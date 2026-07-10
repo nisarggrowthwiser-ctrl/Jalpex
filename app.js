@@ -1595,19 +1595,18 @@ function inquireProduct(productName) {
 // ── REVEAL ON SCROLL ANIMATIONS ──
 function initRevealAnimations() {
   const reveals = document.querySelectorAll("[data-reveal]");
-
-  const revealOnScroll = () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 100;
-
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add("active");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target);
       }
     });
-  };
+  }, {
+    threshold: 0.05,
+    rootMargin: "0px 0px -50px 0px"
+  });
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Trigger initial
+  reveals.forEach(el => observer.observe(el));
 }

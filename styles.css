@@ -2234,6 +2234,9 @@ footer {
 
 /* ── RESPONSIVE DESIGN ── */
 @media (max-width: 1024px) {
+  .products-slider-track .product-card {
+    flex: 0 0 calc((100% - 30px) / 2);
+  }
   .logistics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2349,6 +2352,38 @@ footer {
   .logistics-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .products-header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    text-align: center;
+  }
+  .products-header-left {
+    max-width: 100%;
+  }
+  .products-header-left .section-title,
+  .products-header-left .section-desc {
+    text-align: center !important;
+  }
+  .products-header-right {
+    width: 100%;
+  }
+  .btn-view-all {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .psc-tabs-container {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+  .psc-tab-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    flex-grow: 1;
+    text-align: center;
   }
   .wcu-banner {
     border-radius: 14px;
@@ -2624,4 +2659,32 @@ footer {
 @keyframes driveRightToLeft {
   0% { left: 110%; }
   100% { left: -120px; }
+}
+
+/* ── SCROLL REVEAL ANIMATIONS ── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+[data-reveal].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered loading delays */
+[data-reveal][data-delay="100"] { transition-delay: 100ms; }
+[data-reveal][data-delay="200"] { transition-delay: 200ms; }
+[data-reveal][data-delay="300"] { transition-delay: 300ms; }
+[data-reveal][data-delay="400"] { transition-delay: 400ms; }
+[data-reveal][data-delay="500"] { transition-delay: 500ms; }
+[data-reveal][data-delay="600"] { transition-delay: 600ms; }
+[data-reveal][data-delay="700"] { transition-delay: 700ms; }
+
+@media (max-width: 580px) {
+  .products-slider-track .product-card {
+    flex: 0 0 100%;
+  }
 }
