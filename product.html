@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1E4D2B">
+  <title>Product Details | Megayug Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding-top: 100px;
+    }
+    
+    .product-detail-section {
+      padding: 60px 0;
+      min-height: 80vh;
+    }
+
+    .back-btn-container {
+      margin-bottom: 40px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-mid);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .btn-back:hover {
+      color: var(--accent-orange);
+    }
+
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .product-detail-img-wrap {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 120px;
+    }
+
+    .product-detail-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.5s;
+    }
+
+    .product-detail-img-wrap img:hover {
+      transform: scale(1.03);
+    }
+
+    .product-detail-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .product-detail-cat {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-orange);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .product-detail-title {
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1.1;
+      margin: 0;
+      color: var(--text-dark);
+    }
+
+    .product-detail-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .spec-table th, .spec-table td {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .spec-table th {
+      background: rgba(30, 77, 43, 0.06);
+      color: var(--text-dark);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .spec-table td {
+      border-bottom: 1px solid rgba(90, 70, 30, 0.1);
+      color: var(--text-mid);
+    }
+
+    .spec-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .spec-label {
+      font-weight: 500;
+      color: var(--text-dark);
+      width: 35%;
+    }
+
+    .product-detail-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .product-detail-tag {
+      background: rgba(255, 102, 0, 0.08);
+      border: 1px solid rgba(255, 102, 0, 0.2);
+      color: var(--accent-orange);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .product-inquiry-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-top: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .product-inquiry-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .product-inquiry-desc {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .product-detail-img-wrap {
+        position: static;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo-light.png" alt="Megayug Global Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#products" class="active">Products</a></li>
+        <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+        <li><a href="index.html#inquiry">Inquiry</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#inquiry-form-section" class="btn-primary header-cta">Request Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PRODUCT DETAILS CONTENT ── -->
+  <section class="product-detail-section">
+    <div class="container">
+      
+      <div class="back-btn-container">
+        <a href="index.html#products" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Collections
+        </a>
+      </div>
+
+      <div class="product-detail-grid" id="productDetailGrid">
+        <!-- Rendered dynamically by script below -->
+        <div style="grid-column: 1 / -1; text-align: center; padding: 100px 0;">
+          <h3 style="color: var(--text-dark);">Loading Product Details...</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="font-family: var(--font-heading); color: white;">Megayug Global</h4>
+          <p style="margin-top: 15px;">Megayug Global is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#story">Our Story</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Offerings</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#products">Premium Spices</a></li>
+            <li><a href="index.html#products">Nutritious Seeds</a></li>
+            <li><a href="index.html#products">Pulses & Grains</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Registered Office</h4>
+          <div class="footer-contact-info">
+            <span>Megayug Global, India</span>
+            <span>Email: info@megayugglobal.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Megayug Global. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Local copy of products details database
+    const productsData = [
+      // SPICES
+      { id: "turmeric", category: "spices", name: "Turmeric Finger", desc: "Golden-yellow, aromatic spice available as whole fingers or ground powder. Sourced from high-curcumin farming belts.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png", specs: { "Curcumin Content": ">3.5%", "Moisture": "<10%", "Admixture": "<1%", "Origin": "India" } },
+      { id: "red_chilli", category: "spices", name: "Red Chilli", desc: "Vibrant red and fiery, offered as stemless/with-stem whole pods or finely ground powder of varying heat levels.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png", specs: { "ASTA Color": "60 - 120 max", "Moisture": "<12%", "Heat Value": "15,000 - 90,000 SHU", "Origin": "India" } },
+      { id: "cumin", category: "spices", name: "Cumin Seeds", desc: "Highly aromatic seeds with deep earthy flavor, available in whole premium grade seeds and fresh ground powder.", tags: ["whole", "powder", "earthy"], image: "products/cumin.png", specs: { "Purity": "99.5% min", "Moisture": "<9%", "Volatile Oil": "1.5% min", "Origin": "India" } },
+      { id: "coriander", category: "spices", name: "Coriander Seeds", desc: "Sweet, citrusy flavor profile. Offered in uniform whole seeds or premium, finely milled spice powder.", tags: ["whole", "powder", "premium"], image: "products/coriander.png", specs: { "Purity": "99% min", "Moisture": "<9%", "Split Seeds": "5% max", "Origin": "India" } },
+      { id: "fennel", category: "spices", name: "Fennel Seeds", desc: "Sweet, licorice-like aroma. Excellent digestant and culinary flavoring, available whole or ground.", tags: ["whole", "powder", "aromatic"], image: "products/fennel.png", specs: { "Purity": "99% min", "Moisture": "<10%", "Foreign Matter": "1% max", "Origin": "India" } },
+      { id: "black_pepper", category: "spices", name: "Black Pepper", desc: "Known as the King of Spices. Sourced from organic coastal farms, offered as whole peppercorns or cracked powder.", tags: ["whole", "powder", "coarse"], image: "products/black-pepper.png", specs: { "Density": "500 - 550 g/l", "Moisture": "<12.5%", "Piperine Content": "4.0% min", "Origin": "India" } },
+      { id: "cardamom", category: "spices", name: "Cardamom", desc: "Premium green and black cardamom pods, sorted by size (7mm-8mm+) for intense sweet-spicy aroma.", tags: ["green", "black", "pods"], image: "products/cardamom.png", specs: { "Size": "7mm - 8mm+", "Color": "Deep Green", "Moisture": "<12%", "Origin": "India" } },
+      { id: "fenugreek", category: "spices", name: "Fenugreek Seeds", desc: "Bitter-sweet seeds loaded with health benefits, used whole in tempering or grounded for spice mixtures.", tags: ["whole", "powder", "medicinal"], image: "products/fenugreek.png", specs: { "Purity": "99% min", "Moisture": "<10%", "Total Ash": "5% max", "Origin": "India" } },
+      { id: "cloves", category: "spices", name: "Cloves", desc: "Fully grown, dried flower buds with high essential oil content, intense aroma, and warm spicy flavor.", tags: ["whole", "high-oil"], image: "products/cloves.png", specs: { "Purity": "99.8% min", "Moisture": "<12%", "Volatile Oil": "15% min", "Origin": "India" } },
+      { id: "cinnamon", category: "spices", name: "Cinnamon Sticks", desc: "Premium rolls (quills) or ground powder with a delicate, sweet-spicy flavor profile.", tags: ["quills", "powder", "organic"], image: "products/cinnamon.png", specs: { "Moisture": "<12%", "Volatile Oil": ">1.5%", "Thickness": "0.2 - 0.8mm", "Origin": "India" } },
+      { id: "nutmeg", category: "spices", name: "Nutmeg", desc: "Whole oval nutmeg seeds and ground powder, rich in volatile oils for baking and spice blends.", tags: ["whole", "powder", "nutty"], image: "products/nutmeg.png", specs: { "Purity": "99% min", "Moisture": "<10%", "Admixture": "Nil", "Origin": "India" } },
+      { id: "bay_leaves", category: "spices", name: "Bay Leaves", desc: "Carefully shade-dried aromatic bay leaves with robust green color and distinct herbal fragrance.", tags: ["dried", "whole"], image: "products/bay-leaves.png", specs: { "Moisture": "<10%", "Color": "Olive Green", "Size": "4 - 8 cm", "Origin": "India" } },
+      { id: "ginger_powder", category: "spices", name: "Ginger Powder", desc: "Finely ground dry ginger (Sonth) with strong pungent heat and medicinal stomach-soothing qualities.", tags: ["ground", "dry-ginger"], image: "products/ginger-powder.png", specs: { "Mesh Size": "60 - 80", "Moisture": "<10%", "Total Ash": "<8%", "Origin": "India" } },
+      { id: "garlic_powder", category: "spices", name: "Garlic Powder", desc: "Dehydrated garlic cloves ground into fine aromatic powder. Dissolves easily, adding deep savory flavor.", tags: ["ground", "dehydrated"], image: "products/garlic-powder.png", specs: { "Purity": "100% Garlic", "Moisture": "<6%", "Granulation": "100% through 60 mesh", "Origin": "India" } },
+      { id: "onion_powder", category: "spices", name: "Onion Powder", desc: "Premium dehydrated white and red onions processed into free-flowing powder with sweet, savory taste.", tags: ["ground", "free-flowing"], image: "products/onion-powder.png", specs: { "Moisture": "<5%", "Color": "Off-white / Light Pink", "Admixture": "None", "Origin": "India" } },
+      { id: "curry_powder", category: "spices", name: "Curry Powder", desc: "Proprietary spice blend containing turmeric, coriander, cumin, fenugreek, and warm spices in golden ratio.", tags: ["blend", "premium-grade"], image: "products/curry-powder.png", specs: { "Ingredients": "Custom Spice Blend", "Moisture": "<8%", "Flavor": "Warm & Aromatic", "Origin": "India" } },
+
+      // SEEDS
+      { id: "sesame_seeds", category: "seeds", name: "Sesame Seeds", desc: "Rich in healthy oils. Offered in natural golden, premium mechanically hulled, and pure deep black variants.", tags: ["natural", "hulled", "black"], image: "products/sesame-seeds.png", specs: { "Purity": "99.95% min", "Moisture": "<4.5%", "Oil Content": "50% min", "Origin": "India" } },
+      { id: "flax_seeds", category: "seeds", name: "Flax Seeds", desc: "Glossy brown seeds packed with Omega-3 fatty acids, fiber, and lignans. Ideal for healthy food formulations.", tags: ["brown", "omega-3", "clean"], image: "products/flax-seeds.png", specs: { "Purity": "99.5% min", "Moisture": "<8%", "Oil Content": "38% min", "Origin": "India" } },
+      { id: "chia_seeds", category: "seeds", name: "Chia Seeds", desc: "Premium black and white chia seeds, highly hydrophilic. Rich source of protein and essential minerals.", tags: ["black", "white", "superfood"], image: "products/chia-seeds.png", specs: { "Purity": "99.9% min", "Moisture": "<7%", "Protein": "20% min", "Origin": "India" } },
+      { id: "psyllium_seeds", category: "seeds", name: "Psyllium Seeds", desc: "High-mucilage plantago ovata seeds and processed psyllium husk, ideal for dietary fibers and digestive health.", tags: ["seeds", "husk", "digestive"], image: "products/psyllium-seeds.png", specs: { "Husk Purity": "95% - 99%", "Moisture": "<10%", "Swell Volume": ">40 ml/g", "Origin": "India" } },
+      { id: "quinoa_seeds", category: "seeds", name: "Quinoa Seeds", desc: "Saponin-free, thoroughly washed white, red, and black quinoa. A complete plant-based protein grain seed.", tags: ["white", "red", "black"], image: "products/quinoa-seeds.png", specs: { "Purity": "99.9% min", "Moisture": "<12%", "Saponin": "Negative", "Origin": "India" } },
+      { id: "amaranth_seeds", category: "seeds", name: "Amaranth Seeds", desc: "Gluten-free, highly nutritious ancient grain seeds, sorted and processed for snacks and flour blends.", tags: ["gluten-free", "ancient-grain"], image: "products/amaranth-seeds.png", specs: { "Purity": "99.5% min", "Moisture": "<11%", "Protein": "14% min", "Origin": "India" } },
+
+      // PULSES AND GRAINS
+      { id: "chickpeas", category: "pulses", name: "Kabuli Chickpeas", desc: "Premium white chickpeas (Kabuli) graded by count size (75-80, 42-44, etc.) with high protein content.", tags: ["kabuli", "whole", "white"], image: "products/chickpeas.png", specs: { "Size": "8mm - 9mm", "Count per Ounce": "75-80 / 42-44", "Moisture": "<12%", "Origin": "India" } },
+      { id: "chickpeas_splits", category: "pulses", name: "Chickpeas Splits (Chana Dal)", desc: "Polished and unpolished split desi chickpeas, rich in protein, cleaned of all physical impurities.", tags: ["splits", "chana-dal"], image: "products/chickpeas-splits.png", specs: { "Purity": "99.5% min", "Moisture": "<12%", "Foreign Matter": "Nil", "Origin": "India" } },
+      { id: "green_moong", category: "pulses", name: "Green Moong (Whole)", desc: "Shiny, bold green mung beans with high germination rate and rich nutritional value.", tags: ["whole", "green"], image: "products/green-moong.png", specs: { "Purity": "99% min", "Moisture": "<11%", "Foreign Matter": "<0.5%", "Origin": "India" } },
+      { id: "green_moong_splits", category: "pulses", name: "Green Moong Splits (Moong Dal)", desc: "Dehusked yellow split and green split moong dal, easy to digest and quick cooking.", tags: ["splits", "yellow", "green"], image: "products/green-moong-splits.png", specs: { "Purity": "99.5% min", "Moisture": "<10%", "Broken Seeds": "<1%", "Origin": "India" } },
+      { id: "black_gram", category: "pulses", name: "Black Gram (Urad Whole)", desc: "Whole black gram (Urad) seeds, key ingredient for traditional foods and rich source of plant protein.", tags: ["whole", "urad"], image: "products/black-gram.png", specs: { "Purity": "99% min", "Moisture": "<12%", "Foreign Matter": "Nil", "Origin": "India" } },
+      { id: "black_gram_splits", category: "pulses", name: "Black Gram Splits (Urad Dal)", desc: "Split dehusked white urad dal and split black urad dal, thoroughly sorted and cleaned.", tags: ["splits", "white", "black"], image: "products/black-gram-splits.png", specs: { "Purity": "99.5% min", "Moisture": "<11%", "Broken Splits": "<2%", "Origin": "India" } },
+      { id: "pigeon_peas", category: "pulses", name: "Pigeon Peas (Toor Dal)", desc: "Premium split yellow pigeon peas (Arhar/Toor Dal), oily and non-oily varieties available.", tags: ["splits", "toor-dal", "yellow"], image: "products/pigeon-peas.png", specs: { "Purity": "99.8% min", "Moisture": "<11%", "Foreign Matter": "Nil", "Origin": "India" } },
+      { id: "peanuts", category: "pulses", name: "Peanuts (Groundnuts)", desc: "Bold and Java peanut kernels sorted by count (38/42, 40/50, 50/60, etc.) with high oil yield.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png", specs: { "Count per Ounce": "38/42, 40/50, 50/60", "Moisture": "<8%", "Aflatoxin": "<4 ppb max", "Origin": "India" } }
+    ];
+
+    // Read URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || 'turmeric';
+
+    // Find product
+    const product = productsData.find(p => p.id === productId);
+
+    const grid = document.getElementById("productDetailGrid");
+    if (product) {
+      document.title = `${product.name} | Megayug Global Premium Exports`;
+      
+      let specRows = "";
+      for (const [key, value] of Object.entries(product.specs || {})) {
+        specRows += `
+          <tr>
+            <td class="spec-label">${key}</td>
+            <td>${value}</td>
+          </tr>
+        `;
+      }
+
+      grid.innerHTML = `
+        <!-- Left Column: Image -->
+        <div class="product-detail-img-wrap">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+
+        <!-- Right Column: Info & Inquiry Form -->
+        <div class="product-detail-info">
+          <div>
+            <span class="product-detail-cat">${product.category}</span>
+            <h1 class="product-detail-title">${product.name}</h1>
+          </div>
+          
+          <div class="product-detail-tags">
+            ${product.tags.map(tag => `<span class="product-detail-tag">${tag}</span>`).join("")}
+          </div>
+
+          <p class="product-detail-desc">${product.desc}</p>
+
+          <h3 style="color: var(--text-dark); font-size: 20px; margin-top: 10px;">Specifications</h3>
+          <table class="spec-table">
+            <tbody>
+              ${specRows}
+            </tbody>
+          </table>
+
+          <div class="product-inquiry-card" id="inquiry-form-section">
+            <h3 class="product-inquiry-title">Inquire About This Product</h3>
+            <p class="product-inquiry-desc">Interested in importing ${product.name}? Complete this quick form for spec sheet and commercial quotes.</p>
+            
+            <form id="productInquiryForm">
+              <div class="form-group">
+                <label for="formName">Your Full Name / Company Name</label>
+                <input type="text" id="formName" class="form-control" placeholder="Enter name" required>
+              </div>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="formEmail">Email Address</label>
+                  <input type="email" id="formEmail" class="form-control" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                  <label for="formPhone">Phone Number</label>
+                  <input type="tel" id="formPhone" class="form-control" placeholder="Include country code" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Requirements (Qty, packaging, destination port)</label>
+                <textarea id="formMessage" class="form-control" rows="4" required>Hello, I'm interested in importing Megayug Global's premium "${product.name}". Please send me pricing specification, packing sizes, and details.</textarea>
+              </div>
+              <button type="submit" class="btn-primary form-submit-btn">Send Inquiry for ${product.name}</button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      `;
+
+      // Handle Inquiry Form Submission
+      document.getElementById("productInquiryForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const status = document.getElementById("formStatus");
+        status.className = "form-status success";
+        status.textContent = "Thank you! Your inquiry for " + product.name + " has been logged. Our trade desk will contact you shortly.";
+        e.target.reset();
+        setTimeout(() => {
+          status.textContent = "";
+        }, 8000);
+      });
+
+    } else {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 100px 0;">
+          <h3 style="color: var(--text-dark); margin-bottom: 20px;">Product Not Found</h3>
+          <a href="index.html#products" class="btn-primary">View All Products</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

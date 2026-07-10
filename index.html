@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF6EE">
+  <title>Megayug Global | Premium Agricultural Sourcing & Global Exports</title>
+  <meta name="description" content="Megayug Global exports premium Indian spices, high-quality seeds, organic grains, and pulses worldwide. Experience superior quality and reliable agricultural logistics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo-link">
+        <img src="logo-light.png" alt="Megayug Global Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="active" data-trans="nav_home">Home</a></li>
+        <li><a href="#story" data-trans="nav_story">Our Story</a></li>
+        <li><a href="#products" data-trans="nav_products">Products</a></li>
+        <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+        <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Picker -->
+        <div class="lang-picker">
+          <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>EN</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-item active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-item" data-lang="hi">🇮🇳 हिन्दी (Hindi)</button>
+            <button class="lang-item" data-lang="ar">🇸🇦 العربية (Arabic)</button>
+            <button class="lang-item" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-item" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-item" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-item" data-lang="zh">🇨🇳 中文 (Chinese)</button>
+            <button class="lang-item" data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+
+        <a href="#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" data-trans="nav_home">Home</a></li>
+      <li><a href="#story" data-trans="nav_story">Our Story</a></li>
+      <li><a href="#products" data-trans="nav_products">Products</a></li>
+      <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+      <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+    </ul>
+    <div class="mobile-lang-section">
+      <p>Select Language</p>
+      <div class="mobile-lang-grid">
+        <button class="mob-lang-btn active" data-lang="en">EN</button>
+        <button class="mob-lang-btn" data-lang="hi">HI</button>
+        <button class="mob-lang-btn" data-lang="ar">AR</button>
+        <button class="mob-lang-btn" data-lang="fr">FR</button>
+        <button class="mob-lang-btn" data-lang="es">ES</button>
+        <button class="mob-lang-btn" data-lang="pt">PT</button>
+        <button class="mob-lang-btn" data-lang="zh">ZH</button>
+        <button class="mob-lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+    <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
+  </div>
+
+  <!-- ── HERO SECTION (BLUEBIRD-STYLE FLY-IN) ── -->
+  <header class="hero" id="home">
+    <!-- Giant ghost typography behind the centerpiece -->
+    <div class="hero-ghost" aria-hidden="true">MEGAYUG</div>
+
+    <!-- Flying centerpiece -->
+    <div class="hero-flyer-wrap">
+      <img class="hero-flyer" src="products/red-chilli-cutout.png" alt="Bowl of premium export-quality Indian red chillies">
+    </div>
+
+    <!-- Floating trusted-markets pill -->
+    <div class="hero-users-pill">
+      <div class="hup-avatars">
+        <img src="products/turmeric.png" alt="Turmeric">
+        <img src="products/cardamom.png" alt="Cardamom">
+        <img src="products/chickpeas.png" alt="Chickpeas">
+      </div>
+      <span class="hup-label">Export Markets</span>
+      <span class="hup-count">+40</span>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span data-trans="hero_badge">ESTABLISHED SINCE 2026</span>
+        </div>
+        <h1 class="hero-title" data-trans="hero_title">
+          Bridging Indian <em>Heritage</em> with Global Markets.
+        </h1>
+        <p class="hero-desc" data-trans="hero_desc">
+          At MEGAYUG GLOBAL, we export premium Indian spices, high-quality seeds, organic grains, and pulses directly to international clients. Sourced with absolute care, delivered with complete integrity.
+        </p>
+        <div class="hero-cta">
+          <a href="#products" class="btn-primary" data-trans="hero_explore">Explore Portfolio</a>
+          <a href="#story" class="btn-outline" data-trans="hero_legacy">Our Values</a>
+        </div>
+      </div>
+
+      <!-- Frosted glass cards (like the reference video) -->
+      <div class="hero-glass-row">
+        <a class="hero-glass-card hgc-quality" href="#why-choose-us">
+          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
+          <div class="hgc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <span class="hgc-chip">Perfect Quality</span>
+          <h3>Lab-tested purity in every export batch</h3>
+        </a>
+        <a class="hero-glass-card hgc-sourcing" href="#story">
+          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
+          <div class="hgc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 18V9"></path><path d="M12 9a4 4 0 0 0-4-4H4v4a4 4 0 0 0 4 4h4z"></path><path d="M12 9a4 4 0 0 1 4-4h4v4a4 4 0 0 1-4 4h-4z"></path></svg>
+          </div>
+          <h3>Farm-Direct Sourcing</h3>
+          <p>Handpicked from certified Indian farms for personalized supply programs.</p>
+        </a>
+        <a class="hero-glass-card hgc-stat" href="#inquiry">
+          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
+          <div class="hgc-stat-num">40<span>+</span></div>
+          <p>countries partner with us to redefine their spice &amp; grain trade.</p>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── OUR STORY SECTION ── -->
+  <section class="about-intro" id="story">
+    <div class="container">
+      <div class="about-intro-inner">
+        <div class="about-intro-text">
+          <span class="section-label" data-trans="story_label">Global Agro Exporter</span>
+          <h2 class="section-title" data-trans="story_title">Premium Quality, Ethical Sourcing & Trusted Global Delivery</h2>
+          <p data-trans="story_p1">
+            At Megayug Global, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.
+          </p>
+          <p data-trans="story_p2">
+            We offer an extensive range of agricultural exports, categorized into authentic spices, nutritious seeds, and essential grains and pulses. Every product is processed and packaged with great care, preserving its goodness for our global customers. Partner with us for a seamless export experience backed by unmatched dedication.
+          </p>
+          <a href="#products" data-trans="story_link">Explore our export collections &rarr;</a>
+        </div>
+        
+        <div class="about-bowl-wrap">
+          <div class="about-bowl-img">
+            <img src="organic-sourcing.png" alt="Megayug Global - Premium Agricultural Exports" style="max-width:100%; border-radius:var(--radius-lg); height:auto; box-shadow:var(--shadow-lg);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERACTIVE MORPH SLIDER SECTION ── -->
+  <section class="featured-morph-slider">
+    <div class="morph-hero-container">
+      <div class="morph-hero-image-wrap">
+        <img class="hero-image" src="products/turmeric.png" alt="Turmeric Finger">
+      </div>
+      <div class="scrim"></div>
+      
+      <div class="morph-hero-copy">
+        <p class="caption">Premium Spices • Organically Sourced</p>
+        <h1 class="title">TURMERIC FINGER</h1>
+        <p class="spec">Curcumin Content: >3.5% | Moisture: <10%</p>
+        <a class="cta" href="product.html?id=turmeric">View Product Details</a>
+      </div>
+
+      <!-- Slide Controls (Bottom Left) -->
+      <div class="morph-controls">
+        <div class="slide-number">01 / 06</div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <div class="nav-arrows">
+          <button class="nav-arrow prev" aria-label="Previous slide">&larr;</button>
+          <button class="nav-arrow next" aria-label="Next slide">&rarr;</button>
+        </div>
+      </div>
+
+      <!-- Side Thumbnail Stack -->
+      <div class="product-stack">
+        <!-- Card 1 -->
+        <button class="stack-card" data-product="cinnamon" data-index="1">
+          <img src="products/cinnamon.png" alt="Cinnamon">
+          <div class="stack-card-info">
+            <span class="stack-card-cat">Spices</span>
+            <span class="stack-card-name">Cinnamon Sticks</span>
+          </div>
+        </button>
+        <!-- Card 2 -->
+        <button class="stack-card" data-product="sesame_seeds" data-index="2">
+          <img src="products/sesame-seeds.png" alt="Sesame Seeds">
+          <div class="stack-card-info">
+            <span class="stack-card-cat">Seeds</span>
+            <span class="stack-card-name">Sesame Seeds</span>
+          </div>
+        </button>
+        <!-- Card 3 -->
+        <button class="stack-card" data-product="chickpeas" data-index="3">
+          <img src="products/chickpeas.png" alt="Kabuli Chickpeas">
+          <div class="stack-card-info">
+            <span class="stack-card-cat">Pulses</span>
+            <span class="stack-card-name">Kabuli Chickpeas</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DIVISIONS PORTFOLIO SECTION ── -->
+  <section class="products-showcase" id="products">
+    <!-- Scrolling Marquee Ticker -->
+    <div class="ticker-banner">
+      <div class="ticker-content">
+        <span data-trans="ticker_text">Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • </span>
+        <span data-trans="ticker_text">Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • </span>
+      </div>
+    </div>
+
+    <!-- Dark Blue Banner Header -->
+    <div class="products-header-banner">
+      <div class="container products-header-inner">
+        <div class="products-header-left">
+          <span class="section-label" style="color: var(--accent-orange) !important; display: inline-block; margin-bottom: 12px;" data-trans="prod_label">Featured Products</span>
+          <h2 class="section-title" style="color: #FFFFFF; text-align: left; margin-bottom: 16px;" data-trans="prod_title">Our Premium Export Collection</h2>
+          <p class="section-desc" style="color: rgba(255, 255, 255, 0.8); text-align: left; margin: 0;" data-trans="prod_desc">
+            Explore our premium range of export-quality agricultural products carefully sourced, securely packed, and delivered worldwide with quality, freshness, and reliability.
+          </p>
+        </div>
+        <div class="products-header-right">
+          <a href="catalog.html" class="btn-view-all" data-trans="btn_view_all">View All Products</a>
+        </div>
+      </div>
+      
+      <!-- Tab Buttons Inside Banner -->
+      <div class="container" style="margin-top: 40px;">
+        <div class="psc-tabs-container" style="display: flex; justify-content: flex-start; gap: 15px; flex-wrap: wrap;">
+          <button class="psc-tab-btn" data-category="spices" data-trans="tab_spices">Spices</button>
+          <button class="psc-tab-btn" data-category="seeds" data-trans="tab_seeds">Seeds</button>
+          <button class="psc-tab-btn" data-category="pulses" data-trans="tab_pulses">Pulses & Grains</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Slider Container -->
+    <div class="container products-slider-container">
+      <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous Products">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      </button>
+      
+      <div class="products-slider-viewport">
+        <div class="products-slider-track" id="productsSliderTrack">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+
+      <button class="slider-arrow next" id="sliderNext" aria-label="Next Products">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+      
+      <div class="slider-dots" id="sliderDots">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOGISTICS SERVICES SECTION ── -->
+  <section class="logistics-section" id="why-choose-us">
+    <div class="container">
+      <div class="mx-auto" style="max-width: 650px; text-align: center; margin-bottom: 50px;">
+        <span class="section-label mx-auto" style="color: var(--accent-orange) !important;" data-trans="logistics_label">Our Logistics Services!</span>
+        <h2 class="section-title mx-auto" data-trans="logistics_title">Reliable Worldwide Freight Services</h2>
+        <p class="section-desc mx-auto" data-trans="logistics_desc">Seamless Import Export Transportation solutions designed to ensure secure, timely, and efficient global delivery of premium agricultural products.</p>
+      </div>
+
+      <div class="logistics-grid">
+        <!-- Card 1: Road Freight -->
+        <div class="logistics-card">
+          <div class="logistics-image-wrap">
+            <img src="products/road-freight.png" alt="Road Freight Logistics">
+          </div>
+          <div class="logistics-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="logistics-card-body">
+            <h3 class="logistics-card-title" data-trans="logistics_road_title">Road Freight</h3>
+            <p class="logistics-card-desc" data-trans="logistics_road_desc">Reliable inland transportation solutions ensuring safe and timely delivery of agricultural products across domestic and international supply chains with efficiency and professionalism.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Ocean Freight -->
+        <div class="logistics-card">
+          <div class="logistics-image-wrap">
+            <img src="products/ocean-freight.png" alt="Ocean Freight Logistics">
+          </div>
+          <div class="logistics-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h20c.6 0 1-.4 1-1v-2c0-.6-.4-1-1-1H2c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1z"></path><path d="M5 13V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8"></path><path d="M12 3v10"></path></svg>
+          </div>
+          <div class="logistics-card-body">
+            <h3 class="logistics-card-title" data-trans="logistics_ocean_title">Ocean Freight</h3>
+            <p class="logistics-card-desc" data-trans="logistics_ocean_desc">Cost-effective global sea freight services designed for bulk agricultural exports, secure container handling, and seamless trade operations across worldwide markets with reliability and efficiency.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Air Freight -->
+        <div class="logistics-card">
+          <div class="logistics-image-wrap">
+            <img src="products/air-freight.png" alt="Air Freight Logistics">
+          </div>
+          <div class="logistics-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1.55-1.95L12 3 4.55 6.05A2 2 0 0 0 3 8v8a2 2 0 0 0 1.55 1.95L12 21l7.45-3.05A2 2 0 0 0 21 16z"></path><polyline points="12 21 12 11"></polyline><polyline points="3 8 12 11 21 8"></polyline><line x1="12" y1="3" x2="12" y2="11"></line></svg>
+          </div>
+          <div class="logistics-card-body">
+            <h3 class="logistics-card-title" data-trans="logistics_air_title">Air Freight</h3>
+            <p class="logistics-card-desc" data-trans="logistics_air_desc">Fast and dependable air cargo solutions for urgent shipments, delivering premium agricultural products quickly while maintaining quality and freshness standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRIVATE LABELING & CUSTOM PACKAGING ── -->
+  <section class="private-labeling">
+    <div class="container">
+      <div class="pl-grid">
+        <div class="pl-image-wrap">
+          <img src="products/process-packaging.png" alt="Private Labeling & Packaging Services">
+        </div>
+        <div class="pl-info">
+          <span class="section-label" data-trans="pl_label">Value-Added Services</span>
+          <h2 class="section-title" data-trans="pl_title">Private Labeling & Custom Packaging Solutions</h2>
+          <p data-trans="pl_desc">
+            We help global brands, distributors, and supermarkets build their own brand presence. Megayug Global offers complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging.
+          </p>
+          <div class="pl-features">
+            <div class="pl-feat-item">
+              <div class="pl-feat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              </div>
+              <div>
+                <h4 class="pl-feat-title" data-trans="pl_f1_title">Custom Brand Labeling</h4>
+                <p class="pl-feat-desc" data-trans="pl_f1_desc">Your logos, colors, barcodes, and custom designs on premium export jars or pouches.</p>
+              </div>
+            </div>
+            <div class="pl-feat-item">
+              <div class="pl-feat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+              </div>
+              <div>
+                <h4 class="pl-feat-title" data-trans="pl_f2_title">Flexible Packing Sizes</h4>
+                <p class="pl-feat-desc" data-trans="pl_f2_desc">Available in small retail pouches (50g - 1kg) to bulk bags (10kg - 50kg) based on requirements.</p>
+              </div>
+            </div>
+            <div class="pl-feat-item">
+              <div class="pl-feat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <h4 class="pl-feat-title" data-trans="pl_f3_title">Hygienic Pouch Packing</h4>
+                <p class="pl-feat-desc" data-trans="pl_f3_desc">Modern multi-layer vacuum pouch setups that lock in flavor and avoid moisture entry.</p>
+              </div>
+            </div>
+            <div class="pl-feat-item">
+              <div class="pl-feat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="pl-feat-title" data-trans="pl_f4_title">Compliance Ready</h4>
+                <p class="pl-feat-desc" data-trans="pl_f4_desc">Label details conform with international custom laws and FDA regulations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUALITY CERTIFICATIONS ── -->
+  <section class="certifications-section">
+    <div class="container">
+      <div class="mx-auto" style="max-width: 650px;">
+        <span class="section-label" data-trans="cert_label">Global Standards</span>
+        <h2 class="section-title mx-auto" data-trans="cert_title">Accredited Quality Certifications</h2>
+        <p class="section-desc mx-auto" data-trans="cert_desc">We adhere strictly to global sanitary and phytosanitary requirements. Our sourcing operations carry internationally recognized benchmarks.</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-item">
+          <div class="cert-badge-image">
+            <img src="products/cert-iso.png" alt="ISO 22000:2018 Logo">
+          </div>
+          <div class="cert-name">ISO 22000:2018</div>
+          <div class="cert-authority">Food Safety Management</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-badge-image">
+            <img src="products/cert-fssai.png" alt="FSSAI Logo">
+          </div>
+          <div class="cert-name">FSSAI</div>
+          <div class="cert-authority">Govt of India Approved</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-badge-image">
+            <img src="products/cert-apeda.png" alt="APEDA Logo">
+          </div>
+          <div class="cert-name">APEDA</div>
+          <div class="cert-authority">Agro Export Promotion</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-badge-image">
+            <img src="products/cert-spices-board.png" alt="Spices Board Logo">
+          </div>
+          <div class="cert-name">Spices Board</div>
+          <div class="cert-authority">Ministry of Commerce</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPORT PROCESS TIMELINE ── -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="mx-auto" style="max-width: 650px;">
+        <span class="section-label" data-trans="process_label">Step-by-Step Flow</span>
+        <h2 class="section-title" data-trans="process_title">Our Export Process</h2>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="products/process-sourcing.png" alt="Direct Sourcing">
+            <span class="process-step-badge">01</span>
+          </div>
+          <div class="process-body">
+            <h3 class="process-card-title" data-trans="process_1_title">Direct Sourcing</h3>
+            <p class="process-card-desc" data-trans="process_1_desc">We handpick materials directly from agricultural hubs and certified farms in India.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="products/process-inspection.png" alt="Quality Inspection">
+            <span class="process-step-badge">02</span>
+          </div>
+          <div class="process-body">
+            <h3 class="process-card-title" data-trans="process_2_title">Quality Inspection</h3>
+            <p class="process-card-desc" data-trans="process_2_desc">Products undergo thorough testing to ensure compliance with global sanitary standards.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="products/process-processing.png" alt="Modern Processing">
+            <span class="process-step-badge">03</span>
+          </div>
+          <div class="process-body">
+            <h3 class="process-card-title" data-trans="process_3_title">Modern Processing</h3>
+            <p class="process-card-desc" data-trans="process_3_desc">State-of-the-art cleaning, sorting, and grounding technology maintains purity.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="products/process-packaging.png" alt="Secure Packaging">
+            <span class="process-step-badge">04</span>
+          </div>
+          <div class="process-body">
+            <h3 class="process-card-title" data-trans="process_4_title">Secure Packaging</h3>
+            <p class="process-card-desc" data-trans="process_4_desc">Advanced vacuum and airtight packaging shields products during long sea routes.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="products/process-distribution.png" alt="Global Distribution">
+            <span class="process-step-badge">05</span>
+          </div>
+          <div class="process-body">
+            <h3 class="process-card-title" data-trans="process_5_title">Global Distribution</h3>
+            <p class="process-card-desc" data-trans="process_5_desc">Handled by trusted freight forwarders, ensuring on-time delivery at destination ports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INQUIRY SECTION ── -->
+  <section class="inquiry-section" id="inquiry">
+    <div class="container">
+      <div class="inquiry-wrap">
+        <div class="inquiry-info">
+          <span class="section-label" data-trans="inquiry_label">Get in Touch</span>
+          <h2 class="section-title" data-trans="inquiry_title">Start Your Export Inquiry</h2>
+          <p data-trans="inquiry_desc">
+            Send us your requirement, packaging needs, and destination port. Our trade desk will reply with competitive CNF/FOB quotes within 24 hours.
+          </p>
+
+          <div class="inquiry-card">
+            <div class="inquiry-contact-item">
+              <div class="ici-icon">📍</div>
+              <div>
+                <div class="ici-title" data-trans="info_address_title">Registered Office</div>
+                <div class="ici-value" data-trans="info_address_val">128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535</div>
+              </div>
+            </div>
+            <div class="inquiry-contact-item">
+              <div class="ici-icon">✉️</div>
+              <div>
+                <div class="ici-title" data-trans="info_email_title">Email Support</div>
+                <div class="ici-value"><a href="mailto:info@megayugglobal.com">info@megayugglobal.com</a></div>
+              </div>
+            </div>
+            <div class="inquiry-contact-item">
+              <div class="ici-icon">📞</div>
+              <div>
+                <div class="ici-title" data-trans="info_phone_title">Direct Trade Desk</div>
+                <div class="ici-value" style="display: flex; flex-direction: column; gap: 4px;">
+                  <a href="tel:+917984872375">Vishal Trivedi: +91 79848 72375</a>
+                  <a href="tel:+918905353063">Kalpesh Trivedi: +91 89053 53063</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inquiry-form-card">
+          <form id="inquiryForm">
+            <div class="form-group">
+              <label for="formName" data-trans="form_name">Your Full Name / Company Name</label>
+              <input type="text" id="formName" class="form-control" placeholder="John Doe / Global Foods Inc." required>
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="formEmail" data-trans="form_email">Corporate Email Address</label>
+                <input type="email" id="formEmail" class="form-control" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="formPhone" data-trans="form_phone">Phone Number (with Country Code)</label>
+                <input type="tel" id="formPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="formProduct" data-trans="form_product">Select Main Product Category</label>
+              <select id="formProduct" class="form-control">
+                <option value="spices" data-trans="form_prod_opt1">Spices (Whole / Ground)</option>
+                <option value="seeds" data-trans="form_prod_opt2">Nutritious Seeds</option>
+                <option value="pulses" data-trans="form_prod_opt3">Pulses and Grains</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="formMessage" data-trans="form_message">Detail your requirement (Quantity, Destination Port, Packaging preference)</label>
+              <textarea id="formMessage" class="form-control" placeholder="I am looking to import 15 Metric Tons of Turmeric Finger (Grade A) to Port of Rotterdam. Please quote FOB and CNF prices." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit-btn" data-trans="form_btn">Send Export Inquiry</button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ANIMATED LOGISTICS SCENE ── -->
+  <div class="logistics-animation-scene">
+    <!-- Scrolling Farm Hills Background -->
+    <div class="scene-bg-farms"></div>
+    
+    <!-- Moving Airplane in the Sky -->
+    <div class="scene-plane">
+      <svg viewBox="0 0 24 24" width="45" height="20" fill="none" stroke="#B05C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 16V8a2 2 0 0 0-1.55-1.95L12 3 4.55 6.05A2 2 0 0 0 3 8v8a2 2 0 0 0 1.55 1.95L12 21l7.45-3.05A2 2 0 0 0 21 16z"></path>
+        <path d="M20 12H4"></path>
+      </svg>
+    </div>
+
+    <!-- Animated Farm Tractor -->
+    <div class="scene-tractor">
+      <svg class="scene-tractor-svg" viewBox="0 0 80 40">
+        <!-- Body / Cabin -->
+        <rect x="25" y="10" width="22" height="16" fill="#3E7C17" rx="1" />
+        <rect x="27" y="12" width="18" height="6" fill="#FFFFFF" opacity="0.8" rx="1" />
+        <!-- Engine Hood -->
+        <path d="M47 18 h18 a2 2 0 0 1 2 2 v6 h-20 z" fill="#4E9F3D" />
+        <!-- Exhaust Pipe -->
+        <rect x="58" y="8" width="2" height="10" fill="#555" />
+        <rect x="58" y="7" width="4" height="2" fill="#555" />
+        <!-- Smoke Puff -->
+        <circle class="smoke-puff" cx="60" cy="4" r="1.5" fill="#bbb" opacity="0.6" />
+        <!-- Rear Big Wheel -->
+        <circle cx="28" cy="28" r="8" fill="#1e2022" />
+        <circle cx="28" cy="28" r="3.5" fill="#ffd369" />
+        <!-- Front Small Wheel -->
+        <circle cx="60" cy="30" r="5" fill="#1e2022" />
+        <circle cx="60" cy="30" r="2" fill="#ffd369" />
+        <!-- Seat and Steering -->
+        <rect x="20" y="18" width="5" height="5" fill="#ffd369" />
+        <line x1="43" y1="18" x2="38" y2="13" stroke="#222" stroke-width="1.5" />
+        <circle cx="38" cy="13" r="2" fill="#222" />
+      </svg>
+    </div>
+
+    <!-- Highway Road -->
+    <div class="scene-highway"></div>
+
+    <!-- Cyclist (Bicycle) -->
+    <div class="scene-vehicle bike">
+      <svg viewBox="0 0 40 25" width="40" height="25">
+        <circle cx="8" cy="18" r="5" fill="none" stroke="#222" stroke-width="1.5" />
+        <circle cx="32" cy="18" r="5" fill="none" stroke="#222" stroke-width="1.5" />
+        <polyline points="8 18, 18 18, 25 10, 14 10, 8 18" fill="none" stroke="#222" stroke-width="1.5" stroke-linejoin="round" />
+        <line x1="18" y1="18" x2="14" y2="10" stroke="#222" stroke-width="1.5" />
+        <line x1="25" y1="10" x2="32" y2="18" stroke="#222" stroke-width="1.5" />
+        <line x1="12" y1="8" x2="16" y2="8" stroke="#222" stroke-width="2" />
+        <polyline points="23 6, 25 10" fill="none" stroke="#222" stroke-width="1.5" />
+        <circle cx="16" cy="4" r="3" fill="#B05C54" />
+      </svg>
+    </div>
+
+    <!-- Delivery Scooter -->
+    <div class="scene-vehicle scooter">
+      <svg viewBox="0 0 50 30" width="50" height="30">
+        <path d="M10 22 L18 22 L22 14 L12 14 Z" fill="#e65c00" />
+        <path d="M22 14 L28 14 L32 22 L20 22 Z" fill="#e65c00" opacity="0.8" />
+        <rect x="2" y="8" width="12" height="12" fill="#B05C54" rx="1" />
+        <line x1="32" y1="22" x2="36" y2="10" stroke="#222" stroke-width="2" />
+        <line x1="36" y1="10" x2="33" y2="8" stroke="#222" stroke-width="2" />
+        <circle cx="12" cy="24" r="5" fill="#1e2022" />
+        <circle cx="12" cy="24" r="2" fill="#FFF" />
+        <circle cx="36" cy="24" r="5" fill="#1e2022" />
+        <circle cx="36" cy="24" r="2" fill="#FFF" />
+        <circle cx="23" cy="8" r="4" fill="#1b2a47" />
+        <path d="M18 12 Q23 12 25 18 L20 18 Z" fill="#1b2a47" />
+      </svg>
+    </div>
+
+    <!-- Electric Delivery Van -->
+    <div class="scene-vehicle van">
+      <svg viewBox="0 0 90 40" width="90" height="40">
+        <rect x="2" y="6" width="60" height="24" rx="2" fill="#B05C54" />
+        <path d="M62 6 h14 a4 4 0 0 1 4 4 v14 a2 2 0 0 1 -2 2 h-16 z" fill="#eae6df" />
+        <path d="M66 10 h8 a2 2 0 0 1 2 2 v6 h-10 z" fill="#1b2a47" />
+        <path d="M25 18 Q30 14 35 18 Q30 22 25 18" fill="#3E7C17" />
+        <circle cx="20" cy="30" r="7" fill="#1e2022" />
+        <circle cx="20" cy="30" r="3" fill="#FFFFFF" />
+        <circle cx="65" cy="30" r="7" fill="#1e2022" />
+        <circle cx="65" cy="30" r="3" fill="#FFFFFF" />
+      </svg>
+    </div>
+
+    <!-- Sedan Car (Opposite lane, moving right-to-left) -->
+    <div class="scene-vehicle car">
+      <svg viewBox="0 0 70 30" width="70" height="30" style="transform: scaleX(-1);">
+        <path d="M5 20 L8 12 A4 4 0 0 1 12 10 L48 10 A4 4 0 0 1 52 12 L58 20 Z" fill="#1b2a47" />
+        <rect x="2" y="18" width="66" height="6" fill="#111c30" />
+        <rect x="14" y="12" width="14" height="6" fill="#FFFFFF" opacity="0.7" />
+        <rect x="30" y="12" width="14" height="6" fill="#FFFFFF" opacity="0.7" />
+        <circle cx="16" cy="24" r="5.5" fill="#1e2022" />
+        <circle cx="16" cy="24" r="2.5" fill="#ffd369" />
+        <circle cx="48" cy="24" r="5.5" fill="#1e2022" />
+        <circle cx="48" cy="24" r="2.5" fill="#ffd369" />
+      </svg>
+    </div>
+
+    <!-- Animated Megayug Delivery Truck -->
+    <div class="scene-truck">
+      <svg class="scene-truck-svg" viewBox="0 0 120 40">
+        <!-- Trailer / Cargo Container -->
+        <rect x="5" y="5" width="80" height="24" rx="2" fill="#B05C54" />
+        <!-- Logo Text on Container -->
+        <text x="14" y="21" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" letter-spacing="1">MEGAYUG</text>
+        
+        <!-- Truck Cabin -->
+        <path d="M85 10 h16 a4 4 0 0 1 4 4 v10 a1 1 0 0 1 -1 1 h-19 z" fill="#1b2a47" />
+        <rect x="92" y="13" width="7" height="6" rx="1" fill="#FFFFFF" opacity="0.8" />
+        <!-- Cabin details -->
+        <rect x="85" y="24" width="30" height="5" fill="#111c30" />
+        
+        <!-- Connection Joint -->
+        <rect x="84" y="22" width="2" height="3" fill="#555" />
+        
+        <!-- Wheels -->
+        <circle cx="20" cy="33" r="6" fill="#1e2022" />
+        <circle cx="20" cy="33" r="2.5" fill="#FFFFFF" />
+        <circle cx="34" cy="33" r="6" fill="#1e2022" />
+        <circle cx="34" cy="33" r="2.5" fill="#FFFFFF" />
+        <circle cx="72" cy="33" r="6" fill="#1e2022" />
+        <circle cx="72" cy="33" r="2.5" fill="#FFFFFF" />
+        <circle cx="98" cy="33" r="6" fill="#1e2022" />
+        <circle cx="98" cy="33" r="2.5" fill="#FFFFFF" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+            <img src="logo-dark.png" alt="Megayug Global Logo" style="height:54px; width:auto; border-radius:8px;">
+            <span class="logo-text" style="color: #FFFFFF; font-size: 28px;">Megayug <em>Global</em></span>
+          </div>
+          <p data-trans="footer_desc">
+            Megayug Global is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.
+          </p>
+        </div>
+        <div class="footer-col" style="padding-left: 20px;">
+          <h4 data-trans="footer_quick_links">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home" data-trans="nav_home">Home</a></li>
+            <li><a href="#story" data-trans="nav_story">Our Story</a></li>
+            <li><a href="#products" data-trans="nav_products">Products</a></li>
+            <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+            <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-trans="footer_products">Our Offerings</h4>
+          <ul class="footer-links">
+            <li><a href="#products" onclick="document.querySelector('[data-category=spices]').click()" data-trans="tab_spices">Spices</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=seeds]').click()" data-trans="tab_seeds">Seeds</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=pulses]').click()" data-trans="tab_pulses">Pulses & Grains</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-trans="footer_contact">Contact Sourcing Desk</h4>
+          <div class="footer-contact-info">
+            <span style="display: flex; gap: 8px;">
+              <span>📍</span>
+              <span>128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535</span>
+            </span>
+            <span>✉️ <a href="mailto:info@megayugglobal.com" style="color: inherit; text-decoration: none;">info@megayugglobal.com</a></span>
+            <span style="display: flex; flex-direction: column; gap: 4px;">
+              <span>📞 <a href="tel:+917984872375" style="color: inherit; text-decoration: none;">Vishal: +91 79848 72375</a></span>
+              <span style="margin-left: 24px;"><a href="tel:+918905353063" style="color: inherit; text-decoration: none;">Kalpesh: +91 89053 53063</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Megayug Global. <span data-trans="footer_rights">All Rights Reserved.</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" data-trans="footer_terms">Terms of Trade</a>
+          <a href="#" data-trans="footer_privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger & Flip -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <!-- Link app.js -->
+  <script src="app.js"></script>
+</body>
+</html>

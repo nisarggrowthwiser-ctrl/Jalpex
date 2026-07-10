@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1E4D2B">
+  <title>Global Export Catalog | Megayug Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding-top: 100px;
+    }
+
+    .catalog-header {
+      background: linear-gradient(rgba(11, 19, 43, 0.93), rgba(11, 19, 43, 0.93)), url('spices-catalog.png') center/cover no-repeat;
+      padding: 60px 0 80px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .catalog-title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .catalog-subtitle {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+
+    .catalog-filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 10px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: var(--transition);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .filter-btn:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #FFFFFF;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-orange);
+      color: white;
+      border-color: var(--accent-orange);
+      box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+    }
+
+    .catalog-section {
+      padding: 60px 0 80px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      background: var(--blue-mist);
+      position: relative;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .product-cat-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--accent-orange);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .product-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 10px;
+    }
+
+    .product-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-mid);
+      margin: 0 0 16px;
+      flex-grow: 1;
+    }
+
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .product-tag {
+      background: var(--cream);
+      color: var(--text-mid);
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-card-inquire {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      color: var(--accent-orange);
+      border: 1.5px solid var(--accent-orange);
+      border-radius: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .product-card:hover .btn-card-inquire {
+      background: var(--accent-orange);
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo-light.png" alt="Megayug Global Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+        <li><a href="index.html#story" data-trans="nav_story">Our Story</a></li>
+        <li><a href="index.html#products" class="active" data-trans="nav_products">Products</a></li>
+        <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+        <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Picker -->
+        <div class="lang-picker">
+          <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>EN</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-item active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-item" data-lang="hi">🇮🇳 हिन्दी (Hindi)</button>
+            <button class="lang-item" data-lang="ar">🇸🇦 العربية (Arabic)</button>
+            <button class="lang-item" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-item" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-item" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-item" data-lang="zh">🇨🇳 中文 (Chinese)</button>
+            <button class="lang-item" data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+
+        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+      <li><a href="index.html#story" data-trans="nav_story">Our Story</a></li>
+      <li><a href="index.html#products" data-trans="nav_products">Products</a></li>
+      <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+      <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+    </ul>
+    <div class="mobile-lang-section">
+      <p>Select Language</p>
+      <div class="mobile-lang-grid">
+        <button class="mob-lang-btn active" data-lang="en">EN</button>
+        <button class="mob-lang-btn" data-lang="hi">HI</button>
+        <button class="mob-lang-btn" data-lang="ar">AR</button>
+        <button class="mob-lang-btn" data-lang="fr">FR</button>
+        <button class="mob-lang-btn" data-lang="es">ES</button>
+        <button class="mob-lang-btn" data-lang="pt">PT</button>
+        <button class="mob-lang-btn" data-lang="zh">ZH</button>
+        <button class="mob-lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+    <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
+  </div>
+
+  <!-- ── CATALOG HEADER ── -->
+  <header class="catalog-header">
+    <div class="container">
+      <h1 class="catalog-title">Explore Our Full Portfolio</h1>
+      <p class="catalog-subtitle">We export premium spices, nutritious seeds, organic grains, and pulses directly from local sources to your destination port.</p>
+      
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-cat="all">All Commodities</button>
+        <button class="filter-btn" data-cat="spices">Premium Spices</button>
+        <button class="filter-btn" data-cat="seeds">Certified Seeds</button>
+        <button class="filter-btn" data-cat="pulses">Pulses & Grains</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── PRODUCT SECTION ── -->
+  <section class="catalog-section">
+    <div class="container">
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Rendered by Javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
+            <img src="logo-light.png" alt="Megayug Global Logo" class="logo-img">
+          </a>
+          <p style="margin-top: 15px;">Megayug Global is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#story">Our Story</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Offerings</h4>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=spices">Premium Spices</a></li>
+            <li><a href="catalog.html?cat=seeds">Nutritious Seeds</a></li>
+            <li><a href="catalog.html?cat=pulses">Pulses & Grains</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Registered Office</h4>
+          <div class="footer-contact-info">
+            <span>Megayug Global, India</span>
+            <span>128 , 1st floor , Shivalika complex , Opp V.J Patel Vegetable Market , Deesa , Banaskantha -385535</span>
+            <span style="margin-top: 10px; display: block;">
+              <strong>Vishal Trivedi:</strong> <a href="tel:+917984872375" style="color: inherit; text-decoration: none;">+91 7984872375</a><br>
+              <strong>Kalpesh Trivedi:</strong> <a href="tel:+918905353063" style="color: inherit; text-decoration: none;">+91 8905353063</a>
+            </span>
+            <span style="margin-top: 10px; display: block;">Email: info@megayugglobal.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Megayug Global. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Uses global productsData from app.js
+
+    let activeFilter = "all";
+
+    function renderCatalog() {
+      const grid = document.getElementById("catalogGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      const filtered = activeFilter === "all" 
+        ? productsData 
+        : productsData.filter(p => p.category === activeFilter);
+
+      filtered.forEach(prod => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.addEventListener("click", () => {
+          window.location.href = `product.html?id=${prod.id}`;
+        });
+
+        // Category clean label
+        let catLabel = "Spices";
+        if (prod.category === "seeds") catLabel = "Seeds";
+        if (prod.category === "pulses") catLabel = "Pulses & Grains";
+
+        card.innerHTML = `
+          <div class="product-img-wrap">
+            <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+            <span class="product-cat-tag">${catLabel}</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">${prod.name}</h3>
+            <p class="product-desc">${prod.desc}</p>
+            <div class="product-tags">
+              ${prod.tags.map(t => `<span class="product-tag">${t}</span>`).join("")}
+            </div>
+            <button class="btn-card-inquire">Inquire Details</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function initFilters() {
+      // Check query parameter first
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get("cat");
+      if (catParam && ["spices", "seeds", "pulses"].includes(catParam)) {
+        activeFilter = catParam;
+      }
+
+      const buttons = document.querySelectorAll(".filter-btn");
+      buttons.forEach(btn => {
+        const filterVal = btn.getAttribute("data-cat");
+        if (filterVal === activeFilter) {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
+
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          activeFilter = filterVal;
+          // Update URL parameter without reload
+          const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?cat=" + activeFilter;
+          window.history.pushState({ path: newUrl }, "", newUrl);
+          renderCatalog();
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initFilters();
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>
