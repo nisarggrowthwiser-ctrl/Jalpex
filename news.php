@@ -2,21 +2,18 @@
 /**
  * news.php — Hostinger / any PHP shared-hosting version of the news API.
  *
- * Upload this file next to your HTML files (public_html/).
- * It becomes available at  https://your-domain.com/news.php
+ * Sources:
+ *   1. PIB (Press Information Bureau) — daily English press releases
+ *   2. DGFT (Directorate General of Foreign Trade) — notifications page
+ *      NOTE: commerce.gov.in migrated to a JS SPA — its /press-releases/
+ *      URL returns 404. DGFT is the working replacement.
  *
- * Same behaviour as the Vercel api/news.js:
- *   - Pulls English press releases from PIB (Ministry of Commerce & Industry,
- *     Ministry of Finance, + trade-keyword matches from any ministry)
- *   - Pulls the commerce.gov.in press-releases list
- *   - Returns merged JSON
- *   - Caches the result in a local file for CACHE_SECONDS, so government
- *     sites are only contacted a few times per day.
+ * Caches result in news-cache.json for CACHE_SECONDS.
  */
 
-/* ---------------------------- config ---------------------------- */
+/* ------------------------------------------------------------------ config */
 
-const CACHE_SECONDS = 10800;                 // 3 hours
+const CACHE_SECONDS = 10800;
 const MAX_ITEMS     = 25;
 define('CACHE_FILE', __DIR__ . '/news-cache.json');
 
@@ -24,21 +21,23 @@ const PIB_URLS = [
     'https://pib.gov.in/allRel.aspx?reg=3&lang=1',
     'https://www.pib.gov.in/allRel.aspx?reg=3&lang=1',
 ];
-const COMMERCE_URLS = [
-    'https://www.commerce.gov.in/press-releases/',
-    'https://commerce.gov.in/press-releases/',
-    'https://www.commerce.gov.in/press-releases',
+const DGFT_URLS = [
+    'https://www.dgft.gov.in/CP/?opt=notification',
+    'https://dgft.gov.in/CP/?opt=notification',
 ];
 
 $MINISTRY_PATTERNS = [
-    '/commerce\s*(&(amp;)?|and)\s*industry/i',   // Ministry of Commerce & Industry
-    '/ministry\s+of\s+finance/i',                // Ministry of Finance (CBIC, customs)
+    '/commerce\s*(&(amp;)?|and)\s*industry/i',
+    '/ministry\s+of\s+finance/i',
 ];
 
 const KEYWORD_PATTERN =
-    '/(export|import|foreign trade|trade polic|customs|tariff|dgft|icegate|cbic|niryat|\bfta\b|free trade|duty drawback|\bgst\b|e-?commerce export)/i';
+    '/(export|import|foreign trade|trade polic|customs|tariff|dgft|icegate|cbic|niryat|\bfta\b|free trade|duty drawback|\bgst\b|e-?commerce export|anti.?dump|safeguard|countervail)/i';
 
-/* ---------------------------- helpers ---------------------------- */
+const DGFT_ROW_PATTERN =
+    '/(notification|circular|policy|amendment|dgft|trade|export|import|tariff|duty|ftp)/i';
+
+/* ----------------------------------------------------------------- helpers */
 
 if (!function_exists('news_fetch_url')) {
     function news_fetch_url(string $url): string
@@ -91,13 +90,25 @@ function news_clean_html(string $html): string
     return preg_replace('/<style[\s\S]*?<\/style>/i', '', $html);
 }
 
-/* ---------------------------- PIB ---------------------------- */
+function news_parse_loose_date(string $text): ?string
+{
+    if (preg_match('/(\d{1,2})[-\s\/]([A-Za-z]{3,9})[-\s\/](\d{4})/', $text, $m)) {
+        $ts = strtotime("{$m[1]} {$m[2]} {$m[3]}");
+        if ($ts) return date('Y-m-d', $ts);
+    }
+    if (preg_match('/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/', $text, $m)) {
+        $ts = strtotime("{$m[3]}-{$m[2]}-{$m[1]}");
+        if ($ts) return date('Y-m-d', $ts);
+    }
+    return null;
+}
+
+/* -------------------------------------------------------------------- PIB */
 
 function news_fetch_pib(array $ministryPatterns): array
 {
     $html = news_clean_html(news_fetch_first(PIB_URLS));
 
-    // headings with byte offsets — used to find each release's ministry
     $headings = [];
     if (preg_match_all('/<(h[1-6])[^>]*>([\s\S]*?)<\/\1>/i', $html, $hm, PREG_OFFSET_CAPTURE | PREG_SET_ORDER)) {
         foreach ($hm as $h) {
@@ -109,8 +120,6 @@ function news_fetch_pib(array $ministryPatterns): array
     }
 
     $items = [];
-    // PIB uses several page names (incl. misspelled PressReleseDetail.aspx),
-    // so match on PRID= only.
     if (preg_match_all(
         '/<a[^>]+href=["\']([^"\']*PRID=\d+[^"\']*)["\'][^>]*>([\s\S]*?)<\/a>/i',
         $html, $am, PREG_OFFSET_CAPTURE | PREG_SET_ORDER
@@ -142,7 +151,7 @@ function news_fetch_pib(array $ministryPatterns): array
 
             $items[] = [
                 'source'   => 'PIB',
-                'ministry' => $ministry ?: null,
+                'ministry' => $ministry ?: 'Press Information Bureau',
                 'title'    => $title,
                 'url'      => $url,
                 'date'     => date('Y-m-d'),
@@ -152,48 +161,40 @@ function news_fetch_pib(array $ministryPatterns): array
     return $items;
 }
 
-/* ---------------------------- commerce.gov.in ---------------------------- */
+/* ------------------------------------------------------------------- DGFT */
 
-function news_parse_loose_date(string $text): ?string
+function news_fetch_dgft(): array
 {
-    if (preg_match('/(\d{1,2})[-\s\/]([A-Za-z]{3,9})[-\s\/](\d{4})/', $text, $m)) {
-        $ts = strtotime("{$m[1]} {$m[2]} {$m[3]}");
-        if ($ts) return date('Y-m-d', $ts);
-    }
-    if (preg_match('/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/', $text, $m)) {
-        $ts = strtotime("{$m[3]}-{$m[2]}-{$m[1]}");
-        if ($ts) return date('Y-m-d', $ts);
-    }
-    return null;
-}
-
-function news_fetch_commerce(): array
-{
-    $html = news_clean_html(news_fetch_first(COMMERCE_URLS));
+    $html = news_clean_html(news_fetch_first(DGFT_URLS));
 
     $items = [];
-    if (preg_match_all('/<(li|tr|p|div)[^>]*>([\s\S]*?)<\/\1>/i', $html, $rm, PREG_SET_ORDER)) {
+    if (preg_match_all('/<(tr|li|div)[^>]*>([\s\S]*?)<\/\1>/i', $html, $rm, PREG_SET_ORDER)) {
         foreach ($rm as $r) {
             $row = $r[2];
             if (!preg_match('/<a[^>]+href=["\']([^"\']+)["\'][^>]*>([\s\S]*?)<\/a>/i', $row, $a)) continue;
 
             $title = news_strip_tags_deep($a[2]);
-            if ($title === '' || mb_strlen($title) < 20) continue;
-            if (!preg_match('/(press|release|trade|export|agreement|minister|commerce|\.pdf)/i', $a[1] . ' ' . $title)) continue;
+            if ($title === '' || mb_strlen($title) < 15) continue;
+
+            if (!preg_match(KEYWORD_PATTERN, $title) &&
+                !preg_match(DGFT_ROW_PATTERN, $title)) continue;
 
             $url = html_entity_decode($a[1], ENT_QUOTES, 'UTF-8');
-            if (str_starts_with($url, '/')) $url = 'https://www.commerce.gov.in' . $url;
+            if (str_starts_with($url, '/'))  $url = 'https://www.dgft.gov.in' . $url;
+            if (str_starts_with($url, '?'))  $url = 'https://www.dgft.gov.in/CP/' . $url;
             if (!preg_match('/^https?:/i', $url)) continue;
 
             foreach ($items as $it) if ($it['url'] === $url) continue 2;
 
             $items[] = [
-                'source'   => 'Ministry of Commerce',
+                'source'   => 'DGFT',
                 'ministry' => 'Ministry of Commerce & Industry',
                 'title'    => $title,
                 'url'      => $url,
                 'date'     => news_parse_loose_date(news_strip_tags_deep($row)),
             ];
+
+            if (count($items) >= 15) break;
         }
     }
 
@@ -201,18 +202,18 @@ function news_fetch_commerce(): array
     return array_slice($items, 0, 10);
 }
 
-/* ---------------------------- build + cache + respond ---------------------------- */
+/* -------------------------------------------------- build + cache + respond */
 
 function news_build(array $ministryPatterns): array
 {
-    $items = [];
+    $items  = [];
     $errors = [];
 
     try { $items = array_merge($items, news_fetch_pib($ministryPatterns)); }
     catch (Throwable $e) { $errors[] = 'PIB: ' . $e->getMessage(); }
 
-    try { $items = array_merge($items, news_fetch_commerce()); }
-    catch (Throwable $e) { $errors[] = 'Commerce: ' . $e->getMessage(); }
+    try { $items = array_merge($items, news_fetch_dgft()); }
+    catch (Throwable $e) { $errors[] = 'DGFT: ' . $e->getMessage(); }
 
     $out = [
         'updatedAt' => gmdate('c'),
@@ -229,7 +230,6 @@ function news_respond(array $ministryPatterns): void
     header('Access-Control-Allow-Origin: *');
     header('Cache-Control: public, max-age=900');
 
-    // serve fresh cache if available
     if (is_readable(CACHE_FILE) && (time() - filemtime(CACHE_FILE)) < CACHE_SECONDS) {
         readfile(CACHE_FILE);
         return;
@@ -237,7 +237,6 @@ function news_respond(array $ministryPatterns): void
 
     $out = news_build($ministryPatterns);
 
-    // if fetching failed completely but an old cache exists, serve the old cache
     if (empty($out['items']) && is_readable(CACHE_FILE)) {
         readfile(CACHE_FILE);
         return;
@@ -248,7 +247,6 @@ function news_respond(array $ministryPatterns): void
     echo $json;
 }
 
-// Run only when accessed over the web (lets test scripts include this file safely)
 if (PHP_SAPI !== 'cli') {
     news_respond($MINISTRY_PATTERNS);
 }

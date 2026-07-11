@@ -1,39 +1,41 @@
 /**
  * /api/news — Vercel serverless function
  *
- * Fetches the latest India trade / export-import related press releases from:
- *   1. PIB (Press Information Bureau) daily "All Releases" page (English)
- *   2. Ministry of Commerce press-releases page (commerce.gov.in)
+ * Sources (all server-rendered HTML — no JS required):
+ *   1. PIB (Press Information Bureau) — daily English press releases
+ *      filtered to Ministry of Commerce & Industry, Ministry of Finance,
+ *      plus trade-keyword matches from any ministry.
+ *   2. DGFT (Directorate General of Foreign Trade) — notifications page.
+ *      commerce.gov.in migrated to a JS SPA and no longer has a scrapable
+ *      press-release URL — DGFT is the direct replacement.
  *
- * Returns merged JSON. Responses are cached on Vercel's CDN (see CACHE_SECONDS),
- * so government sites are only hit a few times per day — no cron job needed.
- *
- * Drop this file in the `api/` folder at the root of your Vercel project.
- * Your static site stays exactly as it is; this becomes available at /api/news.
+ * Vercel CDN caches the response for CACHE_SECONDS so government sites
+ * are only hit a few times per day — no cron job needed.
  */
 
-const CACHE_SECONDS = 10800; // 3 hours — CDN re-fetches at most this often
+const CACHE_SECONDS = 10800; // 3 hours
 const MAX_ITEMS = 25;
 
 const PIB_URLS = [
   "https://pib.gov.in/allRel.aspx?reg=3&lang=1",
   "https://www.pib.gov.in/allRel.aspx?reg=3&lang=1",
 ];
-const COMMERCE_URLS = [
-  "https://www.commerce.gov.in/press-releases/",
-  "https://commerce.gov.in/press-releases/",
-  "https://www.commerce.gov.in/press-releases",
+
+// DGFT notifications page — server-rendered, reliably scrapeable
+const DGFT_URLS = [
+  "https://www.dgft.gov.in/CP/?opt=notification",
+  "https://dgft.gov.in/CP/?opt=notification",
 ];
 
-// PIB groups releases under ministry headings. Keep items from these ministries…
+// PIB groups releases under ministry headings — keep these ministries
 const MINISTRY_PATTERNS = [
-  /commerce\s*(&(amp;)?|and)\s*industry/i, // Ministry of Commerce & Industry (DGFT, Niryat)
-  /ministry\s+of\s+finance/i,              // Ministry of Finance (CBIC, ICEGATE, customs)
+  /commerce\s*(&(amp;)?|and)\s*industry/i, // Ministry of Commerce & Industry
+  /ministry\s+of\s+finance/i,              // Ministry of Finance (CBIC, customs)
 ];
 
-// …and additionally keep any release (from any ministry) whose title matches:
+// Also keep any release whose title matches trade keywords
 const KEYWORD_PATTERN =
-  /(export|import|foreign trade|trade polic|customs|tariff|dgft|icegate|cbic|niryat|\bfta\b|free trade|duty drawback|\bgst\b|e-?commerce export)/i;
+  /(export|import|foreign trade|trade polic|customs|tariff|dgft|icegate|cbic|niryat|\bfta\b|free trade|duty drawback|\bgst\b|e-?commerce export|anti.?dump|safeguard|countervail)/i;
 
 const FETCH_HEADERS = {
   "User-Agent":
@@ -44,7 +46,7 @@ const FETCH_HEADERS = {
   "Upgrade-Insecure-Requests": "1",
 };
 
-/* ---------------------------- helpers ---------------------------- */
+/* ------------------------------------------------------------------ helpers */
 
 function decodeEntities(s) {
   return s
@@ -67,42 +69,34 @@ async function fetchText(url) {
   return res.text();
 }
 
-// try a list of URLs, return the first successful response body
 async function fetchFirst(urls) {
   let lastErr;
   for (const url of urls) {
-    try {
-      return await fetchText(url);
-    } catch (e) {
-      lastErr = e;
-    }
+    try { return await fetchText(url); } catch (e) { lastErr = e; }
   }
   throw lastErr;
 }
 
-/* ---------------------------- PIB ---------------------------- */
+/* ------------------------------------------------------------------ PIB */
 
 async function fetchPib() {
   const html = (await fetchFirst(PIB_URLS))
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "");
 
-  // Collect headings (used to know which ministry each release belongs to)
+  // Ministry headings (to attribute each release to a ministry)
   const headings = [];
   const hRe = /<(h[1-6])[^>]*>([\s\S]*?)<\/\1>/gi;
   let m;
   while ((m = hRe.exec(html))) {
     const text = stripTags(m[2]);
-    if (/(ministry|department|office|secretariat|commission|niti)/i.test(text)) {
+    if (/(ministry|department|office|secretariat|commission|niti)/i.test(text))
       headings.push({ pos: m.index, text });
-    }
   }
 
-  // Collect press-release links.
-  // NOTE: PIB uses several page names (PressReleasePage.aspx, and a misspelled
-  // PressReleseDetail.aspx / PressReleseDetailm.aspx), so match on PRID= only.
+  // Links — PIB uses PRID= query param across several page names
   const items = [];
-  const aRe = /<a[^>]+href=["']([^"']*PRID=\d+[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  const aRe = /<a[^>]+href=["']([^"']*PRID=\d+[^"']*)[^>]*>([\s\S]*?)<\/a>/gi;
   while ((m = aRe.exec(html))) {
     const title = stripTags(m[2]);
     if (!title || title.length < 15) continue;
@@ -111,7 +105,6 @@ async function fetchPib() {
     if (url.startsWith("/")) url = "https://pib.gov.in" + url;
     if (!/^https?:/i.test(url)) url = "https://pib.gov.in/" + url.replace(/^\.?\//, "");
 
-    // nearest heading above this link = its ministry
     let ministry = "";
     for (const h of headings) {
       if (h.pos < m.index) ministry = h.text;
@@ -126,21 +119,20 @@ async function fetchPib() {
     if (!items.some((it) => it.url === url || (prid && it.prid === prid))) {
       items.push({
         source: "PIB",
-        ministry: ministry || null,
+        ministry: ministry || "Press Information Bureau",
         title,
         url,
         prid,
-        date: new Date().toISOString().slice(0, 10), // PIB page shows today's releases
+        date: new Date().toISOString().slice(0, 10),
       });
     }
   }
   return items;
 }
 
-/* ---------------------------- commerce.gov.in ---------------------------- */
+/* ------------------------------------------------------------------ DGFT */
 
 function parseLooseDate(text) {
-  // matches "15-September-2025", "24 July 2025", "15 Sep 2025", "15/09/2025"
   const m1 = text.match(/(\d{1,2})[-\s\/]([A-Za-z]{3,9})[-\s\/](\d{4})/);
   if (m1) {
     const d = new Date(`${m1[1]} ${m1[2]} ${m1[3]}`);
@@ -154,14 +146,16 @@ function parseLooseDate(text) {
   return null;
 }
 
-async function fetchCommerce() {
-  const html = (await fetchFirst(COMMERCE_URLS))
+async function fetchDgft() {
+  const html = (await fetchFirst(DGFT_URLS))
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "");
 
   const items = [];
-  // Look at list rows / table rows / paragraphs that contain a link
-  const rowRe = /<(li|tr|p|div)[^>]*>([\s\S]*?)<\/\1>/gi;
+
+  // DGFT notification rows — each row has a serial number, date, and a link
+  // Pattern: table rows or list items containing a link to a PDF or page
+  const rowRe = /<(tr|li|div)[^>]*>([\s\S]*?)<\/\1>/gi;
   let m;
   while ((m = rowRe.exec(html))) {
     const row = m[2];
@@ -169,33 +163,43 @@ async function fetchCommerce() {
     if (!a) continue;
 
     const title = stripTags(a[2]);
-    if (!title || title.length < 20) continue;
-    if (!/(press|release|trade|export|agreement|minister|commerce|\.pdf)/i.test(a[1] + " " + title))
+    if (!title || title.length < 15) continue;
+
+    // Filter to trade-related entries
+    if (!KEYWORD_PATTERN.test(title) &&
+        !/(notification|circular|policy|amendment|dgft|trade|export|import|tariff|duty|ftp)/i.test(title))
       continue;
 
     let url = decodeEntities(a[1]);
-    if (url.startsWith("/")) url = "https://www.commerce.gov.in" + url;
+    if (url.startsWith("/")) url = "https://www.dgft.gov.in" + url;
+    if (url.startsWith("?")) url = "https://www.dgft.gov.in/CP/" + url;
     if (!/^https?:/i.test(url)) continue;
 
     const date = parseLooseDate(stripTags(row));
+
     if (!items.some((it) => it.url === url)) {
-      items.push({ source: "Ministry of Commerce", ministry: "Ministry of Commerce & Industry", title, url, date });
+      items.push({
+        source: "DGFT",
+        ministry: "Ministry of Commerce & Industry",
+        title,
+        url,
+        date,
+      });
     }
+    if (items.length >= 15) break;
   }
 
-  // newest first when dates are known
   items.sort((x, y) => (y.date || "").localeCompare(x.date || ""));
   return items.slice(0, 10);
 }
 
-/* ---------------------------- handler ---------------------------- */
+/* ------------------------------------------------------------------ handler */
 
 module.exports = async (req, res) => {
-  // Debug mode: /api/news?debug=1 — shows what each source actually returned,
-  // so parsing problems can be diagnosed without guessing. Safe to leave in.
+  // Debug mode: /api/news?debug=1
   if (req.query && req.query.debug) {
     const report = {};
-    for (const [name, urls] of [["pib", PIB_URLS], ["commerce", COMMERCE_URLS]]) {
+    for (const [name, urls] of [["pib", PIB_URLS], ["dgft", DGFT_URLS]]) {
       try {
         const html = await fetchFirst(urls);
         report[name] = {
@@ -215,14 +219,14 @@ module.exports = async (req, res) => {
     return res.status(200).json(report);
   }
 
-  const [pib, commerce] = await Promise.allSettled([fetchPib(), fetchCommerce()]);
+  const [pib, dgft] = await Promise.allSettled([fetchPib(), fetchDgft()]);
 
   const items = [];
   const errors = [];
   if (pib.status === "fulfilled") items.push(...pib.value);
   else errors.push("PIB: " + pib.reason.message);
-  if (commerce.status === "fulfilled") items.push(...commerce.value);
-  else errors.push("Commerce: " + commerce.reason.message);
+  if (dgft.status === "fulfilled") items.push(...dgft.value);
+  else errors.push("DGFT: " + dgft.reason.message);
 
   res.setHeader("Content-Type", "application/json; charset=utf-8");
   res.setHeader("Access-Control-Allow-Origin", "*");
