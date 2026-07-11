@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#FAF6EE">
-  <title>Megayug Global | Premium Agricultural Sourcing & Global Exports</title>
-  <meta name="description" content="Megayug Global exports premium Indian spices, high-quality seeds, organic grains, and pulses worldwide. Experience superior quality and reliable agricultural logistics.">
+  <title>Jalpex International | Premium Agricultural Sourcing & Global Exports</title>
+  <meta name="description" content="Jalpex International exports premium Indian spices, high-quality seeds, organic grains, and pulses worldwide. Experience superior quality and reliable agricultural logistics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,13 +17,14 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="logo-link">
-        <img src="logo-light.png" alt="Megayug Global Logo" class="logo-img">
+        <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
       </a>
       
       <ul class="nav-links">
         <li><a href="#home" class="active" data-trans="nav_home">Home</a></li>
-        <li><a href="#story" data-trans="nav_story">Our Story</a></li>
         <li><a href="#products" data-trans="nav_products">Products</a></li>
+        <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+        <li><a href="news.html" data-trans="nav_news">News</a></li>
         <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
         <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
       </ul>
@@ -64,8 +65,9 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#home" data-trans="nav_home">Home</a></li>
-      <li><a href="#story" data-trans="nav_story">Our Story</a></li>
       <li><a href="#products" data-trans="nav_products">Products</a></li>
+      <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+      <li><a href="news.html" data-trans="nav_news">News</a></li>
       <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
       <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
     </ul>
@@ -85,68 +87,102 @@
     <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
   </div>
 
-  <!-- ── HERO SECTION (BLUEBIRD-STYLE FLY-IN) ── -->
-  <header class="hero" id="home">
-    <!-- Giant ghost typography behind the centerpiece -->
-    <div class="hero-ghost" aria-hidden="true">MEGAYUG</div>
-
-    <!-- Flying centerpiece -->
-    <div class="hero-flyer-wrap">
-      <img class="hero-flyer" src="products/red-chilli-cutout.png" alt="Bowl of premium export-quality Indian red chillies">
+  <!-- ── HERO SECTION (HONESTEXPORTS-STYLE GRID COLLAGE) ── -->
+  <header class="hero-grid-section" id="home">
+    <div class="hero-bg-gradients" aria-hidden="true">
+      <div class="hbg-gradient-bottom"></div>
+      <div class="hbg-gradient-top"></div>
+      <div class="hbg-circle-left"></div>
+      <div class="hbg-circle-right"></div>
     </div>
 
-    <!-- Floating trusted-markets pill -->
-    <div class="hero-users-pill">
-      <div class="hup-avatars">
-        <img src="products/turmeric.png" alt="Turmeric">
-        <img src="products/cardamom.png" alt="Cardamom">
-        <img src="products/chickpeas.png" alt="Chickpeas">
-      </div>
-      <span class="hup-label">Export Markets</span>
-      <span class="hup-count">+40</span>
-    </div>
-
-    <div class="hero-inner container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="pulse-dot"></span>
-          <span data-trans="hero_badge">ESTABLISHED SINCE 2021</span>
+    <div class="container hero-grid-inner">
+      <div class="hero-text-col">
+        <div class="hero-badge-pill">
+          <span class="badge-dot"></span>
+          <span data-trans="hero_badge">Trusted Global Sourcing Partner</span>
+          <svg class="badge-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
         </div>
-        <h1 class="hero-title" data-trans="hero_title">
-          Bridging Indian <em>Heritage</em> with Global Markets.
+
+        <h1 class="hero-heading">
+          <span class="block">Bridging</span>
+          <span class="block">Markets,</span>
+          <span class="block">Delivering</span>
+          <span class="block text-gradient">Excellence.</span>
         </h1>
-        <p class="hero-desc" data-trans="hero_desc">
-          At MEGAYUG GLOBAL, we export premium Indian spices, high-quality seeds, organic grains, and pulses directly to international clients. Sourced with absolute care, delivered with complete integrity.
+
+        <div class="hero-dynamic-text">
+          <span class="line-bar"></span>
+          <span>Exporting</span>
+          <div class="dynamic-word-wrap">
+            <span class="dynamic-word active" id="dynamicWord">Indian Spices</span>
+          </div>
+        </div>
+
+        <p class="hero-paragraph" data-trans="hero_desc">
+          Jalpex International is a premium export house from India, delivering high-grade agricultural commodities, spices, dehydrated vegetables, fresh produce, and handicrafts to clients in 40+ countries. Sourced with care, delivered with trust.
         </p>
-        <div class="hero-cta">
-          <a href="#products" class="btn-primary" data-trans="hero_explore">Explore Portfolio</a>
-          <a href="#story" class="btn-outline" data-trans="hero_legacy">Our Values</a>
+
+        <div class="hero-buttons">
+          <a class="hero-btn-quote" href="#inquiry">Request a Quote
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="hero-btn-explore" href="catalog.html">Explore Products</a>
+        </div>
+
+        <div class="hero-stats-bar">
+          <div class="stat-box">
+            <div class="stat-number">40+</div>
+            <p class="stat-label">Countries</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-number">1,200+</div>
+            <p class="stat-label">Tons Shipped</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-number flex-row-center">4.9 <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+            <p class="stat-label">Client Rating</p>
+          </div>
         </div>
       </div>
 
-      <!-- Frosted glass cards (like the reference video) -->
-      <div class="hero-glass-row">
-        <a class="hero-glass-card hgc-quality" href="#why-choose-us">
-          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
-          <div class="hgc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <div class="hero-visual-col">
+        <!-- Floating Collages / Cards -->
+        <div class="visual-card vc-spices" onclick="window.location.href='catalog.html?cat=agricultural'">
+          <div class="visual-card-img-wrap">
+            <img src="gallery/spice_farm.png" alt="Indian Spices">
           </div>
-          <span class="hgc-chip">Perfect Quality</span>
-          <h3>Lab-tested purity in every export batch</h3>
-        </a>
-        <a class="hero-glass-card hgc-sourcing" href="#story">
-          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
-          <div class="hgc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 18V9"></path><path d="M12 9a4 4 0 0 0-4-4H4v4a4 4 0 0 0 4 4h4z"></path><path d="M12 9a4 4 0 0 1 4-4h4v4a4 4 0 0 1-4 4h-4z"></path></svg>
+          <div class="visual-card-footer">
+            <span class="card-title">Indian Spices</span>
+            <span class="card-subtitle">15+ Varieties</span>
           </div>
-          <h3>Farm-Direct Sourcing</h3>
-          <p>Handpicked from certified Indian farms for personalized supply programs.</p>
-        </a>
-        <a class="hero-glass-card hgc-stat" href="#inquiry">
-          <span class="hgc-arrow" aria-hidden="true">&#8599;</span>
-          <div class="hgc-stat-num">40<span>+</span></div>
-          <p>countries partner with us to redefine their spice &amp; grain trade.</p>
-        </a>
+        </div>
+
+        <div class="visual-card vc-logistics" onclick="window.location.href='gallery.html?cat=port'">
+          <div class="visual-card-img-wrap">
+            <img src="gallery/shipping_port.png" alt="Global Logistics">
+          </div>
+          <div class="visual-card-footer">
+            <span class="card-title">Port Logistics</span>
+            <span class="card-subtitle">40+ Countries</span>
+          </div>
+        </div>
+
+        <div class="visual-card vc-warehouse" onclick="window.location.href='gallery.html?cat=warehouse'">
+          <div class="visual-card-img-wrap">
+            <img src="gallery/warehouse_stock.png" alt="Warehousing">
+          </div>
+          <div class="visual-card-footer">
+            <span class="card-title">Secure Warehousing</span>
+            <span class="card-subtitle">Vacuum Packed</span>
+          </div>
+        </div>
+
+        <!-- Extra details/shapes -->
+        <span class="visual-dot dot-orange"></span>
+        <span class="visual-dot dot-green"></span>
       </div>
     </div>
   </header>
@@ -159,7 +195,7 @@
           <span class="section-label" data-trans="story_label">Global Agro Exporter</span>
           <h2 class="section-title" data-trans="story_title">Premium Quality, Ethical Sourcing & Trusted Global Delivery</h2>
           <p data-trans="story_p1">
-            At Megayug Global, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.
+            At Jalpex International, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.
           </p>
           <p data-trans="story_p2">
             We offer an extensive range of agricultural exports, categorized into authentic spices, nutritious seeds, and essential grains and pulses. Every product is processed and packaged with great care, preserving its goodness for our global customers. Partner with us for a seamless export experience backed by unmatched dedication.
@@ -169,7 +205,7 @@
         
         <div class="about-bowl-wrap" data-reveal data-delay="250">
           <div class="about-bowl-img">
-            <img src="organic-sourcing.png" alt="Megayug Global - Premium Agricultural Exports" style="max-width:100%; border-radius:var(--radius-lg); height:auto; box-shadow:var(--shadow-lg);">
+            <img src="organic-sourcing.png" alt="Jalpex International - Premium Agricultural Exports" style="max-width:100%; border-radius:var(--radius-lg); height:auto; box-shadow:var(--shadow-lg);">
           </div>
         </div>
       </div>
@@ -259,9 +295,10 @@
       <!-- Tab Buttons Inside Banner -->
       <div class="container" style="margin-top: 40px;">
         <div class="psc-tabs-container" style="display: flex; justify-content: flex-start; gap: 15px; flex-wrap: wrap;">
-          <button class="psc-tab-btn" data-category="spices" data-trans="tab_spices">Spices</button>
-          <button class="psc-tab-btn" data-category="seeds" data-trans="tab_seeds">Seeds</button>
-          <button class="psc-tab-btn" data-category="pulses" data-trans="tab_pulses">Pulses & Grains</button>
+          <button class="psc-tab-btn" data-category="agricultural" data-trans="tab_agricultural">Agricultural Products</button>
+          <button class="psc-tab-btn" data-category="food_dehydrated" data-trans="tab_food_dehydrated">Food Products</button>
+          <button class="psc-tab-btn" data-category="fresh_produce" data-trans="tab_fresh_produce">Fresh Fruits & Vegetables</button>
+          <button class="psc-tab-btn" data-category="handicrafts" data-trans="tab_handicrafts">Handicrafts</button>
         </div>
       </div>
     </div>
@@ -354,7 +391,7 @@
           <span class="section-label" data-trans="pl_label">Value-Added Services</span>
           <h2 class="section-title" data-trans="pl_title">Private Labeling & Custom Packaging Solutions</h2>
           <p data-trans="pl_desc">
-            We help global brands, distributors, and supermarkets build their own brand presence. Megayug Global offers complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging.
+            We help global brands, distributors, and supermarkets build their own brand presence. Jalpex International offers complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging.
           </p>
           <div class="pl-features">
             <div class="pl-feat-item">
@@ -513,6 +550,81 @@
     </div>
   </section>
 
+  <!-- ── GLOBAL EXPORT ROUTES MAP SECTION ── -->
+  <section class="global-reach" id="global-reach">
+    <div class="gr-inner">
+      <span class="gr-eyebrow">Global Reach</span>
+      <h2 class="gr-title">Exporting Across <em>Continents</em></h2>
+      <p class="gr-sub">From our base in Gujarat, India, Jalpex International ships premium spices, grains and agro-products to partners across 6 continents &mdash; with reliable port handling and on-time documentation.</p>
+
+      <div class="gr-map">
+        <!-- background map -->
+        <img alt="Dotted world map showing Jalpex International export routes" src="world_map.svg">
+        
+        <!-- trade routes overlay -->
+        <div class="gr-routes">
+          <svg viewBox="0 0 800 400" width="100%" height="100%">
+            <defs>
+              <linearGradient id="jalpex-route-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--gold-light)" stop-opacity="0.2" />
+                <stop offset="50%" stop-color="var(--gold)" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="var(--gold-light)" stop-opacity="0.2" />
+              </linearGradient>
+            </defs>
+
+            <!-- Gujarat, India center at (561, 149) -->
+            <!-- North America (USA) -->
+            <path class="route" pathLength="1" style="animation-delay: 0s;" d="M 561 149 Q 380 50 200 150" />
+            <!-- South America (Brazil) -->
+            <path class="route" pathLength="1" style="animation-delay: 0.6s;" d="M 561 149 Q 420 69 280 270" />
+            <!-- Western Europe -->
+            <path class="route" pathLength="1" style="animation-delay: 1.2s;" d="M 561 149 Q 470 50 380 120" />
+            <!-- Africa (South Africa) -->
+            <path class="route" pathLength="1" style="animation-delay: 1.8s;" d="M 561 149 Q 490 109 420 310" />
+            <!-- Middle East (UAE) -->
+            <path class="route" pathLength="1" style="animation-delay: 2.4s;" d="M 561 149 Q 520 119 480 180" />
+            <!-- South East Asia -->
+            <path class="route" pathLength="1" style="animation-delay: 3.0s;" d="M 561 149 Q 580 109 600 210" />
+            <!-- East Asia (Japan) -->
+            <path class="route" pathLength="1" style="animation-delay: 3.6s;" d="M 561 149 Q 615 99 670 150" />
+            <!-- Australia -->
+            <path class="route" pathLength="1" style="animation-delay: 4.2s;" d="M 561 149 Q 635 89 710 300" />
+
+            <!-- Destination Markers -->
+            <circle cx="200" cy="150" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="280" cy="270" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="380" cy="120" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="420" cy="310" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="480" cy="180" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="600" cy="210" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="670" cy="150" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="710" cy="300" r="3" fill="var(--gold-light)" opacity="0.8" />
+
+            <!-- Sourcing Hub (Gujarat, India) -->
+            <circle class="origin-core" cx="561" cy="149" r="5" />
+            <circle class="origin-ring" cx="561" cy="149" r="5" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- stats strip -->
+      <div class="gr-stats">
+        <div class="gr-stat">
+          <b>50+</b>
+          <span>Countries Sourced</span>
+        </div>
+        <div class="gr-stat">
+          <b>6</b>
+          <span>Continents Served</span>
+        </div>
+        <div class="gr-stat">
+          <b>100%</b>
+          <span>On-Time Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── INQUIRY SECTION ── -->
   <section class="inquiry-section" id="inquiry">
     <div class="container">
@@ -529,14 +641,14 @@
               <div class="ici-icon">📍</div>
               <div>
                 <div class="ici-title" data-trans="info_address_title">Registered Office</div>
-                <div class="ici-value" data-trans="info_address_val">128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535</div>
+                <div class="ici-value" data-trans="info_address_val">23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001</div>
               </div>
             </div>
             <div class="inquiry-contact-item">
               <div class="ici-icon">✉️</div>
               <div>
                 <div class="ici-title" data-trans="info_email_title">Email Support</div>
-                <div class="ici-value"><a href="mailto:info@megayugglobal.com">info@megayugglobal.com</a></div>
+                <div class="ici-value"><a href="mailto:jalpexinternational@gmail.com">jalpexinternational@gmail.com</a></div>
               </div>
             </div>
             <div class="inquiry-contact-item">
@@ -544,8 +656,7 @@
               <div>
                 <div class="ici-title" data-trans="info_phone_title">Direct Trade Desk</div>
                 <div class="ici-value" style="display: flex; flex-direction: column; gap: 4px;">
-                  <a href="tel:+917984872375">+91 79848 72375</a>
-                  <a href="tel:+918905353063">+91 89053 53063</a>
+                  <a href="tel:+919879915124">+91 98799 15124</a>
                 </div>
               </div>
             </div>
@@ -695,7 +806,7 @@
         <!-- Trailer / Cargo Container -->
         <rect x="5" y="5" width="80" height="24" rx="2" fill="#B05C54" />
         <!-- Logo Text on Container -->
-        <text x="14" y="21" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" letter-spacing="1">MEGAYUG</text>
+        <text x="14" y="21" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" letter-spacing="1">JALPEX</text>
         
         <!-- Truck Cabin -->
         <path d="M85 10 h16 a4 4 0 0 1 4 4 v10 a1 1 0 0 1 -1 1 h-19 z" fill="#1b2a47" />
@@ -725,18 +836,19 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="#" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
-            <img src="logo-dark.png" alt="Megayug Global Logo" class="logo-img">
+            <img src="logo-dark.png?v=2" alt="Jalpex International Logo" class="logo-img">
           </a>
           <p data-trans="footer_desc">
-            Megayug Global is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.
+            Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.
           </p>
         </div>
         <div class="footer-col" style="padding-left: 20px;">
           <h4 data-trans="footer_quick_links">Quick Navigation</h4>
           <ul class="footer-links">
             <li><a href="#home" data-trans="nav_home">Home</a></li>
-            <li><a href="#story" data-trans="nav_story">Our Story</a></li>
             <li><a href="#products" data-trans="nav_products">Products</a></li>
+            <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" data-trans="nav_news">News</a></li>
             <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
             <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
           </ul>
@@ -744,9 +856,10 @@
         <div class="footer-col">
           <h4 data-trans="footer_products">Our Offerings</h4>
           <ul class="footer-links">
-            <li><a href="#products" onclick="document.querySelector('[data-category=spices]').click()" data-trans="tab_spices">Spices</a></li>
-            <li><a href="#products" onclick="document.querySelector('[data-category=seeds]').click()" data-trans="tab_seeds">Seeds</a></li>
-            <li><a href="#products" onclick="document.querySelector('[data-category=pulses]').click()" data-trans="tab_pulses">Pulses & Grains</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=agricultural]').click()" data-trans="tab_agricultural">Agricultural Products</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=food_dehydrated]').click()" data-trans="tab_food_dehydrated">Food Products</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=fresh_produce]').click()" data-trans="tab_fresh_produce">Fresh Fruits & Vegetables</a></li>
+            <li><a href="#products" onclick="document.querySelector('[data-category=handicrafts]').click()" data-trans="tab_handicrafts">Handicrafts</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -754,12 +867,11 @@
           <div class="footer-contact-info">
             <span style="display: flex; gap: 8px;">
               <span>📍</span>
-              <span>128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535</span>
+              <span>23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001</span>
             </span>
-            <span>✉️ <a href="mailto:info@megayugglobal.com" style="color: inherit; text-decoration: none;">info@megayugglobal.com</a></span>
+            <span>✉️ <a href="mailto:jalpexinternational@gmail.com" style="color: inherit; text-decoration: none;">jalpexinternational@gmail.com</a></span>
             <span style="display: flex; flex-direction: column; gap: 4px;">
-              <span>📞 <a href="tel:+917984872375" style="color: inherit; text-decoration: none;">+91 79848 72375</a></span>
-              <span style="margin-left: 24px;"><a href="tel:+918905353063" style="color: inherit; text-decoration: none;">+91 89053 53063</a></span>
+              <span>📞 <a href="tel:+919879915124" style="color: inherit; text-decoration: none;">+91 98799 15124</a></span>
             </span>
           </div>
         </div>
@@ -767,7 +879,7 @@
 
       <div class="footer-bottom">
         <div>
-          &copy; 2026 Megayug Global. <span data-trans="footer_rights">All Rights Reserved.</span>
+          &copy; 2026 Jalpex International. <span data-trans="footer_rights">All Rights Reserved.</span>
         </div>
         <div class="footer-social-links">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
@@ -780,7 +892,7 @@
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
             </svg>
           </a>
-          <a href="mailto:info@megayugglobal.com" aria-label="Email">
+          <a href="mailto:jalpexinternational@gmail.com" aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
               <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z"/>
             </svg>
@@ -802,12 +914,217 @@
   <script src="app.js"></script>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/917984872375" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
     <div class="whatsapp-float-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
         <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.46 3.414 1.258 4.861L2 22l5.313-1.394a9.94 9.94 0 0 0 4.699 1.182c5.506 0 9.988-4.48 9.988-9.988C22 6.482 17.518 2 12.012 2zm3.82 14.542c-.2.556-1.012 1.028-1.557 1.084-.375.041-.864.075-2.507-.597-2.083-.855-3.412-2.98-3.516-3.12-.103-.139-.838-1.113-.838-2.124 0-1.01.522-1.503.708-1.705.186-.201.405-.251.54-.251.135 0 .27.001.389.007.12.005.281-.046.439.336.162.392.556 1.361.604 1.46.049.1.081.215.015.347-.066.132-.1.215-.198.331-.099.115-.208.257-.297.346-.099.099-.202.207-.087.405.115.197.513.844 1.1 1.368.758.675 1.393.882 1.591.98.197.099.313.082.428-.05.115-.132.494-.576.626-.773.132-.197.264-.165.446-.099.182.066 1.155.544 1.353.643.197.099.33.148.379.231.049.083.049.528-.152 1.084z"/>
       </svg>
     </div>
   </a>
+
+  <!-- ── MORPH SLIDER LOGIC ── -->
+  <script>
+  (function() {
+    // ── Slide Data (6 slides, matching "01 / 06") ──
+    const slides = [
+      {
+        image:   'products/turmeric.png',
+        caption: 'Premium Spices • Organically Sourced',
+        title:   'TURMERIC FINGER',
+        spec:    'Curcumin Content: &gt;3.5% | Moisture: &lt;10%',
+        link:    'product.html?id=turmeric',
+        bg:      'linear-gradient(135deg,#6b3e10 0%,#1a0d00 100%)'
+      },
+      {
+        image:   'products/cinnamon.png',
+        caption: 'Premium Spices • Hand-Rolled',
+        title:   'CINNAMON STICKS',
+        spec:    'Oil Content: &gt;1.5% | Grade: Ceylon AA',
+        link:    'product.html?id=cinnamon',
+        bg:      'linear-gradient(135deg,#5c2a0e 0%,#100800 100%)'
+      },
+      {
+        image:   'products/sesame-seeds.png',
+        caption: 'Premium Seeds • Export Grade',
+        title:   'SESAME SEEDS',
+        spec:    'Oil Content: &gt;48% | Purity: 99.95%',
+        link:    'product.html?id=sesame_seeds',
+        bg:      'linear-gradient(135deg,#3d3010 0%,#100e00 100%)'
+      },
+      {
+        image:   'products/chickpeas.png',
+        caption: 'Premium Pulses • Farm Direct',
+        title:   'KABULI CHICKPEAS',
+        spec:    'Protein: &gt;20% | Size: 8mm – 10mm',
+        link:    'product.html?id=chickpeas',
+        bg:      'linear-gradient(135deg,#3b2d10 0%,#0f0900 100%)'
+      },
+      {
+        image:   'products/red-chilli.png',
+        caption: 'Premium Spices • Sun-Dried',
+        title:   'RED CHILLI',
+        spec:    'SHU: 25,000–40,000 | ASTA: &gt;100',
+        link:    'product.html?id=red_chilli',
+        bg:      'linear-gradient(135deg,#6b1010 0%,#1a0000 100%)'
+      },
+      {
+        image:   'products/cumin.png',
+        caption: 'Premium Spices • Origin Gujarat',
+        title:   'CUMIN SEEDS',
+        spec:    'Volatile Oil: &gt;3% | Moisture: &lt;9%',
+        link:    'product.html?id=cumin',
+        bg:      'linear-gradient(135deg,#3b3820 0%,#0f0e08 100%)'
+      }
+    ];
+
+    // Thumbnail stack data (the 3 cards always visible on the right)
+    // These rotate to show the NEXT 3 items after the active slide
+    const stackImages = [
+      'products/cinnamon.png',
+      'products/sesame-seeds.png',
+      'products/chickpeas.png',
+      'products/red-chilli.png',
+      'products/cumin.png',
+      'products/turmeric.png',
+    ];
+    const stackCats   = ['Spices','Seeds','Pulses','Spices','Spices','Spices'];
+    const stackNames  = ['Cinnamon Sticks','Sesame Seeds','Kabuli Chickpeas','Red Chilli','Cumin Seeds','Turmeric Finger'];
+
+    let current = 0;
+    let autoTimer = null;
+    const TOTAL = slides.length;
+    const AUTO_MS = 5000;
+
+    // ── Grab DOM ──
+    const heroImg    = document.querySelector('.morph-hero-image-wrap .hero-image');
+    const heroWrap   = document.querySelector('.morph-hero-image-wrap');
+    const captionEl  = document.querySelector('.morph-hero-copy .caption');
+    const titleEl    = document.querySelector('.morph-hero-copy .title');
+    const specEl     = document.querySelector('.morph-hero-copy .spec');
+    const ctaEl      = document.querySelector('.morph-hero-copy .cta');
+    const slideNumEl = document.querySelector('.slide-number');
+    const progressEl = document.querySelector('.progress-fill');
+    const prevBtn    = document.querySelector('.nav-arrow.prev');
+    const nextBtn    = document.querySelector('.nav-arrow.next');
+    const stackCards = document.querySelectorAll('.stack-card');
+    const morphSection = document.querySelector('.featured-morph-slider');
+
+    if (!heroImg || !prevBtn || !nextBtn) return; // guard if section not present
+
+    // ── Update UI ──
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function updateStack(idx) {
+      stackCards.forEach((card, i) => {
+        const slideIdx = (idx + 1 + i) % TOTAL;
+        const img = card.querySelector('img');
+        const catEl  = card.querySelector('.stack-card-cat');
+        const nameEl = card.querySelector('.stack-card-name');
+        if (img)   img.src = stackImages[slideIdx];
+        if (img)   img.alt = stackNames[slideIdx];
+        if (catEl) catEl.textContent = stackCats[slideIdx];
+        if (nameEl)nameEl.textContent = stackNames[slideIdx];
+        // Keep data-index as 1/2/3 for CSS cascade stacking — store real slide idx separately
+        card.setAttribute('data-slide-index', slideIdx);
+      });
+    }
+
+    function goTo(idx, direction) {
+      if (idx === current) return;
+      const slide = slides[idx];
+
+      // Crossfade image
+      heroImg.style.transition = 'opacity 0.15s ease';
+      heroImg.style.opacity = '0';
+      heroImg.style.transform = direction === 'next' ? 'scale(1.06) translateX(2%)' : 'scale(1.06) translateX(-2%)';
+
+      setTimeout(() => {
+        heroImg.src = slide.image;
+        heroImg.alt = slide.title;
+        heroImg.style.transition = 'opacity 0.55s ease, transform 0.75s cubic-bezier(0.16,1,0.3,1)';
+        heroImg.style.opacity = '1';
+        heroImg.style.transform = 'scale(1) translateX(0)';
+
+        // Background tint
+        if (morphSection) morphSection.style.setProperty('--slide-bg', slide.bg);
+      }, 180);
+
+      // Text swap with slight delay
+      setTimeout(() => {
+        captionEl.style.opacity = '0';
+        titleEl.style.opacity = '0';
+        specEl.style.opacity = '0';
+
+        setTimeout(() => {
+          captionEl.innerHTML = slide.caption;
+          titleEl.innerHTML   = slide.title;
+          specEl.innerHTML    = slide.spec;
+          ctaEl.href          = slide.link;
+
+          captionEl.style.transition = 'opacity 0.45s ease';
+          titleEl.style.transition   = 'opacity 0.45s ease 0.05s';
+          specEl.style.transition    = 'opacity 0.45s ease 0.10s';
+
+          captionEl.style.opacity = '1';
+          titleEl.style.opacity   = '1';
+          specEl.style.opacity    = '1';
+        }, 160);
+      }, 80);
+
+      // Counter + progress bar
+      current = idx;
+      slideNumEl.textContent = pad(current + 1) + ' / ' + pad(TOTAL);
+      const pct = ((current + 1) / TOTAL) * 100;
+      progressEl.style.width = pct + '%';
+
+      // Update stack thumbnails
+      updateStack(current);
+    }
+
+    function goNext() {
+      goTo((current + 1) % TOTAL, 'next');
+    }
+
+    function goPrev() {
+      goTo((current - 1 + TOTAL) % TOTAL, 'prev');
+    }
+
+    // ── Auto-advance ──
+    function startAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(goNext, AUTO_MS);
+    }
+    function stopAuto() {
+      clearInterval(autoTimer);
+    }
+
+    // ── Events ──
+    nextBtn.addEventListener('click', () => { stopAuto(); goNext(); startAuto(); });
+    prevBtn.addEventListener('click', () => { stopAuto(); goPrev(); startAuto(); });
+
+    stackCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const idx = parseInt(card.getAttribute('data-slide-index'), 10);
+        stopAuto();
+        goTo(idx, idx > current ? 'next' : 'prev');
+        startAuto();
+      });
+    });
+
+    // Pause on hover
+    const container = document.querySelector('.morph-hero-container');
+    if (container) {
+      container.addEventListener('mouseenter', stopAuto);
+      container.addEventListener('mouseleave', startAuto);
+    }
+
+    // ── Init ──
+    heroImg.style.transform = 'scale(1) translateX(0)';
+    progressEl.style.width = (1 / TOTAL * 100) + '%';
+    updateStack(0);
+    startAuto();
+
+  })();
+  </script>
 </body>
 </html>

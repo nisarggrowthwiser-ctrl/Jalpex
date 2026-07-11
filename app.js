@@ -4,12 +4,20 @@ const translations = {
     nav_home: "Home",
     nav_story: "Our Story",
     nav_products: "Products",
+    nav_gallery: "Gallery",
+    nav_news: "News",
     nav_why: "Why Choose Us",
     nav_inquiry: "Inquiry",
+    nav_gallery: "Gallery",
+    nav_news: "News & Reports",
+    tab_agricultural: "Agricultural Products",
+    tab_food_dehydrated: "Food Products",
+    tab_fresh_produce: "Fresh Fruits & Vegetables",
+    tab_handicrafts: "Handicrafts",
     btn_quote: "Request Quote",
     hero_badge: "ESTABLISHED SINCE 2021",
     hero_title: "Bridging Indian <em>Heritage</em> with Global Markets.",
-    hero_desc: "At MEGAYUG GLOBAL, we export premium Indian spices, high-quality seeds, organic grains, and pulses directly to international clients. Sourced with absolute care, delivered with complete integrity.",
+    hero_desc: "At JALPEX INTERNATIONAL, we export premium Indian spices, high-quality seeds, organic grains, and pulses directly to international clients. Sourced with absolute care, delivered with complete integrity.",
     hero_explore: "Explore Portfolio",
     hero_legacy: "Our Values",
     stat_heritage: "Heritage Quality",
@@ -17,16 +25,17 @@ const translations = {
     stat_destinations: "Global Sourcing",
     story_label: "Global Agro Exporter",
     story_title: "Premium Quality, Ethical Sourcing & Trusted Global Delivery",
-    story_p1: "At Megayug Global, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.",
+    story_p1: "At Jalpex International, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.",
     story_p2: "We offer an extensive range of agricultural exports, categorized into authentic spices, nutritious seeds, and essential grains and pulses. Every product is processed and packaged with great care, preserving its goodness for our global customers. Partner with us for a seamless export experience backed by unmatched dedication.",
     story_link: "Explore our export collections &rarr;",
     ticker_text: "Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • ",
     prod_label: "Featured Products",
     prod_title: "Our Premium Export Collection",
     prod_desc: "Explore our premium range of export-quality products carefully sourced, securely packed, and delivered worldwide with quality, freshness, and reliability.",
-    tab_spices: "Spices",
-    tab_seeds: "Seeds",
-    tab_pulses: "Pulses & Grains",
+    tab_agricultural: "Agricultural Products",
+    tab_food_dehydrated: "Food Products",
+    tab_fresh_produce: "Fresh Fruits & Vegetables",
+    tab_handicrafts: "Handicrafts",
     btn_inquire_product: "Inquire Now",
     wcu_label: "Our Strengths",
     wcu_title: "Why Global Partners Choose Us",
@@ -59,7 +68,7 @@ const translations = {
     inquiry_title: "Start Your Export Inquiry",
     inquiry_desc: "Send us your requirement, packaging needs, and destination port. Our trade desk will reply with competitive CNF/FOB quotes within 24 hours.",
     info_address_title: "Registered Office",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "Email Support",
     info_phone_title: "Direct Trade Desk",
     form_name: "Your Full Name / Company Name",
@@ -73,7 +82,7 @@ const translations = {
     form_btn: "Send Export Inquiry",
     form_success: "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.",
     form_error: "Please fill out all required fields.",
-    footer_desc: "Megayug Global is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.",
+    footer_desc: "Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.",
     footer_quick_links: "Quick Navigation",
     footer_products: "Our Offerings",
     footer_contact: "Contact Sourcing Desk",
@@ -85,8 +94,16 @@ const translations = {
     nav_home: "मुख्य पृष्ठ",
     nav_story: "हमारी कहानी",
     nav_products: "उत्पाद",
+    nav_gallery: "गैलरी",
+    nav_news: "समाचार",
     nav_why: "हमें क्यों चुनें",
     nav_inquiry: "पूछताछ",
+    nav_gallery: "गैलरी",
+    nav_news: "समाचार और रिपोर्ट",
+    tab_agricultural: "कृषि उत्पाद",
+    tab_food_dehydrated: "खाद्य उत्पाद",
+    tab_fresh_produce: "ताजे फल और सब्जियां",
+    tab_handicrafts: "हस्तशिल्प",
     btn_quote: "कोटेशन मांगें",
     hero_badge: "स्थापना वर्ष २०२१",
     hero_title: "भारतीय <em>विरासत</em> को वैश्विक बाजारों से जोड़ना।",
@@ -105,9 +122,10 @@ const translations = {
     prod_label: "विशेष रुप से प्रदर्शित उत्पाद",
     prod_title: "हमारा प्रीमियम निर्यात संग्रह",
     prod_desc: "गुणवत्ता, ताजगी और विश्वसनीयता के साथ दुनिया भर में वितरित हमारे प्रीमियम निर्यात-गुणवत्ता वाले उत्पादों की श्रृंखला का अन्वेषण करें।",
-    tab_spices: "मसाले",
-    tab_seeds: "बीज",
-    tab_pulses: "दालें और अनाज",
+    tab_agricultural: "कृषि उत्पाद",
+    tab_food_dehydrated: "खाद्य उत्पाद",
+    tab_fresh_produce: "ताजे फल और सब्जियां",
+    tab_handicrafts: "हस्तशिल्प",
     btn_inquire_product: "अभी पूछताछ करें",
     wcu_label: "हमारी ताकत",
     wcu_title: "वैश्विक भागीदार हमें क्यों चुनते हैं",
@@ -140,7 +158,7 @@ const translations = {
     inquiry_title: "अपनी निर्यात पूछताछ शुरू करें",
     inquiry_desc: "हमें अपनी आवश्यकता, पैकेजिंग और गंतव्य बंदरगाह भेजें। हमारा ट्रेड डेस्क २४ घंटे के भीतर प्रतिस्पर्धी कीमतों के साथ उत्तर देगा।",
     info_address_title: "पंजीकृत कार्यालय",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "ईमेल समर्थन",
     info_phone_title: "डायरेक्ट ट्रेड डेस्क",
     form_name: "आपका नाम / कंपनी का नाम",
@@ -166,8 +184,16 @@ const translations = {
     nav_home: "الرئيسية",
     nav_story: "قصتنا",
     nav_products: "المنتجات",
+    nav_gallery: "معرض الصور",
+    nav_news: "الأخبار",
     nav_why: "لماذا تختارنا",
     nav_inquiry: "الاستفسار",
+    nav_gallery: "معرض الصور",
+    nav_news: "أخبار وتقارير",
+    tab_agricultural: "المنتجات الزراعية",
+    tab_food_dehydrated: "المنتجات الغذائية",
+    tab_fresh_produce: "الفواكه والخضروات الطازجة",
+    tab_handicrafts: "الحرف اليدوية",
     btn_quote: "طلب اقتباس",
     hero_badge: "تأسست منذ عام 2021",
     hero_title: "ربط <em>التراث</em> الهندي بالأسواق العالمية.",
@@ -186,9 +212,10 @@ const translations = {
     prod_label: "منتجات مميزة",
     prod_title: "مجموعة التصدير الممتازة لدينا",
     prod_desc: "استكشف مجموعتنا المتميزة من المنتجات ذات الجودة التصديرية التي يتم الحصول عليها بعناية وتعبئتها بأمان وتسليمها إلى جميع أنحاء العالم بجودة ونضارة وموثوقية.",
-    tab_spices: "بهارات",
-    tab_seeds: "بذور",
-    tab_pulses: "البقوليات والحبوب",
+    tab_agricultural: "المنتجات الزراعية",
+    tab_food_dehydrated: "المنتجات الغذائية",
+    tab_fresh_produce: "الفواكه والخضروات الطازجة",
+    tab_handicrafts: "الحرف اليدوية",
     btn_inquire_product: "استفسر الآن",
     wcu_label: "نقاط قوتنا",
     wcu_title: "لماذا يختارنا الشركاء العالميون",
@@ -221,7 +248,7 @@ const translations = {
     inquiry_title: "ابدأ استفسار التصدير الخاص بك",
     inquiry_desc: "أرسل لنا متطلباتك واحتياجات التعبئة وميناء الوصول. سيرد مكتب التجارة لدينا بأسعار تنافسية في غضون 24 ساعة.",
     info_address_title: "المكتب المسجل",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "دعم البريد الإلكتروني",
     info_phone_title: "مكتب التجارة المباشر",
     form_name: "الاسم الكامل / اسم الشركة",
@@ -247,12 +274,20 @@ const translations = {
     nav_home: "Accueil",
     nav_story: "Notre Histoire",
     nav_products: "Produits",
+    nav_gallery: "Galerie",
+    nav_news: "Actualités",
     nav_why: "Pourquoi Nous Choisir",
     nav_inquiry: "Demande",
+    nav_gallery: "Galerie",
+    nav_news: "Actualités",
+    tab_agricultural: "Produits Agricoles",
+    tab_food_dehydrated: "Produits Alimentaires",
+    tab_fresh_produce: "Fruits & Légumes Frais",
+    tab_handicrafts: "Artisanat",
     btn_quote: "Demander un Devis",
     hero_badge: "ÉTABLI DEPUIS 2021",
     hero_title: "Relier l'<em>Héritage</em> Indien aux Marchés Globaux.",
-    hero_desc: "Chez MEGAYUG GLOBAL, nous exportons des épices indiennes de qualité supérieure, des graines nutritives, des céréales et légumineuses biologiques directement aux clients internationaux.",
+    hero_desc: "Chez JALPEX INTERNATIONAL, nous exportons des épices indiennes de qualité supérieure, des graines nutritives, des céréales et légumineuses biologiques directement aux clients internationaux.",
     hero_explore: "Explorer le Portfolio",
     hero_legacy: "Nos Valeurs",
     stat_heritage: "Qualité Héritage",
@@ -260,16 +295,17 @@ const translations = {
     stat_destinations: "Sourcing Global",
     story_label: "Exportateur Agro Global",
     story_title: "Qualité Supérieure, Sourcing Éthique et Livraison Fiable",
-    story_p1: "Chez Megayug Global, nous sommes spécialisés dans l'exportation de produits agricoles indiens de qualité supérieure. Issus des sols les plus riches de l'Inde, nos produits conservent leur saveur naturelle, leur arôme riche et leur qualité traditionnelle.",
+    story_p1: "Chez Jalpex International, nous sommes spécialisés dans l'exportation de produits agricoles indiens de qualité supérieure. Issus des sols les plus riches de l'Inde, nos produits conservent leur saveur naturelle, leur arôme riche et leur qualité traditionnelle.",
     story_p2: "Nous proposons une large gamme d'exportations agricoles, classées en épices authentiques, graines nutritives et grains essentiels. Chaque produit est traité et emballé avec le plus grand soin.",
     story_link: "Découvrez nos collections d'exportation &rarr;",
     ticker_text: "Services logistiques mondiaux fiables • Livraison de la qualité indienne dans le monde entier • Solutions d'exportation agricole de premier ordre • ",
     prod_label: "Produits Vedettes",
     prod_title: "Notre Collection d'Exportation Premium",
     prod_desc: "Explorez notre gamme de produits de qualité supérieure, soigneusement sourcés, emballés de manière sécurisée et livrés dans le monde entier.",
-    tab_spices: "Épices",
-    tab_seeds: "Graines",
-    tab_pulses: "Légumineuses & Grains",
+    tab_agricultural: "Produits Agricoles",
+    tab_food_dehydrated: "Produits Alimentaires",
+    tab_fresh_produce: "Fruits & Légumes Frais",
+    tab_handicrafts: "Artisanat",
     btn_inquire_product: "Demander des Infos",
     wcu_label: "Nos Points Forts",
     wcu_title: "Pourquoi les Partenaires Globaux Nous Choisissent",
@@ -302,7 +338,7 @@ const translations = {
     inquiry_title: "Initier votre Demande d'Exportation",
     inquiry_desc: "Envoyez-nous vos besoins, volume et port de destination. Notre bureau commercial vous répondra sous 24h.",
     info_address_title: "Siège Social",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "Support E-mail",
     info_phone_title: "Bureau Commercial Direct",
     form_name: "Nom complet / Entreprise",
@@ -316,7 +352,7 @@ const translations = {
     form_btn: "Envoyer la Demande",
     form_success: "Merci! Votre demande a été enregistrée. Notre équipe vous contactera sous peu.",
     form_error: "Veuillez remplir tous les champs obligatoires.",
-    footer_desc: "Megayug Global est une maison d'exportation de produits agricoles haut de gamme. Nous représentons le meilleur du patrimoine agricole indien.",
+    footer_desc: "Jalpex International est une maison d'exportation de produits agricoles haut de gamme. Nous représentons le meilleur du patrimoine agricole indien.",
     footer_quick_links: "Navigation Rapide",
     footer_products: "Nos Produits",
     footer_contact: "Contact Sourcing",
@@ -328,12 +364,20 @@ const translations = {
     nav_home: "Inicio",
     nav_story: "Nuestra Historia",
     nav_products: "Productos",
+    nav_gallery: "Galería",
+    nav_news: "Noticias",
     nav_why: "Por Qué Elegirnos",
     nav_inquiry: "Consulta",
+    nav_gallery: "Galería",
+    nav_news: "Noticias y Reportes",
+    tab_agricultural: "Productos Agrícolas",
+    tab_food_dehydrated: "Productos Alimenticios",
+    tab_fresh_produce: "Frutas y Verduras Frescas",
+    tab_handicrafts: "Artesanías",
     btn_quote: "Solicitar Cotización",
     hero_badge: "ESTABLECIDO DESDE 2021",
     hero_title: "Uniendo la <em>Herencia</em> India con los Mercados Globales.",
-    hero_desc: "En MEGAYUG GLOBAL, exportamos especias indias de primera calidad, semillas nutritivas, cereales y legumbres orgánicas directamente a clientes internacionales.",
+    hero_desc: "En JALPEX INTERNATIONAL, exportamos especias indias de primera calidad, semillas nutritivas, cereales y legumbres orgánicas directamente a clientes internacionales.",
     hero_explore: "Explorar Portafolio",
     hero_legacy: "Nuestros Valores",
     stat_heritage: "Calidad de Herencia",
@@ -341,16 +385,17 @@ const translations = {
     stat_destinations: "Sourcing Global",
     story_label: "Exportador Agrícola Global",
     story_title: "Calidad Premium, Abastecimiento Ético y Entrega Global de Confianza",
-    story_p1: "En Megayug Global, nos especializamos en la exportación de productos agrícolas indios premium. Obtenidos de los suelos más ricos de la India, conservan su sabor natural y calidad tradicional.",
+    story_p1: "En Jalpex International, nos especializamos en la exportación de productos agrícolas indios premium. Obtenidos de los suelos más ricos de la India, conservan su sabor natural y calidad tradicional.",
     story_p2: "Ofrecemos una amplia gama de exportaciones agrícolas, divididas en especias auténticas, semillas nutritivas y granos esenciales.",
     story_link: "Explore nuestras colecciones de exportación &rarr;",
     ticker_text: "Servicios logísticos mundiales confiables • Entrega de calidad india a nivel mundial • Soluciones premium de exportación • ",
     prod_label: "Productos Destacados",
     prod_title: "Nuestra Colección de Exportación Premium",
     prod_desc: "Explore nuestra gama de productos de calidad de exportación, cuidadosamente seleccionados y entregados en todo el mundo.",
-    tab_spices: "Especias",
-    tab_seeds: "Semillas",
-    tab_pulses: "Legumbres y Granos",
+    tab_agricultural: "Productos Agrícolas",
+    tab_food_dehydrated: "Productos Alimenticios",
+    tab_fresh_produce: "Frutas y Verduras Frescas",
+    tab_handicrafts: "Artesanías",
     btn_inquire_product: "Consultar Ahora",
     wcu_label: "Nuestras Fortalezas",
     wcu_title: "Por qué nos eligen los socios globales",
@@ -383,7 +428,7 @@ const translations = {
     inquiry_title: "Inicie su Consulta de Exportación",
     inquiry_desc: "Envíenos sus requerimientos de volumen, embalaje y puerto de destino. Responderemos en 24 horas.",
     info_address_title: "Oficina Registrada",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "Soporte de Email",
     info_phone_title: "Línea de Comercio Directo",
     form_name: "Nombre completo / Empresa",
@@ -397,7 +442,7 @@ const translations = {
     form_btn: "Enviar Consulta",
     form_success: "¡Gracias! Su consulta ha sido registrada. Nos pondremos en contacto pronto.",
     form_error: "Por favor complete todos los campos obligatorios.",
-    footer_desc: "Megayug Global es una casa exportadora premium de productos agrícolas. Representamos la herencia agrícola de la India.",
+    footer_desc: "Jalpex International es una casa exportadora premium de productos agrícolas. Representamos la herencia agrícola de la India.",
     footer_quick_links: "Navegación Rápida",
     footer_products: "Nuestros Productos",
     footer_contact: "Contacto de Sourcing",
@@ -409,12 +454,20 @@ const translations = {
     nav_home: "Startseite",
     nav_story: "Unsere Story",
     nav_products: "Produkte",
+    nav_gallery: "Galerie",
+    nav_news: "Neuigkeiten",
     nav_why: "Warum Uns Wählen",
     nav_inquiry: "Anfrage",
+    nav_gallery: "Galerie",
+    nav_news: "Neuigkeiten",
+    tab_agricultural: "Agrarprodukte",
+    tab_food_dehydrated: "Lebensmittel",
+    tab_fresh_produce: "Frisches Obst & Gemüse",
+    tab_handicrafts: "Kunsthandwerk",
     btn_quote: "Angebot Anfordern",
     hero_badge: "GEGRÜNDET SEIT 2021",
     hero_title: "Verbindung des indischen <em>Erbes</em> mit globalen Märkten.",
-    hero_desc: "Bei MEGAYUG GLOBAL exportieren wir erstklassige indische Gewürze, hochwertige Samen, Bio-Getreide und Hülsenfrüchte direkt an internationale Kunden.",
+    hero_desc: "Bei JALPEX INTERNATIONAL exportieren wir erstklassige indische Gewürze, hochwertige Samen, Bio-Getreide und Hülsenfrüchte direkt an internationale Kunden.",
     hero_explore: "Portfolio Erkunden",
     hero_legacy: "Unsere Werte",
     stat_heritage: "Qualitätserbe",
@@ -422,16 +475,17 @@ const translations = {
     stat_destinations: "Globales Sourcing",
     story_label: "Globaler Agrar-Exporteur",
     story_title: "Erstklassige Qualität, ethische Beschaffung & zuverlässige Lieferung",
-    story_p1: "Bei Megayug Global haben wir uns auf den Export von erstklassigen indischen Agrarprodukten spezialisiert. Direkt von den fruchtbarsten Böden Indiens stammend, bewahren unsere Produkte ihren natürlichen Geschmack.",
+    story_p1: "Bei Jalpex International haben wir uns auf den Export von erstklassigen indischen Agrarprodukten spezialisiert. Direkt von den fruchtbarsten Böden Indiens stammend, bewahren unsere Produkte ihren natürlichen Geschmack.",
     story_p2: "Unser breites Sortiment umfasst authentische Gewürze, nährstoffreiche Samen sowie Getreide und Hülsenfrüchte, die sorgfältig verarbeitet werden.",
     story_link: "Unsere Export-Kollektionen ansehen &rarr;",
     ticker_text: "Zuverlässige weltweite Logistikdienstleistungen • Lieferung indischer Qualität weltweit • Erstklassige Agrarexportlösungen • ",
     prod_label: "Ausgewählte Produkte",
     prod_title: "Unsere Premium-Export-Kollektion",
     prod_desc: "Entdecken Sie unser erstklassiges Sortiment an Produkten in Exportqualität, die weltweit mit Fokus auf Frische und Zuverlässigkeit geliefert werden.",
-    tab_spices: "Gewürze",
-    tab_seeds: "Samen",
-    tab_pulses: "Hülsenfrüchte & Getreide",
+    tab_agricultural: "Agrarprodukte",
+    tab_food_dehydrated: "Lebensmittel",
+    tab_fresh_produce: "Frisches Obst & Gemüse",
+    tab_handicrafts: "Kunsthandwerk",
     btn_inquire_product: "Jetzt Anfragen",
     wcu_label: "Unsere Stärken",
     wcu_title: "Warum globale Partner uns wählen",
@@ -464,7 +518,7 @@ const translations = {
     inquiry_title: "Starten Sie Ihre Exportanfrage",
     inquiry_desc: "Senden Sie uns Ihre Anforderungen bezüglich Menge, Verpackung und Bestimmungshafen. Wir antworten innerhalb von 24 Stunden.",
     info_address_title: "Eingetragener Sitz",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "E-Mail Support",
     info_phone_title: "Direkter Handels-Desk",
     form_name: "Name / Firmenname",
@@ -478,7 +532,7 @@ const translations = {
     form_btn: "Anfrage Senden",
     form_success: "Vielen Dank! Ihre Anfrage wurde registriert. Unser Team meldet sich in Kürze.",
     form_error: "Bitte füllen Sie alle Pflichtfelder aus.",
-    footer_desc: "Megayug Global ist ein erstklassiges Exporthaus für Agrarrohstoffe. Wir vertreten die Spitze der indischen Agrartradition.",
+    footer_desc: "Jalpex International ist ein erstklassiges Exporthaus für Agrarrohstoffe. Wir vertreten die Spitze der indischen Agrartradition.",
     footer_quick_links: "Schnelle Navigation",
     footer_products: "Unser Angebot",
     footer_contact: "Beschaffungskontakt",
@@ -490,12 +544,20 @@ const translations = {
     nav_home: "Início",
     nav_story: "Nossa História",
     nav_products: "Produtos",
+    nav_gallery: "Galeria",
+    nav_news: "Notícias",
     nav_why: "Por Que Escolher-nos",
     nav_inquiry: "Inquérito",
+    nav_gallery: "Galeria",
+    nav_news: "Notícias e Relatórios",
+    tab_agricultural: "Produtos Agrícolas",
+    tab_food_dehydrated: "Produtos Alimentícios",
+    tab_fresh_produce: "Frutas e Vegetais Frescos",
+    tab_handicrafts: "Artesanato",
     btn_quote: "Solicitar Cotação",
     hero_badge: "ESTABELECIDO DESDE 2021",
     hero_title: "Unindo a <em>Herança</em> Indiana aos Mercados Globais.",
-    hero_desc: "Na MEGAYUG GLOBAL, exportamos especiarias indianas premium, sementes de alta qualidade, grãos e leguminosas orgânicas diretamente para clientes internacionais.",
+    hero_desc: "Na JALPEX INTERNATIONAL, exportamos especiarias indianas premium, sementes de alta qualidade, grãos e leguminosas orgânicas diretamente para clientes internacionais.",
     hero_explore: "Explorar Portfólio",
     hero_legacy: "Nossos Valores",
     stat_heritage: "Qualidade de Herança",
@@ -503,16 +565,17 @@ const translations = {
     stat_destinations: "Sourcing Global",
     story_label: "Exportador Agrícola Global",
     story_title: "Qualidade Premium, Fornecimento Ético e Entrega Global Confiável",
-    story_p1: "Na Megayug Global, somos especializados em exportar produtos agrícolas indianos premium para mercados globais. Cultivados nos solos mais ricos da Índia, nossos produtos mantêm seus sabores naturais.",
+    story_p1: "Na Jalpex International, somos especializados em exportar produtos agrícolas indianos premium para mercados globais. Cultivados nos solos mais ricos da Índia, nossos produtos mantêm seus sabores naturais.",
     story_p2: "Oferecemos uma ampla variedade de produtos de exportação, classificados em especiarias autênticas, sementes nutritivas e grãos essenciais.",
     story_link: "Explore nossas coleções de exportação &rarr;",
     ticker_text: "Serviços logísticos mundiais confiáveis • Entregando a qualidade indiana globalmente • Soluções premium de exportação • ",
     prod_label: "Produtos em Destaque",
     prod_title: "Nossa Coleção de Exportação Premium",
     prod_desc: "Explore a nossa gama de produtos de qualidade de exportação, cuidadosamente selecionados, embalados com segurança e entregues em todo o mundo.",
-    tab_spices: "Especiarias",
-    tab_seeds: "Sementes",
-    tab_pulses: "Leguminosas & Grãos",
+    tab_agricultural: "Produtos Agrícolas",
+    tab_food_dehydrated: "Produtos Alimentícios",
+    tab_fresh_produce: "Frutas e Vegetais Frescos",
+    tab_handicrafts: "Artesanato",
     btn_inquire_product: "Inspecionar Agora",
     wcu_label: "Nossos Pontos Fortes",
     wcu_title: "Por que os parceiros globais nos escolhem",
@@ -545,7 +608,7 @@ const translations = {
     inquiry_title: "Inicie seu Inquérito de Exportação",
     inquiry_desc: "Envie-nos os seus requisitos de volume, embalagem e porto de destino. Responderemos dentro de 24 horas.",
     info_address_title: "Escritório Registado",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "Suporte por Email",
     info_phone_title: "Mesa de Negócios Direta",
     form_name: "Nome Completo / Empresa",
@@ -559,7 +622,7 @@ const translations = {
     form_btn: "Enviar Pedido de Cotação",
     form_success: "Obrigado! O seu pedido de cotação foi registado. Entraremos em contacto brevemente.",
     form_error: "Por favor, preencha todos os campos obrigatórios.",
-    footer_desc: "Megayug Global é uma casa de exportação premium de commodities agrícolas. Representamos o topo do património agrícola indiano.",
+    footer_desc: "Jalpex International é uma casa de exportação premium de commodities agrícolas. Representamos o topo do património agrícola indiano.",
     footer_quick_links: "Navegação Rápida",
     footer_products: "Nossos Produtos",
     footer_contact: "Contacto de Sourcing",
@@ -571,12 +634,20 @@ const translations = {
     nav_home: "首页",
     nav_story: "品牌故事",
     nav_products: "出口产品",
+    nav_gallery: "画廊",
+    nav_news: "新闻",
     nav_why: "合作优势",
     nav_inquiry: "在线询盘",
+    nav_gallery: "画廊",
+    nav_news: "新闻和报告",
+    tab_agricultural: "农产品",
+    tab_food_dehydrated: "食品",
+    tab_fresh_produce: "新鲜果蔬",
+    tab_handicrafts: "手工艺品",
     btn_quote: "获取报价",
     hero_badge: "始创于2021年",
     hero_title: "架起印度<em>传统农业</em>与全球市场的桥梁。",
-    hero_desc: "在 MEGAYUG GLOBAL，我们直接向国际客户出口印度优质香料、高品质种子、有机谷物和豆类。精挑细选，诚信交付。",
+    hero_desc: "在 JALPEX INTERNATIONAL，我们直接向国际客户出口印度优质香料、高品质种子、有机谷物和豆类。精挑细选，诚信交付。",
     hero_explore: "浏览产品组合",
     hero_legacy: "我们的价值观",
     stat_heritage: "传统品质",
@@ -584,16 +655,17 @@ const translations = {
     stat_destinations: "全球采购",
     story_label: "全球农产品出口商",
     story_title: "优质品质、道德采购与值得信赖的全球交付",
-    story_p1: "在 Megayug Global，我们专注于向全球市场出口优质的印度农产品。我们的产品源自印度最肥沃的土地，保持了其天然风味、浓郁香气和传统品质。",
+    story_p1: "在 Jalpex International，我们专注于向全球市场出口优质的印度农产品。我们的产品源自印度最肥沃的土地，保持了其天然风味、浓郁香气和传统品质。",
     story_p2: "我们提供广泛的农业出口，分类为正宗香料、营养种子以及基本谷物和豆类。每件产品都经过精心加工和包装，确保其最佳品质。",
     story_link: "浏览我们的出口系列 &rarr;",
     ticker_text: "可靠的全球物流服务 • 将印度品质送达全球 • 优质农产品出口解决方案 • 精心采购，诚信加工 • ",
     prod_label: "特色产品",
     prod_title: "我们的优质出口系列",
     prod_desc: "探索我们精心采购、安全包装并销往全球的高品质出口农产品系列，确保新鲜与可靠。",
-    tab_spices: "香料",
-    tab_seeds: "种子",
-    tab_pulses: "豆类与谷物",
+    tab_agricultural: "农产品",
+    tab_food_dehydrated: "食品",
+    tab_fresh_produce: "新鲜果蔬",
+    tab_handicrafts: "手工艺品",
     btn_inquire_product: "立即询价",
     wcu_label: "我们的优势",
     wcu_title: "为什么全球合作伙伴选择我们",
@@ -626,7 +698,7 @@ const translations = {
     inquiry_title: "开始您的出口询盘",
     inquiry_desc: "发送您的数量需求、包装要求和目的港。我们的贸易服务台将在24小时内回复极具竞争力的价格。",
     info_address_title: "注册办公室",
-    info_address_val: "128, 1st Floor, Shivalika Complex, Opp V.J Patel Vegetable Market, Deesa, Banaskantha - 385535",
+    info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "电子邮件支持",
     info_phone_title: "直接贸易台",
     form_name: "您的姓名 / 公司名称",
@@ -640,7 +712,7 @@ const translations = {
     form_btn: "发送出口询盘",
     form_success: "谢谢！您的出口询盘已记录。我们的贸易服务台将尽快与您联系。",
     form_error: "请填写所有必填字段。",
-    footer_desc: "Megayug Global 是一家优质的农产品出口商。我们代表了印度农业传统的巅峰。",
+    footer_desc: "Jalpex International 是一家优质的农产品出口商。我们代表了印度农业传统的巅峰。",
     footer_quick_links: "快速导航",
     footer_products: "我们的产品",
     footer_contact: "联系采购台",
@@ -652,41 +724,27 @@ const translations = {
 
 // ── PRODUCTS DATA ──
 const productsData = [
-  // SPICES
-  { id: "turmeric", category: "spices", name: "Turmeric", desc: "Golden-yellow, aromatic spice available as whole fingers or ground powder. Sourced from high-curcumin farming belts.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
-  { id: "red_chilli", category: "spices", name: "Red Chilli", desc: "Vibrant red and fiery, offered as stemless/with-stem whole pods or finely ground powder of varying heat levels.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png" },
-  { id: "cumin", category: "spices", name: "Cumin Seeds", desc: "Highly aromatic seeds with deep earthy flavor, available in whole premium grade seeds and fresh ground powder.", tags: ["whole", "powder", "earthy"], image: "products/cumin.png" },
-  { id: "coriander", category: "spices", name: "Coriander", desc: "Sweet, citrusy flavor profile. Offered in uniform whole seeds or premium, finely milled spice powder.", tags: ["whole", "powder", "premium"], image: "products/coriander.png" },
-  { id: "fennel", category: "spices", name: "Fennel Seeds", desc: "Sweet, licorice-like aroma. Excellent digestant and culinary flavoring, available whole or ground.", tags: ["whole", "powder", "aromatic"], image: "products/fennel.png" },
-  { id: "black_pepper", category: "spices", name: "Black Pepper", desc: "Known as the King of Spices. Sourced from organic coastal farms, offered as whole peppercorns or cracked powder.", tags: ["whole", "powder", "coarse"], image: "products/black-pepper.png" },
-  { id: "cardamom", category: "spices", name: "Cardamom", desc: "Premium green and black cardamom pods, sorted by size (7mm-8mm+) for intense sweet-spicy aroma.", tags: ["green", "black", "pods"], image: "products/cardamom.png" },
-  { id: "fenugreek", category: "spices", name: "Fenugreek", desc: "Bitter-sweet seeds loaded with health benefits, used whole in tempering or grounded for spice mixtures.", tags: ["whole", "powder", "medicinal"], image: "products/fenugreek.png" },
-  { id: "cloves", category: "spices", name: "Cloves", desc: "Fully grown, dried flower buds with high essential oil content, intense aroma, and warm spicy flavor.", tags: ["whole", "high-oil"], image: "products/cloves.png" },
-  { id: "cinnamon", category: "spices", name: "Cinnamon", desc: "Premium rolls (quills) or ground powder with a delicate, sweet-spicy flavor profile.", tags: ["quills", "powder", "organic"], image: "products/cinnamon.png" },
-  { id: "nutmeg", category: "spices", name: "Nutmeg", desc: "Whole oval nutmeg seeds and ground powder, rich in volatile oils for baking and spice blends.", tags: ["whole", "powder", "nutty"], image: "products/nutmeg.png" },
-  { id: "bay_leaves", category: "spices", name: "Bay Leaves", desc: "Carefully shade-dried aromatic bay leaves with robust green color and distinct herbal fragrance.", tags: ["dried", "whole"], image: "products/bay-leaves.png" },
-  { id: "ginger_powder", category: "spices", name: "Ginger Powder", desc: "Finely ground dry ginger (Sonth) with strong pungent heat and medicinal stomach-soothing qualities.", tags: ["ground", "dry-ginger"], image: "products/ginger-powder.png" },
-  { id: "garlic_powder", category: "spices", name: "Garlic Powder", desc: "Dehydrated garlic cloves ground into fine aromatic powder. Dissolves easily, adding deep savory flavor.", tags: ["ground", "dehydrated"], image: "products/garlic-powder.png" },
-  { id: "onion_powder", category: "spices", name: "Onion Powder", desc: "Premium dehydrated white and red onions processed into free-flowing powder with sweet, savory taste.", tags: ["ground", "free-flowing"], image: "products/onion-powder.png" },
-  { id: "curry_powder", category: "spices", name: "Curry Powder", desc: "Proprietary spice blend containing turmeric, coriander, cumin, fenugreek, and warm spices in golden ratio.", tags: ["blend", "premium-grade"], image: "products/curry-powder.png" },
+  // AGRICULTURAL PRODUCTS
+  { id: "turmeric", category: "agricultural", name: "Turmeric Finger", desc: "Premium quality golden-yellow Indian turmeric fingers, high in curcumin content and ground powder.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
+  { id: "red_chilli", category: "agricultural", name: "Red Chilli", desc: "Vibrant red and fiery Indian red chillies, available as stemless whole pods or ground powder.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png" },
+  { id: "cumin", category: "agricultural", name: "Cumin Seeds", desc: "Highly aromatic cumin seeds with deep earthy flavor, thoroughly cleaned and processed.", tags: ["seeds", "powder", "earthy"], image: "products/cumin.png" },
+  { id: "coriander", category: "agricultural", name: "Coriander Seeds", desc: "Uniform whole coriander seeds and premium finely milled coriander powder with fresh citrusy aroma.", tags: ["seeds", "powder", "aromatic"], image: "products/coriander.png" },
+  { id: "sesame_seeds", category: "agricultural", name: "Sesame Seeds", desc: "Premium natural golden and mechanically hulled white sesame seeds, rich in healthy oils.", tags: ["natural", "hulled", "oil-seeds"], image: "products/sesame-seeds.png" },
+  { id: "peanuts", category: "agricultural", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by size, rich in flavor and oil content.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" },
+  { id: "pulses", category: "agricultural", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/chickpeas.png" },
+  { id: "rice", category: "agricultural", name: "Premium Basmati Rice", desc: "Long-grain, aromatic premium Indian Basmati rice, aged to perfection for exquisite flavor.", tags: ["basmati", "long-grain", "aged"], image: "products/rice.png" },
+  { id: "wheat", category: "agricultural", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png" },
+  { id: "cotton", category: "agricultural", name: "Cotton Products", desc: "High-staple raw cotton bolls and cotton fibers, clean and processed for textile industries.", tags: ["raw-cotton", "fiber", "textile-grade"], image: "products/cotton.png" },
 
-  // SEEDS
-  { id: "sesame_seeds", category: "seeds", name: "Sesame Seeds", desc: "Rich in healthy oils. Offered in natural golden, premium mechanically hulled, and pure deep black variants.", tags: ["natural", "hulled", "black"], image: "products/sesame-seeds.png" },
-  { id: "flax_seeds", category: "seeds", name: "Flax Seeds", desc: "Glossy brown seeds packed with Omega-3 fatty acids, fiber, and lignans. Ideal for healthy food formulations.", tags: ["brown", "omega-3", "clean"], image: "products/flax-seeds.png" },
-  { id: "chia_seeds", category: "seeds", name: "Chia Seeds", desc: "Premium black and white chia seeds, highly hydrophilic. Rich source of protein and essential minerals.", tags: ["black", "white", "superfood"], image: "products/chia-seeds.png" },
-  { id: "psyllium_seeds", category: "seeds", name: "Psyllium Seeds", desc: "High-mucilage plantago ovata seeds and processed psyllium husk, ideal for dietary fibers and digestive health.", tags: ["seeds", "husk", "digestive"], image: "products/psyllium-seeds.png" },
-  { id: "quinoa_seeds", category: "seeds", name: "Quinoa Seeds", desc: "Saponin-free, thoroughly washed white, red, and black quinoa. A complete plant-based protein grain seed.", tags: ["white", "red", "black"], image: "products/quinoa-seeds.png" },
-  { id: "amaranth_seeds", category: "seeds", name: "Amaranth Seeds", desc: "Gluten-free, highly nutritious ancient grain seeds, sorted and processed for snacks and flour blends.", tags: ["gluten-free", "ancient-grain"], image: "products/amaranth-seeds.png" },
+  // FOOD & DEHYDRATED VEGETABLES
+  { id: "dehydrated_veg", category: "food_dehydrated", name: "Dehydrated Vegetables", desc: "Premium quality dehydrated onion flakes, garlic powder, and ginger flakes that preserve natural flavor.", tags: ["dehydrated", "flakes", "powder"], image: "products/dehydrated-veg.png" },
+  { id: "food_products", category: "food_dehydrated", name: "Processed Food Products", desc: "Value-added food products, processed grains, and customized packaging solutions for global retail.", tags: ["retail-ready", "value-added", "packaged"], image: "products/process-packaging.png" },
 
-  // PULSES AND GRAINS
-  { id: "chickpeas", category: "pulses", name: "Chickpeas (Kabuli)", desc: "Premium white chickpeas (Kabuli) graded by count size (75-80, 42-44, etc.) with high protein content.", tags: ["kabuli", "whole", "white"], image: "products/chickpeas.png" },
-  { id: "chickpeas_splits", category: "pulses", name: "Chickpeas Splits (Chana Dal)", desc: "Polished and unpolished split desi chickpeas, rich in protein, cleaned of all physical impurities.", tags: ["splits", "chana-dal"], image: "products/chickpeas-splits.png" },
-  { id: "green_moong", category: "pulses", name: "Green Moong (Whole)", desc: "Shiny, bold green mung beans with high germination rate and rich nutritional value.", tags: ["whole", "green"], image: "products/green-moong.png" },
-  { id: "green_moong_splits", category: "pulses", name: "Green Moong Splits (Moong Dal)", desc: "Dehusked yellow split and green split moong dal, easy to digest and quick cooking.", tags: ["splits", "yellow", "green"], image: "products/green-moong-splits.png" },
-  { id: "black_gram", category: "pulses", name: "Black Gram (Urad Whole)", desc: "Whole black gram (Urad) seeds, key ingredient for traditional foods and rich source of plant protein.", tags: ["whole", "urad"], image: "products/black-gram.png" },
-  { id: "black_gram_splits", category: "pulses", name: "Black Gram Splits (Urad Dal)", desc: "Split dehusked white urad dal and split black urad dal, thoroughly sorted and cleaned.", tags: ["splits", "white", "black"], image: "products/black-gram-splits.png" },
-  { id: "pigeon_peas", category: "pulses", name: "Pigeon Peas (Toor Dal)", desc: "Premium split yellow pigeon peas (Arhar/Toor Dal), oily and non-oily varieties available.", tags: ["splits", "toor-dal", "yellow"], image: "products/pigeon-peas.png" },
-  { id: "peanuts", category: "pulses", name: "Peanuts (Groundnuts)", desc: "Bold and Java peanut kernels sorted by count (38/42, 40/50, 50/60, etc.) with high oil yield.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" }
+  // FRESH PRODUCE
+  { id: "fresh_produce", category: "fresh_produce", name: "Fresh Fruits & Vegetables", desc: "Freshly harvested pomegranates, mangoes, potatoes, and red onions sourced from local farms.", tags: ["fresh", "farm-direct", "organic"], image: "products/fresh-produce.png" },
+
+  // HANDICRAFTS
+  { id: "handicrafts", category: "handicrafts", name: "Artisanal Handicrafts", desc: "Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles.", tags: ["handmade", "artisanal", "traditional"], image: "products/handicrafts.png" }
 ];
 
 // ── DOM ELEMENTS & GLOBAL STATE ──
@@ -831,91 +889,41 @@ function initMobileMenu() {
 
 // ── HERO INTRO ANIMATION (BLUEBIRD-STYLE FLY-IN) ──
 function initHeroIntro() {
-  if (typeof gsap === "undefined") return;
-  const flyer = document.querySelector(".hero-flyer");
-  if (!flyer) return;
+  // Dynamic rotating words in the hero heading
+  const words = ["Indian Spices", "Basmati Rice", "Oil Seeds", "Raw Cotton", "Fresh Fruits", "Dehydrated Vegetables"];
+  let currentWordIndex = 0;
+  const wordElement = document.getElementById("dynamicWord");
 
-  // Split the giant ghost text into individual letters for staggering
-  const ghost = document.querySelector(".hero-ghost");
-  if (ghost) {
-    const letters = ghost.textContent.trim().split("");
-    ghost.innerHTML = letters
-      .map(l => `<span class="ghost-letter">${l}</span>`)
-      .join("");
+  if (wordElement) {
+    // Add CSS transition properties dynamically
+    wordElement.style.transition = "all 0.45s cubic-bezier(0.16, 1, 0.3, 1)";
+    
+    setInterval(() => {
+      wordElement.style.opacity = "0";
+      wordElement.style.transform = "translateY(12px)";
+      wordElement.style.filter = "blur(3px)";
+      
+      setTimeout(() => {
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        wordElement.textContent = words[currentWordIndex];
+        wordElement.style.opacity = "1";
+        wordElement.style.transform = "translateY(0)";
+        wordElement.style.filter = "blur(0)";
+      }, 400);
+    }, 3200);
   }
 
-  // Initial hidden states
-  gsap.set(".hero-content > *", { opacity: 0, y: 34 });
-  gsap.set(".hero-glass-card", { opacity: 0, y: 46, scale: 0.92 });
-  gsap.set(".hero-users-pill", { opacity: 0, x: 40 });
-
-  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-  // 1. The bowl of chillies flies in from off-screen with motion blur
-  tl.fromTo(
-    flyer,
-    {
-      xPercent: -170,
-      yPercent: -55,
-      rotation: -22,
-      scale: 1.28,
-      opacity: 0,
-      filter: "blur(24px)",
-    },
-    {
-      xPercent: 0,
-      yPercent: 0,
-      rotation: 0,
-      scale: 1,
-      opacity: 1,
-      filter: "blur(0px)",
-      duration: 1.7,
-      ease: "power4.out",
-    },
-    0.15
-  )
-    // 2. Ghost "MEGAYUG" letters materialise behind it
-    .fromTo(
-      ".ghost-letter",
-      { opacity: 0, y: 60, filter: "blur(10px)" },
-      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, stagger: 0.07 },
-      0.55
-    )
-    // 3. Copy block staggers in
-    .to(".hero-content > *", { opacity: 1, y: 0, duration: 0.9, stagger: 0.12 }, 1.0)
-    // 4. Glass cards pop in
-    .to(
-      ".hero-glass-card",
-      { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.14, ease: "back.out(1.4)" },
-      1.25
-    )
-    // 5. Markets pill slides in
-    .to(".hero-users-pill", { opacity: 1, x: 0, duration: 0.7 }, 1.55);
-
-  // Continuous gentle float (like the bird hovering)
-  gsap.to(flyer, {
-    y: -14,
-    duration: 3.2,
-    ease: "sine.inOut",
-    yoyo: true,
-    repeat: -1,
-    delay: 2.1,
-  });
-
-  // Scroll parallax: bowl drifts down, ghost text drifts up
-  if (typeof ScrollTrigger !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".hero-flyer-wrap", {
-      yPercent: 16,
-      ease: "none",
-      scrollTrigger: { trigger: "#home", start: "top top", end: "bottom top", scrub: true },
-    });
-    gsap.to(".hero-ghost", {
-      yPercent: -30,
-      opacity: 0.25,
-      ease: "none",
-      scrollTrigger: { trigger: "#home", start: "top top", end: "bottom top", scrub: true },
-    });
+  // GSAP Entrance Animations
+  if (typeof gsap !== "undefined") {
+    gsap.fromTo(".hero-badge-pill", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+    gsap.fromTo(".hero-heading .block", { opacity: 0, y: 35 }, { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
+    gsap.fromTo(".hero-paragraph, .hero-dynamic-text, .hero-buttons", { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power2.out", delay: 0.4 });
+    gsap.fromTo(".hero-stats-bar", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.8 });
+    
+    // Animate Visual collage cards
+    gsap.fromTo(".vc-spices", { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 4, duration: 1.2, ease: "back.out(1.5)", delay: 0.6 });
+    gsap.fromTo(".vc-logistics", { opacity: 0, y: 60, rotation: -12 }, { opacity: 1, y: 0, rotation: -5, duration: 1.2, ease: "back.out(1.5)", delay: 0.8 });
+    gsap.fromTo(".vc-warehouse", { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 3, duration: 1.2, ease: "back.out(1.5)", delay: 1.0 });
   }
 }
 
@@ -982,39 +990,39 @@ const morphProducts = [
     spec: "Curcumin Content: >3.5% | Moisture: <10%"
   },
   {
-    id: "cinnamon",
-    name: "CINNAMON STICKS",
-    category: "Premium Spices • Authentic Quality",
-    image: "products/cinnamon.png",
-    spec: "Moisture: <12% | Volatile Oil: >1.5%"
+    id: "rice",
+    name: "BASMATI RICE",
+    category: "Grains & Rice • Premium Aged",
+    image: "products/rice.png",
+    spec: "Avg Length: >7.4mm | Broken: <1%"
   },
   {
-    id: "sesame_seeds",
-    name: "SESAME SEEDS",
-    category: "Nutritious Seeds • Export Standard",
-    image: "products/sesame-seeds.png",
-    spec: "Purity: >99.9% | Admixture: <0.05%"
+    id: "cotton",
+    name: "RAW COTTON",
+    category: "Agricultural Exports • Textile Grade",
+    image: "products/cotton.png",
+    spec: "Staple Length: 28-32mm | Trash: <3%"
   },
   {
-    id: "chickpeas",
-    name: "KABULI CHICKPEAS",
-    category: "Nutritious Pulses • High Protein",
-    image: "products/chickpeas.png",
-    spec: "Size: 8-9mm (75-80 Count/Oz) | Admixture: <1%"
+    id: "dehydrated_veg",
+    name: "DEHYDRATED VEG",
+    category: "Food Products • Natural Flakes",
+    image: "products/dehydrated-veg.png",
+    spec: "Moisture: <6% | Preservatives: None"
   },
   {
-    id: "green_moong_splits",
-    name: "GREEN MOONG SPLITS",
-    category: "Nutritious Grains & Pulses • Cleaned",
-    image: "products/green-moong-splits.png",
-    spec: "Splits Proportion: >95% | Foreign Matter: <0.5%"
+    id: "fresh_produce",
+    name: "FRESH PRODUCE",
+    category: "Fresh Fruits & Vegetables • Farm Direct",
+    image: "products/fresh-produce.png",
+    spec: "Quality: Grade A Export | Cold Chain Ready"
   },
   {
-    id: "ginger_powder",
-    name: "GINGER POWDER",
-    category: "Premium Spices • Ground & Dehydrated",
-    image: "products/ginger-powder.png",
-    spec: "Mesh Size: 60-80 | Total Ash: <8%"
+    id: "handicrafts",
+    name: "ARTISANAL HANDICRAFTS",
+    category: "Indian Handicrafts • Handcrafted Items",
+    image: "products/handicrafts.png",
+    spec: "Brassware & Woodwork | Custom Designs"
   }
 ];
 
@@ -1586,7 +1594,7 @@ function inquireProduct(productName) {
     else if (product.category === "pulses") categorySelect.value = "pulses";
   }
 
-  messageArea.value = `Hello, I'm interested in importing Megayug Global's premium "${productName}". Please send me pricing specification, packing sizes, and details.`;
+  messageArea.value = `Hello, I'm interested in importing Jalpex International's premium "${productName}". Please send me pricing specification, packing sizes, and details.`;
 
   // Smooth scroll to inquiry form
   inquirySection.scrollIntoView({ behavior: "smooth" });

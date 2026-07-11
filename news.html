@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1E4D2B">
+  <title>News & Market Reports | Jalpex International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo-light.png?v=2" alt="Jalpex International Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+        <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+        <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+        <li><a href="news.html" class="active" data-trans="nav_news">News</a></li>
+        <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+        <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Picker -->
+        <div class="lang-picker">
+          <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>EN</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-item active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-item" data-lang="hi">🇮🇳 हिन्दी (Hindi)</button>
+            <button class="lang-item" data-lang="ar">🇸🇦 العربية (Arabic)</button>
+            <button class="lang-item" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-item" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-item" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-item" data-lang="zh">🇨🇳 中文 (Chinese)</button>
+            <button class="lang-item" data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+
+        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+      <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+      <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+      <li><a href="news.html" data-trans="nav_news">News</a></li>
+      <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
+      <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+    </ul>
+    <div class="mobile-lang-section">
+      <p>Select Language</p>
+      <div class="mobile-lang-grid">
+        <button class="mob-lang-btn active" data-lang="en">EN</button>
+        <button class="mob-lang-btn" data-lang="hi">HI</button>
+        <button class="mob-lang-btn" data-lang="ar">AR</button>
+        <button class="mob-lang-btn" data-lang="fr">FR</button>
+        <button class="mob-lang-btn" data-lang="es">ES</button>
+        <button class="mob-lang-btn" data-lang="pt">PT</button>
+        <button class="mob-lang-btn" data-lang="zh">ZH</button>
+        <button class="mob-lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+    <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
+  </div>
+
+  <!-- ── NEWS HEADER ── -->
+  <header class="news-header">
+    <div class="container">
+      <h1 class="catalog-title" data-trans="news_header_title">Trade Intelligence & News</h1>
+      <p class="catalog-subtitle" data-trans="news_header_subtitle">Access current crop updates, agricultural market trends, logistics developments, and company announcements from our trade desk.</p>
+      
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-cat="all" data-trans="news_filter_all">All Articles</button>
+        <button class="filter-btn" data-cat="market" data-trans="news_filter_market">Market Reports</button>
+        <button class="filter-btn" data-cat="company" data-trans="news_filter_company">Company Updates</button>
+        <button class="filter-btn" data-cat="sourcing" data-trans="news_filter_sourcing">Sourcing &amp; Logistics</button>
+        <a href="#govt-feed" class="filter-btn" style="background:var(--btn-bg);color:#fff;border-color:var(--btn-bg);text-decoration:none;">🏛️ Govt. Alerts</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── ARTICLES SECTION ── -->
+  <section class="gallery-section">
+    <div class="container">
+      <!-- Featured Article Placeholder (Dynamically injected) -->
+      <div id="featuredArticleContainer"></div>
+
+      <!-- Grid of remaining articles -->
+      <div class="blog-grid" id="blogGrid">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GOVERNMENT TRADE INTELLIGENCE LIVE FEED ── -->
+  <section class="gallery-section" id="govt-feed" style="background:var(--tan);">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div style="text-align:center;margin-bottom:40px;">
+        <span class="section-label" style="color:var(--accent-gold);">Live Feed</span>
+        <h2 class="section-title" style="margin-top:8px;">Government Trade Intelligence</h2>
+        <p style="max-width:600px;margin:12px auto 0;color:var(--text-mid);font-size:15px;line-height:1.7;">
+          Real-time press releases from PIB &amp; Ministry of Commerce — covering DGFT policy, customs circulars, FTA updates, and export incentives.
+        </p>
+      </div>
+
+      <!-- Source Badges -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px;">
+        <span class="govtag">🏛️ PIB — Press Information Bureau</span>
+        <span class="govtag">🛒 Ministry of Commerce &amp; Industry</span>
+        <span class="govtag">💰 Ministry of Finance</span>
+        <span class="govtag">📦 DGFT / Niryat / CBIC Keywords</span>
+      </div>
+
+      <!-- Live Feed Card -->
+      <div class="govt-feed-card" id="govt-feed-card">
+        <!-- Loading skeleton -->
+        <div id="gf-loading" class="gf-loading-wrap">
+          <div class="gf-skeleton"></div>
+          <div class="gf-skeleton" style="width:80%;"></div>
+          <div class="gf-skeleton" style="width:88%;"></div>
+          <div class="gf-skeleton" style="width:75%;"></div>
+          <div class="gf-skeleton" style="width:90%;"></div>
+        </div>
+
+        <!-- Updated timestamp -->
+        <div id="gf-updated" class="gf-updated" hidden></div>
+
+        <!-- News list -->
+        <ul id="gf-list" class="gf-list"></ul>
+
+        <!-- Error / empty state -->
+        <div id="gf-msg" class="gf-msg" hidden></div>
+      </div>
+
+      <!-- Disclaimer -->
+      <p style="text-align:center;margin-top:20px;font-size:12px;color:var(--text-light);">
+        News is fetched from official government portals and refreshed every 3 hours. Jalpex International does not author these releases.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    /* ── Source badge pills ── */
+    .govtag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 14px;
+      background: rgba(201, 146, 46, 0.10);
+      border: 1px solid rgba(201, 146, 46, 0.30);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-gold);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Feed Card ── */
+    .govt-feed-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      box-shadow: var(--shadow);
+    }
+
+    /* ── Skeleton loader ── */
+    .gf-loading-wrap { display: flex; flex-direction: column; gap: 14px; }
+    .gf-skeleton {
+      height: 18px;
+      width: 100%;
+      background: linear-gradient(90deg, #f0ede6 25%, #e8e4db 50%, #f0ede6 75%);
+      background-size: 200% 100%;
+      border-radius: 6px;
+      animation: gfShimmer 1.4s infinite;
+    }
+    @keyframes gfShimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ── Updated timestamp ── */
+    .gf-updated {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── News list ── */
+    .gf-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .gf-list li {
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: background 0.2s;
+    }
+    .gf-list li:first-child { border-top: none; }
+    .gf-list li:hover { background: rgba(201, 146, 46, 0.04); margin: 0 -36px; padding: 16px 36px; border-radius: 8px; }
+
+    /* Source dot */
+    .gf-dot {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      margin-top: 7px;
+    }
+
+    .gf-item-body { flex: 1; min-width: 0; }
+
+    .gf-list a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14.5px;
+      line-height: 1.5;
+      display: block;
+      transition: color 0.2s;
+    }
+    .gf-list a:hover { color: var(--accent-gold); }
+    .gf-list a::after {
+      content: ' ↗';
+      font-size: 11px;
+      opacity: 0.5;
+    }
+
+    /* Meta row */
+    .gf-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 5px;
+    }
+    .gf-badge {
+      display: inline-block;
+      background: var(--blue-pale);
+      color: var(--blue-deep);
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .gf-badge.pib  { background: rgba(201,146,46,0.12); color: #8a5e00; }
+    .gf-badge.moc  { background: rgba(30,77,43,0.10);  color: var(--blue-deep); }
+    .gf-date {
+      font-size: 11.5px;
+      color: var(--text-light);
+    }
+    .gf-ministry {
+      font-size: 11px;
+      color: var(--text-mid);
+    }
+
+    /* ── Empty / error state ── */
+    .gf-msg {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-mid);
+      font-size: 14px;
+    }
+    .gf-msg svg { display: block; margin: 0 auto 14px; opacity: 0.35; }
+
+    @media (max-width: 640px) {
+      .govt-feed-card { padding: 20px 18px; }
+      .gf-list li:hover { margin: 0 -18px; padding: 16px 18px; }
+    }
+  </style>
+
+
+  <script>
+  (function () {
+    var loadingEl = document.getElementById('gf-loading');
+    var updatedEl = document.getElementById('gf-updated');
+    var listEl    = document.getElementById('gf-list');
+    var msgEl     = document.getElementById('gf-msg');
+
+    // ── Tries each backend in order; uses the first that responds OK.
+    // On Vercel: /api/news is a serverless function, /news.php 404s → ignored.
+    // On Hostinger: /api/news 404s → ignored, /news.php is the PHP script.
+    var ENDPOINTS = ['/api/news', '/news.php'];
+
+    function load(i) {
+      if (i >= ENDPOINTS.length) return Promise.reject(new Error('no backend'));
+      return fetch(ENDPOINTS[i])
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .catch(function () { return load(i + 1); });
+    }
+
+    function showError(text) {
+      if (loadingEl) loadingEl.hidden = true;
+      msgEl.hidden = false;
+      msgEl.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' + text;
+    }
+
+    function renderItems(items) {
+      items.forEach(function (it) {
+        var li = document.createElement('li');
+
+        var dot = document.createElement('div');
+        dot.className = 'gf-dot';
+
+        var body = document.createElement('div');
+        body.className = 'gf-item-body';
+
+        var a = document.createElement('a');
+        a.href    = it.url;
+        a.target  = '_blank';
+        a.rel     = 'noopener noreferrer';
+        a.textContent = it.title;
+
+        var meta = document.createElement('div');
+        meta.className = 'gf-meta';
+
+        var badge = document.createElement('span');
+        badge.className = 'gf-badge ' + (it.source === 'PIB' ? 'pib' : 'moc');
+        badge.textContent = it.source;
+
+        meta.appendChild(badge);
+
+        if (it.date) {
+          var dateSpan = document.createElement('span');
+          dateSpan.className = 'gf-date';
+          try {
+            var d = new Date(it.date);
+            dateSpan.textContent = d.toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+          } catch(e) { dateSpan.textContent = it.date; }
+          meta.appendChild(dateSpan);
+        }
+
+        if (it.ministry) {
+          var minSpan = document.createElement('span');
+          minSpan.className = 'gf-ministry';
+          minSpan.textContent = '· ' + it.ministry;
+          meta.appendChild(minSpan);
+        }
+
+        body.appendChild(a);
+        body.appendChild(meta);
+        li.appendChild(dot);
+        li.appendChild(body);
+        listEl.appendChild(li);
+      });
+    }
+
+    load(0)
+      .then(function (data) {
+        if (loadingEl) loadingEl.hidden = true;
+
+        if (!data.items || !data.items.length) {
+          showError('No new updates right now — check back later.');
+          return;
+        }
+
+        try {
+          updatedEl.textContent = 'Last refreshed: ' +
+            new Date(data.updatedAt).toLocaleString('en-IN', { dateStyle:'medium', timeStyle:'short' }) +
+            '  ·  ' + data.count + ' items';
+          updatedEl.hidden = false;
+        } catch(e) {}
+
+        renderItems(data.items);
+      })
+      .catch(function () {
+        showError('Could not load news right now. Please try again later.');
+      });
+  })();
+  </script>
+
+
+  <!-- ── ARTICLE DETAIL MODAL ── -->
+  <div class="article-modal" id="articleModal">
+    <div class="article-modal-card">
+      <button class="article-modal-close" id="modalClose">&times;</button>
+      <div class="article-modal-hero">
+        <img src="" alt="" id="modalImg">
+      </div>
+      <div class="article-modal-body">
+        <div class="article-meta">
+          <span class="article-cat" id="modalCat"></span>
+          <span id="modalDate"></span>
+        </div>
+        <h2 class="article-modal-title" id="modalTitle"></h2>
+        <div class="article-modal-text" id="modalText">
+          <!-- Text Paragraphs -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
+            <img src="logo-light.png?v=2" alt="Jalpex International Logo" class="logo-img">
+          </a>
+          <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="catalog.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Offerings</h4>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=agricultural">Agricultural Products</a></li>
+            <li><a href="catalog.html?cat=food_dehydrated">Food Products</a></li>
+            <li><a href="catalog.html?cat=fresh_produce">Fresh Fruits & Vegetables</a></li>
+            <li><a href="catalog.html?cat=handicrafts">Handicrafts</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Registered Office</h4>
+          <div class="footer-contact-info">
+            <span>Jalpex International, India</span>
+            <span>23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001</span>
+            <span style="margin-top: 10px; display: block;">
+              <a href="tel:+919879915124" style="color: inherit; text-decoration: none;">+91 98799 15124</a>
+            </span>
+            <span style="margin-top: 10px; display: block;">Email: jalpexinternational@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jalpex International. All Rights Reserved.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+          </a>
+          <a href="mailto:jalpexinternational@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Local news articles database
+    const newsArticles = [
+      {
+        id: "art1",
+        category: "market",
+        isFeatured: true,
+        image: "products/organic-sourcing.png",
+        date: "July 10, 2026",
+        title: "India's Agricultural Export Growth Targets $100B by 2030: Jalpex Scaling Operations",
+        desc: "With rising global demand for Indian spices, grains, and organic produce, Jalpex International is expanding its warehousing capacity to meet new delivery programs in Europe and the Americas.",
+        body: "<p>New government policies promoting farm-direct logistics are opening up trade routes. At Jalpex International, we have integrated new cleaning sorting plants in Banaskantha to process over 20 Metric Tons of premium spices and seeds daily. Our direct relationship with farming cooperatives has reduced customs transit overheads, allowing us to offer extremely competitive CNF prices to our clients worldwide.</p><p>As shipping rates stabilize and container availability becomes predictable, bulk importers are securing long-term buying programs. Our sourcing desks in Gujarat and Rajasthan have logged a record number of inquiries for contract processing of cumin and sesame seeds this harvest season.</p><p>By prioritizing certifications like ISO 22000 and FSSAI, Jalpex International stands ready to lead this growth wave, bringing quality farm produce to global dining tables.</p>"
+      },
+      {
+        id: "art2",
+        category: "company",
+        isFeatured: false,
+        image: "gallery/warehouse_stock.png",
+        date: "June 25, 2026",
+        title: "New State-of-the-Art Warehouse Opened in Deesa, Gujarat",
+        desc: "We have inaugurated a new temperature-controlled logistics terminal specializing in preserving volatile oil contents of spices.",
+        body: "<p>Preserving seed quality and preventing insect entry is crucial for compliance with FDA and EU phytosanitary limits. Our new 45,000 sq ft facility in Deesa, Gujarat features modern multi-stage sorting tables and vacuum packing systems.</p><p>This facility allows us to process, inspect, and package raw agricultural goods under clean room conditions. Volatile oils in spices like cumin, fennel, and coriander seeds are highly sensitive to temperature and ambient moisture, and our new HVAC setups guarantee moisture levels stay below 6% during storage.</p><p>This enables clients to customize their private labeling and custom pouch sizes directly at source, saving packaging costs in destination ports. Contact our sales desk for custom contract packaging inquiries.</p>"
+      },
+      {
+        id: "art3",
+        category: "market",
+        isFeatured: false,
+        image: "products/red-chilli.png",
+        date: "May 18, 2026",
+        title: "Red Chilli Export Demand Climbs in Gulf Markets",
+        desc: "Indian stemless red chilli (ASTA 100-120) sees a 15% increase in trade inquiries. Here is a market analysis for bulk buyers.",
+        body: "<p>Rising culinary trends and spice manufacturing needs in Saudi Arabia, UAE, and Oman are driving chilli exports. Buyers are prioritizing low pesticide residue and high heat levels (SHU values above 40,000).</p><p>Jalpex International has secured contract harvest agreements with premium Guntur chilli farms, ensuring stable commercial supply volumes despite seasonal price fluctuations.</p><p>Our quality assurance team monitors crops right from the flowering stage, checking for uniform color and size. The dried chillies undergo metal detection and steam sterilization prior to being packed in sea-worthy jute bags or customized retail pouches.</p>"
+      },
+      {
+        id: "art4",
+        category: "sourcing",
+        isFeatured: false,
+        image: "gallery/spice_farm.png",
+        date: "April 05, 2026",
+        title: "Direct Sourcing Redefines Agricultural Traceability",
+        desc: "How farm tracking helps bulk clients verify phytosanitary origins and safety parameters of spices and pulses.",
+        body: "<p>Global consumers are demanding to know exactly where their food comes from. Jalpex International's digital sourcing ledger logs farming coordinates, fertilizer usage, and batch milling dates.</p><p>This transparency is helping bulk distributors in Germany and the UK clear custom borders smoothly, eliminating product quarantine risks. By eliminating middlemen, we pass the cost benefits directly to our buyers while ensuring local farmers receive fair price payouts.</p><p>We believe ethical trade is the only sustainable way forward. Our farm-to-port logistics program is built on mutual trust and complete chemical analysis transparency.</p>"
+      }
+    ];
+
+    let activeFilter = "all";
+
+    function renderNews() {
+      const featuredContainer = document.getElementById("featuredArticleContainer");
+      const grid = document.getElementById("blogGrid");
+      
+      if (!featuredContainer || !grid) return;
+      
+      featuredContainer.innerHTML = "";
+      grid.innerHTML = "";
+
+      const filtered = activeFilter === "all"
+        ? newsArticles
+        : newsArticles.filter(art => art.category === activeFilter);
+
+      // Find if there is a featured article in the filtered list
+      const featuredArticle = filtered.find(art => art.isFeatured);
+      const remainingArticles = filtered.filter(art => art !== featuredArticle);
+
+      if (featuredArticle) {
+        let catText = "Market Report";
+        if (featuredArticle.category === "company") catText = "Company Update";
+        if (featuredArticle.category === "sourcing") catText = "Sourcing & Logistics";
+
+        const featDiv = document.createElement("div");
+        featDiv.className = "featured-article";
+        featDiv.innerHTML = `
+          <div class="featured-article-img">
+            <img src="${featuredArticle.image}" alt="${featuredArticle.title}">
+          </div>
+          <div class="featured-article-content">
+            <div class="article-meta">
+              <span class="article-cat">${catText}</span>
+              <span>${featuredArticle.date}</span>
+            </div>
+            <h2 class="featured-article-title">${featuredArticle.title}</h2>
+            <p class="featured-article-desc">${featuredArticle.desc}</p>
+            <a href="#" class="btn-read-more" data-id="${featuredArticle.id}">
+              Read Full Article 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        `;
+        
+        featDiv.querySelector(".btn-read-more").addEventListener("click", (e) => {
+          e.preventDefault();
+          openArticleModal(featuredArticle.id);
+        });
+
+        featuredContainer.appendChild(featDiv);
+      }
+
+      remainingArticles.forEach(art => {
+        const card = document.createElement("div");
+        card.className = "blog-card";
+        
+        let catText = "Market Report";
+        if (art.category === "company") catText = "Company Update";
+        if (art.category === "sourcing") catText = "Sourcing & Logistics";
+
+        card.innerHTML = `
+          <div class="blog-card-img">
+            <img src="${art.image}" alt="${art.title}" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="article-meta">
+              <span class="article-cat">${catText}</span>
+              <span>${art.date}</span>
+            </div>
+            <h3 class="blog-card-title">${art.title}</h3>
+            <p class="blog-card-desc">${art.desc}</p>
+            <a href="#" class="btn-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        `;
+
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          openArticleModal(art.id);
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    function initFilters() {
+      const buttons = document.querySelectorAll(".filter-btn");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          activeFilter = btn.getAttribute("data-cat");
+          renderNews();
+        });
+      });
+    }
+
+    // Modal Reader Functionality
+    const modal = document.getElementById("articleModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalCat = document.getElementById("modalCat");
+    const modalDate = document.getElementById("modalDate");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const closeBtn = document.getElementById("modalClose");
+
+    function openArticleModal(id) {
+      const article = newsArticles.find(art => art.id === id);
+      if (!article) return;
+
+      modalImg.src = article.image;
+      modalImg.alt = article.title;
+      
+      let catText = "Market Report";
+      if (article.category === "company") catText = "Company Update";
+      if (article.category === "sourcing") catText = "Sourcing & Logistics";
+      
+      modalCat.textContent = catText;
+      modalDate.textContent = article.date;
+      modalTitle.textContent = article.title;
+      modalText.innerHTML = article.body;
+
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden"; // Disable scroll
+    }
+
+    function closeArticleModal() {
+      modal.classList.remove("open");
+      document.body.style.overflow = ""; // Re-enable scroll
+    }
+
+    closeBtn.addEventListener("click", closeArticleModal);
+    
+    // Close modal on click outside the card
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeArticleModal();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        closeArticleModal();
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initFilters();
+      renderNews();
+    });
+  </script>
+</body>
+</html>
