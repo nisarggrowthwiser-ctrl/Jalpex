@@ -15,8 +15,15 @@
 const CACHE_SECONDS = 10800; // 3 hours — CDN re-fetches at most this often
 const MAX_ITEMS = 25;
 
-const PIB_URL = "https://pib.gov.in/allRel.aspx?reg=3&lang=1";
-const COMMERCE_URL = "https://www.commerce.gov.in/press-releases/";
+const PIB_URLS = [
+  "https://pib.gov.in/allRel.aspx?reg=3&lang=1",
+  "https://www.pib.gov.in/allRel.aspx?reg=3&lang=1",
+];
+const COMMERCE_URLS = [
+  "https://www.commerce.gov.in/press-releases/",
+  "https://commerce.gov.in/press-releases/",
+  "https://www.commerce.gov.in/press-releases",
+];
 
 // PIB groups releases under ministry headings. Keep items from these ministries…
 const MINISTRY_PATTERNS = [
@@ -30,8 +37,11 @@ const KEYWORD_PATTERN =
 
 const FETCH_HEADERS = {
   "User-Agent":
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
-  Accept: "text/html,application/xhtml+xml",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "Accept-Language": "en-IN,en;q=0.9,hi;q=0.8",
+  "Upgrade-Insecure-Requests": "1",
 };
 
 /* ---------------------------- helpers ---------------------------- */
@@ -57,10 +67,23 @@ async function fetchText(url) {
   return res.text();
 }
 
+// try a list of URLs, return the first successful response body
+async function fetchFirst(urls) {
+  let lastErr;
+  for (const url of urls) {
+    try {
+      return await fetchText(url);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr;
+}
+
 /* ---------------------------- PIB ---------------------------- */
 
 async function fetchPib() {
-  const html = (await fetchText(PIB_URL))
+  const html = (await fetchFirst(PIB_URLS))
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "");
 
@@ -75,9 +98,11 @@ async function fetchPib() {
     }
   }
 
-  // Collect press-release links
+  // Collect press-release links.
+  // NOTE: PIB uses several page names (PressReleasePage.aspx, and a misspelled
+  // PressReleseDetail.aspx / PressReleseDetailm.aspx), so match on PRID= only.
   const items = [];
-  const aRe = /<a[^>]+href=["']([^"']*PressRelease[^"']*PRID=\d+[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  const aRe = /<a[^>]+href=["']([^"']*PRID=\d+[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
   while ((m = aRe.exec(html))) {
     const title = stripTags(m[2]);
     if (!title || title.length < 15) continue;
@@ -97,12 +122,14 @@ async function fetchPib() {
     const keywordMatch = KEYWORD_PATTERN.test(title);
     if (!ministryMatch && !keywordMatch) continue;
 
-    if (!items.some((it) => it.url === url)) {
+    const prid = (url.match(/PRID=(\d+)/i) || [])[1];
+    if (!items.some((it) => it.url === url || (prid && it.prid === prid))) {
       items.push({
         source: "PIB",
         ministry: ministry || null,
         title,
         url,
+        prid,
         date: new Date().toISOString().slice(0, 10), // PIB page shows today's releases
       });
     }
@@ -128,7 +155,7 @@ function parseLooseDate(text) {
 }
 
 async function fetchCommerce() {
-  const html = (await fetchText(COMMERCE_URL))
+  const html = (await fetchFirst(COMMERCE_URLS))
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "");
 
@@ -164,6 +191,30 @@ async function fetchCommerce() {
 /* ---------------------------- handler ---------------------------- */
 
 module.exports = async (req, res) => {
+  // Debug mode: /api/news?debug=1 — shows what each source actually returned,
+  // so parsing problems can be diagnosed without guessing. Safe to leave in.
+  if (req.query && req.query.debug) {
+    const report = {};
+    for (const [name, urls] of [["pib", PIB_URLS], ["commerce", COMMERCE_URLS]]) {
+      try {
+        const html = await fetchFirst(urls);
+        report[name] = {
+          ok: true,
+          length: html.length,
+          pridLinks: (html.match(/PRID=\d+/gi) || []).length,
+          anchors: (html.match(/<a[\s>]/gi) || []).length,
+          headings: (html.match(/<h[1-6][\s>]/gi) || []).length,
+          sample: html.slice(0, 1200),
+        };
+      } catch (e) {
+        report[name] = { ok: false, error: e.message };
+      }
+    }
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(200).json(report);
+  }
+
   const [pib, commerce] = await Promise.allSettled([fetchPib(), fetchCommerce()]);
 
   const items = [];

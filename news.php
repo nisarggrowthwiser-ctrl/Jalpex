@@ -20,8 +20,15 @@ const CACHE_SECONDS = 10800;                 // 3 hours
 const MAX_ITEMS     = 25;
 define('CACHE_FILE', __DIR__ . '/news-cache.json');
 
-const PIB_URL      = 'https://pib.gov.in/allRel.aspx?reg=3&lang=1';
-const COMMERCE_URL = 'https://www.commerce.gov.in/press-releases/';
+const PIB_URLS = [
+    'https://pib.gov.in/allRel.aspx?reg=3&lang=1',
+    'https://www.pib.gov.in/allRel.aspx?reg=3&lang=1',
+];
+const COMMERCE_URLS = [
+    'https://www.commerce.gov.in/press-releases/',
+    'https://commerce.gov.in/press-releases/',
+    'https://www.commerce.gov.in/press-releases',
+];
 
 $MINISTRY_PATTERNS = [
     '/commerce\s*(&(amp;)?|and)\s*industry/i',   // Ministry of Commerce & Industry
@@ -44,7 +51,11 @@ if (!function_exists('news_fetch_url')) {
             CURLOPT_TIMEOUT        => 20,
             CURLOPT_SSL_VERIFYPEER => true,
             CURLOPT_USERAGENT      => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36',
-            CURLOPT_HTTPHEADER     => ['Accept: text/html,application/xhtml+xml'],
+            CURLOPT_HTTPHEADER     => [
+                'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language: en-IN,en;q=0.9,hi;q=0.8',
+                'Upgrade-Insecure-Requests: 1',
+            ],
         ]);
         $body = curl_exec($ch);
         $code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
@@ -55,6 +66,16 @@ if (!function_exists('news_fetch_url')) {
         }
         return $body;
     }
+}
+
+function news_fetch_first(array $urls): string
+{
+    $lastErr = null;
+    foreach ($urls as $url) {
+        try { return news_fetch_url($url); }
+        catch (Throwable $e) { $lastErr = $e; }
+    }
+    throw $lastErr;
 }
 
 function news_strip_tags_deep(string $s): string
@@ -74,7 +95,7 @@ function news_clean_html(string $html): string
 
 function news_fetch_pib(array $ministryPatterns): array
 {
-    $html = news_clean_html(news_fetch_url(PIB_URL));
+    $html = news_clean_html(news_fetch_first(PIB_URLS));
 
     // headings with byte offsets — used to find each release's ministry
     $headings = [];
@@ -88,8 +109,10 @@ function news_fetch_pib(array $ministryPatterns): array
     }
 
     $items = [];
+    // PIB uses several page names (incl. misspelled PressReleseDetail.aspx),
+    // so match on PRID= only.
     if (preg_match_all(
-        '/<a[^>]+href=["\']([^"\']*PressRelease[^"\']*PRID=\d+[^"\']*)["\'][^>]*>([\s\S]*?)<\/a>/i',
+        '/<a[^>]+href=["\']([^"\']*PRID=\d+[^"\']*)["\'][^>]*>([\s\S]*?)<\/a>/i',
         $html, $am, PREG_OFFSET_CAPTURE | PREG_SET_ORDER
     )) {
         foreach ($am as $a) {
@@ -146,7 +169,7 @@ function news_parse_loose_date(string $text): ?string
 
 function news_fetch_commerce(): array
 {
-    $html = news_clean_html(news_fetch_url(COMMERCE_URL));
+    $html = news_clean_html(news_fetch_first(COMMERCE_URLS));
 
     $items = [];
     if (preg_match_all('/<(li|tr|p|div)[^>]*>([\s\S]*?)<\/\1>/i', $html, $rm, PREG_SET_ORDER)) {
