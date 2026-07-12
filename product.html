@@ -5,185 +5,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#1E4D2B">
   <title>Product Details | Jalpex International</title>
+  <meta name="description" content="Explore premium export-quality agricultural products from Jalpex International.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      background: var(--cream);
-      color: var(--text-dark);
-      padding-top: 100px;
-    }
-    
-    .product-detail-section {
-      padding: 60px 0;
-      min-height: 80vh;
-    }
+    body { background: var(--cream); color: var(--text-dark); padding-top: 80px; }
 
-    .back-btn-container {
-      margin-bottom: 40px;
+    /* ── HERO BANNER ── */
+    .pd-hero {
+      background: linear-gradient(135deg, #0d1f12 0%, #1E4D2B 60%, #2a6640 100%);
+      padding: 56px 0 52px;
+      position: relative;
+      overflow: hidden;
     }
-
-    .btn-back {
+    .pd-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(201,146,46,0.13) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .pd-hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 16px;
+    }
+    .pd-hero-breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
+    .pd-hero-breadcrumb a:hover { color: var(--accent-gold); }
+    .pd-hero-breadcrumb .sep { color: rgba(255,255,255,0.25); }
+    .pd-hero-cat {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+    .pd-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.05;
+      margin: 0 0 16px;
+    }
+    .pd-hero-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.68;
+      max-width: 540px;
+      font-weight: 300;
+    }
+    .pd-hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .pd-hero-tag {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: rgba(255,255,255,0.82);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+    .pd-hero-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .pd-btn-inquire {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--text-mid);
-      text-decoration: none;
+      background: var(--accent-gold);
+      color: #0d1f12;
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-weight: 700;
       font-size: 14px;
+      text-decoration: none;
+      transition: all 0.35s;
+      box-shadow: 0 6px 20px rgba(201,146,46,0.3);
+    }
+    .pd-btn-inquire:hover { background: #f0c36a; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(201,146,46,0.4); }
+    .pd-btn-catalog {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.78);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 13px 24px;
+      border-radius: 50px;
       font-weight: 500;
-      transition: color 0.3s;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.35s;
     }
+    .pd-btn-catalog:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
 
-    .btn-back:hover {
-      color: var(--accent-orange);
-    }
-
-    .product-detail-grid {
+    /* ── DETAIL GRID ── */
+    .pd-detail-section { padding: 64px 0; }
+    .pd-detail-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 56px;
       align-items: start;
     }
-
-    .product-detail-img-wrap {
-      background: rgba(255, 255, 255, 0.72);
+    .pd-img-wrap {
+      background: #fff;
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 30px;
+      border-radius: 24px;
+      padding: 32px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: sticky;
-      top: 120px;
+      top: 100px;
+      box-shadow: 0 8px 32px rgba(36,29,18,0.08);
     }
-
-    .product-detail-img-wrap img {
+    .pd-img-wrap img {
       max-width: 100%;
       height: auto;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      max-height: 420px;
+      object-fit: contain;
+      border-radius: 12px;
       transition: transform 0.5s;
     }
+    .pd-img-wrap img:hover { transform: scale(1.04); }
 
-    .product-detail-img-wrap img:hover {
-      transform: scale(1.03);
-    }
-
-    .product-detail-info {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .product-detail-cat {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--accent-orange);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .product-detail-title {
-      font-size: clamp(36px, 4vw, 52px);
-      line-height: 1.1;
-      margin: 0;
-      color: var(--text-dark);
-    }
-
-    .product-detail-desc {
+    .pd-info { display: flex; flex-direction: column; gap: 30px; }
+    .pd-block-heading {
+      font-family: 'DM Sans', sans-serif;
       font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-mid);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
     }
-
     .spec-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
-      background: rgba(255, 255, 255, 0.6);
+      background: #fff;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 14px;
       overflow: hidden;
     }
-
-    .spec-table th, .spec-table td {
-      padding: 14px 20px;
-      text-align: left;
-      font-size: 14px;
-    }
-
-    .spec-table th {
-      background: rgba(30, 77, 43, 0.06);
-      color: var(--text-dark);
-      font-weight: 600;
-      border-bottom: 1px solid var(--border);
-    }
-
     .spec-table td {
-      border-bottom: 1px solid rgba(90, 70, 30, 0.1);
-      color: var(--text-mid);
-    }
-
-    .spec-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .spec-label {
-      font-weight: 500;
-      color: var(--text-dark);
-      width: 35%;
-    }
-
-    .product-detail-tags {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .product-detail-tag {
-      background: rgba(255, 102, 0, 0.08);
-      border: 1px solid rgba(255, 102, 0, 0.2);
-      color: var(--accent-orange);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-    }
-
-    .product-inquiry-card {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      margin-top: 20px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .product-inquiry-title {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: var(--text-dark);
-    }
-
-    .product-inquiry-desc {
+      padding: 13px 18px;
       font-size: 14px;
+      border-bottom: 1px solid rgba(90,70,30,0.08);
       color: var(--text-mid);
-      margin-bottom: 24px;
     }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .spec-label { font-weight: 600; color: var(--text-dark); width: 44%; }
 
-    @media (max-width: 1024px) {
-      .product-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .product-detail-img-wrap {
-        position: static;
-        max-width: 500px;
-        margin: 0 auto;
-      }
+    .pd-badge-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pd-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(30,77,43,0.07);
+      border: 1px solid rgba(30,77,43,0.16);
+      color: #1E4D2B;
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pd-badge svg { width: 14px; height: 14px; stroke: #1E4D2B; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── WHY CHOOSE US ── */
+    .pd-wcu-section {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0;
+    }
+    .pd-wcu-header { text-align: center; margin-bottom: 52px; }
+    .pd-wcu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .pd-wcu-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px 24px;
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
+    .pd-wcu-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(36,29,18,0.1); }
+    .pd-wcu-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #1E4D2B, #2a6640);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .pd-wcu-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pd-wcu-card h4 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+    .pd-wcu-card p { font-size: 13.5px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+
+    /* ── INQUIRY ── */
+    .pd-inquiry-section { padding: 72px 0 88px; }
+    .pd-inquiry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.65fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .pd-inquiry-left { position: sticky; top: 100px; }
+    .pd-inquiry-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .pd-inquiry-left p { font-size: 15px; color: var(--text-mid); line-height: 1.7; margin-bottom: 30px; }
+    .pd-contact-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .pd-contact-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text-mid); }
+    .pd-contact-list li svg { width: 18px; height: 18px; min-width: 18px; stroke: #1E4D2B; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+    .pd-contact-list a { color: var(--accent-orange); text-decoration: none; }
+    .pd-contact-list a:hover { text-decoration: underline; }
+
+    .pd-form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 44px 40px;
+      box-shadow: 0 8px 32px rgba(36,29,18,0.07);
+    }
+    .pd-form-card h3 { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .pd-form-sub { font-size: 14px; color: var(--text-mid); margin-bottom: 28px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .pd-hero { padding: 38px 0 34px; }
+      .pd-hero-title { font-size: clamp(30px, 8vw, 44px); }
+      .pd-hero-desc { font-size: 14px; }
+      .pd-detail-section { padding: 40px 0; }
+      .pd-detail-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pd-img-wrap { position: static; padding: 20px; }
+      .pd-wcu-section { padding: 48px 0; }
+      .pd-wcu-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .pd-wcu-card { padding: 22px 18px; }
+      .pd-inquiry-section { padding: 48px 0 60px; }
+      .pd-inquiry-grid { grid-template-columns: 1fr; gap: 36px; }
+      .pd-inquiry-left { position: static; }
+      .pd-form-card { padding: 28px 20px; }
+    }
+    @media (max-width: 480px) {
+      .pd-wcu-grid { grid-template-columns: 1fr; }
+      .pd-hero-actions { gap: 10px; }
+      .pd-btn-inquire, .pd-btn-catalog { padding: 11px 20px; font-size: 13px; }
     }
   </style>
 </head>
@@ -195,40 +285,153 @@
       <a href="index.html" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
       </a>
-      
       <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="catalog.html" class="active">Products</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
-        <li><a href="index.html#inquiry">Inquiry</a></li>
+        <li><a href="#pd-inquiry">Inquiry</a></li>
       </ul>
-
       <div class="nav-actions">
-        <a href="#inquiry-form-section" class="btn-primary header-cta">Request Quote</a>
+        <a href="#pd-inquiry" class="btn-primary header-cta">Request Quote</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- ── PRODUCT DETAILS CONTENT ── -->
-  <section class="product-detail-section">
-    <div class="container">
-      
-      <div class="back-btn-container">
-        <a href="catalog.html" class="btn-back">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          Back to Collections
-        </a>
-      </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="catalog.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+      <li><a href="#pd-inquiry">Inquiry</a></li>
+    </ul>
+    <a href="#pd-inquiry" class="btn-primary mobile-menu-cta">Request Quote</a>
+  </div>
 
-      <div class="product-detail-grid" id="productDetailGrid">
-        <!-- Rendered dynamically by script below -->
-        <div style="grid-column: 1 / -1; text-align: center; padding: 100px 0;">
-          <h3 style="color: var(--text-dark);">Loading Product Details...</h3>
+  <!-- ── PRODUCT HERO (JS rendered) ── -->
+  <div class="pd-hero" id="pd-hero">
+    <div class="container" id="pd-hero-content">
+      <div style="color:rgba(255,255,255,0.4);font-size:14px;">Loading product&hellip;</div>
+    </div>
+  </div>
+
+  <!-- ── PRODUCT DETAIL GRID ── -->
+  <section class="pd-detail-section">
+    <div class="container">
+      <div class="pd-detail-grid" id="pd-detail-grid">
+        <!-- JS rendered -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ── -->
+  <section class="pd-wcu-section">
+    <div class="container">
+      <div class="pd-wcu-header">
+        <span class="section-label" style="color:var(--accent-orange);">Why Jalpex</span>
+        <h2 class="section-title" style="margin-top:8px;">Why Buyers Trust Us</h2>
+        <p class="section-desc" style="max-width:560px;margin:0 auto;">We combine 15+ years of agricultural expertise, strict quality control, and transparent trade practices to deliver confidence with every shipment.</p>
+      </div>
+      <div class="pd-wcu-grid">
+        <div class="pd-wcu-card">
+          <div class="pd-wcu-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          </div>
+          <h4>Lab-Certified Quality</h4>
+          <p>Every batch undergoes third-party lab testing. FSSAI, FDA &amp; ISO-compliant certifications available on request.</p>
+        </div>
+        <div class="pd-wcu-card">
+          <div class="pd-wcu-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0v10l-8 4m-8-4V7m16 3l-8 4m-8-4l8 4"/></svg>
+          </div>
+          <h4>Direct Farm Sourcing</h4>
+          <p>Sourced directly from Gujarat, Rajasthan &amp; MP farming belts — zero middlemen, full traceability from field to port.</p>
+        </div>
+        <div class="pd-wcu-card">
+          <div class="pd-wcu-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Secure Packaging</h4>
+          <p>Vacuum-sealed PP woven bags, food-grade cartons &amp; fumigated containers ensure cargo arrives fresh and intact.</p>
+        </div>
+        <div class="pd-wcu-card">
+          <div class="pd-wcu-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>40+ Countries Served</h4>
+          <p>Trusted by importers across UAE, USA, UK, Germany, Australia &amp; Southeast Asia with an on-time delivery track record.</p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- ── INQUIRY FORM ── -->
+  <section class="pd-inquiry-section" id="pd-inquiry">
+    <div class="container">
+      <div class="pd-inquiry-grid">
+
+        <div class="pd-inquiry-left">
+          <span class="section-label" style="color:var(--accent-orange);display:block;margin-bottom:12px;">Get In Touch</span>
+          <h2 id="pd-inq-heading">Request a Quote</h2>
+          <p id="pd-inq-desc">Fill in the form and our trade desk will respond within 24 hours with pricing, specs and packaging details.</p>
+          <ul class="pd-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:jalpexinternational@gmail.com">jalpexinternational@gmail.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.09-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919879915124">+91 98799 15124</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              23, Dayakunj, Vrundavan Nagar, Junagadh, Gujarat 362001, India
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-form-card">
+          <h3>Send Your Inquiry</h3>
+          <p class="pd-form-sub" id="pd-form-sub">We'll reply within 24 hours with pricing and product specs.</p>
+          <form id="productInquiryForm">
+            <div class="form-group">
+              <label for="inq-name">Full Name / Company Name *</label>
+              <input type="text" id="inq-name" class="form-control" placeholder="e.g. Global Foods Ltd." required>
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="inq-email">Email Address *</label>
+                <input type="email" id="inq-email" class="form-control" placeholder="you@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="inq-phone">Phone / WhatsApp *</label>
+                <input type="tel" id="inq-phone" class="form-control" placeholder="+1 555 000 0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inq-country">Destination Country</label>
+              <input type="text" id="inq-country" class="form-control" placeholder="e.g. United Arab Emirates">
+            </div>
+            <div class="form-group">
+              <label for="inq-message">Requirements (Qty, packaging, port) *</label>
+              <textarea id="inq-message" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit-btn" style="width:100%;justify-content:center;padding:16px 24px;">
+              Send Inquiry
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div id="pd-form-status" class="form-status" style="margin-top:14px;"></div>
+          </form>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -237,13 +440,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
+          <a href="index.html" class="logo-link" style="margin-bottom:20px;display:inline-block;">
             <img src="logo-light.png?v=2" alt="Jalpex International Logo" class="logo-img">
           </a>
-          <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+          <p class="footer-about-text" style="margin-top:15px;">Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
         </div>
         <div class="footer-col">
-          <h4>Quick Navigation</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="catalog.html">Products</a></li>
@@ -253,19 +456,21 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Our Offerings</h4>
+          <h4 class="footer-heading">Our Offerings</h4>
           <ul class="footer-links">
             <li><a href="catalog.html?cat=agricultural">Agricultural Products</a></li>
             <li><a href="catalog.html?cat=food_dehydrated">Food Products</a></li>
-            <li><a href="catalog.html?cat=fresh_produce">Fresh Fruits & Vegetables</a></li>
+            <li><a href="catalog.html?cat=fresh_produce">Fresh Fruits &amp; Vegetables</a></li>
             <li><a href="catalog.html?cat=handicrafts">Handicrafts</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Registered Office</h4>
+          <h4 class="footer-heading">Registered Office</h4>
           <div class="footer-contact-info">
             <span>Jalpex International, India</span>
-            <span>Email: jalpexinternational@gmail.com</span>
+            <span>23, Dayakunj, Vrundavan Nagar, Junagadh, Gujarat 362001</span>
+            <span>+91 98799 15124</span>
+            <span>jalpexinternational@gmail.com</span>
           </div>
         </div>
       </div>
@@ -273,158 +478,136 @@
         <p>&copy; 2026 Jalpex International. All Rights Reserved.</p>
         <div class="footer-social-links">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0z"/><circle cx="8" cy="8" r="2.667"/><circle cx="12.406" cy="3.594" r="0.96"/></svg>
           </a>
           <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
           </a>
           <a href="mailto:jalpexinternational@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z"/></svg>
           </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="app.js"></script>
-  <script>
-    // Local copy of products details database
-    const productsData = [
-      // AGRICULTURAL PRODUCTS
-      { id: "turmeric", category: "agricultural", name: "Turmeric Finger", desc: "Golden-yellow, aromatic spice available as whole fingers or ground powder. Sourced from high-curcumin farming belts.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png", specs: { "Curcumin Content": ">3.5%", "Moisture": "<10%", "Admixture": "<1%", "Origin": "India" } },
-      { id: "red_chilli", category: "agricultural", name: "Red Chilli", desc: "Vibrant red and fiery, offered as stemless/with-stem whole pods or finely ground powder of varying heat levels.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png", specs: { "ASTA Color": "60 - 120 max", "Moisture": "<12%", "Heat Value": "15,000 - 90,000 SHU", "Origin": "India" } },
-      { id: "cumin", category: "agricultural", name: "Cumin Seeds", desc: "Highly aromatic seeds with deep earthy flavor, available in whole premium grade seeds and fresh ground powder.", tags: ["whole", "powder", "earthy"], image: "products/cumin.png", specs: { "Purity": "99.5% min", "Moisture": "<9%", "Volatile Oil": "1.5% min", "Origin": "India" } },
-      { id: "coriander", category: "agricultural", name: "Coriander Seeds", desc: "Sweet, citrusy flavor profile. Offered in uniform whole seeds or premium, finely milled spice powder.", tags: ["whole", "powder", "premium"], image: "products/coriander.png", specs: { "Purity": "99% min", "Moisture": "<9%", "Split Seeds": "5% max", "Origin": "India" } },
-      { id: "sesame_seeds", category: "agricultural", name: "Sesame Seeds", desc: "Rich in healthy oils. Offered in natural golden, premium mechanically hulled, and pure deep black variants.", tags: ["natural", "hulled", "black"], image: "products/sesame-seeds.png", specs: { "Purity": "99.95% min", "Moisture": "<4.5%", "Oil Content": "50% min", "Origin": "India" } },
-      { id: "peanuts", category: "agricultural", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by count (38/42, 40/50, 50/60, etc.) with high oil yield.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png", specs: { "Count per Ounce": "38/42, 40/50, 50/60", "Moisture": "<8%", "Aflatoxin": "<4 ppb max", "Origin": "India" } },
-      { id: "pulses", category: "agricultural", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/chickpeas.png", specs: { "Purity": "99.5% min", "Moisture": "<12%", "Foreign Matter": "Nil", "Origin": "India" } },
-      { id: "rice", category: "agricultural", name: "Premium Basmati Rice", desc: "Long-grain, aromatic premium Indian Basmati rice, aged to perfection for exquisite flavor.", tags: ["basmati", "long-grain", "aged"], image: "products/rice.png", specs: { "Average Grain Length": "7.4 mm min", "Moisture": "<12%", "Broken": "1% max", "Origin": "India" } },
-      { id: "wheat", category: "agricultural", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png", specs: { "Protein": "11.5% min", "Moisture": "<12%", "Gluten": "26% min", "Origin": "India" } },
-      { id: "cotton", category: "agricultural", name: "Cotton Products", desc: "High-staple raw cotton bolls and cotton fibers, clean and processed for textile industries.", tags: ["raw-cotton", "fiber", "textile-grade"], image: "products/cotton.png", specs: { "Staple Length": "28mm - 32mm", "Micronaire": "3.5 - 4.9 NCL", "Trash Content": "<3%", "Origin": "India" } },
-
-      // FOOD & DEHYDRATED VEGETABLES
-      { id: "dehydrated_veg", category: "food_dehydrated", name: "Dehydrated Vegetables", desc: "Premium quality dehydrated onion flakes, garlic powder, and ginger flakes that preserve natural flavor.", tags: ["dehydrated", "flakes", "powder"], image: "products/dehydrated-veg.png", specs: { "Moisture": "<6%", "Purity": "100% Natural", "Preservatives": "None", "Origin": "India" } },
-      { id: "food_products", category: "food_dehydrated", name: "Processed Food Products", desc: "Value-added food products, processed grains, and customized packaging solutions for global retail.", tags: ["retail-ready", "value-added", "packaged"], image: "products/process-packaging.png", specs: { "Compliance": "FDA, FSSAI, ISO", "Packaging Sizes": "50g to 50kg", "Private Labeling": "Available", "Origin": "India" } },
-
-      // FRESH PRODUCE
-      { id: "fresh_produce", category: "fresh_produce", name: "Fresh Fruits & Vegetables", desc: "Freshly harvested pomegranates, mangoes, potatoes, and red onions sourced from local farms.", tags: ["fresh", "farm-direct", "organic"], image: "products/fresh-produce.png", specs: { "Quality": "Grade A Export", "Cold Chain": "Maintained", "Packaging": "Ventilated Crates", "Origin": "India" } },
-
-      // HANDICRAFTS
-      { id: "handicrafts", category: "handicrafts", name: "Artisanal Handicrafts", desc: "Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles.", tags: ["handmade", "artisanal", "traditional"], image: "products/handicrafts.png", specs: { "Material": "Brass, Wood, Cotton", "Craftsmanship": "100% Handcrafted", "Custom Designs": "Available", "Origin": "India" } }
-    ];
-
-    // Read URL param
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id') || 'turmeric';
-
-    // Find product
-    const product = productsData.find(p => p.id === productId);
-
-    const grid = document.getElementById("productDetailGrid");
-    if (product) {
-      document.title = `${product.name} | Jalpex International Premium Exports`;
-      
-      let specRows = "";
-      for (const [key, value] of Object.entries(product.specs || {})) {
-        specRows += `
-          <tr>
-            <td class="spec-label">${key}</td>
-            <td>${value}</td>
-          </tr>
-        `;
-      }
-
-      grid.innerHTML = `
-        <!-- Left Column: Image -->
-        <div class="product-detail-img-wrap">
-          <img src="${product.image}" alt="${product.name}">
-        </div>
-
-        <!-- Right Column: Info & Inquiry Form -->
-        <div class="product-detail-info">
-          <div>
-            <span class="product-detail-cat">${product.category.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())}</span>
-            <h1 class="product-detail-title">${product.name}</h1>
-          </div>
-          
-          <div class="product-detail-tags">
-            ${product.tags.map(tag => `<span class="product-detail-tag">${tag}</span>`).join("")}
-          </div>
-
-          <p class="product-detail-desc">${product.desc}</p>
-
-          <h3 style="color: var(--text-dark); font-size: 20px; margin-top: 10px;">Specifications</h3>
-          <table class="spec-table">
-            <tbody>
-              ${specRows}
-            </tbody>
-          </table>
-
-          <div class="product-inquiry-card" id="inquiry-form-section">
-            <h3 class="product-inquiry-title">Inquire About This Product</h3>
-            <p class="product-inquiry-desc">Interested in importing ${product.name}? Complete this quick form for spec sheet and commercial quotes.</p>
-            
-            <form id="productInquiryForm">
-              <div class="form-group">
-                <label for="formName">Your Full Name / Company Name</label>
-                <input type="text" id="formName" class="form-control" placeholder="Enter name" required>
-              </div>
-              <div class="form-group-row">
-                <div class="form-group">
-                  <label for="formEmail">Email Address</label>
-                  <input type="email" id="formEmail" class="form-control" placeholder="Enter email" required>
-                </div>
-                <div class="form-group">
-                  <label for="formPhone">Phone Number</label>
-                  <input type="tel" id="formPhone" class="form-control" placeholder="Include country code" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="formMessage">Requirements (Qty, packaging, destination port)</label>
-                <textarea id="formMessage" class="form-control" rows="4" required>Hello, I'm interested in importing Jalpex International's premium "${product.name}". Please send me pricing specification, packing sizes, and details.</textarea>
-              </div>
-              <button type="submit" class="btn-primary form-submit-btn">Send Inquiry for ${product.name}</button>
-              <div id="formStatus" class="form-status"></div>
-            </form>
-          </div>
-        </div>
-      `;
-
-      // Handle Inquiry Form Submission
-      document.getElementById("productInquiryForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const status = document.getElementById("formStatus");
-        status.className = "form-status success";
-        status.textContent = "Thank you! Your inquiry for " + product.name + " has been logged. Our trade desk will contact you shortly.";
-        e.target.reset();
-        setTimeout(() => {
-          status.textContent = "";
-        }, 8000);
-      });
-
-    } else {
-      grid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 100px 0;">
-          <h3 style="color: var(--text-dark); margin-bottom: 20px;">Product Not Found</h3>
-          <a href="index.html#products" class="btn-primary">View All Products</a>
-        </div>
-      `;
-    }
-  </script>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
     <div class="whatsapp-float-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
-        <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.46 3.414 1.258 4.861L2 22l5.313-1.394a9.94 9.94 0 0 0 4.699 1.182c5.506 0 9.988-4.48 9.988-9.988C22 6.482 17.518 2 12.012 2zm3.82 14.542c-.2.556-1.012 1.028-1.557 1.084-.375.041-.864.075-2.507-.597-2.083-.855-3.412-2.98-3.516-3.12-.103-.139-.838-1.113-.838-2.124 0-1.01.522-1.503.708-1.705.186-.201.405-.251.54-.251.135 0 .27.001.389.007.12.005.281-.046.439.336.162.392.556 1.361.604 1.46.049.1.081.215.015.347-.066.132-.1.215-.198.331-.099.115-.208.257-.297.346-.099.099-.202.207-.087.405.115.197.513.844 1.1 1.368.758.675 1.393.882 1.591.98.197.099.313.082.428-.05.115-.132.494-.576.626-.773.132-.197.264-.165.446-.099.182.066 1.155.544 1.353.643.197.099.33.148.379.231.049.083.049.528-.152 1.084z"/>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.46 3.414 1.258 4.861L2 22l5.313-1.394a9.94 9.94 0 0 0 4.699 1.182c5.506 0 9.988-4.48 9.988-9.988C22 6.482 17.518 2 12.012 2zm3.82 14.542c-.2.556-1.012 1.028-1.557 1.084-.375.041-.864.075-2.507-.597-2.083-.855-3.412-2.98-3.516-3.12-.103-.139-.838-1.113-.838-2.124 0-1.01.522-1.503.708-1.705.186-.201.405-.251.54-.251.135 0 .27.001.389.007.12.005.281-.046.439.336.162.392.556 1.361.604 1.46.049.1.081.215.015.347-.066.132-.1.215-.198.331-.099.115-.208.257-.297.346-.099.099-.202.207-.087.405.115.197.513.844 1.1 1.368.758.675 1.393.882 1.591.98.197.099.313.082.428-.05.115-.132.494-.576.626-.773.132-.197.264-.165.446-.099.182.066 1.155.544 1.353.643.197.099.33.148.379.231.049.083.049.528-.152 1.084z"/></svg>
     </div>
   </a>
+
+  <script src="app.js"></script>
+  <script>
+  (function() {
+    const productsData = [
+      { id:"turmeric",       category:"agricultural",    name:"Turmeric Finger",           desc:"Golden-yellow, aromatic spice available as whole fingers or ground powder. Sourced from high-curcumin farming belts of Gujarat and Andhra Pradesh.",     tags:["Whole Finger","Powder","High-Curcumin"],     image:"products/turmeric.png",          specs:{"Curcumin Content":">3.5%","Moisture":"<10%","Admixture":"<1%","Origin":"India (Gujarat / AP)"} },
+      { id:"red_chilli",     category:"agricultural",    name:"Red Chilli",                desc:"Vibrant red and fiery, offered as stemless/with-stem whole pods or finely ground powder of varying heat levels.",                                       tags:["Whole","Powder","Stemless"],                 image:"products/red-chilli.png",        specs:{"ASTA Color":"60–120","Moisture":"<12%","Heat Value":"15,000–90,000 SHU","Origin":"India"} },
+      { id:"cumin",          category:"agricultural",    name:"Cumin Seeds",               desc:"Highly aromatic seeds with deep earthy flavour, available in whole premium grade seeds and freshly ground powder.",                                     tags:["Whole","Powder","Earthy"],                   image:"products/cumin.png",             specs:{"Purity":"99.5% min","Moisture":"<9%","Volatile Oil":"1.5% min","Origin":"India (Gujarat)"} },
+      { id:"coriander",      category:"agricultural",    name:"Coriander Seeds",           desc:"Sweet, citrusy flavour profile. Offered in uniform whole seeds or premium finely milled spice powder.",                                               tags:["Whole","Powder","Premium"],                  image:"products/coriander.png",         specs:{"Purity":"99% min","Moisture":"<9%","Split Seeds":"5% max","Origin":"India"} },
+      { id:"sesame_seeds",   category:"agricultural",    name:"Sesame Seeds",              desc:"Rich in healthy oils. Available in natural golden, premium mechanically hulled, and pure deep black variants.",                                        tags:["Natural","Hulled","Black"],                  image:"products/sesame-seeds.png",      specs:{"Purity":"99.95% min","Moisture":"<4.5%","Oil Content":"50% min","Origin":"India"} },
+      { id:"peanuts",        category:"agricultural",    name:"Groundnuts (Peanuts)",      desc:"Bold and Java peanut kernels sorted by count (38/42, 40/50, 50/60) with high oil yield.",                                                            tags:["Bold","Java","Kernels"],                     image:"products/peanuts.png",           specs:{"Count per Ounce":"38/42, 40/50, 50/60","Moisture":"<8%","Aflatoxin":"<4 ppb","Origin":"India"} },
+      { id:"pulses",         category:"agricultural",    name:"Pulses & Lentils",          desc:"Premium grade split and whole Indian pulses — Moong Dal, Chana Dal, Urad Dal and more.",                                                             tags:["Lentils","Splits","Whole"],                  image:"products/chickpeas.png",         specs:{"Purity":"99.5% min","Moisture":"<12%","Foreign Matter":"Nil","Origin":"India"} },
+      { id:"rice",           category:"agricultural",    name:"Premium Basmati Rice",      desc:"Long-grain, aromatic Indian Basmati, aged to perfection for exquisite flavour.",                                                                     tags:["Basmati","Long-Grain","Aged"],               image:"products/rice.png",              specs:{"Avg Grain Length":"7.4 mm min","Moisture":"<12%","Broken":"1% max","Origin":"India"} },
+      { id:"wheat",          category:"agricultural",    name:"Premium Wheat",             desc:"Golden high-protein wheat grains, ideal for milling into premium flour and baking.",                                                                  tags:["Golden","High-Protein","Milling"],           image:"products/wheat.png",             specs:{"Protein":"11.5% min","Moisture":"<12%","Gluten":"26% min","Origin":"India"} },
+      { id:"cotton",         category:"agricultural",    name:"Cotton Products",           desc:"High-staple raw cotton bolls and cotton fibres, clean and processed for textile industries.",                                                         tags:["Raw-Cotton","Fibre","Textile-Grade"],        image:"products/cotton.png",            specs:{"Staple Length":"28–32 mm","Micronaire":"3.5–4.9 NCL","Trash Content":"<3%","Origin":"India"} },
+      { id:"dehydrated_veg", category:"food_dehydrated", name:"Dehydrated Vegetables",    desc:"Premium dehydrated onion flakes, garlic powder, and ginger flakes that preserve natural flavour.",                                                    tags:["Dehydrated","Flakes","Powder"],              image:"products/dehydrated-veg.png",    specs:{"Moisture":"<6%","Purity":"100% Natural","Preservatives":"None","Origin":"India"} },
+      { id:"food_products",  category:"food_dehydrated", name:"Processed Food Products",  desc:"Value-added food products, processed grains, and customised packaging solutions for global retail.",                                                  tags:["Retail-Ready","Value-Added","Packaged"],     image:"products/process-packaging.png", specs:{"Compliance":"FDA, FSSAI, ISO","Packaging":"50g to 50kg","Private Label":"Available","Origin":"India"} },
+      { id:"fresh_produce",  category:"fresh_produce",   name:"Fresh Fruits & Vegetables", desc:"Freshly harvested pomegranates, mangoes, potatoes, and red onions sourced from local farms.",                                                       tags:["Fresh","Farm-Direct","Seasonal"],            image:"products/fresh-produce.png",     specs:{"Quality":"Grade A Export","Cold Chain":"Maintained","Packaging":"Ventilated Crates","Origin":"India"} },
+      { id:"handicrafts",    category:"handicrafts",     name:"Artisanal Handicrafts",     desc:"Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles for global markets.",                                         tags:["Handmade","Artisanal","Traditional"],        image:"products/handicrafts.png",       specs:{"Material":"Brass, Wood, Cotton","Craftsmanship":"100% Handcrafted","Custom Designs":"Available","Origin":"India"} }
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || 'turmeric';
+    const product   = productsData.find(p => p.id === productId);
+
+    if (!product) {
+      document.getElementById('pd-hero-content').innerHTML = '<h2 style="color:#fff;font-family:Cormorant Garamond,serif;">Product not found</h2><a href="catalog.html" style="color:var(--accent-gold);margin-top:16px;display:inline-block;">← Back to Catalogue</a>';
+      return;
+    }
+
+    // Update page title
+    document.title = product.name + ' | Jalpex International — Premium Exports';
+
+    const catLabel = product.category.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    // ── Hero ──
+    document.getElementById('pd-hero-content').innerHTML = `
+      <div class="pd-hero-breadcrumb">
+        <a href="index.html">Home</a><span class="sep">/</span>
+        <a href="catalog.html">Products</a><span class="sep">/</span>
+        <span style="color:rgba(255,255,255,0.82)">${product.name}</span>
+      </div>
+      <span class="pd-hero-cat">${catLabel}</span>
+      <h1 class="pd-hero-title">${product.name}</h1>
+      <p class="pd-hero-desc">${product.desc}</p>
+      <div class="pd-hero-tags">${product.tags.map(t=>`<span class="pd-hero-tag">${t}</span>`).join('')}</div>
+      <div class="pd-hero-actions">
+        <a href="#pd-inquiry" class="pd-btn-inquire">
+          Request a Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="catalog.html" class="pd-btn-catalog">← All Products</a>
+      </div>
+    `;
+
+    // ── Detail grid ──
+    let specRows = '';
+    for (const [k,v] of Object.entries(product.specs||{})) {
+      specRows += `<tr><td class="spec-label">${k}</td><td>${v}</td></tr>`;
+    }
+
+    document.getElementById('pd-detail-grid').innerHTML = `
+      <div class="pd-img-wrap">
+        <img src="${product.image}" alt="${product.name}">
+      </div>
+      <div class="pd-info">
+        <div>
+          <h3 class="pd-block-heading">Product Specifications</h3>
+          <table class="spec-table"><tbody>${specRows}</tbody></table>
+        </div>
+        <div>
+          <h3 class="pd-block-heading">Quality Certifications</h3>
+          <div class="pd-badge-row">
+            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>FSSAI</span>
+            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>FDA Approved</span>
+            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>ISO Certified</span>
+            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Lab Tested</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="pd-block-heading">Available Packaging</h3>
+          <div class="pd-badge-row">
+            <span class="pd-badge">25 kg PP Bags</span>
+            <span class="pd-badge">50 kg Jute Bags</span>
+            <span class="pd-badge">Vacuum Sealed</span>
+            <span class="pd-badge">Custom Packaging</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // ── Inquiry pre-fill ──
+    document.getElementById('pd-inq-heading').textContent = 'Inquire About ' + product.name;
+    document.getElementById('pd-inq-desc').textContent    = 'Interested in importing ' + product.name + '? Our trade desk will respond within 24 hours with pricing, specs, and packaging details.';
+    document.getElementById('pd-form-sub').textContent    = 'Send your requirements for ' + product.name + ' and we\'ll reply with a competitive commercial quote.';
+    const msgEl = document.getElementById('inq-message');
+    if (msgEl) msgEl.value = 'Hello, I\'m interested in importing Jalpex International\'s "' + product.name + '". Please share pricing, packing sizes, and commercial details.';
+
+    // ── Form submission ──
+    document.getElementById('productInquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const st = document.getElementById('pd-form-status');
+      st.className = 'form-status success';
+      st.textContent = '✓ Thank you! Your inquiry for ' + product.name + ' has been received. Our trade desk will contact you within 24 hours.';
+      this.reset();
+      if (msgEl) msgEl.value = '';
+      setTimeout(()=>{ st.textContent=''; st.className='form-status'; }, 9000);
+    });
+
+  })();
+  </script>
+
 </body>
 </html>
