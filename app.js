@@ -749,7 +749,7 @@ const productsData = [
 
 // ── DOM ELEMENTS & GLOBAL STATE ──
 let currentLang = "en";
-let activeCategory = "spices";
+let activeCategory = "agricultural";
 
 // ── INITIALIZATION ──
 document.addEventListener("DOMContentLoaded", () => {
