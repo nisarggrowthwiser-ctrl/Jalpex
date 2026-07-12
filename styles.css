@@ -2931,7 +2931,7 @@ footer {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
@@ -3294,7 +3294,7 @@ footer {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px;
 }
 
@@ -3458,6 +3458,16 @@ footer {
   color: var(--text-dark);
 }
 
+@media (max-width: 768px) {
+  .lightbox-caption {
+    width: 90%;
+    bottom: 20px;
+  }
+  .lightbox-caption h3 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 580px) {
   .lightbox-arrow {
     width: 44px;
@@ -3469,11 +3479,22 @@ footer {
   .lightbox-arrow.next {
     right: 15px;
   }
+  .article-modal-hero {
+    height: 180px;
+  }
   .article-modal-body {
-    padding: 24px;
+    padding: 20px;
   }
   .article-modal-title {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .article-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
   }
 }
 /* ═══════════════════════════════════════════════
