@@ -225,17 +225,37 @@
       list-style: none;
       margin: 0;
       padding: 0;
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 12px;
     }
     .gf-list li {
-      padding: 16px 0;
+      padding: 12px 8px;
       border-top: 1px solid var(--border);
       display: flex;
       gap: 14px;
       align-items: flex-start;
       transition: background 0.2s;
+      border-radius: 6px;
     }
     .gf-list li:first-child { border-top: none; }
-    .gf-list li:hover { background: rgba(201, 146, 46, 0.04); margin: 0 -36px; padding: 16px 36px; border-radius: 8px; }
+    .gf-list li:hover { background: rgba(201, 146, 46, 0.06); }
+
+    /* Sleek custom scrollbar */
+    .gf-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    .gf-list::-webkit-scrollbar-track {
+      background: rgba(90, 70, 30, 0.03);
+      border-radius: 99px;
+    }
+    .gf-list::-webkit-scrollbar-thumb {
+      background: rgba(201, 146, 46, 0.2);
+      border-radius: 99px;
+    }
+    .gf-list::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-gold);
+    }
 
     /* Source dot */
     .gf-dot {
@@ -305,8 +325,8 @@
     .gf-msg svg { display: block; margin: 0 auto 14px; opacity: 0.35; }
 
     @media (max-width: 640px) {
-      .govt-feed-card { padding: 20px 18px; }
-      .gf-list li:hover { margin: 0 -18px; padding: 16px 18px; }
+      .govt-feed-card { padding: 24px 20px; }
+      .gf-list { max-height: 340px; padding-right: 8px; }
     }
   </style>
 
