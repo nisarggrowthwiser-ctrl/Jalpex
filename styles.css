@@ -224,7 +224,7 @@ nav.scrolled .nav-inner {
   height: 55px;
   width: auto;
   display: block;
-  transition: height 0.4s;
+  transition: var(--transition);
   object-fit: contain;
   border-radius: 6px;
 }
