@@ -127,16 +127,16 @@
     <div class="container">
 
       <!-- Section Header -->
-      <div style="text-align:center;margin-bottom:40px;">
+      <div class="govt-feed-section-header" style="text-align:center;margin-bottom:40px;">
         <span class="section-label" style="color:var(--accent-gold);">Live Feed</span>
         <h2 class="section-title" style="margin-top:8px;">Government Trade Intelligence</h2>
-        <p style="max-width:600px;margin:12px auto 0;color:var(--text-mid);font-size:15px;line-height:1.7;">
+        <p class="govt-feed-desc" style="max-width:600px;margin:12px auto 0;color:var(--text-mid);font-size:15px;line-height:1.7;">
           Real-time press releases from PIB &amp; Ministry of Commerce — covering DGFT policy, customs circulars, FTA updates, and export incentives.
         </p>
       </div>
 
       <!-- Source Badges -->
-      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px;">
+      <div class="govt-feed-badges" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px;">
         <span class="govtag">🏛️ PIB — Press Information Bureau</span>
         <span class="govtag">🛒 Ministry of Commerce &amp; Industry</span>
         <span class="govtag">💰 Ministry of Finance</span>
@@ -327,6 +327,9 @@
     @media (max-width: 640px) {
       .govt-feed-card { padding: 24px 20px; }
       .gf-list { max-height: 340px; padding-right: 8px; }
+      .govt-feed-desc { display: none !important; }
+      .govt-feed-badges { display: none !important; }
+      .govt-feed-section-header { margin-bottom: 20px !important; }
     }
   </style>
 
