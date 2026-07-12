@@ -775,7 +775,9 @@ function initNavbarScroll() {
     } else {
       navbar.classList.remove("scrolled");
     }
-    updateActiveNavLink();
+    if (document.getElementById("home")) {
+      updateActiveNavLink();
+    }
   });
 }
 
