@@ -3105,10 +3105,75 @@ footer {
 
 /* ── NEWS & ARTICLES PAGE ── */
 .news-header {
-  background: linear-gradient(rgba(11, 19, 43, 0.9), rgba(11, 19, 43, 0.9)), url('gallery/shipping_port.png') center/cover no-repeat;
-  padding: 60px 0 80px;
+  background: linear-gradient(rgba(18, 43, 26, 0.92), rgba(18, 43, 26, 0.92)), url('gallery/shipping_port.png') center/cover no-repeat;
+  padding: 80px 0 100px;
   color: #FFFFFF;
   text-align: center;
+}
+
+.news-header .catalog-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.news-header .catalog-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+  margin: 0 auto 36px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.news-header .catalog-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.news-header .filter-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 10px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.news-header .filter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.news-header .filter-btn.active {
+  background: var(--accent-gold);
+  color: white;
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(201, 146, 46, 0.35);
+}
+
+.news-header .filter-btn.govt-alerts-btn {
+  background: rgba(201, 146, 46, 0.15);
+  border-color: rgba(201, 146, 46, 0.4);
+  color: var(--accent-gold-bright);
+  text-decoration: none;
+}
+
+.news-header .filter-btn.govt-alerts-btn:hover {
+  background: rgba(201, 146, 46, 0.3);
+  border-color: var(--accent-gold-bright);
+  color: #FFFFFF;
 }
 
 .featured-article {
