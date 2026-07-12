@@ -112,8 +112,6 @@
   <!-- ── ARTICLES SECTION ── -->
   <section class="gallery-section">
     <div class="container">
-      <!-- Featured Article Placeholder (Dynamically injected) -->
-      <div id="featuredArticleContainer"></div>
 
       <!-- Grid of remaining articles -->
       <div class="blog-grid" id="blogGrid">
@@ -544,56 +542,18 @@
     let activeFilter = "all";
 
     function renderNews() {
-      const featuredContainer = document.getElementById("featuredArticleContainer");
       const grid = document.getElementById("blogGrid");
-      
-      if (!featuredContainer || !grid) return;
-      
-      featuredContainer.innerHTML = "";
+
+      if (!grid) return;
+
       grid.innerHTML = "";
 
       const filtered = activeFilter === "all"
         ? newsArticles
         : newsArticles.filter(art => art.category === activeFilter);
 
-      // Find if there is a featured article in the filtered list
-      const featuredArticle = filtered.find(art => art.isFeatured);
-      const remainingArticles = filtered.filter(art => art !== featuredArticle);
-
-      if (featuredArticle) {
-        let catText = "Market Report";
-        if (featuredArticle.category === "company") catText = "Company Update";
-        if (featuredArticle.category === "sourcing") catText = "Sourcing & Logistics";
-
-        const featDiv = document.createElement("div");
-        featDiv.className = "featured-article";
-        featDiv.innerHTML = `
-          <div class="featured-article-img">
-            <img src="${featuredArticle.image}" alt="${featuredArticle.title}">
-          </div>
-          <div class="featured-article-content">
-            <div class="article-meta">
-              <span class="article-cat">${catText}</span>
-              <span>${featuredArticle.date}</span>
-            </div>
-            <h2 class="featured-article-title">${featuredArticle.title}</h2>
-            <p class="featured-article-desc">${featuredArticle.desc}</p>
-            <a href="#" class="btn-read-more" data-id="${featuredArticle.id}">
-              Read Full Article 
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-        `;
-        
-        featDiv.querySelector(".btn-read-more").addEventListener("click", (e) => {
-          e.preventDefault();
-          openArticleModal(featuredArticle.id);
-        });
-
-        featuredContainer.appendChild(featDiv);
-      }
-
-      remainingArticles.forEach(art => {
+      // Show all articles in the grid (no separate featured card)
+      filtered.forEach(art => {
         const card = document.createElement("div");
         card.className = "blog-card";
         
