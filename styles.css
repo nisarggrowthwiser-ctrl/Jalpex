@@ -3122,10 +3122,21 @@ footer {
   flex-direction: column;
 }
 
+.featured-article.no-image {
+  height: auto !important;
+}
+
 @media (min-width: 992px) {
   .featured-article {
     flex-direction: row;
     height: 420px;
+  }
+  .featured-article.no-image {
+    flex-direction: column;
+    height: auto;
+  }
+  .featured-article.no-image .featured-article-content {
+    padding: 50px 60px !important;
   }
   .featured-article-img {
     flex: 1.3;
