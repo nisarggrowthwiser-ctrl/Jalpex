@@ -955,15 +955,10 @@ footer .logo-img {
     padding: 14px 20px;
   }
   .stat-divider { display: none; }
+  /* Hide decorative floating image cards on mobile to keep page compact */
   .hero-visual-col {
-    height: 380px;
+    display: none;
   }
-  .vc-spices { width: 140px; right: 2%; }
-  .vc-spices .visual-card-img-wrap { height: 150px; }
-  .vc-logistics { width: 130px; left: 2%; }
-  .vc-logistics .visual-card-img-wrap { height: 130px; }
-  .vc-warehouse { width: 125px; bottom: 2%; right: 10%; }
-  .vc-warehouse .visual-card-img-wrap { height: 135px; }
 }
 
 
