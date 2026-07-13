@@ -970,6 +970,7 @@ section {
 .about-intro {
   background: linear-gradient(rgba(250, 246, 238, 0.95), rgba(250, 246, 238, 0.95)), url('products/process-sourcing.png') center / cover no-repeat;
   border-bottom: 1px solid var(--border);
+  padding: 100px 0;
 }
 
 .about-intro-inner {
@@ -3737,6 +3738,9 @@ footer {
   }
 
   /* ── ABOUT INTRO ── */
+  .about-intro {
+    padding: 60px 0;
+  }
   .about-intro-inner {
     gap: 32px;
   }
@@ -3990,12 +3994,13 @@ footer {
 
 .hero-dark {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   background: linear-gradient(135deg, #070b14 0%, #0f182c 35%, #182543 70%, #1f3054 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 100px 0 80px;
+  padding: 65px 0 0 0;
 }
 
 .hero-dark::after {
@@ -4116,7 +4121,7 @@ footer {
   position: relative;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.35fr 0.65fr;
   gap: 60px;
   align-items: center;
   width: 100%;
@@ -4138,7 +4143,7 @@ footer {
 }
 
 /* ── LEFT: Text ── */
-.hero-dark-text { display: flex; flex-direction: column; gap: 22px; }
+.hero-dark-text { display: flex; flex-direction: column; gap: 16px; }
 
 /* Badge — gold accent */
 .hero-dark-badge {
@@ -4173,7 +4178,7 @@ footer {
 /* Heading */
 .hero-dark-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 5.5vw, 72px);
+  font-size: clamp(54px, 6.8vw, 88px);
   font-weight: 600;
   color: #ffffff;
   line-height: 1.08;
@@ -4181,7 +4186,8 @@ footer {
   margin: 0;
 }
 /* Gold italic accent — exact logo gold #c29652 */
-.hd-gold-italic {
+.hd-gold-italic,
+.hero-dark-heading em {
   font-style: italic;
   font-weight: 400;
   background: linear-gradient(110deg, #bd8f45 0%, #c29652 40%, #e8c07a 60%, #c29652 80%, #bd8f45 100%);
@@ -4230,11 +4236,11 @@ footer {
 
 /* Description */
 .hero-dark-desc {
-  font-size: 16px;
-  line-height: 1.78;
-  color: rgba(255,255,255,0.58);
-  font-weight: 300;
-  max-width: 520px;
+  font-size: 17.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.72);
+  font-weight: 350;
+  max-width: 680px;
   margin: 0;
 }
 
@@ -4296,7 +4302,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 18px 28px;
+  padding: 10px 22px;
   background: rgba(24,37,67,0.35);
   border: 1px solid rgba(194,150,82,0.15);
   border-radius: 18px;
@@ -4325,8 +4331,10 @@ footer {
 /* Three.js Globe Wrapper */
 .hg-threejs-wrap {
   position: relative;
-  width: 480px;
-  height: 480px;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   flex-shrink: 0;
   z-index: 10;
   pointer-events: none;
@@ -4335,10 +4343,6 @@ footer {
 /* Let product chips have pointer events to be clickable/interactive */
 .hg-threejs-wrap .hg-chip {
   pointer-events: auto;
-}
-
-@media (max-width: 1200px) {
-  .hg-threejs-wrap { width: 400px; height: 400px; }
 }
 @media (max-width: 900px) {
   .hg-threejs-wrap { width: 320px; height: 320px; }
@@ -4574,7 +4578,7 @@ footer {
 @media (max-width: 900px) {
   .hero-dark-inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-dark-globe { display: none; }
-  .hero-dark { min-height: auto; padding: 90px 0 60px; }
+  .hero-dark { height: auto; min-height: auto; overflow: visible; padding: 90px 0 60px; }
   .hero-dark-heading { font-size: clamp(32px, 9vw, 50px); }
 }
 @media (max-width: 480px) {
@@ -4584,4 +4588,20 @@ footer {
   .hero-dark-btns { flex-direction: column; }
   .hdb-primary, .hdb-outline { width: 100%; justify-content: center; }
   .hero-dark-stats { width: 100%; justify-content: space-between; }
+}
+
+/* ── VIEWPORT HEIGHT MEDIA QUERIES FOR SINGLE SCROLL FOLD ── */
+@media (min-width: 901px) and (max-height: 850px) {
+  .hero-dark-text { gap: 12px; }
+  .hero-dark-heading { font-size: clamp(34px, 4.5vw, 54px); }
+  .hero-dark-desc { font-size: 14.5px; }
+  .hero-dark-stats { padding: 8px 18px; gap: 16px; margin-top: 0; }
+  .hg-threejs-wrap { max-width: 400px; }
+}
+@media (min-width: 901px) and (max-height: 720px) {
+  .hero-dark-text { gap: 8px; }
+  .hero-dark-heading { font-size: clamp(28px, 4vw, 38px); }
+  .hero-dark-desc { font-size: 13px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .hero-dark-stats { display: none; }
+  .hg-threejs-wrap { max-width: 300px; }
 }
