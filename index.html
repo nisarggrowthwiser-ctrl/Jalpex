@@ -87,104 +87,108 @@
     <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
   </div>
 
-  <!-- ── HERO SECTION (HONESTEXPORTS-STYLE GRID COLLAGE) ── -->
-  <header class="hero-grid-section" id="home">
-    <div class="hero-bg-gradients" aria-hidden="true">
-      <div class="hbg-gradient-bottom"></div>
-      <div class="hbg-gradient-top"></div>
-      <div class="hbg-circle-left"></div>
-      <div class="hbg-circle-right"></div>
-    </div>
+  <!-- ── HERO SECTION (DARK ANIMATED) ── -->
+  <header class="hero-dark" id="home">
+    <!-- Particle canvas -->
+    <canvas class="hero-particles-canvas" id="heroParticles" aria-hidden="true"></canvas>
 
-    <div class="container hero-grid-inner">
-      <div class="hero-text-col">
-        <div class="hero-badge-pill">
-          <span class="badge-dot"></span>
-          <span data-trans="hero_badge">Trusted Global Sourcing Partner</span>
-          <svg class="badge-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+    <!-- Background glow layers -->
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+    <div class="container hero-dark-inner">
+
+      <!-- LEFT: Text Content -->
+      <div class="hero-dark-text">
+
+        <!-- Badge -->
+        <div class="hero-dark-badge" data-anim="fade-up" data-delay="0">
+          <span class="hdb-dot"></span>
+          <span>India's Trusted Agricultural Export House</span>
         </div>
 
-        <h1 class="hero-heading">
-          <span class="block">Bridging</span>
-          <span class="block">Markets,</span>
-          <span class="block">Delivering</span>
-          <span class="block text-gradient">Excellence.</span>
+        <!-- Heading -->
+        <h1 class="hero-dark-heading" data-anim="fade-up" data-delay="120">
+          Bridging Indian
+          <span class="hd-gold-italic">Harvest</span>
+          with Global Markets.
         </h1>
 
-        <div class="hero-dynamic-text">
-          <span class="line-bar"></span>
-          <span>Exporting</span>
-          <div class="dynamic-word-wrap">
-            <span class="dynamic-word active" id="dynamicWord">Indian Spices</span>
+        <!-- Rotating product line -->
+        <div class="hero-dark-ticker" data-anim="fade-up" data-delay="220">
+          <span class="hdt-bar"></span>
+          <span class="hdt-label">Exporting</span>
+          <div class="hdt-word-track">
+            <span class="hdt-word" id="hdtWord">Indian Spices</span>
           </div>
         </div>
 
-        <p class="hero-paragraph" data-trans="hero_desc">
+        <!-- Description -->
+        <p class="hero-dark-desc" data-anim="fade-up" data-delay="340" data-trans="hero_desc">
           Jalpex International is a premium export house from India, delivering high-grade agricultural commodities, spices, dehydrated vegetables, fresh produce, and handicrafts to clients in 40+ countries. Sourced with care, delivered with trust.
         </p>
 
-        <div class="hero-buttons">
-          <a class="hero-btn-quote" href="#inquiry">Request a Quote
-            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <!-- CTA Buttons -->
+        <div class="hero-dark-btns" data-anim="fade-up" data-delay="460">
+          <a class="hdb-primary" href="#inquiry">
+            Request a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a class="hero-btn-explore" href="catalog.html">Explore Products</a>
+          <a class="hdb-outline" href="catalog.html">Explore Products</a>
         </div>
 
-        <div class="hero-stats-bar">
-          <div class="stat-box">
-            <div class="stat-number">40+</div>
-            <p class="stat-label">Countries</p>
+        <!-- Stats bar -->
+        <div class="hero-dark-stats" data-anim="fade-up" data-delay="580">
+          <div class="hds-item">
+            <span class="hds-num">40+</span>
+            <span class="hds-lbl">Countries</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-box">
-            <div class="stat-number">1,200+</div>
-            <p class="stat-label">Tons Shipped</p>
+          <div class="hds-sep"></div>
+          <div class="hds-item">
+            <span class="hds-num">1,200+</span>
+            <span class="hds-lbl">Tons Shipped</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-box">
-            <div class="stat-number flex-row-center">4.9 <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
-            <p class="stat-label">Client Rating</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual-col">
-        <!-- Floating Collages / Cards -->
-        <div class="visual-card vc-spices" onclick="window.location.href='catalog.html?cat=agricultural'">
-          <div class="visual-card-img-wrap">
-            <img src="gallery/spice_farm.png" alt="Indian Spices">
-          </div>
-          <div class="visual-card-footer">
-            <span class="card-title">Indian Spices</span>
-            <span class="card-subtitle">15+ Varieties</span>
+          <div class="hds-sep"></div>
+          <div class="hds-item">
+            <span class="hds-num">15+</span>
+            <span class="hds-lbl">Years Experience</span>
           </div>
         </div>
 
-        <div class="visual-card vc-logistics" onclick="window.location.href='gallery.html?cat=port'">
-          <div class="visual-card-img-wrap">
-            <img src="gallery/shipping_port.png" alt="Global Logistics">
-          </div>
-          <div class="visual-card-footer">
-            <span class="card-title">Port Logistics</span>
-            <span class="card-subtitle">40+ Countries</span>
-          </div>
-        </div>
+      </div><!-- /hero-dark-text -->
 
-        <div class="visual-card vc-warehouse" onclick="window.location.href='gallery.html?cat=warehouse'">
-          <div class="visual-card-img-wrap">
-            <img src="gallery/warehouse_stock.png" alt="Warehousing">
-          </div>
-          <div class="visual-card-footer">
-            <span class="card-title">Secure Warehousing</span>
-            <span class="card-subtitle">Vacuum Packed</span>
-          </div>
-        </div>
+      <!-- RIGHT: Globe Orb Animation -->
+      <div class="hero-dark-globe" data-anim="fade-in" data-delay="200" aria-hidden="true">
+        <div class="hg-orb-wrap">
+          <!-- Main orb -->
+          <div class="hg-orb"></div>
 
-        <!-- Extra details/shapes -->
-        <span class="visual-dot dot-orange"></span>
-        <span class="visual-dot dot-green"></span>
-      </div>
+          <!-- Wireframe rings -->
+          <div class="hg-ring hg-ring-1"></div>
+          <div class="hg-ring hg-ring-2"></div>
+          <div class="hg-ring hg-ring-3"></div>
+
+          <!-- Orbiting dots/nodes -->
+          <div class="hg-orbit hg-orbit-1"><span class="hg-node"><span class="hg-node-label">UAE</span></span></div>
+          <div class="hg-orbit hg-orbit-2"><span class="hg-node"><span class="hg-node-label">USA</span></span></div>
+          <div class="hg-orbit hg-orbit-3"><span class="hg-node"><span class="hg-node-label">EU</span></span></div>
+          <div class="hg-orbit hg-orbit-4"><span class="hg-node"><span class="hg-node-label">AUS</span></span></div>
+
+          <!-- Floating product chips -->
+          <div class="hg-chip hg-chip-1">🌶 Spices</div>
+          <div class="hg-chip hg-chip-2">🌾 Grains</div>
+          <div class="hg-chip hg-chip-3">🌿 Herbs</div>
+        </div>
+      </div><!-- /hero-dark-globe -->
+
+    </div><!-- /hero-dark-inner -->
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-hint" aria-label="Scroll down">
+      <div class="hsh-mouse"><div class="hsh-wheel"></div></div>
+      <span>Scroll</span>
     </div>
+
   </header>
 
   <!-- ── OUR STORY SECTION ── -->

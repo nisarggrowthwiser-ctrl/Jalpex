@@ -891,43 +891,149 @@ function initMobileMenu() {
 
 // ── HERO INTRO ANIMATION (BLUEBIRD-STYLE FLY-IN) ──
 function initHeroIntro() {
-  // Dynamic rotating words in the hero heading
-  const words = ["Indian Spices", "Basmati Rice", "Oil Seeds", "Raw Cotton", "Fresh Fruits", "Dehydrated Vegetables"];
-  let currentWordIndex = 0;
-  const wordElement = document.getElementById("dynamicWord");
+  // ── 1. Staggered entry animations ──
+  const animEls = document.querySelectorAll('[data-anim]');
+  if (animEls.length) {
+    animEls.forEach(el => {
+      const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+      setTimeout(() => {
+        el.classList.add('anim-visible');
+      }, delay + 120); // base delay so page fully paints
+    });
+  }
 
-  if (wordElement) {
-    // Add CSS transition properties dynamically
-    wordElement.style.transition = "all 0.45s cubic-bezier(0.16, 1, 0.3, 1)";
-    
+  // ── 2. Ticker word cycling ──
+  const tickerWords = [
+    'Indian Spices', 'Basmati Rice', 'Oil Seeds',
+    'Raw Cotton', 'Fresh Fruits', 'Dehydrated Vegs', 'Pulses & Lentils'
+  ];
+  let tickerIdx = 0;
+  const hdtWordEl = document.getElementById('hdtWord');
+
+  if (hdtWordEl) {
     setInterval(() => {
-      wordElement.style.opacity = "0";
-      wordElement.style.transform = "translateY(12px)";
-      wordElement.style.filter = "blur(3px)";
-      
+      // Exit animation
+      hdtWordEl.style.opacity = '0';
+      hdtWordEl.style.transform = 'translateY(-16px)';
+      hdtWordEl.style.filter = 'blur(4px)';
+      setTimeout(() => {
+        tickerIdx = (tickerIdx + 1) % tickerWords.length;
+        hdtWordEl.textContent = tickerWords[tickerIdx];
+        hdtWordEl.style.transform = 'translateY(16px)';
+        // Enter animation
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            hdtWordEl.style.opacity = '1';
+            hdtWordEl.style.transform = 'translateY(0)';
+            hdtWordEl.style.filter = 'blur(0)';
+          });
+        });
+      }, 340);
+    }, 3000);
+    // Set transition once
+    hdtWordEl.style.transition = 'all 0.45s cubic-bezier(0.16,1,0.3,1)';
+  }
+
+  // Also handle the old dynamicWord if it still exists
+  const wordElement = document.getElementById('dynamicWord');
+  if (wordElement) {
+    const words = ['Indian Spices', 'Basmati Rice', 'Oil Seeds', 'Raw Cotton', 'Fresh Fruits', 'Dehydrated Vegetables'];
+    let currentWordIndex = 0;
+    wordElement.style.transition = 'all 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+    setInterval(() => {
+      wordElement.style.opacity = '0';
+      wordElement.style.transform = 'translateY(12px)';
+      wordElement.style.filter = 'blur(3px)';
       setTimeout(() => {
         currentWordIndex = (currentWordIndex + 1) % words.length;
         wordElement.textContent = words[currentWordIndex];
-        wordElement.style.opacity = "1";
-        wordElement.style.transform = "translateY(0)";
-        wordElement.style.filter = "blur(0)";
+        wordElement.style.opacity = '1';
+        wordElement.style.transform = 'translateY(0)';
+        wordElement.style.filter = 'blur(0)';
       }, 400);
     }, 3200);
   }
 
-  // GSAP Entrance Animations
-  if (typeof gsap !== "undefined") {
-    gsap.fromTo(".hero-badge-pill", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
-    gsap.fromTo(".hero-heading .block", { opacity: 0, y: 35 }, { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
-    gsap.fromTo(".hero-paragraph, .hero-dynamic-text, .hero-buttons", { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power2.out", delay: 0.4 });
-    gsap.fromTo(".hero-stats-bar", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.8 });
-    
-    // Animate Visual collage cards
-    gsap.fromTo(".vc-spices", { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 4, duration: 1.2, ease: "back.out(1.5)", delay: 0.6 });
-    gsap.fromTo(".vc-logistics", { opacity: 0, y: 60, rotation: -12 }, { opacity: 1, y: 0, rotation: -5, duration: 1.2, ease: "back.out(1.5)", delay: 0.8 });
-    gsap.fromTo(".vc-warehouse", { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 3, duration: 1.2, ease: "back.out(1.5)", delay: 1.0 });
+  // ── 3. Canvas particle system ──
+  const canvas = document.getElementById('heroParticles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const PARTICLE_COUNT = window.innerWidth < 768 ? 40 : 80;
+  const particles = [];
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
+      x:    Math.random() * canvas.width,
+      y:    Math.random() * canvas.height,
+      vx:   (Math.random() - 0.5) * 0.4,
+      vy:   (Math.random() - 0.5) * 0.4,
+      r:    Math.random() * 1.8 + 0.4,
+      // vary between green-white and gold
+      hue:  Math.random() > 0.75 ? 42 : 140,
+      sat:  Math.random() * 30 + 50,
+      alpha: Math.random() * 0.35 + 0.1,
+    });
+  }
+
+  const MAX_DIST = 120;
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Update & draw dots
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${p.hue}, ${p.sat}%, 75%, ${p.alpha})`;
+      ctx.fill();
+    });
+
+    // Draw connecting lines
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          const alpha = (1 - dist / MAX_DIST) * 0.12;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(74, 222, 128, ${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(drawParticles);
+  }
+
+  drawParticles();
+
+  // GSAP fallback for old hero elements (if present on other pages)
+  if (typeof gsap !== 'undefined') {
+    gsap.fromTo('.vc-spices', { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 4, duration: 1.2, ease: 'back.out(1.5)', delay: 0.6 });
+    gsap.fromTo('.vc-logistics', { opacity: 0, y: 60, rotation: -12 }, { opacity: 1, y: 0, rotation: -5, duration: 1.2, ease: 'back.out(1.5)', delay: 0.8 });
+    gsap.fromTo('.vc-warehouse', { opacity: 0, y: 60, rotation: 10 }, { opacity: 1, y: 0, rotation: 3, duration: 1.2, ease: 'back.out(1.5)', delay: 1.0 });
   }
 }
+
 
 // ── GSAP SCROLL EFFECTS (SECTIONS) ──
 function initScrollFx() {
