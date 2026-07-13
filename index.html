@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.2">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
         <li><a href="#home" class="active" data-trans="nav_home">Home</a></li>
         <li><a href="#products" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
-        <li><a href="news.html" data-trans="nav_news">News</a></li>
+        <li><a href="news.html" data-trans="nav_news">Updates & Analysis</a></li>
         <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
         <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
       </ul>
@@ -67,7 +67,7 @@
       <li><a href="#home" data-trans="nav_home">Home</a></li>
       <li><a href="#products" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
-      <li><a href="news.html" data-trans="nav_news">News</a></li>
+      <li><a href="news.html" data-trans="nav_news">Updates & Analysis</a></li>
       <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
       <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
     </ul>
@@ -92,10 +92,16 @@
     <!-- Particle canvas -->
     <canvas class="hero-particles-canvas" id="heroParticles" aria-hidden="true"></canvas>
 
+    <!-- 3D Interactive Globe Canvas (Full Screen behind contents) -->
+    <canvas id="jalpex-globe-canvas"></canvas>
+
     <!-- Background glow layers -->
     <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
     <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
 
+    <!-- Animated mesh grid -->
+    <div class="hero-mesh" aria-hidden="true"></div>
     <div class="container hero-dark-inner">
 
       <!-- LEFT: Text Content -->
@@ -157,27 +163,10 @@
 
       </div><!-- /hero-dark-text -->
 
-      <!-- RIGHT: Globe Orb Animation -->
+      <!-- RIGHT: Three.js 3D Interactive Globe -->
       <div class="hero-dark-globe" data-anim="fade-in" data-delay="200" aria-hidden="true">
-        <div class="hg-orb-wrap">
-          <!-- Main orb -->
-          <div class="hg-orb"></div>
-
-          <!-- Wireframe rings -->
-          <div class="hg-ring hg-ring-1"></div>
-          <div class="hg-ring hg-ring-2"></div>
-          <div class="hg-ring hg-ring-3"></div>
-
-          <!-- Orbiting dots/nodes -->
-          <div class="hg-orbit hg-orbit-1"><span class="hg-node"><span class="hg-node-label">UAE</span></span></div>
-          <div class="hg-orbit hg-orbit-2"><span class="hg-node"><span class="hg-node-label">USA</span></span></div>
-          <div class="hg-orbit hg-orbit-3"><span class="hg-node"><span class="hg-node-label">EU</span></span></div>
-          <div class="hg-orbit hg-orbit-4"><span class="hg-node"><span class="hg-node-label">AUS</span></span></div>
-
-          <!-- Floating product chips -->
-          <div class="hg-chip hg-chip-1">🌶 Spices</div>
-          <div class="hg-chip hg-chip-2">🌾 Grains</div>
-          <div class="hg-chip hg-chip-3">🌿 Herbs</div>
+        <div class="hg-threejs-wrap">
+          <!-- Globe canvas runs full screen in background -->
         </div>
       </div><!-- /hero-dark-globe -->
 
@@ -852,7 +841,7 @@
             <li><a href="#home" data-trans="nav_home">Home</a></li>
             <li><a href="#products" data-trans="nav_products">Products</a></li>
             <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
-            <li><a href="news.html" data-trans="nav_news">News</a></li>
+            <li><a href="news.html" data-trans="nav_news">Updates & Analysis</a></li>
             <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
             <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
           </ul>
@@ -910,12 +899,475 @@
     </div>
   </footer>
 
+  <!-- Three.js for Hero Globe -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
   <!-- GSAP & ScrollTrigger & Flip -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
   <!-- Link app.js -->
   <script src="app.js"></script>
+
+  <!-- ── JALPEX THREE.JS GLOBE ANIMATION ── -->
+  <script>
+  (function() {
+    'use strict';
+    if (typeof THREE === 'undefined') return;
+
+    const canvas = document.getElementById('jalpex-globe-canvas');
+    if (!canvas) return;
+
+    // ── Renderer ──
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+
+    // ── Scene & Camera ──
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+    camera.position.set(0.65, 0.18, 3.25);
+
+    // ── Globe Geometry ──
+    const GLOBE_R = 1.15; // Slightly larger for backgrounds
+
+    // Build fallback Earth texture on 2D canvas (white palette)
+    function buildEarthTexture() {
+      const size = 1024;
+      const c = document.createElement('canvas');
+      c.width = size; c.height = size / 2;
+      const cx = c.getContext('2d');
+
+      // Ocean — completely transparent to blend seamlessly with background
+      cx.fillStyle = 'rgba(0, 0, 0, 0)';
+      cx.fillRect(0, 0, size, size / 2);
+
+      // Continent color — bright white/pearl
+      const landColor = '#ffffff';
+      const landBorder = 'rgba(194,150,82,0.2)';
+      cx.fillStyle = landColor;
+
+      // Helper: draw a landmass
+      function land(x, y, w, h, rx) {
+        cx.beginPath();
+        cx.roundRect ? cx.roundRect(x, y, w, h, rx || 8) :
+          (cx.rect(x, y, w, h));
+        cx.fill();
+        cx.strokeStyle = landBorder;
+        cx.lineWidth = 1;
+        cx.stroke();
+      }
+
+      // North America
+      land(120, 40, 160, 110, 12);
+      land(90, 80, 80, 60, 8);
+      land(150, 140, 90, 60, 10);
+      // South America
+      land(175, 200, 80, 130, 12);
+      // Europe
+      land(460, 30, 85, 70, 10);
+      land(455, 50, 30, 50, 6);
+      // Africa
+      land(450, 120, 90, 160, 14);
+      // Asia (main)
+      land(540, 20, 220, 120, 14);
+      land(560, 100, 160, 80, 12);
+      // Indian subcontinent
+      land(580, 140, 55, 90, 10);
+      // South-East Asia
+      land(700, 130, 70, 70, 10);
+      // Australia
+      land(700, 270, 110, 80, 12);
+      // Antarctica hint
+      land(0, 460, size, 50, 0);
+      // Greenland
+      land(220, 10, 60, 45, 8);
+
+      // Gold latitude/longitude grid lines (delicate golden lines)
+      cx.strokeStyle = 'rgba(194,150,82,0.08)';
+      cx.lineWidth = 0.5;
+      for (let lat = 0; lat <= 8; lat++) {
+        cx.beginPath();
+        cx.moveTo(0, lat * (size/2/8));
+        cx.lineTo(size, lat * (size/2/8));
+        cx.stroke();
+      }
+      for (let lon = 0; lon <= 16; lon++) {
+        cx.beginPath();
+        cx.moveTo(lon * (size/16), 0);
+        cx.lineTo(lon * (size/16), size/2);
+        cx.stroke();
+      }
+
+      return new THREE.CanvasTexture(c);
+    }
+
+    // Load high-resolution realistic Earth continent texture
+    const textureLoader = new THREE.TextureLoader();
+    const earthTex = textureLoader.load(
+      'https://unpkg.com/three-globe/example/img/earth-dark.jpg',
+      undefined,
+      undefined,
+      function (err) {
+        console.warn("Could not load online Earth texture, using high-fidelity procedural fallback", err);
+        earthMesh.material.map = buildEarthTexture();
+        earthMesh.material.needsUpdate = true;
+      }
+    );
+
+    const earthMat = new THREE.MeshPhongMaterial({
+      map: earthTex,
+      bumpMap: earthTex,
+      bumpScale: 0.04,
+      transparent: true,
+      opacity: 0.95,
+      specular: new THREE.Color(0xffffff),
+      shininess: 30,
+    });
+    const earthGeo = new THREE.SphereGeometry(GLOBE_R, 64, 64);
+    const earthMesh = new THREE.Mesh(earthGeo, earthMat);
+    scene.add(earthMesh);
+
+    // ── Atmosphere Glow (white-ish rim) ──
+    const atmVert = `
+      varying vec3 vNormal;
+      void main() {
+        vNormal = normalize(normalMatrix * normal);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+    const atmFrag = `
+      varying vec3 vNormal;
+      void main() {
+        float intensity = pow(0.65 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
+        gl_FragColor = vec4(1.0, 1.0, 1.0, intensity * 0.45);
+      }
+    `;
+    const atmMesh = new THREE.Mesh(
+      new THREE.SphereGeometry(GLOBE_R * 1.06, 48, 48),
+      new THREE.ShaderMaterial({
+        vertexShader: atmVert,
+        fragmentShader: atmFrag,
+        blending: THREE.AdditiveBlending,
+        side: THREE.BackSide,
+        transparent: true,
+        depthWrite: false,
+      })
+    );
+    scene.add(atmMesh);
+
+    // ── Lights ──
+    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    dirLight.position.set(5, 3, 4);
+    scene.add(dirLight);
+    const fillLight = new THREE.DirectionalLight(0xc2d8ff, 0.4);
+    fillLight.position.set(-5, -2, -3);
+    scene.add(fillLight);
+
+    // ── Lat/Lon → 3D ──
+    function latLonTo3D(lat, lon, r) {
+      const phi   = (90 - lat) * (Math.PI / 180);
+      const theta = (lon + 180) * (Math.PI / 180);
+      return new THREE.Vector3(
+        -r * Math.sin(phi) * Math.cos(theta),
+         r * Math.cos(phi),
+         r * Math.sin(phi) * Math.sin(theta)
+      );
+    }
+
+    // ── India origin pulse marker ──
+    const indiaPt = latLonTo3D(20.5, 79.0, GLOBE_R + 0.005);
+
+    const originCore = new THREE.Mesh(
+      new THREE.SphereGeometry(0.022, 12, 12),
+      new THREE.MeshBasicMaterial({ color: 0xc29652 })
+    );
+    originCore.position.copy(indiaPt);
+    scene.add(originCore);
+
+    // Pulse ring
+    const pulseRingGeo = new THREE.RingGeometry(0.02, 0.036, 32);
+    const pulseRingMat = new THREE.MeshBasicMaterial({
+      color: 0xffffff, side: THREE.DoubleSide,
+      transparent: true, opacity: 0.9,
+    });
+    const pulseRing = new THREE.Mesh(pulseRingGeo, pulseRingMat);
+    pulseRing.position.copy(indiaPt);
+    pulseRing.lookAt(new THREE.Vector3(0, 0, 0).add(indiaPt.clone().multiplyScalar(2)));
+    scene.add(pulseRing);
+
+    // ── Export route destinations ──
+    const destinations = [
+      { lat: 37.09,  lon: -95.71, name: 'USA' },
+      { lat: 56.13,  lon: -106.35, name: 'Canada' },
+      { lat: 55.38,  lon:  -3.44, name: 'UK' },
+      { lat: 51.17,  lon:  10.45, name: 'Germany' },
+      { lat: 46.23,  lon:   2.21, name: 'France' },
+      { lat: 23.42,  lon:  53.85, name: 'UAE' },
+      { lat: 23.88,  lon:  45.08, name: 'Saudi' },
+      { lat: -25.27, lon: 133.78, name: 'Australia' },
+      { lat:  1.35,  lon: 103.82, name: 'Singapore' },
+      { lat: -30.56, lon:  22.94, name: 'S.Africa' },
+    ];
+
+    // ── Route arcs & particles ──
+    const routes = [];
+    const GOLD  = new THREE.Color(0xc29652);
+    const WHITE = new THREE.Color(0xffffff);
+
+    function buildArcCurve(from, to) {
+      const mid = from.clone().add(to).normalize().multiplyScalar(GLOBE_R * 1.4);
+      return new THREE.QuadraticBezierCurve3(from, mid, to);
+    }
+
+    const originPt3D = latLonTo3D(20.5, 79.0, GLOBE_R + 0.01);
+    const ARC_MAT = new THREE.LineBasicMaterial({
+      color: 0xc29652, transparent: true, opacity: 0.35, linewidth: 1.5,
+    });
+
+    destinations.forEach((dest, i) => {
+      const destPt = latLonTo3D(dest.lat, dest.lon, GLOBE_R + 0.01);
+      const curve  = buildArcCurve(originPt3D, destPt);
+      const pts    = curve.getPoints(60);
+      const geo    = new THREE.BufferGeometry().setFromPoints(pts);
+      const line   = new THREE.Line(geo, ARC_MAT.clone());
+      scene.add(line);
+
+      // Particle (white glow dot traveling along arc)
+      const partMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(0.016, 8, 8),
+        new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 })
+      );
+      scene.add(partMesh);
+
+      // Destination marker
+      const destMark = new THREE.Mesh(
+        new THREE.SphereGeometry(0.014, 8, 8),
+        new THREE.MeshBasicMaterial({ color: 0xc29652, transparent: true, opacity: 0.8 })
+      );
+      destMark.position.copy(destPt);
+      scene.add(destMark);
+
+      routes.push({
+        curve,
+        particle: partMesh,
+        progress: i / destinations.length,
+        speed: 0.0018 + Math.random() * 0.001,
+      });
+    });
+
+    // ── Ambient star/dust particles ──
+    const STAR_COUNT = 80;
+    const starPositions = [];
+    const starGeo = new THREE.BufferGeometry();
+    for (let i = 0; i < STAR_COUNT; i++) {
+      starPositions.push(
+        (Math.random() - 0.5) * 5,
+        (Math.random() - 0.5) * 5,
+        (Math.random() - 0.5) * 5
+      );
+    }
+    starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPositions, 3));
+    const starMat = new THREE.PointsMaterial({
+      color: 0xffffff, size: 0.022,
+      transparent: true, opacity: 0.55,
+    });
+    const stars = new THREE.Points(starGeo, starMat);
+    scene.add(stars);
+
+    // ── 3D Floating Agricultural Products ──
+    const productsGroup = new THREE.Group();
+    scene.add(productsGroup);
+    const floatingItems = [];
+
+    // 1. Cinnamon stick
+    const cinnamonGeo = new THREE.CylinderGeometry(0.015, 0.015, 0.32, 8);
+    const cinnamonMat = new THREE.MeshStandardMaterial({
+      color: 0xa66a4e, roughness: 0.9, metalness: 0.1,
+    });
+    const cinnamonStick = new THREE.Mesh(cinnamonGeo, cinnamonMat);
+    cinnamonStick.position.set(-1.1, 0.55, 0.6);
+    cinnamonStick.rotation.z = Math.PI / 6;
+    productsGroup.add(cinnamonStick);
+    floatingItems.push({ mesh: cinnamonStick, speedY: 0.0016, speedRot: 0.007, amp: 0.14, offset: 0 });
+
+    // 2. Chickpea grain
+    const chickpeaGeo = new THREE.SphereGeometry(0.046, 8, 8);
+    chickpeaGeo.scale(1.2, 1.0, 1.2);
+    const chickpeaMat = new THREE.MeshStandardMaterial({
+      color: 0xe8bd84, roughness: 0.7,
+    });
+    const chickpea = new THREE.Mesh(chickpeaGeo, chickpeaMat);
+    chickpea.position.set(1.25, -0.4, 0.7);
+    productsGroup.add(chickpea);
+    floatingItems.push({ mesh: chickpea, speedY: 0.0012, speedRot: 0.005, amp: 0.18, offset: Math.PI / 3 });
+
+    // 3. Cardamom Pod
+    const cardGeo = new THREE.SphereGeometry(0.038, 8, 8);
+    cardGeo.scale(1.6, 1.0, 1.0);
+    const cardMat = new THREE.MeshStandardMaterial({
+      color: 0x8cc493, roughness: 0.8,
+    });
+    const cardPod = new THREE.Mesh(cardGeo, cardMat);
+    cardPod.position.set(-0.95, -0.5, 0.8);
+    productsGroup.add(cardPod);
+    floatingItems.push({ mesh: cardPod, speedY: 0.0018, speedRot: 0.008, amp: 0.15, offset: Math.PI });
+
+    // 4. Red Chilli
+    const chilliGeo = new THREE.ConeGeometry(0.026, 0.22, 8);
+    const chilliMat = new THREE.MeshStandardMaterial({
+      color: 0xc24030, roughness: 0.3, metalness: 0.2,
+    });
+    const chilli = new THREE.Mesh(chilliGeo, chilliMat);
+    chilli.position.set(1.05, 0.65, 0.5);
+    chilli.rotation.x = Math.PI / 3;
+    productsGroup.add(chilli);
+    floatingItems.push({ mesh: chilli, speedY: 0.001, speedRot: 0.006, amp: 0.2, offset: Math.PI * 1.5 });
+
+    // ── Logistics Group (Airplane & Ship) ──
+    const logisticsGroup = new THREE.Group();
+    scene.add(logisticsGroup);
+
+    // Cargo Airplane circling the globe
+    const planeGeo = new THREE.ConeGeometry(0.014, 0.065, 5);
+    planeGeo.rotateX(Math.PI / 2);
+    const wingGeo = new THREE.BoxGeometry(0.08, 0.004, 0.02);
+    const planeMesh = new THREE.Mesh(planeGeo, new THREE.MeshBasicMaterial({ color: 0xffffff }));
+    const wingMesh = new THREE.Mesh(wingGeo, new THREE.MeshBasicMaterial({ color: 0xdddddd }));
+    planeMesh.add(wingMesh);
+    logisticsGroup.add(planeMesh);
+
+    // Cargo Ship sailing path
+    const shipGeo = new THREE.BoxGeometry(0.065, 0.018, 0.02);
+    const shipMat = new THREE.MeshBasicMaterial({ color: 0x1f242d });
+    const shipMesh = new THREE.Mesh(shipGeo, shipMat);
+    const containerGeo = new THREE.BoxGeometry(0.038, 0.014, 0.015);
+    const cargoMesh = new THREE.Mesh(containerGeo, new THREE.MeshBasicMaterial({ color: 0xc29652 }));
+    cargoMesh.position.y = 0.015;
+    shipMesh.add(cargoMesh);
+    logisticsGroup.add(shipMesh);
+
+    // Reflective ocean base at bottom of the globe
+    const oceanGeo = new THREE.PlaneGeometry(8, 8);
+    const oceanMat = new THREE.MeshStandardMaterial({
+      color: 0x0c152b,
+      roughness: 0.35,
+      metalness: 0.8,
+      transparent: true,
+      opacity: 0.6,
+    });
+    const ocean = new THREE.Mesh(oceanGeo, oceanMat);
+    ocean.rotation.x = -Math.PI / 2;
+    ocean.position.y = -1.4;
+    scene.add(ocean);
+
+    // ── Mouse parallax ──
+    let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+    const heroEl = document.getElementById('home');
+    if (heroEl) {
+      heroEl.addEventListener('mousemove', (e) => {
+        const rect = heroEl.getBoundingClientRect();
+        targetX = ((e.clientX - rect.left) / rect.width  - 0.5) * 0.6;
+        targetY = ((e.clientY - rect.top)  / rect.height - 0.5) * 0.4;
+      });
+      heroEl.addEventListener('mouseleave', () => {
+        targetX = 0; targetY = 0;
+      });
+    }
+
+    // ── Resize ──
+    let baseCameraZ = 3.25;
+    function onResize() {
+      const parent = canvas.parentElement;
+      if (!parent) return;
+      const w = parent.clientWidth;
+      const h = parent.clientHeight;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+
+      // Update camera positions based on screen width
+      if (w < 768) {
+        camera.position.set(0.0, -0.15, 3.8); // Centered on mobile
+        baseCameraZ = 3.8;
+      } else {
+        camera.position.set(0.65, 0.18, 3.25); // Offset to the right on desktop
+        baseCameraZ = 3.25;
+      }
+    }
+    window.addEventListener('resize', onResize);
+    onResize();
+
+    // ── Clock ──
+    const clock = new THREE.Clock();
+
+    // ── Render loop ──
+    function animate() {
+      requestAnimationFrame(animate);
+      const delta   = clock.getDelta();
+      const elapsed = clock.getElapsedTime();
+
+      // Smooth parallax
+      currentX += (targetX - currentX) * 0.05;
+      currentY += (targetY - currentY) * 0.05;
+
+      // Rotate globe
+      earthMesh.rotation.y  += 0.0025;
+      earthMesh.rotation.x   = currentY * 0.35;
+      earthMesh.rotation.z   = currentX * 0.15;
+      atmMesh.rotation.copy(earthMesh.rotation);
+
+      // Stars drift
+      stars.rotation.y += 0.0004;
+      stars.rotation.x  = currentY * 0.1;
+
+      // Camera subtle zoom relative to dynamic baseCameraZ
+      camera.position.z = baseCameraZ + Math.sin(elapsed * 0.18) * 0.08;
+
+      // Route particles
+      routes.forEach(r => {
+        r.progress = (r.progress + r.speed) % 1;
+        const pt = r.curve.getPoint(r.progress);
+        r.particle.position.copy(pt);
+        // Fade at ends
+        const fade = 1 - Math.abs(r.progress - 0.5) * 2;
+        r.particle.material.opacity = Math.max(0.1, fade * 0.9);
+      });
+
+      // Airplane trajectory slow orbit circling the globe
+      const planeAngle = elapsed * 0.14;
+      planeMesh.position.set(Math.cos(planeAngle) * (GLOBE_R * 1.15), Math.sin(planeAngle * 0.5) * 0.4, Math.sin(planeAngle) * (GLOBE_R * 1.15));
+      planeMesh.lookAt(new THREE.Vector3(Math.cos(planeAngle + 0.1) * (GLOBE_R * 1.15), Math.sin((planeAngle + 0.1) * 0.5) * 0.4, Math.sin(planeAngle + 0.1) * (GLOBE_R * 1.15)));
+
+      // Cargo ship sailing route around the base
+      const shipAngle = elapsed * 0.045 + Math.PI;
+      shipMesh.position.set(Math.cos(shipAngle) * (GLOBE_R * 1.08), -0.16, Math.sin(shipAngle) * (GLOBE_R * 1.08));
+      shipMesh.rotation.y = -shipAngle + Math.PI / 2;
+
+      // Floating agricultural products animation (Sinusoidal float & individual rotation)
+      floatingItems.forEach(item => {
+        item.offset += item.speedY * 60 * delta;
+        item.mesh.position.y += Math.sin(item.offset) * 0.0018;
+        item.mesh.rotation.x += item.speedRot * 60 * delta;
+        item.mesh.rotation.y += item.speedRot * 1.1 * 60 * delta;
+      });
+
+      // Apply interactive tilt to products group (rotation is cleaner than shift)
+      productsGroup.rotation.y = currentX * 0.25;
+      productsGroup.rotation.x = currentY * 0.25;
+
+      // Origin pulse ring
+      const pulseScale = 1 + Math.sin(elapsed * 3.5) * 0.5;
+      pulseRing.scale.set(pulseScale, pulseScale, 1);
+      pulseRingMat.opacity = (1 - Math.sin(elapsed * 3.5) * 0.5) * 0.6;
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  })();
+  </script>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
