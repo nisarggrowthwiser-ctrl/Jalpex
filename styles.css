@@ -4133,7 +4133,7 @@ footer {
 }
 
 /* ── LEFT: Text ── */
-.hero-dark-text { display: flex; flex-direction: column; gap: 16px; }
+.hero-dark-text { display: flex; flex-direction: column; gap: 12px; }
 
 /* Badge — gold accent */
 .hero-dark-badge {
@@ -4143,9 +4143,9 @@ footer {
   background: rgba(194,150,82,0.12);
   border: 1px solid rgba(194,150,82,0.35);
   color: rgba(255,255,255,0.88);
-  padding: 7px 18px;
+  padding: 5px 14px;
   border-radius: 50px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 1px;
   width: fit-content;
@@ -4168,7 +4168,7 @@ footer {
 /* Heading */
 .hero-dark-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(54px, 6.8vw, 88px);
+  font-size: clamp(40px, 5.2vw, 64px);
   font-weight: 600;
   color: #ffffff;
   line-height: 1.08;
@@ -4197,7 +4197,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 17px;
+  font-size: 15px;
   color: rgba(255,255,255,0.50);
   font-weight: 300;
 }
@@ -4226,8 +4226,8 @@ footer {
 
 /* Description */
 .hero-dark-desc {
-  font-size: 17.5px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.6;
   color: rgba(255,255,255,0.72);
   font-weight: 350;
   max-width: 680px;
@@ -4245,10 +4245,10 @@ footer {
   background: linear-gradient(135deg, #bd8f45 0%, #c29652 50%, #d4a660 100%);
   background-size: 200% auto;
   color: #0f1a35;
-  padding: 14px 30px;
+  padding: 11px 24px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
   box-shadow: 0 8px 28px rgba(194,150,82,0.40), 0 2px 8px rgba(0,0,0,0.3);
@@ -4271,10 +4271,10 @@ footer {
   gap: 8px;
   background: rgba(24,37,67,0.4);
   color: rgba(255,255,255,0.82);
-  padding: 13px 26px;
+  padding: 10px 22px;
   border-radius: 50px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   border: 1px solid rgba(194,150,82,0.30);
   backdrop-filter: blur(8px);
@@ -4292,24 +4292,24 @@ footer {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 10px 22px;
+  padding: 8px 18px;
   background: rgba(24,37,67,0.35);
   border: 1px solid rgba(194,150,82,0.15);
   border-radius: 18px;
   backdrop-filter: blur(16px);
   width: fit-content;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .hds-item { display: flex; flex-direction: column; gap: 3px; }
 .hds-num {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #c29652;
   line-height: 1;
   font-family: 'Space Grotesk', sans-serif;
 }
-.hds-lbl { font-size: 11px; color: rgba(255,255,255,0.40); letter-spacing: 1.2px; text-transform: uppercase; }
-.hds-sep { width: 1px; height: 40px; background: rgba(194,150,82,0.15); }
+.hds-lbl { font-size: 10px; color: rgba(255,255,255,0.40); letter-spacing: 1.2px; text-transform: uppercase; }
+.hds-sep { width: 1px; height: 32px; background: rgba(194,150,82,0.15); }
 
 /* ── RIGHT: Globe orb — BIGGER ── */
 .hero-dark-globe {
@@ -4327,7 +4327,7 @@ footer {
   height: auto;
   flex-shrink: 0;
   z-index: 10;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 /* Let product chips have pointer events to be clickable/interactive */
