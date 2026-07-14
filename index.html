@@ -91,10 +91,6 @@
   <header class="hero-dark" id="home">
     <!-- Particle canvas -->
     <canvas class="hero-particles-canvas" id="heroParticles" aria-hidden="true"></canvas>
-
-    <!-- 3D Interactive Globe Canvas (Full Screen behind contents) -->
-    <canvas id="jalpex-globe-canvas"></canvas>
-
     <!-- Background glow layers -->
     <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
     <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
@@ -166,7 +162,7 @@
       <!-- RIGHT: Three.js 3D Interactive Globe -->
       <div class="hero-dark-globe" data-anim="fade-in" data-delay="200" aria-hidden="true">
         <div class="hg-threejs-wrap">
-          <!-- Globe canvas runs full screen in background -->
+          <canvas id="jalpex-globe-canvas"></canvas>
         </div>
       </div><!-- /hero-dark-globe -->
 
@@ -927,7 +923,7 @@
     // ── Scene & Camera ──
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-    camera.position.set(0.65, 0.18, 3.25);
+    camera.position.set(0.0, 0.0, 3.25);
 
     // ── Globe Geometry ──
     const GLOBE_R = 1.15; // Slightly larger for backgrounds
@@ -1290,10 +1286,10 @@
 
       // Update camera positions based on screen width
       if (w < 768) {
-        camera.position.set(0.0, -0.15, 3.8); // Centered on mobile
+        camera.position.set(0.0, -0.05, 3.8); // Centered
         baseCameraZ = 3.8;
       } else {
-        camera.position.set(0.65, 0.18, 3.25); // Offset to the right on desktop
+        camera.position.set(0.0, 0.0, 3.25); // Centered in container on desktop
         baseCameraZ = 3.25;
       }
     }

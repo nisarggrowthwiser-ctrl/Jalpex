@@ -4327,7 +4327,7 @@ footer {
   height: auto;
   flex-shrink: 0;
   z-index: 10;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* Let product chips have pointer events to be clickable/interactive */
