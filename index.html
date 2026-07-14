@@ -22,7 +22,7 @@
       
       <ul class="nav-links">
         <li><a href="#home" class="active" data-trans="nav_home">Home</a></li>
-        <li><a href="#products" data-trans="nav_products">Products</a></li>
+        <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Updates & Analysis</a></li>
         <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
@@ -65,7 +65,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#home" data-trans="nav_home">Home</a></li>
-      <li><a href="#products" data-trans="nav_products">Products</a></li>
+      <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Updates & Analysis</a></li>
       <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
@@ -286,33 +286,33 @@
       </div>
       
       <!-- Tab Buttons Inside Banner -->
-      <div class="container" style="margin-top: 40px;">
+      <div class="container" style="margin-top: 30px;">
         <div class="psc-tabs-container" style="display: flex; justify-content: flex-start; gap: 15px; flex-wrap: wrap;">
-          <button class="psc-tab-btn" data-category="agricultural" data-trans="tab_agricultural">Agricultural Products</button>
-          <button class="psc-tab-btn" data-category="food_dehydrated" data-trans="tab_food_dehydrated">Food Products</button>
-          <button class="psc-tab-btn" data-category="fresh_produce" data-trans="tab_fresh_produce">Fresh Fruits & Vegetables</button>
-          <button class="psc-tab-btn" data-category="handicrafts" data-trans="tab_handicrafts">Handicrafts</button>
+          <button class="psc-tab-btn" data-category="agriculture" data-trans="tab_agriculture">Agriculture Product</button>
+          <button class="psc-tab-btn" data-category="handicraft" data-trans="tab_handicraft">Handicraft</button>
+          <button class="psc-tab-btn" data-category="textile" data-trans="tab_textile">Textile</button>
+          <button class="psc-tab-btn" data-category="construction" data-trans="tab_construction">Construction Machinery</button>
         </div>
       </div>
     </div>
 
-    <!-- Products Slider Container -->
-    <div class="container products-slider-container">
-      <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous Products">
+    <!-- Products Grid Container -->
+    <div class="container products-grid-container">
+      <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous Products" style="display: none;">
         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
       </button>
       
-      <div class="products-slider-viewport">
-        <div class="products-slider-track" id="productsSliderTrack">
+      <div class="products-grid-viewport">
+        <div class="products-grid-track" id="productsSliderTrack">
           <!-- Rendered dynamically by app.js -->
         </div>
       </div>
 
-      <button class="slider-arrow next" id="sliderNext" aria-label="Next Products">
+      <button class="slider-arrow next" id="sliderNext" aria-label="Next Products" style="display: none;">
         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </button>
       
-      <div class="slider-dots" id="sliderDots">
+      <div class="slider-dots" id="sliderDots" style="display: none;">
         <!-- Rendered dynamically by app.js -->
       </div>
     </div>
@@ -565,37 +565,37 @@
               </linearGradient>
             </defs>
 
-            <!-- Gujarat, India center at (561, 149) -->
+            <!-- Gujarat, India center at (580, 180) -->
             <!-- North America (USA) -->
-            <path class="route" pathLength="1" style="animation-delay: 0s;" d="M 561 149 Q 380 50 200 150" />
+            <path class="route" pathLength="1" style="animation-delay: 0s;" d="M 580 180 Q 380 50 170 135" />
             <!-- South America (Brazil) -->
-            <path class="route" pathLength="1" style="animation-delay: 0.6s;" d="M 561 149 Q 420 69 280 270" />
+            <path class="route" pathLength="1" style="animation-delay: 0.6s;" d="M 580 180 Q 420 80 250 240" />
             <!-- Western Europe -->
-            <path class="route" pathLength="1" style="animation-delay: 1.2s;" d="M 561 149 Q 470 50 380 120" />
+            <path class="route" pathLength="1" style="animation-delay: 1.2s;" d="M 580 180 Q 470 50 390 105" />
             <!-- Africa (South Africa) -->
-            <path class="route" pathLength="1" style="animation-delay: 1.8s;" d="M 561 149 Q 490 109 420 310" />
+            <path class="route" pathLength="1" style="animation-delay: 1.8s;" d="M 580 180 Q 500 120 445 295" />
             <!-- Middle East (UAE) -->
-            <path class="route" pathLength="1" style="animation-delay: 2.4s;" d="M 561 149 Q 520 119 480 180" />
+            <path class="route" pathLength="1" style="animation-delay: 2.4s;" d="M 580 180 Q 520 140 475 160" />
             <!-- South East Asia -->
-            <path class="route" pathLength="1" style="animation-delay: 3.0s;" d="M 561 149 Q 580 109 600 210" />
-            <!-- East Asia (Japan) -->
-            <path class="route" pathLength="1" style="animation-delay: 3.6s;" d="M 561 149 Q 615 99 670 150" />
+            <path class="route" pathLength="1" style="animation-delay: 3.0s;" d="M 580 180 Q 595 185 615 195" />
+            <!-- East Asia (Japan/China) -->
+            <path class="route" pathLength="1" style="animation-delay: 3.6s;" d="M 580 180 Q 615 120 650 140" />
             <!-- Australia -->
-            <path class="route" pathLength="1" style="animation-delay: 4.2s;" d="M 561 149 Q 635 89 710 300" />
+            <path class="route" pathLength="1" style="animation-delay: 4.2s;" d="M 580 180 Q 645 220 725 280" />
 
             <!-- Destination Markers -->
-            <circle cx="200" cy="150" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="280" cy="270" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="380" cy="120" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="420" cy="310" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="480" cy="180" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="600" cy="210" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="670" cy="150" r="3" fill="var(--gold-light)" opacity="0.8" />
-            <circle cx="710" cy="300" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="170" cy="135" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="250" cy="240" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="390" cy="105" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="445" cy="295" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="475" cy="160" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="615" cy="195" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="650" cy="140" r="3" fill="var(--gold-light)" opacity="0.8" />
+            <circle cx="725" cy="280" r="3" fill="var(--gold-light)" opacity="0.8" />
 
             <!-- Sourcing Hub (Gujarat, India) -->
-            <circle class="origin-core" cx="561" cy="149" r="5" />
-            <circle class="origin-ring" cx="561" cy="149" r="5" />
+            <circle class="origin-core" cx="580" cy="180" r="5" />
+            <circle class="origin-ring" cx="580" cy="180" r="5" />
           </svg>
         </div>
       </div>
@@ -675,9 +675,10 @@
             <div class="form-group">
               <label for="formProduct" data-trans="form_product">Select Main Product Category</label>
               <select id="formProduct" class="form-control">
-                <option value="spices" data-trans="form_prod_opt1">Spices (Whole / Ground)</option>
-                <option value="seeds" data-trans="form_prod_opt2">Nutritious Seeds</option>
-                <option value="pulses" data-trans="form_prod_opt3">Pulses and Grains</option>
+                <option value="agriculture" data-trans="form_prod_opt1">Agriculture Product</option>
+                <option value="handicraft" data-trans="form_prod_opt2">Handicraft</option>
+                <option value="textile" data-trans="form_prod_opt3">Textile</option>
+                <option value="construction" data-trans="form_prod_opt4">Construction Machinery</option>
               </select>
             </div>
             <div class="form-group">

@@ -986,34 +986,79 @@ const translations = {
   }
 };
 
+// Extend translations with new categories
+translations.en.tab_agriculture = "Agriculture Product";
+translations.en.tab_handicraft = "Handicraft";
+translations.en.tab_textile = "Textile";
+translations.en.tab_construction = "Construction Machinery";
+
+translations.hi.tab_agriculture = "कृषि उत्पाद";
+translations.hi.tab_handicraft = "हस्तशिल्प";
+translations.hi.tab_textile = "कपड़ा";
+translations.hi.tab_construction = "निर्माण मशीनरी";
+
+translations.ar.tab_agriculture = "المنتجات الزراعية";
+translations.ar.tab_handicraft = "الحرف اليدوية";
+translations.ar.tab_textile = "المنسوجات";
+translations.ar.tab_construction = "آلات البناء";
+
+translations.fr.tab_agriculture = "Produits Agricoles";
+translations.fr.tab_handicraft = "Artisanat";
+translations.fr.tab_textile = "Textiles";
+translations.fr.tab_construction = "Machines de Construction";
+
+translations.es.tab_agriculture = "Productos Agrícolas";
+translations.es.tab_handicraft = "Artesanías";
+translations.es.tab_textile = "Textil";
+translations.es.tab_construction = "Maquinaria de Construcción";
+
+translations.de.tab_agriculture = "Agrarprodukte";
+translations.de.tab_handicraft = "Kunsthandwerk";
+translations.de.tab_textile = "Textil";
+translations.de.tab_construction = "Baumaschinen";
+
+translations.pt.tab_agriculture = "Produtos Agrícolas";
+translations.pt.tab_handicraft = "Artesanato";
+translations.pt.tab_textile = "Têxteis";
+translations.pt.tab_construction = "Máquinas de Construção";
+
+translations.zh.tab_agriculture = "农业产品";
+translations.zh.tab_handicraft = "手工艺品";
+translations.zh.tab_textile = "纺织品";
+translations.zh.tab_construction = "工程机械";
+
 // ── PRODUCTS DATA ──
 const productsData = [
-  // AGRICULTURAL PRODUCTS
-  { id: "turmeric", category: "agricultural", name: "Turmeric Finger", desc: "Premium quality golden-yellow Indian turmeric fingers, high in curcumin content and ground powder.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
-  { id: "red_chilli", category: "agricultural", name: "Red Chilli", desc: "Vibrant red and fiery Indian red chillies, available as stemless whole pods or ground powder.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png" },
-  { id: "cumin", category: "agricultural", name: "Cumin Seeds", desc: "Highly aromatic cumin seeds with deep earthy flavor, thoroughly cleaned and processed.", tags: ["seeds", "powder", "earthy"], image: "products/cumin.png" },
-  { id: "coriander", category: "agricultural", name: "Coriander Seeds", desc: "Uniform whole coriander seeds and premium finely milled coriander powder with fresh citrusy aroma.", tags: ["seeds", "powder", "aromatic"], image: "products/coriander.png" },
-  { id: "sesame_seeds", category: "agricultural", name: "Sesame Seeds", desc: "Premium natural golden and mechanically hulled white sesame seeds, rich in healthy oils.", tags: ["natural", "hulled", "oil-seeds"], image: "products/sesame-seeds.png" },
-  { id: "peanuts", category: "agricultural", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by size, rich in flavor and oil content.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" },
-  { id: "pulses", category: "agricultural", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/chickpeas.png" },
-  { id: "rice", category: "agricultural", name: "Premium Basmati Rice", desc: "Long-grain, aromatic premium Indian Basmati rice, aged to perfection for exquisite flavor.", tags: ["basmati", "long-grain", "aged"], image: "products/rice.png" },
-  { id: "wheat", category: "agricultural", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png" },
-  { id: "cotton", category: "agricultural", name: "Cotton Products", desc: "High-staple raw cotton bolls and cotton fibers, clean and processed for textile industries.", tags: ["raw-cotton", "fiber", "textile-grade"], image: "products/cotton.png" },
+  // AGRICULTURE PRODUCT
+  { id: "turmeric", category: "agriculture", name: "Turmeric Finger", desc: "Premium quality golden-yellow Indian turmeric fingers, high in curcumin content and ground powder.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
+  { id: "red_chilli", category: "agriculture", name: "Red Chilli", desc: "Vibrant red and fiery Indian red chillies, available as stemless whole pods or ground powder.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png" },
+  { id: "cumin", category: "agriculture", name: "Cumin Seeds", desc: "Highly aromatic cumin seeds with deep earthy flavor, thoroughly cleaned and processed.", tags: ["seeds", "powder", "earthy"], image: "products/cumin.png" },
+  { id: "coriander", category: "agriculture", name: "Coriander Seeds", desc: "Uniform whole coriander seeds and premium finely milled coriander powder with fresh citrusy aroma.", tags: ["seeds", "powder", "aromatic"], image: "products/coriander.png" },
+  { id: "sesame_seeds", category: "agriculture", name: "Sesame Seeds", desc: "Premium natural golden and mechanically hulled white sesame seeds, rich in healthy oils.", tags: ["natural", "hulled", "oil-seeds"], image: "products/sesame-seeds.png" },
+  { id: "peanuts", category: "agriculture", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by size, rich in flavor and oil content.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" },
+  { id: "pulses", category: "agriculture", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/chickpeas.png" },
+  { id: "rice", category: "agriculture", name: "Premium Basmati Rice", desc: "Long-grain, aromatic premium Indian Basmati rice, aged to perfection for exquisite flavor.", tags: ["basmati", "long-grain", "aged"], image: "products/rice.png" },
+  { id: "wheat", category: "agriculture", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png" },
+  { id: "dehydrated_veg", category: "agriculture", name: "Dehydrated Vegetables", desc: "Premium quality dehydrated onion flakes, garlic powder, and ginger flakes that preserve natural flavor.", tags: ["dehydrated", "flakes", "powder"], image: "products/dehydrated-veg.png" },
+  { id: "food_products", category: "agriculture", name: "Processed Food Products", desc: "Value-added food products, processed grains, and customized packaging solutions for global retail.", tags: ["retail-ready", "value-added", "packaged"], image: "products/process-packaging.png" },
+  { id: "fresh_produce", category: "agriculture", name: "Fresh Fruits & Vegetables", desc: "Freshly harvested pomegranates, mangoes, potatoes, and red onions sourced from local farms.", tags: ["fresh", "farm-direct", "organic"], image: "products/fresh-produce.png" },
 
-  // FOOD & DEHYDRATED VEGETABLES
-  { id: "dehydrated_veg", category: "food_dehydrated", name: "Dehydrated Vegetables", desc: "Premium quality dehydrated onion flakes, garlic powder, and ginger flakes that preserve natural flavor.", tags: ["dehydrated", "flakes", "powder"], image: "products/dehydrated-veg.png" },
-  { id: "food_products", category: "food_dehydrated", name: "Processed Food Products", desc: "Value-added food products, processed grains, and customized packaging solutions for global retail.", tags: ["retail-ready", "value-added", "packaged"], image: "products/process-packaging.png" },
+  // HANDICRAFT
+  { id: "handicrafts", category: "handicraft", name: "Artisanal Handicrafts", desc: "Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles.", tags: ["handmade", "artisanal", "traditional"], image: "products/handicrafts.png" },
 
-  // FRESH PRODUCE
-  { id: "fresh_produce", category: "fresh_produce", name: "Fresh Fruits & Vegetables", desc: "Freshly harvested pomegranates, mangoes, potatoes, and red onions sourced from local farms.", tags: ["fresh", "farm-direct", "organic"], image: "products/fresh-produce.png" },
+  // TEXTILE
+  { id: "cotton", category: "textile", name: "Raw Cotton", desc: "High-staple raw cotton bolls and cotton fibers, clean and processed for textile industries.", tags: ["raw-cotton", "fiber", "textile-grade"], image: "products/cotton.png" },
+  { id: "textile_yarn", category: "textile", name: "Cotton Yarn", desc: "Premium organic cotton yarn wound on cones, highly durable and ideal for weaving and knitting.", tags: ["yarn", "organic", "weaving"], image: "products/textile-yarn.png" },
 
-  // HANDICRAFTS
-  { id: "handicrafts", category: "handicrafts", name: "Artisanal Handicrafts", desc: "Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles.", tags: ["handmade", "artisanal", "traditional"], image: "products/handicrafts.png" }
+  // CONSTRUCTION MACHINERY
+  { id: "concrete_mixer", category: "construction", name: "Concrete Mixer Machine", desc: "Heavy-duty electric and diesel-powered concrete mixer machines with robust drum capacity.", tags: ["machinery", "concrete", "mixer"], image: "products/concrete-mixer.png" },
+  { id: "excavator", category: "construction", name: "Hydraulic Excavator", desc: "High-performance hydraulic crawler excavator designed for heavy excavation, mining, and roadwork.", tags: ["excavator", "crawler", "hydraulic"], image: "products/excavator.png" },
+  { id: "road_roller", category: "construction", name: "Heavy Road Roller", desc: "Double-drum vibratory road roller designed for soil, gravel, and asphalt compaction.", tags: ["road-roller", "compactor", "heavy"], image: "products/road-roller.png" }
 ];
 
 // ── DOM ELEMENTS & GLOBAL STATE ──
 let currentLang = "en";
-let activeCategory = "agricultural";
+let activeCategory = "agriculture";
 
 // ── INITIALIZATION ──
 document.addEventListener("DOMContentLoaded", () => {
@@ -1775,79 +1820,12 @@ function initGlobeCanvas() {
 }
 
 // ── PRODUCTS RENDERING & TABS ──
+// ── PRODUCTS RENDERING & TABS ──
 let sliderCurrentIndex = 0;
 
 function initProductsSlider() {
-  const prevBtn = document.getElementById("sliderPrev");
-  const nextBtn = document.getElementById("sliderNext");
-  const track = document.getElementById("productsSliderTrack");
-  const dotsContainer = document.getElementById("sliderDots");
-
-  if (!prevBtn || !nextBtn || !track || !dotsContainer) return;
-
-  function getCardsPerPage() {
-    if (window.innerWidth <= 580) return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 4;
-  }
-
-  function updateSlider() {
-    const cards = track.querySelectorAll(".product-card");
-    const cardsPerPage = getCardsPerPage();
-    const totalCards = cards.length;
-    
-    // Max index is totalCards - cardsPerPage
-    const maxIndex = Math.max(0, totalCards - cardsPerPage);
-    if (sliderCurrentIndex > maxIndex) {
-      sliderCurrentIndex = maxIndex;
-    }
-    if (sliderCurrentIndex < 0) {
-      sliderCurrentIndex = 0;
-    }
-
-    if (cards.length > 0) {
-      const cardWidth = cards[0].offsetWidth;
-      const gap = 30;
-      const translateX = sliderCurrentIndex * (cardWidth + gap);
-      track.style.transform = `translateX(-${translateX}px)`;
-    }
-
-    // Render Dots
-    dotsContainer.innerHTML = "";
-    const totalDots = Math.max(1, totalCards - cardsPerPage + 1);
-    for (let i = 0; i < totalDots; i++) {
-      const dot = document.createElement("div");
-      dot.className = `slider-dot ${i === sliderCurrentIndex ? 'active' : ''}`;
-      dot.addEventListener("click", () => {
-        sliderCurrentIndex = i;
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-    }
-
-    // Enable/disable arrows
-    prevBtn.style.opacity = sliderCurrentIndex === 0 ? "0.3" : "1";
-    prevBtn.style.pointerEvents = sliderCurrentIndex === 0 ? "none" : "auto";
-    
-    nextBtn.style.opacity = sliderCurrentIndex === maxIndex ? "0.3" : "1";
-    nextBtn.style.pointerEvents = sliderCurrentIndex === maxIndex ? "none" : "auto";
-  }
-
-  prevBtn.addEventListener("click", () => {
-    sliderCurrentIndex--;
-    updateSlider();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    sliderCurrentIndex++;
-    updateSlider();
-  });
-
-  window.addEventListener("resize", () => {
-    updateSlider();
-  });
-
-  window.updateProductsSlider = updateSlider;
+  // Slider is disabled in favor of the scrollable grid
+  window.updateProductsSlider = () => {};
 }
 
 function renderProducts() {
@@ -1863,19 +1841,22 @@ function renderProducts() {
         <p style="font-size: 14px; font-weight: 300; max-width: 420px; margin: 0 auto;">Click on any of the product categories above to view our premium certified exports.</p>
       </div>
     `;
-    document.getElementById("sliderPrev").style.opacity = "0";
-    document.getElementById("sliderPrev").style.pointerEvents = "none";
-    document.getElementById("sliderNext").style.opacity = "0";
-    document.getElementById("sliderNext").style.pointerEvents = "none";
-    document.getElementById("sliderDots").innerHTML = "";
+    const prevBtn = document.getElementById("sliderPrev");
+    const nextBtn = document.getElementById("sliderNext");
+    const dotsContainer = document.getElementById("sliderDots");
+    if (prevBtn) prevBtn.style.display = "none";
+    if (nextBtn) nextBtn.style.display = "none";
+    if (dotsContainer) dotsContainer.style.display = "none";
     return;
   }
 
-  // Show navigation arrows
-  document.getElementById("sliderPrev").style.opacity = "1";
-  document.getElementById("sliderPrev").style.pointerEvents = "auto";
-  document.getElementById("sliderNext").style.opacity = "1";
-  document.getElementById("sliderNext").style.pointerEvents = "auto";
+  // Hide navigation elements for grid layout
+  const prevBtn = document.getElementById("sliderPrev");
+  const nextBtn = document.getElementById("sliderNext");
+  const dotsContainer = document.getElementById("sliderDots");
+  if (prevBtn) prevBtn.style.display = "none";
+  if (nextBtn) nextBtn.style.display = "none";
+  if (dotsContainer) dotsContainer.style.display = "none";
 
   const filtered = productsData.filter(p => p.category === activeCategory);
   const featuredTagText = (translations[currentLang] && translations[currentLang].tag_featured) || "Featured Product";
@@ -1898,11 +1879,6 @@ function renderProducts() {
     `;
     track.appendChild(card);
   });
-
-  sliderCurrentIndex = 0;
-  if (window.updateProductsSlider) {
-    window.updateProductsSlider();
-  }
 }
 
 function initProductTabs() {
@@ -1960,16 +1936,18 @@ function inquireProduct(productName) {
   const inquirySection = document.getElementById("inquiry");
 
   const product = productsData.find(p => p.name === productName);
-  if (product) {
-    if (product.category === "spices") categorySelect.value = "spices";
-    else if (product.category === "seeds") categorySelect.value = "seeds";
-    else if (product.category === "pulses") categorySelect.value = "pulses";
+  if (product && categorySelect) {
+    categorySelect.value = product.category;
   }
 
-  messageArea.value = `Hello, I'm interested in importing Jalpex International's premium "${productName}". Please send me pricing specification, packing sizes, and details.`;
+  if (messageArea) {
+    messageArea.value = `Hello, I'm interested in importing Jalpex International's premium "${productName}". Please send me pricing specification, packing sizes, and details.`;
+  }
 
   // Smooth scroll to inquiry form
-  inquirySection.scrollIntoView({ behavior: "smooth" });
+  if (inquirySection) {
+    inquirySection.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 // ── REVEAL ON SCROLL ANIMATIONS ──
