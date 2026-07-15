@@ -2,6 +2,9 @@
   "name": "jalpex-international",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
   "engines": {
     "node": ">=18"
   }
