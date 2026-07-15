@@ -306,17 +306,29 @@
 
     .gal-card-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 600;
       color: #fff;
       line-height: 1.3;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 2.6em; /* Ensure uniform title container height */
     }
 
     .gal-card-desc {
-      font-size: 13px;
+      font-size: 13.5px;
       color: rgba(255, 255, 255, 0.45);
-      line-height: 1.5;
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 4.8em; /* Ensure uniform description container height */
     }
 
     /* ── LIGHTBOX (REDESIGNED) ── */
@@ -680,13 +692,13 @@
     <div class="container">
       <div class="gal-filter-inner">
         <button class="gal-fbtn active" data-cat="all">All Operations <span class="fbtn-count"
-            id="countAll">6</span></button>
+            id="countAll">9</span></button>
         <button class="gal-fbtn" data-cat="warehouse">Warehouse <span class="fbtn-count"
             id="countWarehouse">3</span></button>
         <button class="gal-fbtn" data-cat="port">Port & Logistics <span class="fbtn-count"
-            id="countPort">2</span></button>
+            id="countPort">3</span></button>
         <button class="gal-fbtn" data-cat="farms">Farms & Sourcing <span class="fbtn-count"
-            id="countFarms">1</span></button>
+            id="countFarms">3</span></button>
       </div>
     </div>
   </div>
@@ -808,60 +820,60 @@
       {
         id: "w1", category: "warehouse",
         image: "gallery/warehouse_stock.png",
-        title: "Temperature-Controlled Grain Storage",
-        desc: "Industrial-scale warehouse with organized stacking, humidity control, and real-time inventory tracking across 15,000+ sq ft."
+        title: "Temperature-Controlled Storage",
+        desc: "Industrial-scale warehouse with organized stacking, humidity control, and real-time inventory tracking for volatile oil protection."
       },
       {
         id: "w2", category: "warehouse",
         image: "gallery/quality_check.png",
         title: "NABL-Grade Quality Laboratory",
-        desc: "In-house lab with certified equipment for moisture, aflatoxin, pesticide residue, and microbiological testing — every batch verified."
+        desc: "In-house lab with certified equipment testing moisture, aflatoxin, and pesticide residues to guarantee compliance with EU and FDA standards."
       },
       {
-        id: "u1", category: "warehouse",
-        image: "gallery/infra_1.jpg",
-        title: "State-of-the-Art Processing Center",
-        desc: "Advanced automated sorting, grading, and packaging facility for agricultural exports."
-      },
-      {
-        id: "uv1", category: "port",
-        image: "gallery/shipping_port.png",
-        video: "gallery/infra_video_1.mp4",
+        id: "w3", category: "warehouse",
+        image: "gallery/whatsapp_img_1.jpg",
+        video: "gallery/whatsapp_vid_2.mp4",
         type: "video",
-        title: "Export Shipment Logistics Operations",
-        desc: "Real-time look at container dispatch and port loading operations for overseas trade."
+        title: "Automated Seeds Cleaning & Processing",
+        desc: "Real-time look at our automated cleaning, grading, and gravity separation sorting machines preparing seeds for dispatch."
       },
       {
         id: "p1", category: "port",
-        image: "gallery/shipping_port.png",
-        title: "Mundra & Kandla Port Operations",
-        desc: "Direct container freight loading from India's busiest western ports, serving 40+ international trade routes."
+        image: "gallery/whatsapp_img_2.jpg",
+        title: "Port Forklift Loading Operations",
+        desc: "Heavy-duty forklifts loading and organizing stretch-wrapped cargo pallets at the container yard terminal."
       },
       {
-        id: "uv2", category: "port",
-        image: "gallery/cargo_ship.png",
-        video: "gallery/infra_video_2.mp4",
+        id: "p2", category: "port",
+        image: "gallery/whatsapp_img_3.jpg",
+        title: "Mundra Port Container Terminal",
+        desc: "International shipping containers staged and stacked at Western India's premier export terminal awaiting vessel loading."
+      },
+      {
+        id: "p3", category: "port",
+        image: "gallery/shipping_port.png",
+        video: "gallery/whatsapp_vid_1.mp4",
         type: "video",
-        title: "Cargo Handling & Port Dispatch",
-        desc: "Automated cranes loading shipping freight for departure across global corridors."
+        title: "Port Cargo Stuffing & Dispatch",
+        desc: "Watch the loading bay and trailer transport operations moving export containers for deep-sea shipping."
       },
       {
         id: "f1", category: "farms",
         image: "gallery/spice_farm.png",
-        title: "Direct Farm Sourcing — Gujarat & Rajasthan",
-        desc: "Contract farming partnerships with 50+ certified farms across India's premier spice and grain belts for traceable, organic sourcing."
-      },
-      {
-        id: "u2", category: "farms",
-        image: "gallery/infra_2.jpg",
-        title: "Direct Sourcing & Farm Sorting",
-        desc: "Harvest processing and quality selection directly at the sourcing fields."
+        title: "Contract Farming — Gujarat & Rajasthan",
+        desc: "Direct partnership program with spice farmers ensuring clean soil parameters and fully traceable harvest sourcing."
       },
       {
         id: "f2", category: "farms",
         image: "organic-sourcing.png",
-        title: "Organic Crop Harvesting & Sorting",
-        desc: "Carefully selected, cleaned, and sorted seeds and grains under strict quality inspections."
+        title: "Organic Crop Sourcing & Harvesting",
+        desc: "Sourcing certified organic cumin, sesame, and mustard seeds directly from pesticide-free farming cooperatives."
+      },
+      {
+        id: "f3", category: "farms",
+        image: "gallery/whatsapp_img_1.jpg",
+        title: "Export Palletization & Inspection",
+        desc: "Customs-ready boxes palletized and secured next to shipping container, undergoing final pre-shipment quality verification."
       }
     ];
 
