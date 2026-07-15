@@ -3372,26 +3372,26 @@ footer {
 /* ── NEWS & ARTICLES PAGE ── */
 .news-header {
   background: linear-gradient(rgba(18, 43, 26, 0.92), rgba(18, 43, 26, 0.92)), url('gallery/shipping_port.png') center/cover no-repeat;
-  padding: 80px 0 100px;
+  padding: 18px 0 20px;
   color: #FFFFFF;
   text-align: center;
 }
 
 .news-header .catalog-title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .news-header .catalog-subtitle {
-  font-size: 16px;
+  font-size: 13.5px;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 650px;
-  margin: 0 auto 36px;
+  max-width: 600px;
+  margin: 0 auto 12px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .news-header .catalog-filters {
@@ -4149,18 +4149,18 @@ footer {
 
   /* ── NEWS PAGE HEADER ── */
   .news-header {
-    padding: 50px 0 56px;
+    padding: 18px 0 20px;
   }
 
   .news-header .catalog-title {
-    font-size: clamp(24px, 7vw, 34px);
-    margin-bottom: 8px;
+    font-size: clamp(20px, 6vw, 28px);
+    margin-bottom: 4px;
   }
 
   .news-header .catalog-subtitle {
-    font-size: 13px;
-    margin: 0 auto 20px;
-    line-height: 1.55;
+    font-size: 12px;
+    margin: 0 auto 12px;
+    line-height: 1.5;
   }
 
   .news-header .catalog-filters {
@@ -4337,7 +4337,7 @@ footer {
   }
 
   .news-header {
-    padding: 40px 0 44px;
+    padding: 18px 0 20px;
   }
 
   .inquiry-section {

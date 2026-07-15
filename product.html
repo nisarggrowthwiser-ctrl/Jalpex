@@ -15,146 +15,108 @@
   <link rel="stylesheet" href="styles.css?v=2.2">
   <style>
     body {
-      background: var(--cream);
+      background: var(--bg);
       color: var(--text-dark);
       padding-top: 65px;
+      font-family: var(--font-body);
     }
 
-    /* ── HERO BANNER (MINIMAL) ── */
-    .pd-hero {
-      background: var(--cream);
-      padding: 30px 0 20px;
-      position: relative;
-      border-bottom: 1px solid var(--border);
+    /* ── TWO-COLUMN GRID LAYOUT (TIGHT SPACING) ── */
+    .pd-grid-container {
+      max-width: 1200px;
+      margin: 24px auto 40px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
     }
 
-    .pd-hero::before {
-      display: none;
-    }
-
-    .pd-hero-breadcrumb {
+    /* ── LEFT COLUMN (DETAILS) ── */
+    .pd-breadcrumb {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-mid);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    .pd-hero-breadcrumb a {
+    .pd-breadcrumb a {
       color: var(--text-mid);
       text-decoration: none;
       transition: color 0.3s;
     }
 
-    .pd-hero-breadcrumb a:hover {
-      color: var(--accent-orange);
+    .pd-breadcrumb a:hover {
+      color: var(--accent-gold);
     }
 
-    .pd-hero-breadcrumb .sep {
-      color: var(--text-mid);
+    .pd-breadcrumb .sep {
       opacity: 0.5;
     }
 
-    .pd-hero-cat {
+    .pd-cat {
       display: block;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--accent-orange);
-      margin-bottom: 8px;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
     }
 
-    .pd-hero-title {
+    .pd-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(30px, 4vw, 44px);
+      font-size: clamp(28px, 4vw, 38px);
       font-weight: 600;
       color: var(--text-dark);
-      line-height: 1.1;
-      margin: 0 0 10px;
+      line-height: 1.15;
+      margin: 0 0 8px;
     }
 
-    .pd-hero-desc {
-      font-size: 14.5px;
+    .pd-desc {
+      font-size: 14px;
       color: var(--text-mid);
-      line-height: 1.6;
-      max-width: 720px;
+      line-height: 1.55;
+      margin-bottom: 18px;
       font-weight: 300;
     }
 
-    .pd-hero-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .pd-hero-tag {
+    .pd-img-box {
       background: #fff;
       border: 1px solid var(--border);
-      color: var(--text-mid);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 11px;
-    }
-
-    .pd-hero-actions {
-      display: none;
-    }
-
-    /* ── DETAIL GRID ── */
-    .pd-detail-section {
-      padding: 64px 0;
-    }
-
-    .pd-detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: start;
-    }
-
-    .pd-img-wrap {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
+      border-radius: 16px;
+      padding: 18px;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: sticky;
-      top: 100px;
-      box-shadow: 0 8px 32px rgba(36, 29, 18, 0.08);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
     }
 
-    .pd-img-wrap img {
-      max-width: 100%;
-      height: auto;
-      max-height: 420px;
+    .pd-img-box img {
+      max-height: 240px;
+      width: auto;
       object-fit: contain;
-      border-radius: 12px;
-      transition: transform 0.5s;
+      border-radius: 8px;
+      transition: transform 0.4s var(--ease-out);
     }
 
-    .pd-img-wrap img:hover {
-      transform: scale(1.04);
+    .pd-img-box img:hover {
+      transform: scale(1.03);
     }
 
-    .pd-info {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .pd-block-heading {
+    .pd-badge-title {
       font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 700;
+      text-transform: uppercase;
       color: var(--text-dark);
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--border);
+      margin: 16px 0 8px;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 4px;
     }
 
     .spec-table {
@@ -162,14 +124,16 @@
       border-collapse: collapse;
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
     }
 
     .spec-table td {
-      padding: 13px 18px;
-      font-size: 14px;
-      border-bottom: 1px solid rgba(90, 70, 30, 0.08);
+      padding: 9px 14px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(90, 70, 30, 0.06);
       color: var(--text-mid);
     }
 
@@ -180,271 +144,165 @@
     .spec-label {
       font-weight: 600;
       color: var(--text-dark);
-      width: 44%;
+      width: 38%;
     }
 
     .pd-badge-row {
       display: flex;
-      gap: 10px;
+      gap: 6px;
       flex-wrap: wrap;
+      margin-bottom: 12px;
     }
 
     .pd-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       background: var(--blue-mist);
       border: 1px solid var(--blue-pale);
       color: var(--blue-deep);
-      padding: 7px 14px;
-      border-radius: 10px;
-      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 11px;
       font-weight: 600;
     }
 
-    .pd-badge svg {
+    /* ── RIGHT COLUMN (INQUIRY FORM) ── */
+    .pd-form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 90px;
+    }
+
+    .pd-form-card h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 4px;
+    }
+
+    .pd-form-sub {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      margin: 0 0 16px;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--cream);
+      color: var(--text-dark);
+      transition: border-color 0.3s;
+      font-family: var(--font-body);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      background: #fff;
+    }
+
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 12px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-status {
+      font-size: 12px;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .form-status.success {
+      color: #2e7d32;
+    }
+
+    .pd-contact-block {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pd-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-mid);
+    }
+
+    .pd-contact-item svg {
       width: 14px;
       height: 14px;
       stroke: var(--blue-deep);
       fill: none;
       stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
     }
 
-    /* ── WHY CHOOSE US ── */
-    .pd-wcu-section {
-      background: #fff;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 72px 0;
-    }
-
-    .pd-wcu-header {
-      text-align: center;
-      margin-bottom: 52px;
-    }
-
-    .pd-wcu-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .pd-wcu-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 30px 24px;
-      transition: transform 0.35s, box-shadow 0.35s;
-    }
-
-    .pd-wcu-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 44px rgba(36, 29, 18, 0.1);
-    }
-
-    .pd-wcu-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--blue-light), var(--blue-deep));
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .pd-wcu-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .pd-wcu-card h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 10px;
-    }
-
-    .pd-wcu-card p {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: var(--text-mid);
-      margin: 0;
-    }
-
-    /* ── INQUIRY ── */
-    .pd-inquiry-section {
-      padding: 72px 0 88px;
-    }
-
-    .pd-inquiry-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.65fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    .pd-inquiry-left {
-      position: sticky;
-      top: 100px;
-    }
-
-    .pd-inquiry-left h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 600;
-      color: var(--text-dark);
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .pd-inquiry-left p {
-      font-size: 15px;
-      color: var(--text-mid);
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    .pd-contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .pd-contact-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--text-mid);
-    }
-
-    .pd-contact-list li svg {
-      width: 18px;
-      height: 18px;
-      min-width: 18px;
-      stroke: var(--blue-deep);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      margin-top: 1px;
-    }
-
-    .pd-contact-list a {
-      color: var(--accent-orange);
+    .pd-contact-item a {
+      color: var(--accent-gold);
       text-decoration: none;
     }
 
-    .pd-contact-list a:hover {
+    .pd-contact-item a:hover {
       text-decoration: underline;
     }
 
-    .pd-form-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 44px 40px;
-      box-shadow: 0 8px 32px rgba(36, 29, 18, 0.07);
-    }
-
-    .pd-form-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-    }
-
-    .pd-form-sub {
-      font-size: 14px;
-      color: var(--text-mid);
-      margin-bottom: 28px;
-    }
-
-    /* ── MOBILE ── */
-    @media (max-width: 768px) {
-      .pd-hero {
-        padding: 38px 0 34px;
-      }
-
-      .pd-hero-title {
-        font-size: clamp(30px, 8vw, 44px);
-      }
-
-      .pd-hero-desc {
-        font-size: 14px;
-      }
-
-      .pd-detail-section {
-        padding: 40px 0;
-      }
-
-      .pd-detail-grid {
+    /* ── RESPONSIVE ── */
+    @media (max-width: 991px) {
+      .pd-grid-container {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
+        margin: 16px auto;
       }
-
-      .pd-img-wrap {
-        position: static;
-        padding: 20px;
-      }
-
-      .pd-wcu-section {
-        padding: 48px 0;
-      }
-
-      .pd-wcu-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-      }
-
-      .pd-wcu-card {
-        padding: 22px 18px;
-      }
-
-      .pd-inquiry-section {
-        padding: 48px 0 60px;
-      }
-
-      .pd-inquiry-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-
-      .pd-inquiry-left {
-        position: static;
-      }
-
       .pd-form-card {
-        padding: 28px 20px;
+        position: static;
       }
     }
 
     @media (max-width: 480px) {
-      .pd-wcu-grid {
+      .form-group-row {
         grid-template-columns: 1fr;
+        gap: 0;
       }
-
-      .pd-hero-actions {
-        gap: 10px;
-      }
-
-      .pd-btn-inquire,
-      .pd-btn-catalog {
-        padding: 11px 20px;
-        font-size: 13px;
+      .pd-grid-container {
+        padding: 0 16px;
       }
     }
   </style>
@@ -488,100 +346,69 @@
     <a href="#pd-inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
   </div>
 
-  <!-- ── PRODUCT HERO (JS rendered) ── -->
-  <div class="pd-hero" id="pd-hero">
-    <div class="container" id="pd-hero-content">
-      <div style="color:rgba(255,255,255,0.4);font-size:14px;">Loading product&hellip;</div>
+  <!-- ── MAIN TWO-COLUMN GRID ── -->
+  <main class="pd-grid-container">
+    
+    <!-- Left Column: Details -->
+    <div class="pd-info-col" id="pd-info-col">
+      <div style="color:var(--text-mid); font-size:14px; padding:20px 0;">Loading product details...</div>
     </div>
-  </div>
 
-  <!-- ── PRODUCT DETAIL GRID ── -->
-  <section class="pd-detail-section">
-    <div class="container">
-      <div class="pd-detail-grid" id="pd-detail-grid">
-        <!-- JS rendered -->
+    <!-- Right Column: Inquiry Form Card -->
+    <div class="pd-form-col" id="pd-inquiry">
+      <div class="pd-form-card">
+        <h3 id="pd-inq-heading">Send Inquiry</h3>
+        <p class="pd-form-sub" id="pd-form-sub">Submit your requirements and we'll reply within 24 hours.</p>
+        
+        <form id="productInquiryForm">
+          <div class="form-group">
+            <label for="inq-name">Full Name / Company Name *</label>
+            <input type="text" id="inq-name" class="form-control" placeholder="e.g. Global Foods Ltd." required>
+          </div>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="inq-email">Email Address *</label>
+              <input type="email" id="inq-email" class="form-control" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inq-phone">Phone / WhatsApp *</label>
+              <input type="tel" id="inq-phone" class="form-control" placeholder="+1 555 000 0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inq-country">Destination Country</label>
+            <input type="text" id="inq-country" class="form-control" placeholder="e.g. United Arab Emirates">
+          </div>
+          <div class="form-group">
+            <label for="inq-message">Requirements (Qty, packaging, port) *</label>
+            <textarea id="inq-message" class="form-control" rows="3" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary form-submit-btn">
+            Send Inquiry
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+          
+          <div id="pd-form-status" class="form-status"></div>
+        </form>
+
+        <div class="pd-contact-block">
+          <div class="pd-contact-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+            <a href="mailto:jalpexinternational@gmail.com">jalpexinternational@gmail.com</a>
+          </div>
+          <div class="pd-contact-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.09-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            <a href="tel:+919879915124">+91 98799 15124</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- ── INQUIRY FORM ── -->
-  <section class="pd-inquiry-section" id="pd-inquiry">
-    <div class="container">
-      <div class="pd-inquiry-grid">
-
-        <div class="pd-inquiry-left">
-          <span class="section-label" style="color:var(--accent-orange);display:block;margin-bottom:12px;">Get In
-            Touch</span>
-          <h2 id="pd-inq-heading">Request a Quote</h2>
-          <p id="pd-inq-desc">Fill in the form and our trade desk will respond within 24 hours with pricing, specs and
-            packaging details.</p>
-          <ul class="pd-contact-list">
-            <li>
-              <svg viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <a href="mailto:jalpexinternational@gmail.com">jalpexinternational@gmail.com</a>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.09-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <a href="tel:+919879915124">+91 98799 15124</a>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              23, Dayakunj, Vrundavan Nagar, Junagadh, Gujarat 362001, India
-            </li>
-          </ul>
-        </div>
-
-        <div class="pd-form-card">
-          <h3>Send Your Inquiry</h3>
-          <p class="pd-form-sub" id="pd-form-sub">We'll reply within 24 hours with pricing and product specs.</p>
-          <form id="productInquiryForm">
-            <div class="form-group">
-              <label for="inq-name">Full Name / Company Name *</label>
-              <input type="text" id="inq-name" class="form-control" placeholder="e.g. Global Foods Ltd." required>
-            </div>
-            <div class="form-group-row">
-              <div class="form-group">
-                <label for="inq-email">Email Address *</label>
-                <input type="email" id="inq-email" class="form-control" placeholder="you@company.com" required>
-              </div>
-              <div class="form-group">
-                <label for="inq-phone">Phone / WhatsApp *</label>
-                <input type="tel" id="inq-phone" class="form-control" placeholder="+1 555 000 0000" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inq-country">Destination Country</label>
-              <input type="text" id="inq-country" class="form-control" placeholder="e.g. United Arab Emirates">
-            </div>
-            <div class="form-group">
-              <label for="inq-message">Requirements (Qty, packaging, port) *</label>
-              <textarea id="inq-message" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary form-submit-btn"
-              style="width:100%;justify-content:center;padding:16px 24px;">
-              Send Inquiry
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-            <div id="pd-form-status" class="form-status" style="margin-top:14px;"></div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- ── FOOTER ── -->
   <footer>
@@ -626,28 +453,6 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Jalpex International. All Rights Reserved.</p>
-        <div class="footer-social-links">
-          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0z" />
-              <circle cx="8" cy="8" r="2.667" />
-              <circle cx="12.406" cy="3.594" r="0.96" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-            </svg>
-          </a>
-          <a href="mailto:jalpexinternational@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z" />
-            </svg>
-          </a>
-        </div>
       </div>
     </div>
   </footer>
@@ -692,7 +497,7 @@
       const product = productsData.find(p => p.id === productId);
 
       if (!product) {
-        document.getElementById('pd-hero-content').innerHTML = '<h2 style="color:#fff;font-family:Cormorant Garamond,serif;">Product not found</h2><a href="catalog.html" style="color:var(--accent-gold);margin-top:16px;display:inline-block;">← Back to Catalogue</a>';
+        document.getElementById('pd-info-col').innerHTML = '<h2 style="font-family:Cormorant Garamond,serif;">Product not found</h2><a href="catalog.html" style="color:var(--accent-gold);margin-top:16px;display:inline-block;">← Back to Catalogue</a>';
         return;
       }
 
@@ -701,75 +506,62 @@
 
       const catLabel = product.category.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-      // ── Hero ──
-      document.getElementById('pd-hero-content').innerHTML = `
-      <div class="pd-hero-breadcrumb">
-        <a href="index.html">Home</a><span class="sep">/</span>
-        <a href="catalog.html">Products</a><span class="sep">/</span>
-        <span style="color:rgba(255,255,255,0.82)">${product.name}</span>
-      </div>
-      <span class="pd-hero-cat">${catLabel}</span>
-      <h1 class="pd-hero-title">${product.name}</h1>
-      <p class="pd-hero-desc">${product.desc}</p>
-      <div class="pd-hero-tags">${product.tags.map(t => `<span class="pd-hero-tag">${t}</span>`).join('')}</div>
-      <div class="pd-hero-actions">
-        <a href="#pd-inquiry" class="pd-btn-inquire">
-          Request a Quote
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="catalog.html" class="pd-btn-catalog">← All Products</a>
-      </div>
-    `;
-
-      // ── Detail grid ──
+      // ── Build Specs Table rows ──
       let specRows = '';
       for (const [k, v] of Object.entries(product.specs || {})) {
         specRows += `<tr><td class="spec-label">${k}</td><td>${v}</td></tr>`;
       }
 
-      document.getElementById('pd-detail-grid').innerHTML = `
-      <div class="pd-img-wrap">
-        <img src="${product.image}" alt="${product.name}">
-      </div>
-      <div class="pd-info">
-        <div>
-          <h3 class="pd-block-heading">Product Specifications</h3>
-          <table class="spec-table"><tbody>${specRows}</tbody></table>
+      // ── Populate Info Column ──
+      document.getElementById('pd-info-col').innerHTML = `
+        <div class="pd-breadcrumb">
+          <a href="index.html">Home</a><span class="sep">/</span>
+          <a href="catalog.html">Products</a><span class="sep">/</span>
+          <span style="color:var(--text-dark); font-weight:500;">${product.name}</span>
         </div>
-        <div>
-          <h3 class="pd-block-heading">Quality Certifications</h3>
-          <div class="pd-badge-row">
-            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>FSSAI</span>
-            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>FDA Approved</span>
-            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>ISO Certified</span>
-            <span class="pd-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Lab Tested</span>
-          </div>
+        <span class="pd-cat">${catLabel}</span>
+        <h1 class="pd-title">${product.name}</h1>
+        <p class="pd-desc">${product.desc}</p>
+        
+        <div class="pd-img-box">
+          <img src="${product.image}" alt="${product.name}">
         </div>
-        <div>
-          <h3 class="pd-block-heading">Available Packaging</h3>
-          <div class="pd-badge-row">
-            <span class="pd-badge">25 kg PP Bags</span>
-            <span class="pd-badge">50 kg Jute Bags</span>
-            <span class="pd-badge">Vacuum Sealed</span>
-            <span class="pd-badge">Custom Packaging</span>
-          </div>
-        </div>
-      </div>
-    `;
 
-      // ── Inquiry pre-fill ──
+        <h3 class="pd-badge-title">Specifications</h3>
+        <table class="spec-table"><tbody>${specRows}</tbody></table>
+
+        <h3 class="pd-badge-title">Quality Certifications</h3>
+        <div class="pd-badge-row">
+          <span class="pd-badge">FSSAI Certified</span>
+          <span class="pd-badge">FDA Compliant</span>
+          <span class="pd-badge">ISO 9001:2015</span>
+          <span class="pd-badge">NABL Lab Tested</span>
+        </div>
+
+        <h3 class="pd-badge-title">Available Packaging</h3>
+        <div class="pd-badge-row">
+          <span class="pd-badge">25 kg PP Bags</span>
+          <span class="pd-badge">50 kg Jute Bags</span>
+          <span class="pd-badge">Vacuum Seal Pouches</span>
+          <span class="pd-badge">Private Label Custom Box</span>
+        </div>
+      `;
+
+      // ── Inquiry Prefill ──
       document.getElementById('pd-inq-heading').textContent = 'Inquire About ' + product.name;
-      document.getElementById('pd-inq-desc').textContent = 'Interested in importing ' + product.name + '? Our trade desk will respond within 24 hours with pricing, specs, and packaging details.';
-      document.getElementById('pd-form-sub').textContent = 'Send your requirements for ' + product.name + ' and we\'ll reply with a competitive commercial quote.';
+      document.getElementById('pd-form-sub').textContent = 'Interested in importing ' + product.name + '? Send your requirements below.';
+      
       const msgEl = document.getElementById('inq-message');
-      if (msgEl) msgEl.value = 'Hello, I\'m interested in importing Jalpex International\'s "' + product.name + '". Please share pricing, packing sizes, and commercial details.';
+      if (msgEl) {
+        msgEl.value = 'Hello, I would like to import "' + product.name + '". Please provide pricing, pack options, and terms.';
+      }
 
-      // ── Form submission ──
+      // ── Form Submission ──
       document.getElementById('productInquiryForm').addEventListener('submit', function (e) {
         e.preventDefault();
         const st = document.getElementById('pd-form-status');
         st.className = 'form-status success';
-        st.textContent = '✓ Thank you! Your inquiry for ' + product.name + ' has been received. Our trade desk will contact you within 24 hours.';
+        st.textContent = '✓ Thank you! Your inquiry has been received. Our trade desk will contact you within 24 hours.';
         this.reset();
         if (msgEl) msgEl.value = '';
         setTimeout(() => { st.textContent = ''; st.className = 'form-status'; }, 9000);
