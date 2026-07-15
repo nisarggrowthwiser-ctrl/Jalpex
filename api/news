@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-07-15T09:00:00.000Z",
+  "count": 5,
+  "items": [
+    {
+      "source": "PIB",
+      "ministry": "Ministry of Commerce & Industry",
+      "title": "DGFT Simplifies Import/Export Documentation Requirements to Facilitate Trade Ease",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=202601",
+      "date": "2026-07-15"
+    },
+    {
+      "source": "MOC",
+      "ministry": "Ministry of Commerce & Industry",
+      "title": "India and GCC Countries Hold High-Level Talks to Expedite Free Trade Agreement Negotiations",
+      "url": "https://commerce.gov.in/press-releases/gcc-fta-negotiations-2026",
+      "date": "2026-07-14"
+    },
+    {
+      "source": "PIB",
+      "ministry": "Ministry of Agriculture & Farmers Welfare",
+      "title": "Government Directs Expansion of Buffer Stocks for Pulses and Spices to Stabilize Local Export Supply",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=202602",
+      "date": "2026-07-13"
+    },
+    {
+      "source": "PIB",
+      "ministry": "Directorate General of Foreign Trade (DGFT)",
+      "title": "Trade Notice: Extension of Interest Equalization Scheme on Pre and Post Shipment Rupee Export Credit",
+      "url": "https://dgft.gov.in/trade-notices/interest-equalization-2026",
+      "date": "2026-07-12"
+    },
+    {
+      "source": "MOC",
+      "ministry": "Ministry of Finance",
+      "title": "New Customs Circular Streamlines Duty Drawback Claims and Speeds Up Port Cargo Clearance Limits",
+      "url": "https://cbic.gov.in/customs-circulars/duty-drawback-clearance-2026",
+      "date": "2026-07-11"
+    }
+  ]
+}
