@@ -91,9 +91,8 @@
   <header class="hero-dark" id="home">
     <!-- Looping premium cargo logistics video background -->
     <div class="hero-video-wrap">
-      <video class="hero-video-bg" autoplay muted loop playsinline>
-        <source src="gallery/360536.mp4" type="video/mp4">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-sailing-in-the-sea-43187-large.mp4" type="video/mp4">
+      <video class="hero-video-bg" autoplay muted loop playsinline preload="none" id="heroVideoBg">
+        <source data-src="gallery/360536.mp4" type="video/mp4">
       </video>
       <div class="hero-video-overlay"></div>
     </div>
@@ -966,23 +965,39 @@
   </footer>
 
   <!-- Three.js for Hero Globe -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
   <!-- GSAP & ScrollTrigger & Flip -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" defer></script>
   <!-- Link app.js -->
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 
   <!-- ── JALPEX THREE.JS GLOBE ANIMATION ── -->
   <script>
-  (function() {
-    'use strict';
-    if (typeof THREE === 'undefined') return;
+  window.addEventListener('load', function() {
+    // Dynamic Hero Video Loading to prevent blocking main thread
+    const heroVid = document.getElementById('heroVideoBg');
+    if (heroVid) {
+      const source = heroVid.querySelector('source');
+      if (source && source.dataset.src) {
+        source.src = source.dataset.src;
+        heroVid.load();
+        heroVid.play().catch(function(err) {
+          console.log("Hero video autoplay muted failed:", err);
+        });
+      }
+    }
 
-    const canvas = document.getElementById('jalpex-globe-canvas');
-    if (!canvas) return;
+    // Lazy load the heavy Three.js Globe initialization
+    setTimeout(function() {
+      (function() {
+        'use strict';
+        if (typeof THREE === 'undefined') return;
+
+        const canvas = document.getElementById('jalpex-globe-canvas');
+        if (!canvas) return;
 
     // ── Renderer ──
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
@@ -1432,7 +1447,9 @@
     }
 
     animate();
-  })();
+      })();
+    }, 150);
+  });
   </script>
 
   <!-- Floating WhatsApp Button -->
