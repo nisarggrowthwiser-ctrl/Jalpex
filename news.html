@@ -99,12 +99,8 @@
       <h1 class="catalog-title" data-trans="news_header_title">Trade Intelligence & News</h1>
       <p class="catalog-subtitle" data-trans="news_header_subtitle">Access current crop updates, agricultural market trends, logistics developments, and company announcements from our trade desk.</p>
       
-      <div class="catalog-filters">
-        <button class="filter-btn active" data-cat="all" data-trans="news_filter_all">All Articles</button>
-        <button class="filter-btn" data-cat="market" data-trans="news_filter_market">Market Reports</button>
-        <button class="filter-btn" data-cat="company" data-trans="news_filter_company">Company Updates</button>
-        <button class="filter-btn" data-cat="sourcing" data-trans="news_filter_sourcing">Sourcing &amp; Logistics</button>
-        <a href="#govt-feed" class="filter-btn govt-alerts-btn">🏛️ Govt. Alerts</a>
+      <div class="catalog-filters" style="justify-content: center;">
+        <a href="#govt-feed" class="filter-btn govt-alerts-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">🏛️ View Live Government Alerts</a>
       </div>
     </div>
   </header>
@@ -536,8 +532,6 @@
       }
     ];
 
-    let activeFilter = "all";
-
     function renderNews() {
       const featuredContainer = document.getElementById("featuredArticleContainer");
       const grid = document.getElementById("blogGrid");
@@ -547,13 +541,9 @@
       featuredContainer.innerHTML = "";
       grid.innerHTML = "";
 
-      const filtered = activeFilter === "all"
-        ? newsArticles
-        : newsArticles.filter(art => art.category === activeFilter);
-
-      // Find if there is a featured article in the filtered list
-      const featuredArticle = filtered.find(art => art.isFeatured);
-      const remainingArticles = filtered.filter(art => art !== featuredArticle);
+      // Find if there is a featured article in the list
+      const featuredArticle = newsArticles.find(art => art.isFeatured);
+      const remainingArticles = newsArticles.filter(art => art !== featuredArticle);
 
       if (featuredArticle) {
         let catText = "Market Report";
@@ -631,18 +621,6 @@
       });
     }
 
-    function initFilters() {
-      const buttons = document.querySelectorAll(".filter-btn");
-      buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          buttons.forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
-          activeFilter = btn.getAttribute("data-cat");
-          renderNews();
-        });
-      });
-    }
-
     // Modal Reader Functionality
     const modal = document.getElementById("articleModal");
     const modalImg = document.getElementById("modalImg");
@@ -698,7 +676,6 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-      initFilters();
       renderNews();
     });
   </script>
