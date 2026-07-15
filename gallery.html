@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#182543">
   <title>Gallery | Jalpex International — Export Infrastructure & Operations</title>
-  <meta name="description" content="Explore Jalpex International's world-class export infrastructure — modern warehouses, international port logistics, and direct farm sourcing operations across India.">
+  <meta name="description"
+    content="Explore Jalpex International's world-class export infrastructure — modern warehouses, international port logistics, and direct farm sourcing operations across India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=2.2">
   <style>
     /* ── GALLERY PAGE SCOPED STYLES ── */
-    body { padding-top: 65px; background: #0a0f1a; color: #e8e2d6; }
+    body {
+      padding-top: 65px;
+      background: #0a0f1a;
+      color: #e8e2d6;
+    }
 
     /* ── HERO BANNER ── */
     .gal-hero {
@@ -23,24 +31,29 @@
       padding: 60px 0 50px;
       overflow: hidden;
     }
+
     .gal-hero::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(10,15,26,0.30) 0%, rgba(10,15,26,0.85) 70%, #0a0f1a 100%),
+        linear-gradient(180deg, rgba(10, 15, 26, 0.30) 0%, rgba(10, 15, 26, 0.85) 70%, #0a0f1a 100%),
         url('gallery/warehouse_stock.png') center 30%/cover no-repeat;
       filter: saturate(0.6);
       z-index: 0;
     }
-    .gal-hero .container { position: relative; z-index: 1; }
+
+    .gal-hero .container {
+      position: relative;
+      z-index: 1;
+    }
 
     .gal-hero-label {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(201,146,46,0.15);
-      border: 1px solid rgba(201,146,46,0.30);
+      background: rgba(201, 146, 46, 0.15);
+      border: 1px solid rgba(201, 146, 46, 0.30);
       color: #f0c36a;
       padding: 6px 18px;
       border-radius: 100px;
@@ -50,8 +63,10 @@
       text-transform: uppercase;
       margin-bottom: 22px;
     }
+
     .gal-hero-label .dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #f0c36a;
       animation: pulse-glow 2s infinite;
@@ -66,6 +81,7 @@
       margin-bottom: 16px;
       max-width: 700px;
     }
+
     .gal-hero h1 em {
       font-style: italic;
       color: #f0c36a;
@@ -73,7 +89,7 @@
 
     .gal-hero-sub {
       font-size: 16px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       max-width: 560px;
       line-height: 1.7;
       margin-bottom: 35px;
@@ -85,10 +101,12 @@
       gap: 40px;
       flex-wrap: wrap;
     }
+
     .gal-stat {
       display: flex;
       flex-direction: column;
     }
+
     .gal-stat-num {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 32px;
@@ -96,9 +114,10 @@
       color: #fff;
       line-height: 1;
     }
+
     .gal-stat-label {
       font-size: 12px;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.45);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-top: 4px;
@@ -109,12 +128,13 @@
       position: sticky;
       top: 65px;
       z-index: 100;
-      background: rgba(10,15,26,0.85);
+      background: rgba(10, 15, 26, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       padding: 0;
     }
+
     .gal-filter-inner {
       display: flex;
       align-items: center;
@@ -123,82 +143,99 @@
       padding: 14px 0;
       flex-wrap: wrap;
     }
+
     .gal-fbtn {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.10);
-      color: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      color: rgba(255, 255, 255, 0.55);
       padding: 9px 24px;
       border-radius: 100px;
       font-family: 'DM Sans', sans-serif;
       font-size: 13px;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       white-space: nowrap;
     }
+
     .gal-fbtn:hover {
       color: #fff;
-      border-color: rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.06);
+      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.06);
     }
+
     .gal-fbtn.active {
       background: #C9922E;
       border-color: #C9922E;
       color: #0a0f1a;
       font-weight: 600;
     }
+
     .gal-fbtn .fbtn-count {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.7);
-      width: 20px; height: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.7);
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       font-size: 10px;
       font-weight: 700;
       margin-left: 8px;
     }
+
     .gal-fbtn.active .fbtn-count {
-      background: rgba(10,15,26,0.2);
+      background: rgba(10, 15, 26, 0.2);
       color: #0a0f1a;
     }
 
-    /* ── MASONRY GRID ── */
+    /* ── GRID SECTION ── */
     .gal-grid-section {
       padding: 50px 0 100px;
     }
+
     .gal-grid {
-      columns: 3;
-      column-gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
     }
 
     /* ── GALLERY CARD ── */
     .gal-card {
-      break-inside: avoid;
-      margin-bottom: 20px;
-      border-radius: 16px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
       position: relative;
       cursor: pointer;
-      background: #141a28;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: var(--shadow);
     }
+
     .gal-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+      box-shadow: var(--shadow-lg);
     }
 
     .gal-card-img-wrap {
       position: relative;
       overflow: hidden;
+      height: 220px;
+      background: var(--blue-mist);
     }
+
     .gal-card-img-wrap img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .gal-card:hover .gal-card-img-wrap img {
       transform: scale(1.05);
     }
@@ -207,34 +244,47 @@
     .gal-card-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(10,15,26,0.75) 100%);
+      background: linear-gradient(180deg, transparent 40%, rgba(10, 15, 26, 0.75) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
       transition: opacity 0.4s ease;
     }
-    .gal-card:hover .gal-card-overlay { opacity: 1; }
+
+    .gal-card:hover .gal-card-overlay {
+      opacity: 1;
+    }
 
     .gal-card-zoom {
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       transform: scale(0.7);
-      transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .gal-card:hover .gal-card-zoom { transform: scale(1); }
-    .gal-card-zoom svg { width: 22px; height: 22px; stroke: #fff; }
+
+    .gal-card:hover .gal-card-zoom {
+      transform: scale(1);
+    }
+
+    .gal-card-zoom svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+    }
 
     /* Card footer */
     .gal-card-body {
       padding: 18px 20px;
     }
+
     .gal-card-cat {
       font-size: 10px;
       font-weight: 700;
@@ -246,11 +296,14 @@
       align-items: center;
       gap: 6px;
     }
+
     .gal-card-cat::before {
       content: '';
-      width: 16px; height: 1px;
+      width: 16px;
+      height: 1px;
       background: #C9922E;
     }
+
     .gal-card-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 20px;
@@ -259,9 +312,10 @@
       line-height: 1.3;
       margin-bottom: 6px;
     }
+
     .gal-card-desc {
       font-size: 13px;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.45);
       line-height: 1.5;
     }
 
@@ -269,7 +323,7 @@
     .gal-lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(6,8,14,0.97);
+      background: rgba(6, 8, 14, 0.97);
       z-index: 2000;
       display: flex;
       align-items: center;
@@ -278,6 +332,7 @@
       pointer-events: none;
       transition: opacity 0.4s ease;
     }
+
     .gal-lightbox.open {
       opacity: 1;
       pointer-events: auto;
@@ -285,11 +340,13 @@
 
     .gal-lb-close {
       position: absolute;
-      top: 24px; right: 24px;
-      width: 48px; height: 48px;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       color: #fff;
       font-size: 24px;
       display: flex;
@@ -299,8 +356,9 @@
       transition: all 0.3s ease;
       z-index: 2010;
     }
+
     .gal-lb-close:hover {
-      background: rgba(255,255,255,0.14);
+      background: rgba(255, 255, 255, 0.14);
       transform: rotate(90deg);
     }
 
@@ -308,10 +366,11 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.10);
       color: #fff;
       font-size: 20px;
       display: flex;
@@ -321,13 +380,20 @@
       transition: all 0.35s ease;
       z-index: 2010;
     }
+
     .gal-lb-arrow:hover {
       background: #C9922E;
       border-color: #C9922E;
       color: #0a0f1a;
     }
-    .gal-lb-arrow.prev { left: 28px; }
-    .gal-lb-arrow.next { right: 28px; }
+
+    .gal-lb-arrow.prev {
+      left: 28px;
+    }
+
+    .gal-lb-arrow.next {
+      right: 28px;
+    }
 
     .gal-lb-content {
       display: flex;
@@ -338,16 +404,23 @@
       padding: 0 80px;
     }
 
-    .gal-lb-img {
+    .gal-lb-img, .gal-lb-video {
       max-width: 100%;
       max-height: 70vh;
       object-fit: contain;
       border-radius: 14px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
       transform: scale(0.92);
-      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .gal-lightbox.open .gal-lb-img {
+
+    .gal-lb-video {
+      display: none;
+      background: #000;
+    }
+
+    .gal-lightbox.open .gal-lb-img,
+    .gal-lightbox.open .gal-lb-video {
       transform: scale(1);
     }
 
@@ -355,16 +428,18 @@
       text-align: center;
       margin-top: 24px;
     }
+
     .gal-lb-info h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-heading);
       font-size: 24px;
       font-weight: 600;
-      color: #f0c36a;
+      color: var(--accent-gold);
       margin-bottom: 6px;
     }
+
     .gal-lb-info p {
       font-size: 14px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       max-width: 500px;
       margin: 0 auto;
     }
@@ -375,7 +450,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 12px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.3);
       letter-spacing: 3px;
       font-family: 'Space Grotesk', sans-serif;
     }
@@ -388,13 +463,18 @@
       position: relative;
       overflow: hidden;
     }
+
     .gal-cta-band::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(201,146,46,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 30% 50%, rgba(201, 146, 46, 0.08) 0%, transparent 70%);
     }
-    .gal-cta-band .container { position: relative; z-index: 1; }
+
+    .gal-cta-band .container {
+      position: relative;
+      z-index: 1;
+    }
 
     .gal-cta-title {
       font-family: 'Cormorant Garamond', serif;
@@ -403,13 +483,16 @@
       color: #fff;
       margin-bottom: 12px;
     }
+
     .gal-cta-sub {
       font-size: 16px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       margin-bottom: 32px;
       max-width: 500px;
-      margin-left: auto; margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .gal-cta-btn {
       display: inline-flex;
       align-items: center;
@@ -425,31 +508,58 @@
       letter-spacing: 0.5px;
       transition: all 0.35s ease;
     }
+
     .gal-cta-btn:hover {
       background: #f0c36a;
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(201,146,46,0.3);
+      box-shadow: 0 10px 30px rgba(201, 146, 46, 0.3);
     }
-    .gal-cta-btn svg { width: 18px; height: 18px; }
 
-    /* ── FOOTER OVERRIDE ── */
-    footer { background: #080c16; border-top: 1px solid rgba(255,255,255,0.06); }
+    .gal-cta-btn svg {
+      width: 18px;
+      height: 18px;
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .gal-grid { columns: 2; }
+      .gal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+
     @media (max-width: 640px) {
-      .gal-grid { columns: 1; }
-      .gal-hero { min-height: 180px; padding: 30px 0 20px; }
-      .gal-hero-sub { display: none; }
-      .gal-stats { display: none; }
-      .gal-lb-arrow.prev { left: 10px; }
-      .gal-lb-arrow.next { right: 10px; }
-      .gal-lb-content { padding: 0 16px; }
+      .gal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-hero {
+        min-height: 180px;
+        padding: 30px 0 20px;
+      }
+
+      .gal-hero-sub {
+        display: none;
+      }
+
+      .gal-stats {
+        display: none;
+      }
+
+      .gal-lb-arrow.prev {
+        left: 10px;
+      }
+
+      .gal-lb-arrow.next {
+        right: 10px;
+      }
+
+      .gal-lb-content {
+        padding: 0 16px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ── NAVIGATION BAR ── -->
@@ -458,7 +568,7 @@
       <a href="index.html" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
       </a>
-      
+
       <ul class="nav-links">
         <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
         <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
@@ -471,9 +581,18 @@
       <div class="nav-actions">
         <div class="lang-picker">
           <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
-            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
             <span>EN</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
             <button class="lang-item active" data-lang="en">🇬🇧 English</button>
@@ -488,7 +607,7 @@
         </div>
 
         <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
-        
+
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -532,7 +651,8 @@
         <span data-trans="gallery_header_label">Export Infrastructure</span>
       </div>
       <h1 data-trans="gallery_header_title">Where Quality Meets <em>Scale</em></h1>
-      <p class="gal-hero-sub" data-trans="gallery_header_subtitle">A behind-the-scenes look at our warehousing, port logistics, quality labs, and farm sourcing operations powering global deliveries.</p>
+      <p class="gal-hero-sub" data-trans="gallery_header_subtitle">A behind-the-scenes look at our warehousing, port
+        logistics, quality labs, and farm sourcing operations powering global deliveries.</p>
 
       <div class="gal-stats">
         <div class="gal-stat">
@@ -559,10 +679,14 @@
   <div class="gal-filter-bar">
     <div class="container">
       <div class="gal-filter-inner">
-        <button class="gal-fbtn active" data-cat="all">All Operations <span class="fbtn-count" id="countAll">6</span></button>
-        <button class="gal-fbtn" data-cat="warehouse">Warehouse <span class="fbtn-count" id="countWarehouse">3</span></button>
-        <button class="gal-fbtn" data-cat="port">Port & Logistics <span class="fbtn-count" id="countPort">2</span></button>
-        <button class="gal-fbtn" data-cat="farms">Farms & Sourcing <span class="fbtn-count" id="countFarms">1</span></button>
+        <button class="gal-fbtn active" data-cat="all">All Operations <span class="fbtn-count"
+            id="countAll">6</span></button>
+        <button class="gal-fbtn" data-cat="warehouse">Warehouse <span class="fbtn-count"
+            id="countWarehouse">3</span></button>
+        <button class="gal-fbtn" data-cat="port">Port & Logistics <span class="fbtn-count"
+            id="countPort">2</span></button>
+        <button class="gal-fbtn" data-cat="farms">Farms & Sourcing <span class="fbtn-count"
+            id="countFarms">1</span></button>
       </div>
     </div>
   </div>
@@ -580,10 +704,15 @@
   <section class="gal-cta-band">
     <div class="container">
       <h2 class="gal-cta-title">Interested in Our Infrastructure?</h2>
-      <p class="gal-cta-sub">Schedule a virtual tour or request a detailed capability deck for your procurement team.</p>
+      <p class="gal-cta-sub">Schedule a virtual tour or request a detailed capability deck for your procurement team.
+      </p>
       <a href="index.html#inquiry" class="gal-cta-btn">
         Request a Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
       </a>
     </div>
   </section>
@@ -595,6 +724,7 @@
     <button class="gal-lb-arrow next" id="galLbNext" aria-label="Next">&#10095;</button>
     <div class="gal-lb-content">
       <img class="gal-lb-img" id="galLbImg" src="" alt="">
+      <video class="gal-lb-video" id="galLbVideo" controls autoplay muted loop playsinline></video>
       <div class="gal-lb-info">
         <h3 id="galLbTitle"></h3>
         <p id="galLbDesc"></p>
@@ -611,7 +741,8 @@
           <a href="#" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
             <img src="logo-light.png?v=2" alt="Jalpex International Logo" class="logo-img">
           </a>
-          <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+          <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We
+            represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Navigation</h4>
@@ -648,13 +779,22 @@
         <p>&copy; 2026 Jalpex International. All Rights Reserved.</p>
         <div class="footer-social-links">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
           </a>
           <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg>
           </a>
           <a href="mailto:jalpexinternational@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.562L16 11.801V4.697z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -678,16 +818,32 @@
         desc: "In-house lab with certified equipment for moisture, aflatoxin, pesticide residue, and microbiological testing — every batch verified."
       },
       {
+        id: "u1", category: "warehouse",
+        image: "gallery/infra_1.jpg",
+        title: "State-of-the-Art Processing Center",
+        desc: "Advanced automated sorting, grading, and packaging facility for agricultural exports."
+      },
+      {
+        id: "uv1", category: "port",
+        image: "gallery/shipping_port.png",
+        video: "gallery/infra_video_1.mp4",
+        type: "video",
+        title: "Export Shipment Logistics Operations",
+        desc: "Real-time look at container dispatch and port loading operations for overseas trade."
+      },
+      {
         id: "p1", category: "port",
         image: "gallery/shipping_port.png",
         title: "Mundra & Kandla Port Operations",
         desc: "Direct container freight loading from India's busiest western ports, serving 40+ international trade routes."
       },
       {
-        id: "p2", category: "port",
+        id: "uv2", category: "port",
         image: "gallery/cargo_ship.png",
-        title: "Global Marine Freight Network",
-        desc: "Ocean freight partnerships spanning Rotterdam, Hamburg, Jebel Ali, and Southeast Asian destinations with full FCL/LCL support."
+        video: "gallery/infra_video_2.mp4",
+        type: "video",
+        title: "Cargo Handling & Port Dispatch",
+        desc: "Automated cranes loading shipping freight for departure across global corridors."
       },
       {
         id: "f1", category: "farms",
@@ -696,10 +852,16 @@
         desc: "Contract farming partnerships with 50+ certified farms across India's premier spice and grain belts for traceable, organic sourcing."
       },
       {
-        id: "w3", category: "warehouse",
-        image: "products/process-packaging.png",
-        title: "Vacuum-Sealed Export Packaging",
-        desc: "Multi-layer packaging lines with nitrogen flushing, vacuum sealing, and custom branding for retail and bulk buyers."
+        id: "u2", category: "farms",
+        image: "gallery/infra_2.jpg",
+        title: "Direct Sourcing & Farm Sorting",
+        desc: "Harvest processing and quality selection directly at the sourcing fields."
+      },
+      {
+        id: "f2", category: "farms",
+        image: "organic-sourcing.png",
+        title: "Organic Crop Harvesting & Sorting",
+        desc: "Carefully selected, cleaned, and sorted seeds and grains under strict quality inspections."
       }
     ];
 
@@ -736,17 +898,21 @@
         if (item.category === "port") catLabel = "Port & Logistics";
         if (item.category === "farms") catLabel = "Farms & Sourcing";
 
+        const iconMarkup = item.type === "video" 
+          ? `<svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" style="stroke: none;"><path d="M8 5v14l11-7z"></path></svg>`
+          : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+             </svg>`;
+
         card.innerHTML = `
           <div class="gal-card-img-wrap">
             <img src="${item.image}" alt="${item.title}" loading="lazy">
             <div class="gal-card-overlay">
               <div class="gal-card-zoom">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  <line x1="11" y1="8" x2="11" y2="14"></line>
-                  <line x1="8" y1="11" x2="14" y2="11"></line>
-                </svg>
+                ${iconMarkup}
               </div>
             </div>
           </div>
@@ -782,6 +948,7 @@
     // Lightbox
     const lb = document.getElementById("galLightbox");
     const lbImg = document.getElementById("galLbImg");
+    const lbVideo = document.getElementById("galLbVideo");
     const lbTitle = document.getElementById("galLbTitle");
     const lbDesc = document.getElementById("galLbDesc");
     const lbCounter = document.getElementById("galLbCounter");
@@ -789,8 +956,22 @@
     function openLightbox(idx) {
       activeIndex = idx;
       const item = galleryItems[activeIndex];
-      lbImg.src = item.image;
-      lbImg.alt = item.title;
+      
+      if (item.type === "video") {
+        lbImg.style.display = "none";
+        lbImg.src = "";
+        lbVideo.style.display = "block";
+        lbVideo.src = item.video;
+        lbVideo.play();
+      } else {
+        lbVideo.style.display = "none";
+        lbVideo.pause();
+        lbVideo.src = "";
+        lbImg.style.display = "block";
+        lbImg.src = item.image;
+        lbImg.alt = item.title;
+      }
+      
       lbTitle.textContent = item.title;
       lbDesc.textContent = item.desc;
       lbCounter.textContent = `${activeIndex + 1} / ${galleryItems.length}`;
@@ -801,6 +982,8 @@
     function closeLightbox() {
       lb.classList.remove("open");
       document.body.style.overflow = "";
+      lbVideo.pause();
+      lbVideo.src = "";
     }
 
     function showPrev() {
@@ -835,4 +1018,5 @@
     });
   </script>
 </body>
+
 </html>

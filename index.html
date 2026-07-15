@@ -87,21 +87,16 @@
     <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
   </div>
 
-  <!-- ── HERO SECTION (DARK ANIMATED) ── -->
+  <!-- ── HERO SECTION (CINEMATIC LOGISTICS VIDEO) ── -->
   <header class="hero-dark" id="home">
-    <!-- Particle canvas -->
-    <canvas class="hero-particles-canvas" id="heroParticles" aria-hidden="true"></canvas>
-
-    <!-- 3D Interactive Globe Canvas (Full Screen behind contents) -->
-    <canvas id="jalpex-globe-canvas"></canvas>
-
-    <!-- Background glow layers -->
-    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
-
-    <!-- Animated mesh grid -->
-    <div class="hero-mesh" aria-hidden="true"></div>
+    <!-- Looping premium cargo logistics video background -->
+    <div class="hero-video-wrap">
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="gallery/cargo_ship.png">
+        <source src="gallery/360536.mp4" type="video/mp4">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-sailing-in-the-sea-43187-large.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
     <div class="container hero-dark-inner">
 
       <!-- LEFT: Text Content -->
@@ -163,11 +158,9 @@
 
       </div><!-- /hero-dark-text -->
 
-      <!-- RIGHT: Three.js 3D Interactive Globe -->
-      <div class="hero-dark-globe" data-anim="fade-in" data-delay="200" aria-hidden="true">
-        <div class="hg-threejs-wrap">
-          <!-- Globe canvas runs full screen in background -->
-        </div>
+      <!-- RIGHT Side spacer to show cargo shipping video -->
+      <div class="hero-dark-globe" aria-hidden="true">
+        <div></div>
       </div><!-- /hero-dark-globe -->
 
     </div><!-- /hero-dark-inner -->

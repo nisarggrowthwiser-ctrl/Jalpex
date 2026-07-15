@@ -201,7 +201,7 @@
     .gf-skeleton {
       height: 18px;
       width: 100%;
-      background: linear-gradient(90deg, #f0ede6 25%, #e8e4db 50%, #f0ede6 75%);
+      background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
       background-size: 200% 100%;
       border-radius: 6px;
       animation: gfShimmer 1.4s infinite;
@@ -354,9 +354,11 @@
     }
 
     function showError(text) {
-      if (loadingEl) loadingEl.hidden = true;
-      msgEl.hidden = false;
-      msgEl.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' + text;
+      if (loadingEl) loadingEl.style.display = 'none';
+      if (msgEl) {
+        msgEl.style.display = 'block';
+        msgEl.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' + text;
+      }
     }
 
     function renderItems(items) {
@@ -411,7 +413,7 @@
 
     load(0)
       .then(function (data) {
-        if (loadingEl) loadingEl.hidden = true;
+        if (loadingEl) loadingEl.style.display = 'none';
 
         if (!data.items || !data.items.length) {
           showError('No new updates right now — check back later.');
@@ -422,7 +424,7 @@
           updatedEl.textContent = 'Last refreshed: ' +
             new Date(data.updatedAt).toLocaleString('en-IN', { dateStyle:'medium', timeStyle:'short' }) +
             '  ·  ' + data.count + ' items';
-          updatedEl.hidden = false;
+          updatedEl.style.display = 'block';
         } catch(e) {}
 
         renderItems(data.items);
@@ -531,36 +533,6 @@
         title: "India's Agricultural Export Growth Targets $100B by 2030: Jalpex Scaling Operations",
         desc: "With rising global demand for Indian spices, grains, and organic produce, Jalpex International is expanding its warehousing capacity to meet new delivery programs in Europe and the Americas.",
         body: "<p>New government policies promoting farm-direct logistics are opening up trade routes. At Jalpex International, we have integrated new cleaning sorting plants in Banaskantha to process over 20 Metric Tons of premium spices and seeds daily. Our direct relationship with farming cooperatives has reduced customs transit overheads, allowing us to offer extremely competitive CNF prices to our clients worldwide.</p><p>As shipping rates stabilize and container availability becomes predictable, bulk importers are securing long-term buying programs. Our sourcing desks in Gujarat and Rajasthan have logged a record number of inquiries for contract processing of cumin and sesame seeds this harvest season.</p><p>By prioritizing certifications like ISO 22000 and FSSAI, Jalpex International stands ready to lead this growth wave, bringing quality farm produce to global dining tables.</p>"
-      },
-      {
-        id: "art2",
-        category: "company",
-        isFeatured: false,
-        image: "gallery/warehouse_stock.png",
-        date: "June 25, 2026",
-        title: "New State-of-the-Art Warehouse Opened in Deesa, Gujarat",
-        desc: "We have inaugurated a new temperature-controlled logistics terminal specializing in preserving volatile oil contents of spices.",
-        body: "<p>Preserving seed quality and preventing insect entry is crucial for compliance with FDA and EU phytosanitary limits. Our new 45,000 sq ft facility in Deesa, Gujarat features modern multi-stage sorting tables and vacuum packing systems.</p><p>This facility allows us to process, inspect, and package raw agricultural goods under clean room conditions. Volatile oils in spices like cumin, fennel, and coriander seeds are highly sensitive to temperature and ambient moisture, and our new HVAC setups guarantee moisture levels stay below 6% during storage.</p><p>This enables clients to customize their private labeling and custom pouch sizes directly at source, saving packaging costs in destination ports. Contact our sales desk for custom contract packaging inquiries.</p>"
-      },
-      {
-        id: "art3",
-        category: "market",
-        isFeatured: false,
-        image: "products/red-chilli.png",
-        date: "May 18, 2026",
-        title: "Red Chilli Export Demand Climbs in Gulf Markets",
-        desc: "Indian stemless red chilli (ASTA 100-120) sees a 15% increase in trade inquiries. Here is a market analysis for bulk buyers.",
-        body: "<p>Rising culinary trends and spice manufacturing needs in Saudi Arabia, UAE, and Oman are driving chilli exports. Buyers are prioritizing low pesticide residue and high heat levels (SHU values above 40,000).</p><p>Jalpex International has secured contract harvest agreements with premium Guntur chilli farms, ensuring stable commercial supply volumes despite seasonal price fluctuations.</p><p>Our quality assurance team monitors crops right from the flowering stage, checking for uniform color and size. The dried chillies undergo metal detection and steam sterilization prior to being packed in sea-worthy jute bags or customized retail pouches.</p>"
-      },
-      {
-        id: "art4",
-        category: "sourcing",
-        isFeatured: false,
-        image: "gallery/spice_farm.png",
-        date: "April 05, 2026",
-        title: "Direct Sourcing Redefines Agricultural Traceability",
-        desc: "How farm tracking helps bulk clients verify phytosanitary origins and safety parameters of spices and pulses.",
-        body: "<p>Global consumers are demanding to know exactly where their food comes from. Jalpex International's digital sourcing ledger logs farming coordinates, fertilizer usage, and batch milling dates.</p><p>This transparency is helping bulk distributors in Germany and the UK clear custom borders smoothly, eliminating product quarantine risks. By eliminating middlemen, we pass the cost benefits directly to our buyers while ensuring local farmers receive fair price payouts.</p><p>We believe ethical trade is the only sustainable way forward. Our farm-to-port logistics program is built on mutual trust and complete chemical analysis transparency.</p>"
       }
     ];
 
