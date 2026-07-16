@@ -1764,18 +1764,22 @@ section {
 
 /* See All Products Card (Dashed Border Card matching honestexports) */
 .products-grid-track .product-card.see-all-card {
-  background: #FAF8F5 !important;
-  border: 2px dashed #E0D7C1 !important;
+  background: linear-gradient(135deg, #FAF8F5 0%, #F5F1E9 100%) !important;
+  border: 2px dashed rgba(194, 150, 82, 0.4) !important;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: 340px;
+  text-decoration: none !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .products-grid-track .product-card.see-all-card:hover {
-  border-color: var(--accent-gold) !important;
+  border: 2px solid var(--accent-gold) !important;
   background: #FFFFFF !important;
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(194, 150, 82, 0.08) !important;
 }
 
 .see-all-card-inner {
@@ -1784,44 +1788,60 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-decoration: none !important;
+}
+
+.see-all-card-inner * {
+  text-decoration: none !important;
 }
 
 .see-all-icon-box {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #EFEBE4;
-  color: var(--text-dark);
+  background: #FAF6EE;
+  border: 1px solid rgba(194, 150, 82, 0.25);
+  color: var(--accent-gold-bright);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(194, 150, 82, 0.04);
 }
 
 .see-all-icon-box svg {
   width: 24px;
   height: 24px;
+  transition: transform 0.4s ease;
 }
 
 .products-grid-track .product-card.see-all-card:hover .see-all-icon-box {
   background: var(--accent-gold);
   color: #FFFFFF;
-  transform: scale(1.08);
+  transform: scale(1.08) rotate(90deg);
+  box-shadow: 0 4px 15px rgba(194, 150, 82, 0.35);
+  border-color: var(--accent-gold);
 }
 
 .see-all-title {
-  font-family: var(--font-heading);
-  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.products-grid-track .product-card.see-all-card:hover .see-all-title {
+  color: var(--accent-gold-deep);
 }
 
 .see-all-subtitle {
-  font-size: 13px;
-  color: var(--text-light);
+  font-size: 13.5px;
+  color: var(--text-mid);
   margin: 0;
+  font-weight: 400;
 }
 
 /* ── WHY CHOOSE US ── */
