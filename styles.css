@@ -1982,9 +1982,9 @@ section {
   /* soft gold bg */
   border: 1px solid rgba(194, 150, 82, 0.16);
   margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   transition: var(--transition);
 }
 
@@ -1997,6 +1997,10 @@ section {
 .icon-draw {
   width: 24px;
   height: 24px;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0;
 }
 
 .icon-draw path,
@@ -3013,9 +3017,9 @@ footer .logo-link:hover .logo-img {
   height: 54px;
   background: #FFFFFF;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border);
   z-index: 2;
@@ -3025,6 +3029,10 @@ footer .logo-link:hover .logo-img {
   width: 24px;
   height: 24px;
   stroke: #B05C54;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0;
 }
 
 .logistics-card-body {

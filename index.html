@@ -20,9 +20,6 @@
 
   <!-- ── NAVIGATION BAR ── -->
   <nav id="navbar">
-    <div class="top-bar">
-      <span data-trans="company_tagline">“FLOWING ACROSS BORDERS, DELIVERING WITH PRECISION”</span>
-    </div>
     <div class="nav-inner">
       <a href="#" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
@@ -33,8 +30,8 @@
         <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
-        <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
-        <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+        <li><a href="#why-choose-us" data-trans="nav_why">Why Us</a></li>
+        <li><a href="#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -66,7 +63,7 @@
           </div>
         </div>
 
-        <a href="#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
+        <a href="#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Get in Touch</a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
@@ -85,8 +82,8 @@
       <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
-      <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
-      <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+      <li><a href="#why-choose-us" data-trans="nav_why">Why Us</a></li>
+      <li><a href="#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
     </ul>
     <div class="mobile-lang-section">
       <p>Select Language</p>
@@ -101,7 +98,7 @@
         <button class="mob-lang-btn" data-lang="de">DE</button>
       </div>
     </div>
-    <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
+    <a href="#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Get in Touch</a>
   </div>
 
   <!-- ── HERO SECTION (CINEMATIC LOGISTICS VIDEO) ── -->
@@ -118,21 +115,26 @@
       <!-- LEFT: Text Content -->
       <div class="hero-dark-text">
 
+        <!-- Tagline -->
+        <div class="hero-tagline" data-anim="fade-up" data-delay="0" data-trans="company_tagline">
+          “FLOWING ACROSS BORDERS, DELIVERING WITH PRECISION”
+        </div>
+
         <!-- Badge -->
-        <div class="hero-dark-badge" data-anim="fade-up" data-delay="0">
+        <div class="hero-dark-badge" data-anim="fade-up" data-delay="80">
           <span class="hdb-dot"></span>
           <span>India's Trusted Agricultural Export House</span>
         </div>
 
         <!-- Heading -->
-        <h1 class="hero-dark-heading" data-anim="fade-up" data-delay="120">
+        <h1 class="hero-dark-heading" data-anim="fade-up" data-delay="180">
           Bridging Indian<br>
           <span class="hd-gold-italic">Heritage</span> with Global<br>
           Markets.
         </h1>
 
         <!-- Rotating product line -->
-        <div class="hero-dark-ticker" data-anim="fade-up" data-delay="220">
+        <div class="hero-dark-ticker" data-anim="fade-up" data-delay="280">
           <span class="hdt-bar"></span>
           <span class="hdt-label">Exporting</span>
           <div class="hdt-word-track">
@@ -141,16 +143,16 @@
         </div>
 
         <!-- Description -->
-        <p class="hero-dark-desc" data-anim="fade-up" data-delay="340" data-trans="hero_desc">
+        <p class="hero-dark-desc" data-anim="fade-up" data-delay="380" data-trans="hero_desc">
           Jalpex International is a premium export house from India, delivering high-grade agricultural commodities,
           spices, dehydrated vegetables, fresh produce, and handicrafts to clients in 40+ countries. Sourced with care,
           delivered with trust.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="hero-dark-btns" data-anim="fade-up" data-delay="460">
+        <div class="hero-dark-btns" data-anim="fade-up" data-delay="480">
           <a class="hdb-primary" href="#inquiry">
-            Request a Quote
+            <span data-trans="inquiry_label">Get in Touch</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
@@ -318,73 +320,106 @@
     <div class="container products-grid-container" style="margin-top: 50px;">
       <div class="products-grid-viewport" style="max-height: none; overflow: visible; padding: 0;">
         <div class="products-grid-track">
-          <!-- Card 1: Spices -->
-          <a href="catalog.html?cat=spices" class="product-card">
+          <!-- Card 1: Dehydrated Vegetables & Fruits -->
+          <a href="catalog.html?cat=dehydrated" class="product-card">
             <div class="product-card-image-wrap">
-              <img src="products/turmeric.png" alt="Spices" class="product-card-image" loading="lazy">
+              <img src="products/dehydrated-composite.png" alt="Dehydrated Vegetables & Fruits" class="product-card-image" loading="lazy">
               <div class="product-card-overlay"></div>
               <div class="product-card-content">
                 <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
-                <h3 class="product-card-name" data-trans="cat_spices">Spices</h3>
-                <p class="product-card-hover-desc" data-trans="cat_spices_desc">Premium whole and ground spices
-                  including Turmeric Finger, Red Chilli, Cumin, and Coriander.</p>
+                <h3 class="product-card-name">Dehydrated Vegetables & Fruits</h3>
+                <p class="product-card-hover-desc">Premium onion flakes, garlic powder, ginger, and dehydrated vegetables dried to lock in natural flavor.</p>
               </div>
             </div>
           </a>
 
-          <!-- Card 2: Agricultural Products -->
+          <!-- Card 2: Agriculture Products -->
           <a href="catalog.html?cat=agriculture" class="product-card">
             <div class="product-card-image-wrap">
-              <img src="products/rice.png" alt="Agricultural Products" class="product-card-image" loading="lazy">
+              <img src="products/rice.png" alt="Agriculture Products" class="product-card-image" loading="lazy">
               <div class="product-card-overlay"></div>
               <div class="product-card-content">
                 <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
-                <h3 class="product-card-name" data-trans="cat_agriculture">Agricultural Products</h3>
-                <p class="product-card-hover-desc" data-trans="cat_agriculture_desc">High-quality sesame seeds, peanuts,
-                  basmati rice, wheat, and dehydrated vegetables.</p>
+                <h3 class="product-card-name">Agriculture Products</h3>
+                <p class="product-card-hover-desc">High-quality sesame seeds, peanuts, basmati rice, pulses, wheat, and premium foxnuts (Makhana).</p>
               </div>
             </div>
           </a>
 
-          <!-- Card 3: Handicrafts -->
+          <!-- Card 3: Spices -->
+          <a href="catalog.html?cat=spices" class="product-card">
+            <div class="product-card-image-wrap">
+              <img src="products/spices-composite.png" alt="Spices" class="product-card-image" loading="lazy">
+              <div class="product-card-overlay"></div>
+              <div class="product-card-content">
+                <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
+                <h3 class="product-card-name">Spices</h3>
+                <p class="product-card-hover-desc">Premium whole and ground spices including Turmeric Finger, Red Chilli, Cumin, and Coriander.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4: Nature's Finest -->
+          <a href="catalog.html?cat=natures_finest" class="product-card">
+            <div class="product-card-image-wrap">
+              <img src="products/natures-finest-composite.png" alt="Nature's Finest" class="product-card-image" loading="lazy">
+              <div class="product-card-overlay"></div>
+              <div class="product-card-content">
+                <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
+                <h3 class="product-card-name">Nature's Finest</h3>
+                <p class="product-card-hover-desc">Pure organic herbs, moringa leaves, moringa powder, and nutrient-dense organic seeds.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 5: Dried Fruits -->
+          <a href="catalog.html?cat=dried_fruits" class="product-card">
+            <div class="product-card-image-wrap">
+              <img src="products/dried-fruits.png" alt="Dried Fruits" class="product-card-image" loading="lazy">
+              <div class="product-card-overlay"></div>
+              <div class="product-card-content">
+                <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
+                <h3 class="product-card-name">Dried Fruits</h3>
+                <p class="product-card-hover-desc">Export-grade golden raisins, premium cashew kernels, almonds, walnuts, and premium dried figs.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 6: Fruits & Vegetables -->
+          <a href="catalog.html?cat=fresh_produce" class="product-card">
+            <div class="product-card-image-wrap">
+              <img src="products/fresh-produce.png" alt="Fruits & Vegetables" class="product-card-image" loading="lazy">
+              <div class="product-card-overlay"></div>
+              <div class="product-card-content">
+                <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
+                <h3 class="product-card-name">Fruits & Vegetables</h3>
+                <p class="product-card-hover-desc">Farm-direct fresh table potatoes, red onions, seasonal mangoes, and fresh pomegranates.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 7: Handicraft -->
           <a href="catalog.html?cat=handicraft" class="product-card">
             <div class="product-card-image-wrap">
-              <img src="products/handicrafts.png" alt="Handicrafts" class="product-card-image" loading="lazy">
+              <img src="products/handicrafts.png" alt="Handicraft" class="product-card-image" loading="lazy">
               <div class="product-card-overlay"></div>
               <div class="product-card-content">
                 <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
-                <h3 class="product-card-name" data-trans="cat_handicrafts">Handicrafts</h3>
-                <p class="product-card-hover-desc" data-trans="cat_handicrafts_desc">Traditional Indian brassware,
-                  woodwork, and handcrafted textiles sourced from local artisans.</p>
+                <h3 class="product-card-name">Handicraft</h3>
+                <p class="product-card-hover-desc">Exquisite traditional brassware, hand-carved wood crafts, and handmade home decor.</p>
               </div>
             </div>
           </a>
 
-          <!-- Card 4: Textile & Apparel -->
+          <!-- Card 8: Textile & Apparel -->
           <a href="catalog.html?cat=textile" class="product-card">
             <div class="product-card-image-wrap">
-              <img src="products/cotton.png" alt="Textile & Apparel" class="product-card-image" loading="lazy">
+              <img src="products/textile-apparel.png" alt="Textile & Apparel" class="product-card-image" loading="lazy">
               <div class="product-card-overlay"></div>
               <div class="product-card-content">
                 <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
-                <h3 class="product-card-name" data-trans="cat_textile">Textile & Apparel</h3>
-                <p class="product-card-hover-desc" data-trans="cat_textile_desc">Premium organic raw cotton fiber and
-                  highly durable cotton yarns for industrial weaving.</p>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 5: Construction Machinery -->
-          <a href="catalog.html?cat=construction" class="product-card">
-            <div class="product-card-image-wrap">
-              <img src="products/concrete-mixer.png" alt="Construction Machinery" class="product-card-image"
-                loading="lazy">
-              <div class="product-card-overlay"></div>
-              <div class="product-card-content">
-                <span class="product-card-tag" data-trans="tag_featured">Export Grade</span>
-                <h3 class="product-card-name" data-trans="cat_construction">Construction Machinery</h3>
-                <p class="product-card-hover-desc" data-trans="cat_construction_desc">Heavy-duty concrete mixers,
-                  hydraulic excavators, and compact compaction road rollers.</p>
+                <h3 class="product-card-name">Textile & Apparel</h3>
+                <p class="product-card-hover-desc">Premium finished garments, high-end cotton apparel, home textiles, and organic cotton yarns.</p>
               </div>
             </div>
           </a>
@@ -678,29 +713,6 @@
                 standard verifying our clean storage, quality testing, and processing operations.</p>
             </div>
           </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">ISO 22000 Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
-          </div>
         </div>
 
         <!-- Card 2: Import Export Code (IEC) -->
@@ -721,29 +733,6 @@
                 Directorate General of Foreign Trade required for all international trade transactions.</p>
             </div>
           </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">IEC Code Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
-          </div>
         </div>
 
         <!-- Card 3: APEDA Registration -->
@@ -761,29 +750,6 @@
               <p class="new-cert-desc" data-trans="cert_3_desc">Enables official export of premium Indian grains, seeds,
                 pulses, and fresh produce with absolute phytosanitary clearances.</p>
             </div>
-          </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">APEDA Registration Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
           </div>
         </div>
 
@@ -803,29 +769,6 @@
                 authorizing direct export of whole and ground spices to global destinations.</p>
             </div>
           </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">Spices Board RCMC Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
-          </div>
         </div>
 
         <!-- Card 5: Central FSSAI License -->
@@ -842,29 +785,6 @@
               <p class="new-cert-desc" data-trans="cert_5_desc">Full licensing compliance for processing, packaging, and
                 exporting food products, ensuring all batches meet sanitary guidelines.</p>
             </div>
-          </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">FSSAI License Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
           </div>
         </div>
 
@@ -885,29 +805,6 @@
               <p class="new-cert-desc" data-trans="cert_6_desc">Government-registered enterprise status facilitating
                 standard compliances, export priority, and trade incentives.</p>
             </div>
-          </div>
-          <div class="new-cert-footer">
-            <a href="#" class="new-cert-doc-btn" onclick="event.preventDefault();">
-              <span class="doc-btn-icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </span>
-              <span class="doc-btn-meta">
-                <span class="doc-btn-title">MSME Udyam Scan</span>
-                <span class="doc-btn-type">PDF Document</span>
-              </span>
-              <span class="doc-btn-icon-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </span>
-            </a>
           </div>
         </div>
       </div>
@@ -1130,8 +1027,8 @@
                 </svg>
               </div>
               <div>
-                <div class="ici-title">Contact Person</div>
-                <div class="ici-value"><strong>Piyush Dabhi</strong></div>
+                <div class="ici-title">Founder: Piyush Dabhi</div>
+                <div class="ici-value"><strong>Executive Director</strong></div>
               </div>
             </div>
             <div class="inquiry-contact-item">
@@ -1201,10 +1098,14 @@
             <div class="form-group">
               <label for="formProduct" data-trans="form_product">Select Main Product Category</label>
               <select id="formProduct" class="form-control">
-                <option value="agriculture" data-trans="form_prod_opt1">Agriculture Product</option>
-                <option value="handicraft" data-trans="form_prod_opt2">Handicraft</option>
-                <option value="textile" data-trans="form_prod_opt3">Textile</option>
-                <option value="construction" data-trans="form_prod_opt4">Construction Machinery</option>
+                <option value="dehydrated">Dehydrated Vegetables & Fruits</option>
+                <option value="agriculture">Agriculture Products</option>
+                <option value="spices">Spices</option>
+                <option value="natures_finest">Nature's Finest</option>
+                <option value="dried_fruits">Dried Fruits</option>
+                <option value="fresh_produce">Fruits & Vegetables</option>
+                <option value="handicraft">Handicraft</option>
+                <option value="textile">Textile & Apparel</option>
               </select>
             </div>
             <div class="form-group">
@@ -1378,8 +1279,8 @@
             <li><a href="#products" data-trans="nav_products">Products</a></li>
             <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
             <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
-            <li><a href="#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
-            <li><a href="#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+            <li><a href="#why-choose-us" data-trans="nav_why">Why Us</a></li>
+            <li><a href="#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">

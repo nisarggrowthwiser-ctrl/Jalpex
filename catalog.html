@@ -202,9 +202,6 @@
 
   <!-- ── NAVIGATION BAR ── -->
   <nav id="navbar">
-    <div class="top-bar">
-      <span data-trans="company_tagline">“FLOWING ACROSS BORDERS, DELIVERING WITH PRECISION”</span>
-    </div>
     <div class="nav-inner">
       <a href="index.html" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
@@ -215,8 +212,8 @@
         <li><a href="catalog.html" class="active" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
-        <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
-        <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+        <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+        <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -248,7 +245,7 @@
           </div>
         </div>
 
-        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Request Quote</a>
+        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Get in Touch</a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
@@ -267,8 +264,8 @@
       <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
-      <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Choose Us</a></li>
-      <li><a href="index.html#inquiry" data-trans="nav_inquiry">Inquiry</a></li>
+      <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+      <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
     </ul>
     <div class="mobile-lang-section">
       <p>Select Language</p>
@@ -283,7 +280,7 @@
         <button class="mob-lang-btn" data-lang="de">DE</button>
       </div>
     </div>
-    <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Request Quote</a>
+    <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Get in Touch</a>
   </div>
 
   <!-- ── CATALOG HEADER ── -->
@@ -295,11 +292,14 @@
 
       <div class="catalog-filters">
         <button class="filter-btn active" data-cat="all">All Commodities</button>
+        <button class="filter-btn" data-cat="dehydrated">Dehydrated Vegetables & Fruits</button>
+        <button class="filter-btn" data-cat="agriculture">Agriculture Products</button>
         <button class="filter-btn" data-cat="spices">Spices</button>
-        <button class="filter-btn" data-cat="agriculture">Agricultural Products</button>
-        <button class="filter-btn" data-cat="handicraft">Handicrafts</button>
+        <button class="filter-btn" data-cat="natures_finest">Nature's Finest</button>
+        <button class="filter-btn" data-cat="dried_fruits">Dried Fruits</button>
+        <button class="filter-btn" data-cat="fresh_produce">Fruits & Vegetables</button>
+        <button class="filter-btn" data-cat="handicraft">Handicraft</button>
         <button class="filter-btn" data-cat="textile">Textile & Apparel</button>
-        <button class="filter-btn" data-cat="construction">Construction Machinery</button>
       </div>
     </div>
   </header>
@@ -426,11 +426,14 @@
         });
 
         // Category clean label
-        let catLabel = "Agricultural Products";
+        let catLabel = "Agriculture Products";
+        if (prod.category === "dehydrated") catLabel = "Dehydrated Vegetables & Fruits";
         if (prod.category === "spices") catLabel = "Spices";
-        if (prod.category === "handicraft") catLabel = "Handicrafts";
+        if (prod.category === "natures_finest") catLabel = "Nature's Finest";
+        if (prod.category === "dried_fruits") catLabel = "Dried Fruits";
+        if (prod.category === "fresh_produce") catLabel = "Fruits & Vegetables";
+        if (prod.category === "handicraft") catLabel = "Handicraft";
         if (prod.category === "textile") catLabel = "Textile & Apparel";
-        if (prod.category === "construction") catLabel = "Construction Machinery";
 
         card.innerHTML = `
           <div class="product-img-wrap">
@@ -454,7 +457,7 @@
       // Check query parameter first
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get("cat");
-      if (catParam && ["spices", "agriculture", "handicraft", "textile", "construction"].includes(catParam)) {
+      if (catParam && ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "fresh_produce", "handicraft", "textile"].includes(catParam)) {
         activeFilter = catParam;
       }
 
