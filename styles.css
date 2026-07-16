@@ -184,28 +184,27 @@ p {
   text-align: center;
 }
 
-/* ── BUTTONS ── */
 .btn-primary {
-  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-deep) 100%);
+  background: linear-gradient(135deg, var(--accent-gold-bright) 0%, var(--accent-gold) 100%);
   color: white;
   padding: 12px 28px;
   border-radius: 40px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   letter-spacing: .5px;
   transition: var(--transition);
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(30, 77, 43, 0.3);
+  box-shadow: 0 4px 18px rgba(194, 150, 82, 0.25);
   display: inline-block;
   text-align: center;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(30, 77, 43, 0.5);
-  background: linear-gradient(135deg, #4C8F5F 0%, #2E6B3F 100%);
+  box-shadow: 0 8px 24px rgba(194, 150, 82, 0.45);
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep, #9c7839) 100%);
 }
 
 .btn-outline {
