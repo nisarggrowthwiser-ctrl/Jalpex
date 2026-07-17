@@ -1977,14 +1977,17 @@ section {
 }
 
 .wcu-icon-box {
-  position: relative !important;
-  width: 56px;
-  height: 56px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 56px !important;
+  height: 56px !important;
   border-radius: 16px;
   background: rgba(194, 150, 82, 0.08);
   /* soft gold bg */
   border: 1px solid rgba(194, 150, 82, 0.16);
   margin-bottom: 28px;
+  padding: 0 !important;
   transition: var(--transition);
 }
 
@@ -1995,10 +1998,10 @@ section {
 }
 
 .icon-draw {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
   width: 24px !important;
   height: 24px !important;
   display: block !important;
