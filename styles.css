@@ -202,9 +202,11 @@ p {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(194, 150, 82, 0.45);
-  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep, #9c7839) 100%);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(194, 150, 82, 0.55), 0 4px 12px rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, #d4a855 0%, #e8c070 50%, #c29652 100%);
+  color: #fff;
+  letter-spacing: 0.8px;
 }
 
 .btn-outline {
@@ -5149,16 +5151,28 @@ footer .logo-link:hover .logo-img {
   max-width: 580px;
 }
 
-/* Tagline — gold accent */
-.hero-tagline {
+/* Animated non-blurry shimmery Tagline */
+.animated-tagline-text {
   font-family: var(--font-heading);
-  font-size: 13.5px;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-gold);
   font-weight: 600;
-  margin-bottom: 12px;
-  animation: var(--transition);
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #ffffff, #c29652, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine-tagline 4s linear infinite;
+  display: inline-block;
+  font-size: 11px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0); /* forces GPU rasterization to eliminate subpixel text blurring */
+}
+
+@keyframes shine-tagline {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 /* Badge — gold accent */
@@ -5422,9 +5436,9 @@ footer .logo-link:hover .logo-img {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.88) 20%,
-      rgba(255, 255, 255, 0.35) 45%,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(255, 255, 255, 0.65) 20%,
+      rgba(255, 255, 255, 0.18) 50%,
       rgba(255, 255, 255, 0) 65%);
   z-index: 2;
 }

@@ -18,7 +18,7 @@ const translations = {
     btn_quote: "Get in Touch",
     hero_badge: "ESTABLISHED SINCE 2021",
     hero_title: "Bridging Indian<br><em>Heritage</em> with Global<br>Markets.",
-    hero_desc: "At JALPEX INTERNATIONAL, we export premium Indian spices, high-quality seeds, organic grains, and pulses directly to international clients. Sourced with absolute care, delivered with complete integrity.",
+    hero_desc: "Jalpex International is a trusted Indian export company delivering premium agricultural commodities, spices, dehydrated vegetables, fresh produce, and handicrafts to buyers across global markets. Guided by quality, integrity, and reliability, we build long-term partnerships through seamless export solutions and uncompromising service.",
     hero_explore: "Explore Portfolio",
     hero_legacy: "Our Values",
     stat_heritage: "Heritage Quality",
@@ -1323,14 +1323,20 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbarScroll();
   initLanguagePicker();
   initMobileMenu();
-  initProductTabs();
-  initProductsSlider();
-  renderProducts();
-  initInquiryForm();
+  if (document.getElementById("products-grid") || document.querySelector(".product-tabs")) {
+    initProductTabs();
+    initProductsSlider();
+    renderProducts();
+  }
+  if (document.getElementById("inquiry") || document.getElementById("pd-inquiry")) {
+    initInquiryForm();
+  }
   initRevealAnimations();
-  initHeroIntro();
-  initScrollFx();
-  initMorphSlider();
+  if (document.querySelector("[data-anim]")) {
+    initHeroIntro();
+  }
+  try { initScrollFx(); } catch(e) {}
+  try { initMorphSlider(); } catch(e) {}
 });
 
 // ── NAVBAR SCROLL ──
@@ -1376,6 +1382,8 @@ function initLanguagePicker() {
   const langItems = document.querySelectorAll(".lang-item");
   const mobLangBtns = document.querySelectorAll(".mob-lang-btn");
 
+  if (!langToggle || !langPicker) return; // safe for pages without lang picker
+
   // Toggle Dropdown
   langToggle.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -1409,7 +1417,8 @@ function initLanguagePicker() {
       btn.classList.add("active");
 
       // Close mobile menu
-      document.getElementById("mobileToggle").click();
+      const mobileToggleEl = document.getElementById("mobileToggle");
+      if (mobileToggleEl) mobileToggleEl.click();
     });
   });
 }
@@ -1441,6 +1450,8 @@ function initMobileMenu() {
   const mobileMenu = document.getElementById("mobileMenu");
   const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
+  if (!mobileToggle || !mobileMenu) return;
+
   mobileToggle.addEventListener("click", () => {
     mobileToggle.classList.toggle("open");
     mobileMenu.classList.toggle("open");
@@ -1471,8 +1482,14 @@ function initHeroIntro() {
 
   // ── 2. Ticker word cycling ──
   const tickerWords = [
-    'Indian Spices', 'Basmati Rice', 'Oil Seeds',
-    'Raw Cotton', 'Fresh Fruits', 'Dehydrated Vegs', 'Pulses & Lentils'
+    'Dehydrated Vegetables & Fruits',
+    'Agriculture Products',
+    'Authentic Spices',
+    'Nature’s Finest',
+    'Premium Dried Fruits',
+    'Fresh Fruits & Vegetables',
+    'Artisanal Handicrafts',
+    'Textile & Apparel'
   ];
   let tickerIdx = 0;
   const hdtWordEl = document.getElementById('hdtWord');
@@ -1482,7 +1499,7 @@ function initHeroIntro() {
       // Exit animation
       hdtWordEl.style.opacity = '0';
       hdtWordEl.style.transform = 'translateY(-16px)';
-      hdtWordEl.style.filter = 'blur(4px)';
+      hdtWordEl.style.filter = 'none';
       setTimeout(() => {
         tickerIdx = (tickerIdx + 1) % tickerWords.length;
         hdtWordEl.textContent = tickerWords[tickerIdx];
@@ -1492,7 +1509,7 @@ function initHeroIntro() {
           requestAnimationFrame(() => {
             hdtWordEl.style.opacity = '1';
             hdtWordEl.style.transform = 'translateY(0)';
-            hdtWordEl.style.filter = 'blur(0)';
+            hdtWordEl.style.filter = 'none';
           });
         });
       }, 340);
@@ -1504,19 +1521,28 @@ function initHeroIntro() {
   // Also handle the old dynamicWord if it still exists
   const wordElement = document.getElementById('dynamicWord');
   if (wordElement) {
-    const words = ['Indian Spices', 'Basmati Rice', 'Oil Seeds', 'Raw Cotton', 'Fresh Fruits', 'Dehydrated Vegetables'];
+    const words = [
+      'Dehydrated Vegetables & Fruits',
+      'Agriculture Products',
+      'Authentic Spices',
+      'Nature’s Finest',
+      'Premium Dried Fruits',
+      'Fresh Fruits & Vegetables',
+      'Artisanal Handicrafts',
+      'Textile & Apparel'
+    ];
     let currentWordIndex = 0;
     wordElement.style.transition = 'all 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
     setInterval(() => {
       wordElement.style.opacity = '0';
       wordElement.style.transform = 'translateY(12px)';
-      wordElement.style.filter = 'blur(3px)';
+      wordElement.style.filter = 'none';
       setTimeout(() => {
         currentWordIndex = (currentWordIndex + 1) % words.length;
         wordElement.textContent = words[currentWordIndex];
         wordElement.style.opacity = '1';
         wordElement.style.transform = 'translateY(0)';
-        wordElement.style.filter = 'blur(0)';
+        wordElement.style.filter = 'none';
       }, 400);
     }, 3200);
   }
