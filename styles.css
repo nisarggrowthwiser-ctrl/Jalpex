@@ -2252,15 +2252,15 @@ section {
 }
 
 .new-cert-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: #FCFAF6;
+  border: 1px solid rgba(194, 150, 82, 0.25);
+  border-radius: 24px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -2284,14 +2284,17 @@ section {
 
 .new-cert-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent-gold);
+  box-shadow: 0 20px 40px rgba(120, 85, 30, 0.1), 0 0 25px rgba(201, 146, 46, 0.08);
+  border-color: rgba(201, 146, 46, 0.4);
 }
 
 .new-cert-top {
   display: flex;
-  align-items: start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 20px;
+  width: 100%;
 }
 
 /* Color codes for icon circles */
@@ -2344,6 +2347,7 @@ section {
 
 .new-cert-info {
   flex: 1;
+  text-align: center;
 }
 
 .new-cert-name {
@@ -2353,6 +2357,7 @@ section {
   color: var(--text-dark);
   margin-bottom: 4px;
   line-height: 1.25;
+  text-align: center !important;
 }
 
 .new-cert-issuer {
@@ -2362,6 +2367,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
+  text-align: center !important;
 }
 
 .new-cert-desc {
@@ -2370,6 +2376,7 @@ section {
   line-height: 1.6;
   font-weight: 300;
   margin: 0;
+  text-align: center !important;
 }
 
 .new-cert-footer {
@@ -2486,24 +2493,24 @@ section {
 }
 
 .board-badge {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
+  background: #FCFAF6;
+  border: 1px solid rgba(194, 150, 82, 0.25);
+  border-radius: 24px;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   width: 220px;
 }
 
 .board-badge:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent-gold);
   transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(194, 150, 82, 0.12);
+  border-color: rgba(194, 150, 82, 0.5);
 }
 
 .board-badge-icon {
@@ -2998,20 +3005,21 @@ footer .logo-link:hover .logo-img {
 }
 
 .logistics-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: #FCFAF6;
+  border: 1px solid rgba(194, 150, 82, 0.25);
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: var(--transition);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logistics-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 40px rgba(120, 85, 30, 0.1), 0 0 25px rgba(201, 146, 46, 0.08);
+  border-color: rgba(201, 146, 46, 0.4);
 }
 
 .logistics-image-wrap {
@@ -3032,17 +3040,18 @@ footer .logo-link:hover .logo-img {
   transform: scale(1.06);
 }
 
-/* Floating white square overlay for icons */
+/* Floating white square overlay for icons centered */
 .logistics-icon-box {
   position: absolute;
   top: 193px;
-  left: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 54px;
   height: 54px;
-  background: #FFFFFF;
-  border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--border);
+  background: #FCFAF6;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(194, 150, 82, 0.25);
   z-index: 2;
 }
 
@@ -3065,7 +3074,7 @@ footer .logo-link:hover .logo-img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
+  background: transparent;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23faf8f5' fill-opacity='0.4' d='M0,192L48,197.3C96,203,192,213,288,202.7C384,192,480,160,576,149.3C672,139,768,149,864,170.7C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -3078,6 +3087,7 @@ footer .logo-link:hover .logo-img {
   font-weight: 700;
   color: var(--text-dark);
   margin: 0 0 12px;
+  text-align: center !important;
 }
 
 .logistics-card-desc {
@@ -3085,6 +3095,7 @@ footer .logo-link:hover .logo-img {
   line-height: 1.6;
   color: var(--text-mid);
   margin: 0;
+  text-align: center !important;
 }
 
 /* ── RESPONSIVE DESIGN ── */
