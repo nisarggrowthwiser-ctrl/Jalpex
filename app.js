@@ -1208,40 +1208,64 @@ translations.en.tab_handicraft = "Handicraft";
 translations.en.tab_textile = "Textile";
 translations.en.tab_construction = "Construction Machinery";
 
+translations.en.info_contact_title = "Founder";
+translations.en.info_contact_val = "Piyush Dabhi";
+
 translations.hi.tab_agriculture = "कृषि उत्पाद";
 translations.hi.tab_handicraft = "हस्तशिल्प";
 translations.hi.tab_textile = "कपड़ा";
 translations.hi.tab_construction = "निर्माण मशीनरी";
+
+translations.hi.info_contact_title = "संस्थापक";
+translations.hi.info_contact_val = "पीयूष दाभी";
 
 translations.ar.tab_agriculture = "المنتجات الزراعية";
 translations.ar.tab_handicraft = "الحرف اليدوية";
 translations.ar.tab_textile = "المنسوجات";
 translations.ar.tab_construction = "آلات البناء";
 
+translations.ar.info_contact_title = "المؤسس";
+translations.ar.info_contact_val = "بيوش دابهي";
+
 translations.fr.tab_agriculture = "Produits Agricoles";
 translations.fr.tab_handicraft = "Artisanat";
 translations.fr.tab_textile = "Textiles";
 translations.fr.tab_construction = "Machines de Construction";
+
+translations.fr.info_contact_title = "Fondateur";
+translations.fr.info_contact_val = "Piyush Dabhi";
 
 translations.es.tab_agriculture = "Productos Agrícolas";
 translations.es.tab_handicraft = "Artesanías";
 translations.es.tab_textile = "Textil";
 translations.es.tab_construction = "Maquinaria de Construcción";
 
+translations.es.info_contact_title = "Fundador";
+translations.es.info_contact_val = "Piyush Dabhi";
+
 translations.de.tab_agriculture = "Agrarprodukte";
 translations.de.tab_handicraft = "Kunsthandwerk";
 translations.de.tab_textile = "Textil";
 translations.de.tab_construction = "Baumaschinen";
+
+translations.de.info_contact_title = "Gründer";
+translations.de.info_contact_val = "Piyush Dabhi";
 
 translations.pt.tab_agriculture = "Produtos Agrícolas";
 translations.pt.tab_handicraft = "Artesanato";
 translations.pt.tab_textile = "Têxteis";
 translations.pt.tab_construction = "Máquinas de Construção";
 
+translations.pt.info_contact_title = "Fundador";
+translations.pt.info_contact_val = "Piyush Dabhi";
+
 translations.zh.tab_agriculture = "农业产品";
 translations.zh.tab_handicraft = "手工艺品";
 translations.zh.tab_textile = "纺织品";
 translations.zh.tab_construction = "工程机械";
+
+translations.zh.info_contact_title = "创始人";
+translations.zh.info_contact_val = "Piyush Dabhi";
 
 // ── PRODUCTS DATA ──
 const productsData = [
