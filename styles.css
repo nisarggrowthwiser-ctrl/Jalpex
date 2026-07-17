@@ -2074,7 +2074,6 @@ section {
 .private-labeling {
   background: var(--cream);
   padding: 50px 0;
-  border-bottom: 1px solid var(--border);
   position: relative;
 }
 
@@ -2461,7 +2460,6 @@ section {
 /* Boards & Councils section */
 .boards-section {
   margin-top: 60px;
-  border-top: 1px dashed var(--border);
   padding-top: 50px;
 }
 
