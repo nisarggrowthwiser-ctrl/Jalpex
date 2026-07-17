@@ -24,10 +24,11 @@ const translations = {
     stat_heritage: "Heritage Quality",
     stat_organic: "Pure & Organic",
     stat_destinations: "Global Sourcing",
-    story_label: "Global Agro Exporter",
-    story_title: "Premium Quality, Ethical Sourcing & Trusted Global Delivery",
-    story_p1: "At Jalpex International, we specialize in exporting premium Indian agricultural products to global markets. Sourced from the richest soils of India, our products maintain their natural flavor, rich aroma, and traditional quality. We are committed to ethical practices, strict quality control, and clean processing methods to ensure our products meet international standards.",
-    story_p2: "We offer an extensive range of agricultural exports, categorized into authentic spices, nutritious seeds, and essential grains and pulses. Every product is processed and packaged with great care, preserving its goodness for our global customers. Partner with us for a seamless export experience backed by unmatched dedication.",
+    story_label: "Trusted Global Export Partner",
+    story_title: "Premium Quality. Ethical Sourcing. Global Trust.",
+    story_p1: "At Jalpex International, we are committed to delivering premium Indian products to international markets through a reliable and transparent supply chain. We source directly from trusted farmers and manufacturers across India, ensuring every product reflects the country's rich agricultural heritage and uncompromising quality.",
+    story_p2: "Our export portfolio includes agricultural commodities, spices, dehydrated vegetables, fresh produce, pulses, grains, seeds, and handicrafts. Every shipment undergoes rigorous quality checks, hygienic processing, and secure packaging to meet international standards and customer expectations.",
+    story_p3: "With a strong focus on consistency, timely delivery, and long-term partnerships, we strive to provide seamless export solutions tailored to the needs of importers, distributors, wholesalers, and retailers worldwide. At Jalpex International, we don't just export products—we deliver trust, reliability, and lasting business relationships.",
     story_link: "Explore our export collections &rarr;",
     ticker_text: "Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • ",
     prod_label: "Our Catalog",
@@ -183,10 +184,11 @@ const translations = {
     stat_heritage: "विरासत गुणवत्ता",
     stat_organic: "शुद्ध और जैविक",
     stat_destinations: "वैश्विक सोर्सिंग",
-    story_label: "वैश्विक कृषि निर्यातक",
-    story_title: "प्रीमियम गुणवत्ता, नैतिक सोर्सिंग और विश्वसनीय वैश्विक वितरण",
-    story_p1: "जालपेक्स इंटरनेशनल में, हम वैश्विक बाजारों में प्रीमियम भारतीय कृषि उत्पादों के निर्यात में विशेषज्ञ हैं। भारत की सबसे समृद्ध मिट्टी से प्राप्त, हमारे उत्पाद अपने प्राकृतिक स्वाद, समृद्ध सुगंध और पारंपरिक गुणवत्ता बनाए रखते हैं।",
-    story_p2: "हम कृषि निर्यातों की एक विस्तृत श्रृंखला प्रदान करते हैं, जिन्हें मसालों, पौष्टिक बीजों और आवश्यक अनाजों व दालों में वर्गीकृत किया गया है। हर उत्पाद को हमारे वैश्विक ग्राहकों के लिए उसकी गुणवत्ता बनाए रखने के लिए सावधानीपूर्वक संसाधित किया जाता है।",
+    story_label: "विश्वसनीय वैश्विक निर्यात भागीदार",
+    story_title: "प्रीमियम गुणवत्ता। नैतिक सोर्सिंग। वैश्विक विश्वास।",
+    story_p1: "जालपेक्स इंटरनेशनल में, हम एक विश्वसनीय और पारदर्शी आपूर्ति श्रृंखला के माध्यम से अंतरराष्ट्रीय बाजारों में प्रीमियम भारतीय उत्पादों को वितरित करने के लिए प्रतिबद्ध हैं। हम सीधे भारत भर के विश्वसनीय किसानों और निर्माताओं से प्राप्त करते हैं, यह सुनिश्चित करते हुए कि हर उत्पाद देश की समृद्ध कृषि विरासत और असम्बद्ध गुणवत्ता को दर्शाता है।",
+    story_p2: "हमारे निर्यात पोर्टफोलियो में कृषि वस्तुएं, मसाले, निर्जलित सब्जियां, ताजा उत्पाद, दालें, अनाज, बीज और हस्तशिल्प शामिल हैं। हर शिपमेंट अंतरराष्ट्रीय मानकों और ग्राहकों की अपेक्षाओं को पूरा करने के लिए कठोर गुणवत्ता जांच, स्वच्छ प्रसंस्करण और सुरक्षित पैकेजिंग से गुजरता है।",
+    story_p3: "निरंतरता, समय पर वितरण और दीर्घकालिक साझेदारी पर कड़े ध्यान के साथ, हम दुनिया भर में आयातकों, वितरकों, थोक विक्रेताओं और खुदरा विक्रेताओं की आवश्यकताओं के अनुरूप निर्बाध निर्यात समाधान प्रदान करने का प्रयास करते हैं। जालपेक्स इंटरनेशनल में, हम सिर्फ उत्पादों का निर्यात नहीं करते हैं—हम विश्वास, विश्वसनीयता और स्थायी व्यावसायिक संबंध प्रदान करते हैं।",
     story_link: "हमारे निर्यात संग्रह देखें &rarr;",
     ticker_text: "विश्वसनीय वैश्विक रसद सेवाएं • भारतीय गुणवत्ता को विश्व स्तर पर वितरित करना • प्रीमियम कृषि निर्यात समाधान • देखभाल के साथ सोर्स, अखंडता के साथ संसाधित • ",
     prod_label: "हमारा कैटलॉग",
@@ -342,10 +344,11 @@ const translations = {
     stat_heritage: "جودة التراث",
     stat_organic: "نقي وعضوي",
     stat_destinations: "مصادر عالمية",
-    story_label: "مصدر زراعي عالمي",
-    story_title: "جودة ممتازة، مصادر أخلاقية وتسليم عالمي موثوق",
-    story_p1: "في جالبيكس إنترناشيونال، نحن متخصصون في تصدير المنتجات الزراعية الهندية المتميزة إلى الأسواق العالمية. يتم الحصول عليها من أغنى التربة في الهند، وتحافظ منتجاتنا على نكهتها الطبيعية ورائعتها الغنية وجودتها التقليدية.",
-    story_p2: "نحن نقدم مجموعة واسعة من الصادرات الزراعية، المصنفة إلى بهارات أصلية، وبذور مغذية، وحبوب وبقوليات أساسية. تتم معالجة وتعبئة كل منتج بعناية فائقة للحفاظ على جودته لعملائنا العالميين.",
+    story_label: "شريك تصدير عالمي موثوق",
+    story_title: "جودة ممتازة. مصادر أخلاقية. ثقة عالمية.",
+    story_p1: "في جالبيكس إنترناشيونال، نحن ملتزمون بتقديم منتجات هندية متميزة إلى الأسواق العالمية من خلال سلسلة توريد موثوقة وشفافة. نحن نشحن مباشرة من المزارعين والمصنعين الموثوقين في جميع أنحاء الهند، مما يضمن أن كل منتج يعكس التراث الزراعي الغني للبلاد وجودتها التي لا تضاهى.",
+    story_p2: "تشمل محفظة صادراتنا السلع الزراعية، والتوابل، والخضروات المجففة، والمنتجات الطازجة، والبقوليات، والحبوب, والبذور، والحرف اليدوية. تخضع كل شحنة لفحوصات جودة صارمة، ومعالجة صحية، وتعبئة آمنة لتلبية المعمعايير الدولية وتوقعات العملاء.",
+    story_p3: "مع التركيز القوي على الاتساق والتسليم في الوقت المناسب والشراكات طويلة الأجل، فإننا نسعى جاهدين لتقديم حلول تصدير سلسة مصممة خصيصًا لتلبية احتياجات المستوردين والموزعين وتجار الجملة والتجزئة في جميع أنحاء العالم. في جالبيكس إنترناشيونال، لا نقوم فقط بتصدير المنتجات - بل نقدم الثقة والموثوقية وعلاقات تجارية دائمة.",
     story_link: "استكشف مجموعات التصدير لدينا &rarr;",
     ticker_text: "خدمات لوجستية عالمية موثوقة • تقديم الجودة الهندية عالميًا • حلول تصدير زراعية ممتازة • تم الحصول عليها بعناية ومعالجتها بنزاهة • ",
     prod_label: "منتجات مميزة",
@@ -489,10 +492,11 @@ const translations = {
     stat_heritage: "Qualité Héritage",
     stat_organic: "Pur & Biologique",
     stat_destinations: "Sourcing Global",
-    story_label: "Exportateur Agro Global",
-    story_title: "Qualité Supérieure, Sourcing Éthique et Livraison Fiable",
-    story_p1: "Chez Jalpex International, nous sommes spécialisés dans l'exportation de produits agricoles indiens de qualité supérieure. Issus des sols les plus riches de l'Inde, nos produits conservent leur saveur naturelle, leur arôme riche et leur qualité traditionnelle.",
-    story_p2: "Nous proposons une large gamme d'exportations agricoles, classées en épices authentiques, graines nutritives et grains essentiels. Chaque produit est traité et emballé avec le plus grand soin.",
+    story_label: "Partenaire d'exportation mondial de confiance",
+    story_title: "Qualité Supérieure. Sourcing Éthique. Confiance Globale.",
+    story_p1: "Chez Jalpex International, nous nous engageons à livrer des produits indiens de qualité supérieure aux marchés internationaux via une chaîne d'approvisionnement fiable et transparente. Nous nous approvisionnons directement auprès de fermiers et fabricants de confiance à travers l'Inde, garantissant que chaque produit reflète le riche héritage agricole et la qualité sans compromis du pays.",
+    story_p2: "Notre portefeuille d'exportation comprend des produits agricoles, des épices, des légumes déshydratés, des produits frais, des légumineuses, des grains, des graines et de l'artisanat. Chaque expédition subit des contrôles de qualité rigoureux, un traitement hygiénique et un emballage sécurisé pour répondre aux normes internationales et aux attentes des clients.",
+    story_p3: "Avec un accent particulier sur la régularité, la livraison rapide et les partenariats à long terme, nous nous efforçons de fournir des solutions d'exportation fluides et adaptées aux besoins des importateurs, distributeurs, grossistes et détaillants du monde entier. Chez Jalpex International, nous n'exportons pas seulement des produits, nous livrons de la confiance, de la fiabilité et des relations commerciales durables.",
     story_link: "Découvrez nos collections d'exportation &rarr;",
     ticker_text: "Services logistiques mondiaux fiables • Livraison de la qualité indienne dans le monde entier • Solutions d'exportation agricole de premier ordre • ",
     prod_label: "Produits Vedettes",
@@ -636,10 +640,11 @@ const translations = {
     stat_heritage: "Calidad de Herencia",
     stat_organic: "Puro y Orgánico",
     stat_destinations: "Sourcing Global",
-    story_label: "Exportador Agrícola Global",
-    story_title: "Calidad Premium, Abastecimiento Ético y Entrega Global de Confianza",
-    story_p1: "En Jalpex International, nos especializamos en la exportación de productos agrícolas indios premium. Obtenidos de los suelos más ricos de la India, conservan su sabor natural y calidad tradicional.",
-    story_p2: "Ofrecemos una amplia gama de exportaciones agrícolas, divididas en especias auténticas, semillas nutritivas y granos esenciales.",
+    story_label: "Socio de exportación global de confianza",
+    story_title: "Calidad Premium. Abastecimiento Ético. Confianza Global.",
+    story_p1: "En Jalpex International, estamos comprometidos a entregar productos indios de primera calidad a los mercados internacionales a través de una cadena de suministro confiable y transparente. Nos abastecemos directamente de agricultores y fabricantes de confianza en toda la India, asegurando que cada producto refleje la rica herencia agrícola y la calidad inflexible del país.",
+    story_p2: "Nuestra cartera de exportación incluye productos agrícolas, especias, verduras deshidratadas, productos frescos, legumbres, granos, semillas y artesanías. Cada envío se somete a rigurosos controles de calidad, procesamiento higiénico y embalaje seguro para cumplir con los estándares internacionales y las expectativas del cliente.",
+    story_p3: "Con un fuerte enfoque en la consistencia, la entrega oportuna y las asociaciones a largo plazo, nos esforzamos por proporcionar soluciones de exportación integrales adaptadas a las necesidades de los importadores, distribuidores, mayoristas y minoristas de todo el mundo. En Jalpex International, no solo exportamos productos; brindamos confianza, confiabilidad y relaciones comerciales duraderas.",
     story_link: "Explore nuestras colecciones de exportación &rarr;",
     ticker_text: "Servicios logísticos mundiales confiables • Entrega de calidad india a nivel mundial • Soluciones premium de exportación • ",
     prod_label: "Productos Destacados",
@@ -783,10 +788,11 @@ const translations = {
     stat_heritage: "Qualitätserbe",
     stat_organic: "Rein & Organisch",
     stat_destinations: "Globales Sourcing",
-    story_label: "Globaler Agrar-Exporteur",
-    story_title: "Erstklassige Qualität, ethische Beschaffung & zuverlässige Lieferung",
-    story_p1: "Bei Jalpex International haben wir uns auf den Export von erstklassigen indischen Agrarprodukten spezialisiert. Direkt von den fruchtbarsten Böden Indiens stammend, bewahren unsere Produkte ihren natürlichen Geschmack.",
-    story_p2: "Unser breites Sortiment umfasst authentische Gewürze, nährstoffreiche Samen sowie Getreide und Hülsenfrüchte, die sorgfältig verarbeitet werden.",
+    story_label: "Vertrauenswürdiger globaler Exportpartner",
+    story_title: "Premium-Qualität. Ethische Beschaffung. Globales Vertrauen.",
+    story_p1: "Bei Jalpex International verpflichten wir uns, erstklassige indische Produkte über eine zuverlässige und transparente Lieferkette an internationale Märkte zu liefern. Wir beziehen direkt von vertrauenswürdigen Landwirten und Herstellern in ganz Indien und stellen sicher, dass jedes Produkt das reiche landwirtschaftliche Erbe und die kompromisslose Qualität des Landes widerspiegelt.",
+    story_p2: "Unser Exportportfolio umfasst landwirtschaftliche Erzeugnisse, Gewürze, dehydriertes Gemüse, frische Produkte, Hülsenfrüchte, Getreide, Samen und Kunsthandwerk. Jede Sendung wird strengen Qualitätskontrollen, hygienischer Verarbeitung und sicherer Verpackung unterzogen, um internationale Standards und Kundenerwartungen zu erfüllen.",
+    story_p3: "Mit einem starken Fokus auf Konsistenz, pünktliche Lieferung und langfristige Partnerschaften streben wir danach, nahtlose Exportlösungen anzubieten, die auf die Bedürfnisse von Importeuren, Händlern, Groß- und Einzelhändlern weltweit zugeschnitten sind. Bei Jalpex International exportieren wir nicht nur Produkte – wir liefern Vertrauen, Zuverlässigkeit und dauerhafte Geschäftsbeziehungen.",
     story_link: "Unsere Export-Kollektionen ansehen &rarr;",
     ticker_text: "Zuverlässige weltweite Logistikdienstleistungen • Lieferung indischer Qualität weltweit • Erstklassige Agrarexportlösungen • ",
     prod_label: "Ausgewählte Produkte",
@@ -930,10 +936,11 @@ const translations = {
     stat_heritage: "Qualidade de Herança",
     stat_organic: "Puro e Orgânico",
     stat_destinations: "Sourcing Global",
-    story_label: "Exportador Agrícola Global",
-    story_title: "Qualidade Premium, Fornecimento Ético e Entrega Global Confiável",
-    story_p1: "Na Jalpex International, somos especializados em exportar produtos agrícolas indianos premium para mercados globais. Cultivados nos solos mais ricos da Índia, nossos produtos mantêm seus sabores naturais.",
-    story_p2: "Oferecemos uma ampla variedade de produtos de exportação, classificados em especiarias autênticas, sementes nutritivas e grãos essenciais.",
+    story_label: "Parceiro de exportação global de confiança",
+    story_title: "Qualidade Premium. Abastecimento Ético. Confiança Global.",
+    story_p1: "Na Jalpex International, estamos comprometidos em entregar produtos indianos de qualidade premium para mercados internacionais através de uma cadeia de suprimentos confiável e transparente. Compramos diretamente de agricultores e fabricantes de confiança em toda a Índia, garantindo que cada produto reflita a rica herança agrícola e a qualidade intransigente do país.",
+    story_p2: "Nosso portfólio de exportação inclui commodities agrícolas, especiarias, vegetais desidratados, produtos frescos, leguminosas, grãos, sementes e artesanato. Cada remessa passa por rigorosos testes de qualidade, processamento higiênico e embalagem segura para atender aos padrões internacionais e às expectativas dos clientes.",
+    story_p3: "Com foco em consistência, pontualidade de entrega e parcerias de longo prazo, nos esforçamos para fornecer soluções integradas de exportação adaptadas às necessidades de importadores, distribuidores, atacadistas e varejistas em todo o mundo. Na Jalpex International, não apenas exportamos produtos — entregamos confiança, confiabilidade e relacionamentos comerciais duradouros.",
     story_link: "Explore nossas coleções de exportação &rarr;",
     ticker_text: "Serviços logísticos mundiais confiáveis • Entregando a qualidade indiana globalmente • Soluções premium de exportação • ",
     prod_label: "Produtos em Destaque",
@@ -1077,10 +1084,11 @@ const translations = {
     stat_heritage: "传统品质",
     stat_organic: "纯净与有机",
     stat_destinations: "全球采购",
-    story_label: "全球农产品出口商",
-    story_title: "优质品质、道德采购与值得信赖的全球交付",
-    story_p1: "在 Jalpex International，我们专注于向全球市场出口优质的印度农产品。我们的产品源自印度最肥沃的土地，保持了其天然风味、浓郁香气和传统品质。",
-    story_p2: "我们提供广泛的农业出口，分类为正宗香料、营养种子以及基本谷物和豆类。每件产品都经过精心加工和包装，确保其最佳品质。",
+    story_label: "值得信赖的全球出口合作伙伴",
+    story_title: "优质品质。道德采购。全球信任。",
+    story_p1: "在 Jalpex International，我们致力于通过可靠且透明的供应链向国际市场交付优质的印度产品。我们直接从印度各地值得信赖的农民和制造商处采购，确保每件产品都体现了该国丰富的农业遗产和毫不妥协的品质。",
+    story_p2: "我们的出口组合包括农产品、香料、脱水蔬菜、新鲜果蔬、豆类、谷物、种子和手工艺品。每批货物都经过严格的质量检查、卫生加工和安全包装，以符合国际标准并满足客户의期望。",
+    story_p3: "我们高度关注一致性、及时交付和长期合作伙伴关系，致力于提供量身定制的无缝出口解决方案，满足全球进口商、分销商、批发商和零售商的需求。在 Jalpex International，我们不仅仅出口产品——我们传递信任、可靠性和持久的业务关系。",
     story_link: "浏览我们的出口系列 &rarr;",
     ticker_text: "可靠的全球物流服务 • 将印度品质送达全球 • 优质农产品出口解决方案 • 精心采购，诚信加工 • ",
     prod_label: "特色产品",
@@ -1323,6 +1331,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbarScroll();
   initLanguagePicker();
   initMobileMenu();
+  initStorySlideshow();
   if (document.getElementById("products-grid") || document.querySelector(".product-tabs")) {
     initProductTabs();
     initProductsSlider();
@@ -1338,6 +1347,19 @@ document.addEventListener("DOMContentLoaded", () => {
   try { initScrollFx(); } catch(e) {}
   try { initMorphSlider(); } catch(e) {}
 });
+
+// ── STORY SLIDESHOW ──
+function initStorySlideshow() {
+  const slides = document.querySelectorAll(".about-bowl-img .slide");
+  if (!slides || slides.length === 0) return;
+  
+  let currentIdx = 0;
+  setInterval(() => {
+    slides[currentIdx].classList.remove("active");
+    currentIdx = (currentIdx + 1) % slides.length;
+    slides[currentIdx].classList.add("active");
+  }, 3500);
+}
 
 // ── NAVBAR SCROLL ──
 function initNavbarScroll() {
