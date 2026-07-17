@@ -638,29 +638,16 @@
       // Find all products in this category
       const categoryProducts = productsData.filter(p => p.category === activeCategory);
 
-      // ── Build products listings and specifications ──
-      let productsHtml = '';
-      categoryProducts.forEach((p, idx) => {
-        let specRows = '';
-        for (const [k, v] of Object.entries(p.specs || {})) {
-          specRows += `<tr><td class="spec-label">${k}</td><td>${v}</td></tr>`;
-        }
-
+      // ── Build products listings ──
+      let productsHtml = '<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">';
+      categoryProducts.forEach((p) => {
         productsHtml += `
-          <div class="pd-subproduct-item" style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(194, 150, 82, 0.15);">
-            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
-              <span style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-gold); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600;">${idx + 1}</span>
-              <h3 style="font-family: var(--font-heading); font-size: 22px; color: var(--text-dark); margin: 0;">${p.name}</h3>
-            </div>
-            <p style="font-size: 14.5px; color: var(--text-mid); line-height: 1.6; margin-bottom: 20px;">${p.desc}</p>
-            
-            <div style="margin-top: 15px;">
-              <h4 style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-gold-deep); margin-bottom: 10px;">Product Specifications</h4>
-              <table class="spec-table"><tbody>${specRows}</tbody></table>
-            </div>
-          </div>
+          <span style="background: rgba(194, 150, 82, 0.08); border: 1.5px solid rgba(194, 150, 82, 0.2); color: var(--text-dark); padding: 8px 18px; border-radius: 30px; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-gold); font-size: 14px;">✔</span> ${p.name}
+          </span>
         `;
       });
+      productsHtml += '</div>';
 
       // ── Populate Info Column ──
       document.getElementById('pd-info-col').innerHTML = `
@@ -681,10 +668,10 @@
             </div>
           </div>
           
-          <!-- Category products names list & specs details -->
-          <div class="pd-category-products-list" style="width: 100%;">
-            <h2 style="font-family: var(--font-heading); font-size: 26px; color: var(--text-dark); margin-bottom: 8px;">Product Offerings</h2>
-            <p style="font-size: 14px; color: var(--text-mid); margin-bottom: 25px;">Below is the complete specifications checklist for our ${categoryDetails.name} range:</p>
+          <!-- Category products names list -->
+          <div class="pd-category-products-list" style="width: 100%; margin-top: 10px;">
+            <h2 style="font-family: var(--font-heading); font-size: 24px; color: var(--text-dark); margin-bottom: 8px;">Product Range</h2>
+            <p style="font-size: 14.5px; color: var(--text-mid); margin-bottom: 16px;">We source, process, and pack the following products under this category:</p>
             ${productsHtml}
           </div>
         </div>
