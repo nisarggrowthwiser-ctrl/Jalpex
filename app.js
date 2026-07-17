@@ -1218,6 +1218,10 @@ translations.en.tab_construction = "Construction Machinery";
 
 translations.en.info_contact_title = "Founder";
 translations.en.info_contact_val = "Piyush Dabhi";
+translations.en.info_cofounder_title = "Co-Founder";
+translations.en.info_cofounder_val = "Dr. Jalpa Dabhi";
+translations.en.select_default = "Select Category";
+translations.en.form_phone_error = "Please include '+' and your country code (e.g. +91 98799 15124).";
 
 translations.hi.tab_agriculture = "कृषि उत्पाद";
 translations.hi.tab_handicraft = "हस्तशिल्प";
@@ -1226,6 +1230,10 @@ translations.hi.tab_construction = "निर्माण मशीनरी";
 
 translations.hi.info_contact_title = "संस्थापक";
 translations.hi.info_contact_val = "पीयूष दाभी";
+translations.hi.info_cofounder_title = "सह-संस्थापक";
+translations.hi.info_cofounder_val = "डॉ. जलपा दाभी";
+translations.hi.select_default = "श्रेणी चुनें";
+translations.hi.form_phone_error = "कृपया '+' और अपना देश कोड शामिल करें (जैसे +91 98799 15124)।";
 
 translations.ar.tab_agriculture = "المنتجات الزراعية";
 translations.ar.tab_handicraft = "الحرف اليدوية";
@@ -1234,6 +1242,10 @@ translations.ar.tab_construction = "آلات البناء";
 
 translations.ar.info_contact_title = "المؤسس";
 translations.ar.info_contact_val = "بيوش دابهي";
+translations.ar.info_cofounder_title = "المؤسس المشارك";
+translations.ar.info_cofounder_val = "د. جالبة دابهي";
+translations.ar.select_default = "اختر الفئة";
+translations.ar.form_phone_error = "يرجى تضمين '+' ورمز بلدك (مثل +91 98799 15124).";
 
 translations.fr.tab_agriculture = "Produits Agricoles";
 translations.fr.tab_handicraft = "Artisanat";
@@ -1242,6 +1254,10 @@ translations.fr.tab_construction = "Machines de Construction";
 
 translations.fr.info_contact_title = "Fondateur";
 translations.fr.info_contact_val = "Piyush Dabhi";
+translations.fr.info_cofounder_title = "Co-fondateur";
+translations.fr.info_cofounder_val = "Dr. Jalpa Dabhi";
+translations.fr.select_default = "Choisir la catégorie";
+translations.fr.form_phone_error = "Veuillez inclure '+' et votre code pays (ex: +91 98799 15124).";
 
 translations.es.tab_agriculture = "Productos Agrícolas";
 translations.es.tab_handicraft = "Artesanías";
@@ -1250,6 +1266,10 @@ translations.es.tab_construction = "Maquinaria de Construcción";
 
 translations.es.info_contact_title = "Fundador";
 translations.es.info_contact_val = "Piyush Dabhi";
+translations.es.info_cofounder_title = "Co-fundador";
+translations.es.info_cofounder_val = "Dra. Jalpa Dabhi";
+translations.es.select_default = "Seleccionar categoría";
+translations.es.form_phone_error = "Por favor, incluya '+' y su código de país (ej. +91 98799 15124).";
 
 translations.de.tab_agriculture = "Agrarprodukte";
 translations.de.tab_handicraft = "Kunsthandwerk";
@@ -1258,6 +1278,10 @@ translations.de.tab_construction = "Baumaschinen";
 
 translations.de.info_contact_title = "Gründer";
 translations.de.info_contact_val = "Piyush Dabhi";
+translations.de.info_cofounder_title = "Mitgründer";
+translations.de.info_cofounder_val = "Dr. Jalpa Dabhi";
+translations.de.select_default = "Kategorie auswählen";
+translations.de.form_phone_error = "Bitte geben Sie '+' und Ihre Landesvorwahl an (z. B. +91 98799 15124).";
 
 translations.pt.tab_agriculture = "Produtos Agrícolas";
 translations.pt.tab_handicraft = "Artesanato";
@@ -1266,6 +1290,10 @@ translations.pt.tab_construction = "Máquinas de Construção";
 
 translations.pt.info_contact_title = "Fundador";
 translations.pt.info_contact_val = "Piyush Dabhi";
+translations.pt.info_cofounder_title = "Co-fundador";
+translations.pt.info_cofounder_val = "Dra. Jalpa Dabhi";
+translations.pt.select_default = "Selecionar categoria";
+translations.pt.form_phone_error = "Por favor, inclua '+' e o código do seu país (ex: +91 98799 15124).";
 
 translations.zh.tab_agriculture = "农业产品";
 translations.zh.tab_handicraft = "手工艺品";
@@ -1274,6 +1302,10 @@ translations.zh.tab_construction = "工程机械";
 
 translations.zh.info_contact_title = "创始人";
 translations.zh.info_contact_val = "Piyush Dabhi";
+translations.zh.info_cofounder_title = "联合创始人";
+translations.zh.info_cofounder_val = "Dr. Jalpa Dabhi";
+translations.zh.select_default = "选择类别";
+translations.zh.form_phone_error = "请包含 '+' 和您的国家代码（例如：+91 98799 15124）。";
 
 // ── PRODUCTS DATA ──
 const productsData = [
@@ -2241,24 +2273,41 @@ function initInquiryForm() {
     const name = document.getElementById("formName").value.trim();
     const email = document.getElementById("formEmail").value.trim();
     const phone = document.getElementById("formPhone").value.trim();
+    const category = document.getElementById("formProduct").value;
     const message = document.getElementById("formMessage").value.trim();
 
-    if (!name || !email || !phone || !message) {
+    if (!name || !email || !phone || !category || !message) {
       status.className = "form-status error";
       status.textContent = translations[currentLang].form_error;
       return;
     }
 
+    // Validate phone number starts with '+'
+    if (!phone.startsWith("+")) {
+      status.className = "form-status error";
+      status.textContent = translations[currentLang].form_phone_error || "Please include '+' and your country code (e.g. +91 98799 15124).";
+      return;
+    }
+
     // Log values & mock success
-    console.log("Inquiry Submitted:", { name, email, phone, category: document.getElementById("formProduct").value, message });
+    console.log("Inquiry Submitted:", { name, email, phone, category, message });
 
     status.className = "form-status success";
     status.textContent = translations[currentLang].form_success;
+    
+    // Reset form
     form.reset();
+    
+    // Reset select to index 0 (Select Category)
+    const selectEl = document.getElementById("formProduct");
+    if (selectEl) {
+      selectEl.selectedIndex = 0;
+    }
 
     setTimeout(() => {
       status.textContent = "";
-    }, 6000);
+      status.className = "form-status";
+    }, 8000);
   });
 }
 
