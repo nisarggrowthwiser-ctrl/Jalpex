@@ -1521,7 +1521,7 @@ section {
 /* ── PRODUCTS SHOWCASE CAROUSEL ── */
 .products-showcase {
   background: var(--cream);
-  padding: 0 0 80px 0;
+  padding: 0 0 30px 0;
   position: relative;
 }
 
@@ -1861,7 +1861,7 @@ section {
 /* ── WHY CHOOSE US ── */
 .why-choose-us {
   background: var(--cream);
-  padding: 60px 0 50px;
+  padding: 20px 0 50px;
   position: relative;
   display: block;
 }
@@ -1964,49 +1964,66 @@ section {
 }
 
 .wcu-card {
-  background: rgba(255, 255, 255, 0.72);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: #FCFAF6;
+  border-radius: 24px;
+  border: 1px solid rgba(194, 150, 82, 0.25);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   position: relative;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 36px 28px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  align-items: center !important;
-  text-align: center !important;
+  align-items: stretch !important;
+  text-align: left !important;
 }
 
 .wcu-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 20px 40px rgba(120, 85, 30, 0.18),
-    0 0 25px rgba(201, 146, 46, 0.15);
-  border-color: rgba(201, 146, 46, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(194, 150, 82, 0.12);
+  border-color: rgba(194, 150, 82, 0.5);
+}
+
+.wcu-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
 }
 
 .wcu-icon-box {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 16px;
-  background: rgba(194, 150, 82, 0.08);
-  /* soft gold bg */
-  border: 1px solid rgba(194, 150, 82, 0.16);
-  margin-bottom: 28px;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  background: #F4EFE6 !important;
+  border: 1px solid rgba(194, 150, 82, 0.15) !important;
+  margin: 0 !important;
   padding: 0 !important;
+  flex-shrink: 0 !important;
   transition: var(--transition);
 }
 
 .wcu-card:hover .wcu-icon-box {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-  transform: scale(1.05);
+  background: var(--accent-gold) !important;
+  border-color: var(--accent-gold) !important;
+  transform: scale(1.04);
+}
+
+.wcu-card-arrow {
+  font-size: 18px;
+  color: rgba(194, 150, 82, 0.6);
+  transition: var(--transition);
+  font-weight: 300;
+  margin-left: auto;
+}
+
+.wcu-card:hover .wcu-card-arrow {
+  color: var(--accent-orange);
+  transform: translate(2px, -2px);
 }
 
 .icon-draw {
@@ -2028,12 +2045,12 @@ section {
 .icon-draw line,
 .icon-draw rect,
 .icon-draw circle {
-  stroke: var(--accent-gold) !important;
+  stroke: #123524 !important; /* Green stroke to match theme */
   stroke-width: 1.8;
   stroke-dasharray: none !important;
   stroke-dashoffset: 0 !important;
   filter: none !important;
-  transition: stroke 0.3s ease !important;
+  transition: var(--transition) !important;
 }
 
 .wcu-card:hover .icon-draw path,
@@ -2046,22 +2063,27 @@ section {
 }
 
 .wcu-card-body {
-  padding: 0;
+  display: contents; /* layout structured directly */
 }
 
 .wcu-card-title {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 12px;
+  font-family: var(--font-body);
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #123524 !important; /* Deep forest green */
+  margin: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: left !important;
 }
 
 .wcu-card-desc {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-mid);
-  font-weight: 300;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #5A554C !important;
+  margin: 0 !important;
+  text-align: left !important;
+  font-weight: 400 !important;
 }
 
 
@@ -4034,14 +4056,15 @@ footer .logo-link:hover .logo-img {
 }
 
 .featured-article {
-  background: #FFFFFF;
-  border-radius: var(--radius-lg);
+  background: #FCFAF6;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(194, 150, 82, 0.25);
   margin-bottom: 55px;
   display: flex;
   flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .featured-article.no-image {
@@ -4160,20 +4183,21 @@ footer .logo-link:hover .logo-img {
 }
 
 .blog-card {
-  background: #FFFFFF;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  background: #FCFAF6;
+  border-radius: 24px;
+  border: 1px solid rgba(194, 150, 82, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .blog-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 15px 30px rgba(194, 150, 82, 0.12);
+  border-color: rgba(194, 150, 82, 0.5);
 }
 
 .blog-card-img {

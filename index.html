@@ -64,7 +64,7 @@
 
       <ul class="nav-links">
         <li><a href="#home" class="active" data-trans="nav_home">Home</a></li>
-        <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+        <li><a href="#products" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
         <li><a href="#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -116,7 +116,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#home" data-trans="nav_home">Home</a></li>
-      <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+      <li><a href="#products" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
       <li><a href="#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -424,69 +424,65 @@
       <div class="wcu-cards-grid" style="margin-top: 20px;">
         <!-- Card 1: Quality Assurance -->
         <div class="wcu-card service-card" data-reveal data-delay="100">
-          <div class="wcu-icon-box" style="display: flex !important; align-items: center !important; justify-content: center !important; width: 56px !important; height: 56px !important; margin: 0 auto 28px !important; padding: 0 !important; position: relative !important;">
-            <svg class="icon-draw" style="position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: 24px !important; height: 24px !important; display: block !important; margin: 0 !important; padding: 0 !important; flex-shrink: 0 !important;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <polyline points="9 11 11 13 15 9"></polyline>
-            </svg>
-          </div>
-          <div class="wcu-card-body">
+          <div class="wcu-card-header">
+            <div class="wcu-icon-box">
+              <svg class="icon-draw" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 11 11 13 15 9"></polyline>
+              </svg>
+            </div>
             <h3 class="wcu-card-title" data-trans="wcu_1_title">Quality Assurance</h3>
-            <p class="wcu-card-desc" data-trans="wcu_1_desc">Strict adherence to international food safety regulations
-              and quality testing.</p>
+            <span class="wcu-card-arrow">&nearr;</span>
           </div>
+          <p class="wcu-card-desc" data-trans="wcu_1_desc">Strict adherence to international food safety regulations and quality testing.</p>
         </div>
 
         <!-- Card 2: Premium Packaging -->
         <div class="wcu-card service-card" data-reveal data-delay="200">
-          <div class="wcu-icon-box" style="display: flex !important; align-items: center !important; justify-content: center !important; width: 56px !important; height: 56px !important; margin: 0 auto 28px !important; padding: 0 !important; position: relative !important;">
-            <svg class="icon-draw" style="position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: 24px !important; height: 24px !important; display: block !important; margin: 0 !important; padding: 0 !important; flex-shrink: 0 !important;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"></path>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
-            </svg>
-          </div>
-          <div class="wcu-card-body">
+          <div class="wcu-card-header">
+            <div class="wcu-icon-box">
+              <svg class="icon-draw" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
             <h3 class="wcu-card-title" data-trans="wcu_2_title">Premium Packaging</h3>
-            <p class="wcu-card-desc" data-trans="wcu_2_desc">Customized, moisture-resistant packaging that preserves
-              aroma, taste, and shelf life.</p>
+            <span class="wcu-card-arrow">&nearr;</span>
           </div>
+          <p class="wcu-card-desc" data-trans="wcu_2_desc">Customized, moisture-resistant packaging that preserves aroma, taste, and shelf life.</p>
         </div>
 
         <!-- Card 3: Ethical Sourcing -->
         <div class="wcu-card service-card" data-reveal data-delay="300">
-          <div class="wcu-icon-box" style="display: flex !important; align-items: center !important; justify-content: center !important; width: 56px !important; height: 56px !important; margin: 0 auto 28px !important; padding: 0 !important; position: relative !important;">
-            <svg class="icon-draw" style="position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: 24px !important; height: 24px !important; display: block !important; margin: 0 !important; padding: 0 !important; flex-shrink: 0 !important;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-            </svg>
-          </div>
-          <div class="wcu-card-body">
+          <div class="wcu-card-header">
+            <div class="wcu-icon-box">
+              <svg class="icon-draw" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
             <h3 class="wcu-card-title" data-trans="wcu_3_title">Ethical Sourcing</h3>
-            <p class="wcu-card-desc" data-trans="wcu_3_desc">Direct partnership with local farmers to ensure fair trade
-              and sustainable agriculture.</p>
+            <span class="wcu-card-arrow">&nearr;</span>
           </div>
+          <p class="wcu-card-desc" data-trans="wcu_3_desc">Direct partnership with local farmers to ensure fair trade and sustainable agriculture.</p>
         </div>
 
         <!-- Card 4: Global Logistics -->
         <div class="wcu-card service-card" data-reveal data-delay="400">
-          <div class="wcu-icon-box" style="display: flex !important; align-items: center !important; justify-content: center !important; width: 56px !important; height: 56px !important; margin: 0 auto 28px !important; padding: 0 !important; position: relative !important;">
-            <svg class="icon-draw" style="position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: 24px !important; height: 24px !important; display: block !important; margin: 0 !important; padding: 0 !important; flex-shrink: 0 !important;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13"></rect>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-              <circle cx="5.5" cy="18.5" r="2.5"></circle>
-              <circle cx="18.5" cy="18.5" r="2.5"></circle>
-            </svg>
-          </div>
-          <div class="wcu-card-body">
+          <div class="wcu-card-header">
+            <div class="wcu-icon-box">
+              <svg class="icon-draw" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
             <h3 class="wcu-card-title" data-trans="wcu_4_title">Global Logistics</h3>
-            <p class="wcu-card-desc" data-trans="wcu_4_desc">Efficient custom clearance and fast shipping networks to
-              deliver fresh batches worldwide.</p>
+            <span class="wcu-card-arrow">&nearr;</span>
           </div>
+          <p class="wcu-card-desc" data-trans="wcu_4_desc">Efficient custom clearance and fast shipping networks to deliver fresh batches worldwide.</p>
         </div>
       </div>
     </div>
