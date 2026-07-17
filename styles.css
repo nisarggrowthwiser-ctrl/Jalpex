@@ -5151,45 +5151,52 @@ footer .logo-link:hover .logo-img {
   max-width: 580px;
 }
 
-/* Animated non-blurry shimmery Tagline */
+/* Animated shimmering Tagline — visible on light hero background */
 .animated-tagline-text {
   font-family: var(--font-heading);
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  background: linear-gradient(90deg, #ffffff, #c29652, #ffffff);
-  background-size: 200% auto;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  background: linear-gradient(90deg,
+    #7a5c1e 0%,
+    #c29652 20%,
+    #f0d080 42%,
+    #e8c070 50%,
+    #f0d080 58%,
+    #c29652 80%,
+    #7a5c1e 100%);
+  background-size: 250% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shine-tagline 4s linear infinite;
+  animation: shine-tagline 3s linear infinite;
   display: inline-block;
-  font-size: 11px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0); /* forces GPU rasterization to eliminate subpixel text blurring */
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes shine-tagline {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0%   { background-position: 200% center; }
+  100% { background-position: -50% center; }
 }
 
-/* Badge — gold accent */
+/* Badge — tagline pill, visible on both light and dark backgrounds */
 .hero-dark-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(194, 150, 82, 0.12);
-  border: 1px solid rgba(194, 150, 82, 0.35);
-  color: rgba(255, 255, 255, 0.88);
-  padding: 5px 14px;
+  gap: 10px;
+  background: rgba(194, 150, 82, 0.10);
+  border: 1.5px solid rgba(194, 150, 82, 0.55);
+  color: #7a5c1e;
+  padding: 7px 18px;
   border-radius: 50px;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1px;
   width: fit-content;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 16px rgba(194, 150, 82, 0.18), inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
 .hdb-dot {
