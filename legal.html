@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#182543">
+  <title>Legal Policies & Compliance | Jalpex International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2.5">
+  <style>
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding-top: 66px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+        <li><a href="index.html#products" data-trans="nav_products">Products</a></li>
+        <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+        <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
+        <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+        <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Picker -->
+        <div class="lang-picker">
+          <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>EN</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-item active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-item" data-lang="hi">🇮🇳 हिन्दी (Hindi)</button>
+            <button class="lang-item" data-lang="ar">🇸🇦 العربية (Arabic)</button>
+            <button class="lang-item" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-item" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-item" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-item" data-lang="zh">🇨🇳 中文 (Chinese)</button>
+            <button class="lang-item" data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+
+        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Get in Touch</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
+      <li><a href="index.html#products" data-trans="nav_products">Products</a></li>
+      <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
+      <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
+      <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+      <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
+    </ul>
+    <div class="mobile-lang-section">
+      <p>Select Language</p>
+      <div class="mobile-lang-grid">
+        <button class="mob-lang-btn active" data-lang="en">EN</button>
+        <button class="mob-lang-btn" data-lang="hi">HI</button>
+        <button class="mob-lang-btn" data-lang="ar">AR</button>
+        <button class="mob-lang-btn" data-lang="fr">FR</button>
+        <button class="mob-lang-btn" data-lang="es">ES</button>
+        <button class="mob-lang-btn" data-lang="pt">PT</button>
+        <button class="mob-lang-btn" data-lang="zh">ZH</button>
+        <button class="mob-lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+    <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Get in Touch</a>
+  </div>
+
+  <!-- ── LEGAL HERO ── -->
+  <header class="legal-hero">
+    <div class="container">
+      <h1 class="catalog-title">Governance & Compliance</h1>
+      <p class="catalog-subtitle">Explore the terms, procedures, and quality principles guiding our international trade activities.</p>
+    </div>
+  </header>
+
+  <!-- ── LEGAL CONTAINER ── -->
+  <div class="legal-container container">
+    <!-- Mobile Tab Selector dropdown -->
+    <div class="legal-mobile-selector">
+      <select id="legalSelect" aria-label="Select policy page">
+        <option value="privacy">Privacy Policy</option>
+        <option value="terms">Terms & Conditions</option>
+        <option value="shipping">Shipping & Delivery Policy</option>
+        <option value="refund">Refund & Cancellation Policy</option>
+        <option value="disclaimer">Export Disclaimer</option>
+        <option value="quality">Quality Policy</option>
+      </select>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <aside class="legal-sidebar">
+      <button class="legal-tab-btn active" data-target="privacy">Privacy Policy</button>
+      <button class="legal-tab-btn" data-target="terms">Terms & Conditions</button>
+      <button class="legal-tab-btn" data-target="shipping">Shipping & Delivery</button>
+      <button class="legal-tab-btn" data-target="refund">Refund & Cancellation</button>
+      <button class="legal-tab-btn" data-target="disclaimer">Export Disclaimer</button>
+      <button class="legal-tab-btn" data-target="quality">Quality Policy</button>
+    </aside>
+
+    <!-- Content panels -->
+    <main class="legal-content">
+      
+      <!-- Privacy Policy Panel -->
+      <article class="legal-card active" id="panel-privacy">
+        <h2>Privacy Policy</h2>
+        <div class="legal-meta">Effective Date: 16/06/2026</div>
+        
+        <p>At Jalpex International, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website or contact us.</p>
+        
+        <h3>Information We Collect</h3>
+        <p>We may collect the following information:</p>
+        <ul>
+          <li>Full Name</li>
+          <li>Company Name</li>
+          <li>Email Address</li>
+          <li>Phone Number (with Country Code)</li>
+          <li>Country of Business Operations</li>
+          <li>Product Enquiries</li>
+          <li>Any information voluntarily provided through our contact forms or email</li>
+        </ul>
+
+        <h3>How We Use Your Information</h3>
+        <p>The information we collect is used to:</p>
+        <ul>
+          <li>Provide you with accurate product quotes and trade parameters.</li>
+          <li>Respond to enquiries, requests, and offer sourcing advisory services.</li>
+          <li>Improve website responsiveness, catalog display, and user interface.</li>
+          <li>Ensure compliance with international customs regulations and export trade bodies.</li>
+        </ul>
+
+        <h3>Information Sharing and Disclosure</h3>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted partners (such as logistics provider agencies, customs clearing houses, and inspection offices) who assist in executing trade contracts under strict confidentiality parameters, or when required by law.</p>
+
+        <h3>Security of Data</h3>
+        <p>We implement robust security measures to safeguard your information against unauthorized access, alterations, disclosure, or destruction. However, please be aware that no transmission of data over the internet is completely risk-free.</p>
+
+        <h3>Cookies and Browsing Experience</h3>
+        <p>Our website uses cookies to analyze traffic patterns and optimize localization parameters. You can modify your browser settings to decline cookies if you prefer.</p>
+
+        <h3>Contact Desk</h3>
+        <p>For questions or updates regarding your data, please contact our Compliance Desk at <a href="mailto:jalpexinternational@gmail.com">jalpexinternational@gmail.com</a>.</p>
+      </article>
+
+      <!-- Terms & Conditions Panel -->
+      <article class="legal-card" id="panel-terms">
+        <h2>Terms & Conditions</h2>
+        <div class="legal-meta">Effective Date: 16/06/2026</div>
+
+        <p>Welcome to the digital portal of Jalpex International. By browsing, accessing, or using this website, you agree to comply with and be bound by the following Terms & Conditions.</p>
+
+        <h3>Introduction</h3>
+        <p>The term "Jalpex International" or "us" or "we" refers to the owner of this website. The term "you" refers to the user or viewer of our website. Access is granted subject to your acceptance of these conditions.</p>
+
+        <h3>Intellectual Property Rights</h3>
+        <p>All content, designs, layout, graphics, digital assets, and trademarked materials displayed on this site are the property of Jalpex International and are protected by applicable intellectual property laws. Reproduction, redistribution, or modification of any part of this site without prior written consent is strictly prohibited.</p>
+
+        <h3>Website Usage Restrictions</h3>
+        <p>You agree to use this website only for legitimate business inquiry purposes. You are prohibited from using the site to transmit spam, inject malicious code (viruses, trojans, SQL injections), scrape data without authorization, or misrepresent your identity or company credentials in our sourcing contact portals.</p>
+
+        <h3>Disclaimer of Warranties</h3>
+        <p>The information on this website is provided "as is" for informational guidance. While we endeavor to keep specifications and market articles current, we make no warranties of any kind, express or implied, regarding the accuracy, completeness, or reliability of catalog information.</p>
+
+        <h3>Limitation of Liability</h3>
+        <p>In no event shall Jalpex International, its partners, or directors be liable for any direct, indirect, special, punitive, or consequential damages arising from the use of this portal, including but not limited to loss of business profits or data interruption.</p>
+
+        <h3>Governing Law and Jurisdiction</h3>
+        <p>Any disputes arising out of the use of this website, sourcing parameters, or digital communications shall be governed by the laws of India. All actions or proceedings shall be instituted exclusively in courts situated in Junagadh, Gujarat, India.</p>
+      </article>
+
+      <!-- Shipping & Delivery Policy Panel -->
+      <article class="legal-card" id="panel-shipping">
+        <h2>Shipping & Delivery Policy</h2>
+        
+        <p>We pride ourselves on reliable global logistics, servicing major commercial ports in over 40 countries across the Americas, Europe, Middle East, and Asia-Pacific regions.</p>
+
+        <h3>Shipping Incoterms</h3>
+        <p>Standard export orders are processed and shipped under the following internationally recognized rules:</p>
+        <ul>
+          <li><strong>FOB (Free On Board)</strong>: Sourcing, inland logistics, and port custom clearing in India handled by us. Freight risk transfers to buyer upon vessel loading.</li>
+          <li><strong>CFR (Cost and Freight)</strong>: Ocean freight booked and prepaid by us to the designated port of destination. Marine insurance is managed by the buyer.</li>
+          <li><strong>CIF (Cost, Insurance & Freight)</strong>: Ocean freight and marine transit insurance booked, paid, and managed by us to destination port.</li>
+        </ul>
+
+        <h3>Delivery Schedules & Lead Times</h3>
+        <p>Processing lead times depend on processing parameters, crop seasonality, container availability, and shipping line schedules. Standard packing and container stuffing are completed within 15–21 business days from receipt of operational payment tools (Advance Payment or Confirmed L/C).</p>
+
+        <h3>Pre-Shipment Inspections</h3>
+        <p>All agricultural consignments are inspected at dry ports (CFS) or sea terminals prior to departure. Buyers can nominate international inspection agencies like <strong>SGS</strong> or <strong>Geo-Chem</strong> to audit quality, moisture parameters, packaging integrity, and container weight parameters.</p>
+
+        <h3>Export Documentation Packages</h3>
+        <p>Each container is accompanied by a standard trade document set, including:</p>
+        <ul>
+          <li>Ocean Bill of Lading (B/L)</li>
+          <li>Commercial Invoice & Detailed Packing List</li>
+          <li>Certificate of Origin (CoO)</li>
+          <li>Phytosanitary Certificate issued by the Government of India</li>
+          <li>Fumigation & Pest Control Treatment Certificate</li>
+          <li>SGS or Geo-Chem Inspection Certificate (as requested)</li>
+        </ul>
+      </article>
+
+      <!-- Refund & Cancellation Policy Panel -->
+      <article class="legal-card" id="panel-refund">
+        <h2>Refund & Cancellation Policy</h2>
+
+        <p>As a bulk trade enterprise dealing in highly perishable and agricultural commodities, our procurement contracts are governed by standard international trade procedures.</p>
+
+        <h3>Irrevocable Order Placement</h3>
+        <p>Upon signing a proforma invoice or signing an official contract, our processing factory allocates raw stocks and initiates grading, sorting, and custom packaging. Consequently, once deposit payments are cleared or Letter of Credit is activated, orders cannot be cancelled without full forfeit of deposit or cancellation fees equivalent to processing overheads.</p>
+
+        <h3>Transit & Cargo Claims</h3>
+        <p>We guarantee that all cargo leaves Indian terminals conforming to contract specifications. If goods are damaged in transit or arrive with visual quality deviations, the buyer must:</p>
+        <ul>
+          <li>File a formal claim in writing within 14 calendar days of port discharge.</li>
+          <li>Submit photo/video logs along with an official survey report drafted by a NABL-certified independent inspection body (such as SGS).</li>
+        </ul>
+
+        <h3>Claims Resolution Mechanisms</h3>
+        <p>Valid claims verified by independent inspection reports will be resolved through:</p>
+        <ul>
+          <li>Credit notes applicable on subsequent purchasing schedules.</li>
+          <li>Negotiated price adjustments/settlements.</li>
+          <li>Replacement of affected stocks in subsequent shipping cycles.</li>
+        </ul>
+        <p>No claims will be entertained for quality deviations caused by shipping delays, vessel route alterations, or port warehousing negligence post-discharge.</p>
+      </article>
+
+      <!-- Export Disclaimer Panel -->
+      <article class="legal-card" id="panel-disclaimer">
+        <h2>Export Disclaimer</h2>
+
+        <p>The materials, specifications, and data presented on this website are for general informational guidance only. Parties engaging in commodity trade must rely on official contract parameters.</p>
+
+        <h3>Commodity Market Volatility</h3>
+        <p>Global spice, grain, and crop pricing is subject to rapid fluctuations based on crop sizes, weather events, custom duty updates, and macroeconomic trends. Digital catalog prices are indicative and do not represent binding offers until confirmed in writing via official quotes.</p>
+
+        <h3>Specification Tolerances</h3>
+        <p>All agricultural items are subject to natural variations. Specifications regarding oil contents, color hues, sizes, and natural moisture parameters are subject to tolerances typical in agricultural trades. Contractual specifications are finalized exclusively in written agreements between Jalpex International and the buyer.</p>
+
+        <h3>Trade Compliance Responsibility</h3>
+        <p>Importers are solely responsible for ensuring that imported commodities comply with the local food safety standards, customs tariffs, pesticide limits, and import permit regimes of their destination countries.</p>
+      </article>
+
+      <!-- Quality Policy Panel -->
+      <article class="legal-card" id="panel-quality">
+        <h2>Quality Policy</h2>
+
+        <p>Jalpex International is dedicated to representing the finest heritage of Indian farming by implementing strict quality control protocols across our entire processing chain.</p>
+
+        <h3>Standards and Certifications</h3>
+        <p>Our processing partners maintain advanced manufacturing facilities operating under recognized global quality frameworks:</p>
+        <ul>
+          <li><strong>FSSAI</strong>: Fully registered for domestic processing and export trade parameters.</li>
+          <li><strong>ISO 22000:2018 & HACCP</strong>: Hazard Analysis and Critical Control Point methodologies strictly integrated in sorting, storage, and packaging lines.</li>
+          <li><strong>HALAL Compliant</strong>: Standard processes designed to ensure trade capability in Middle Eastern and Southeast Asian markets.</li>
+        </ul>
+
+        <h3>Supply Chain Audits</h3>
+        <p>We source raw crops directly from farmers and verified regional agricultural cooperatives (APMC). Each collection lot is assessed for trace residues, grade uniformity, and primary quality factors prior to collection and transport.</p>
+
+        <h3>Laboratory Auditing Protocols</h3>
+        <p>Our crop lots are subjected to NABL-accredited laboratory audits to monitor:</p>
+        <ul>
+          <li>Aflatoxin limits (meeting strict EU and US standards).</li>
+          <li>Pesticide residues (ensuring compliance with import limits).</li>
+          <li>Microbiological criteria (E. Coli, Salmonella, and mold levels).</li>
+          <li>Volatile oil percentages in spices (to maintain fragrance and shelf-life).</li>
+        </ul>
+
+        <h3>Continuous Improvement</h3>
+        <p>We continuously upgrade our warehousing systems, packaging barriers (vacuum packing, moisture-proof food grade bags), and processing methods to prevent cross-contamination and guarantee fresh deliveries globally.</p>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
+            <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
+          </a>
+          <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We
+            represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="catalog.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-trans="footer_products">Our Offerings</h4>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=dehydrated">Dehydrated Vegetables & Fruits</a></li>
+            <li><a href="catalog.html?cat=agriculture">Agriculture Products</a></li>
+            <li><a href="catalog.html?cat=spices">Spices</a></li>
+            <li><a href="catalog.html?cat=natures_finest">Nature's Finest</a></li>
+            <li><a href="catalog.html?cat=dried_fruits">Dried Fruits</a></li>
+            <li><a href="catalog.html?cat=fresh_produce">Fruits & Vegetables</a></li>
+            <li><a href="catalog.html?cat=handicraft">Handicrafts</a></li>
+            <li><a href="catalog.html?cat=textile">Textile & Apparel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-trans="footer_contact">Contact Sourcing Desk</h4>
+          <div class="footer-contact-info">
+            <span style="display: flex; gap: 8px;">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="margin-top: 3px;">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Junagadh, Gujarat, India</span>
+            </span>
+            <span style="display: flex; gap: 8px;">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="margin-top: 3px;">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <a href="tel:+919879915124" style="color: inherit; text-decoration: none;">+91-9879915124</a>
+            </span>
+            <span style="display: flex; gap: 8px;">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="margin-top: 3px;">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:jalpexinternational@gmail.com"
+                style="color: inherit; text-decoration: none;">jalpexinternational@gmail.com</a>
+            </span>
+            <span style="display: flex; gap: 8px;">
+              <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="margin-top: 3px;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+              <a href="https://www.jalpexinternational.com" target="_blank" rel="noopener noreferrer"
+                style="color: inherit; text-decoration: none;">www.jalpexinternational.com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Jalpex International. <span data-trans="footer_rights">All Rights Reserved.</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/profile.php?id=61590893169910" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/jalpexinternational/" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+          <a href="https://x.com/jalpexint" target="_blank" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/134613933/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCaoEEUkIxfwd2BYJ2rx7ryg" target="_blank" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.104 2.481l-.008.104-.022.26-.01.104c-.047.519-.119 1.023-.22 1.402a2.008 2.008 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.104-2.126l.008-.104.022-.26.01-.104c.047-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A30 30 0 0 1 8.05 2zM6.5 4.7v5.6l4.7-2.8z" />
+            </svg>
+          </a>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="legal.html?tab=terms" data-trans="footer_terms">Terms & Conditions</a>
+          <a href="legal.html?tab=privacy" data-trans="footer_privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabButtons = document.querySelectorAll(".legal-tab-btn");
+      const cards = document.querySelectorAll(".legal-card");
+      const mobileSelect = document.getElementById("legalSelect");
+
+      function switchTab(tabId) {
+        if (!tabId) return;
+        
+        // Remove active class from all buttons and panels
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        cards.forEach(card => card.classList.remove("active"));
+
+        // Add active to matching button
+        const targetBtn = document.querySelector(`.legal-tab-btn[data-target="${tabId}"]`);
+        if (targetBtn) {
+          targetBtn.classList.add("active");
+        }
+
+        // Add active to matching card
+        const targetPanel = document.getElementById(`panel-${tabId}`);
+        if (targetPanel) {
+          targetPanel.classList.add("active");
+          // Smooth scroll to top of content on mobile
+          if (window.innerWidth <= 768) {
+            targetPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+
+        // Keep dropdown select synchronized
+        if (mobileSelect) {
+          mobileSelect.value = tabId;
+        }
+
+        // Update URL parameter without reload
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + `?tab=${tabId}`;
+        window.history.pushState({ path: newUrl }, "", newUrl);
+      }
+
+      // Sidebar Tab Clicks
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", function() {
+          const target = this.getAttribute("data-target");
+          switchTab(target);
+        });
+      });
+
+      // Mobile Select dropdown change
+      if (mobileSelect) {
+        mobileSelect.addEventListener("change", function() {
+          switchTab(this.value);
+        });
+      }
+
+      // Initial tab parser from URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialTab = urlParams.get("tab");
+      const validTabs = ["privacy", "terms", "shipping", "refund", "disclaimer", "quality"];
+      
+      if (initialTab && validTabs.includes(initialTab)) {
+        switchTab(initialTab);
+      } else {
+        switchTab("privacy"); // default fallback
+      }
+
+      // Support browser back/forward buttons
+      window.addEventListener("popstate", function() {
+        const popParams = new URLSearchParams(window.location.search);
+        const popTab = popParams.get("tab");
+        if (popTab && validTabs.includes(popTab)) {
+          switchTab(popTab);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
