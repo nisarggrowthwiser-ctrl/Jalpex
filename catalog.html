@@ -1306,7 +1306,7 @@
     (function() {
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get("cat");
-      const validCategories = ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "fresh_produce", "handicraft", "textile"];
+      const validCategories = ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "fresh_produce", "handicraft", "textile", "superfoods"];
       if (!catParam || !validCategories.includes(catParam)) {
         window.location.replace("index.html#products");
       }
@@ -1317,8 +1317,9 @@
       {
         id: "dehydrated_onion",
         category: "dehydrated",
-        name: "Dehydrated Onion Products",
-        desc: "Available in 2 types — Dehydrated Red Onion Flakes/Chopped/Minced/Granules/Powder & Dehydrated White Onion Flakes/Chopped/Minced/Granules/Powder. Our premium onions retain their natural flavor, aroma, color, and nutritional value. Ideal for food processing, seasoning blends, soups, sauces, snacks, and frozen foods.",
+        name: "Dehydrated Onion",
+        desc: "Our premium Dehydrated Red and White Onion is produced from carefully selected farm-fresh onions sourced from India's leading agricultural regions. Processed in state-of-the-art facilities using advanced dehydration technology, our onions retain their natural flavor, aroma, color, and nutritional value while offering an extended shelf life. Available in flakes, minced, chopped, granules, powder, and kibbled forms, widely used in food processing, seasoning blends, ready-to-eat meals, soups, sauces, snacks, frozen foods, and spice manufacturing.",
+        highlights: ["Premium quality Red & White Dehydrated Onion","Naturally rich flavor, aroma, and color","Long shelf life with low moisture content","Available in flakes, minced, chopped, granules & powder","Hygienically processed under strict quality control","Export-grade packaging with private labeling options","Ideal for food processing, HoReCa, and retail markets","Reliable global supply with competitive wholesale pricing"],
         tags: ["onion", "flakes", "minced", "chopped", "granules", "powder"],
         image: "products/onion-powder.png",
         specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural Red & White", "Origin": "India" }
@@ -1326,81 +1327,50 @@
       {
         id: "dehydrated_garlic",
         category: "dehydrated",
-        name: "Dehydrated Garlic Flakes/Chopped/Minced/Granules/Powder",
-        desc: "Dehydrated Garlic Flakes (5-15mm), Chopped (3-5mm), Minced (1-3mm), Granules (0.4-1mm), Powder (80-120)Mesh are made by finely chopping/grinding fresh garlic. Export quality with natural pungent flavor and rich aroma, widely used by food manufacturers, spice producers, and restaurants worldwide.",
+        name: "Dehydrated Garlic",
+        desc: "Our Export Quality Dehydrated Garlic is manufactured from freshly harvested, premium-grade garlic sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, our garlic retains its natural pungent flavor, rich aroma, and nutritional value while ensuring an extended shelf life. Available in flakes, minced, chopped, granules, and powder, widely used by food manufacturers, seasoning producers, snack companies, restaurants, and spice processors worldwide.",
+        highlights: ["Premium-grade dehydrated garlic with superior flavor and aroma","Available in flakes, minced, chopped, granules & powder","Low moisture content for extended shelf life","Hygienically processed under strict quality standards","Free from artificial colors and preservatives","Export-quality packaging with private labeling options","Ideal for food processing, seasoning blends, HoReCa & retail","Competitive wholesale pricing with reliable global supply"],
         tags: ["garlic", "flakes", "minced", "chopped", "granules", "powder"],
         image: "products/garlic-powder.png",
         specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder", "Moisture": "<6%", "Purity": "100% Pure & Natural", "Origin": "India" }
       },
       {
-        id: "moringa_powder",
-        category: "dehydrated",
-        name: "Moringa Powder",
-        desc: "Moringa Leaves are the edible, nutrient-rich leaves of the Moringa Oleifera tree, also known as the Drumstick Tree, Miracle Tree, or Tree of Life. Our moringa powder preserves the natural green color, rich nutritional profile, and bioactive compounds. Used in health supplements, functional foods, smoothies, and wellness formulations.",
-        tags: ["moringa", "leaves", "powder", "organic", "superfood"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Form": "Fine Powder (80-100 mesh)", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
-      },
-      {
         id: "dehydrated_ginger",
         category: "dehydrated",
-        name: "Dehydrated Ginger Whole / Flakes / Powder",
-        desc: "Deliver pure, concentrated warmth and robust flavor with our premium dehydrated ginger. Carefully sourced and gently dried to lock in its natural essential oils. Available in whole, slices, flakes, and powder forms, used in food, beverage, pharmaceutical, and nutraceutical industries.",
-        tags: ["ginger", "slices", "flakes", "whole", "powder"],
+        name: "Dehydrated Ginger",
+        desc: "Our Export Quality Dehydrated Ginger is produced from carefully selected fresh ginger sourced from premium farms across India. Processed using advanced dehydration techniques, it preserves its natural pungency, distinctive aroma, authentic flavor, and essential nutrients while offering an extended shelf life for global distribution. Available in slices, flakes, granules, and powder, widely used in the food, beverage, spice, pharmaceutical, and nutraceutical industries.",
+        highlights: ["Premium-grade dehydrated ginger with rich aroma and natural flavor","Available in slices, flakes, granules & powder","Low moisture content for extended shelf life","Hygienically processed under strict quality control","Free from artificial colors and preservatives","Export-grade packaging with private labeling options","Ideal for food processing, beverages, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
+        tags: ["ginger", "slices", "flakes", "granules", "powder"],
         image: "products/ginger-powder.png",
-        specs: { "Forms": "Whole, Slices, Flakes, Powder", "Moisture": "Low moisture", "Purity": "Authentic, pungent flavor", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_potato",
-        category: "dehydrated",
-        name: "Dehydrated Potato Chips / Flakes / Granules / Powder",
-        desc: "Deliver authentic flavor and unmatched convenience with our versatile range of dehydrated potatoes. Sourced from high-quality potatoes and carefully processed to retain their natural starch content, taste, and texture.",
-        tags: ["potato", "chips", "flakes", "granules", "powder"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Forms": "Chips, Flakes, Granules, Powder", "Moisture": "<8%", "Color": "Cream white", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_mango",
-        category: "dehydrated",
-        name: "Dehydrated Mango Flakes / Powder",
-        desc: "Bring the vibrant, tropical taste of mangoes to your product line all year round. Carefully sourced and gently dehydrated to preserve their natural aroma, color, and nutritional value. Ideal for beverages, ice cream, bakery, confectionery, and snack applications.",
-        tags: ["mango", "flakes", "powder", "tropical", "fruit"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Forms": "Flakes, Powder", "Moisture": "<5%", "Color": "Golden yellow", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_spinach",
-        category: "dehydrated",
-        name: "Spinach Powder",
-        desc: "Add rich, earthy green colour and a clean nutritional boost to your formulations with our dehydrated spinach powder. We source fresh, vibrant spinach leaves and gently mill them to preserve their natural colour and nutritional profile.",
-        tags: ["spinach", "powder", "green", "vegetable"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Form": "Fine Powder", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_tomato",
-        category: "dehydrated",
-        name: "Tomato Powder",
-        desc: "Get the rich, tangy flavor and deep red color of vine-ripened tomatoes in a highly stable, easy-to-use format. Our tomato powder is milled from carefully selected, fully ripe tomatoes to deliver consistent color, flavor, and acidity.",
-        tags: ["tomato", "powder", "red", "vegetable"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Form": "Fine Powder", "Moisture": "<5%", "Color": "Deep Red", "Origin": "India" }
+        specs: { "Forms": "Slices, Flakes, Granules, Powder", "Moisture": "Low moisture", "Purity": "Authentic, pungent flavor", "Origin": "India" }
       },
       {
         id: "dehydrated_beetroot",
         category: "dehydrated",
-        name: "Papaya Powder",
-        desc: "Carefully dehydrated and milled to preserve its active nutritional profile, this free-flowing powder is built for seamless manufacturing. Ideal for health supplements, nutraceuticals, beverages, and functional food applications.",
-        tags: ["papaya", "powder", "tropical", "fruit"],
+        name: "Dehydrated Beetroot",
+        desc: "Our Premium Export Quality Dehydrated Beetroot is produced from carefully selected fresh beetroots sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, it retains its natural vibrant red color, earthy flavor, and valuable nutrients while offering an extended shelf life. Available in flakes, slices, granules, and powder, widely used in food processing, health supplements, natural food coloring, beverages, soups, sauces, bakery products, and nutraceutical applications.",
+        highlights: ["Premium-grade Dehydrated Beetroot","Available in flakes, slices, granules & powder","Naturally rich in antioxidants, fiber & essential nutrients","Vibrant natural color with authentic flavor","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+        tags: ["beetroot", "flakes", "slices", "granules", "powder"],
         image: "products/dehydrated-veg.png",
-        specs: { "Form": "Fine Powder", "Moisture": "<6%", "Color": "Golden orange", "Origin": "India" }
+        specs: { "Forms": "Flakes, Slices, Granules, Powder", "Moisture": "Low moisture", "Color": "Vibrant natural red", "Origin": "India" }
+      },
+      {
+        id: "moringa_powder",
+        category: "dehydrated",
+        name: "Moringa Powder",
+        desc: "Our Premium Export Quality Moringa Powder is produced from carefully selected fresh Moringa (Drumstick) leaves sourced from trusted farms in India. The leaves are hygienically washed, shade-dried, and finely processed using advanced techniques to preserve their natural green color, rich nutritional profile, and bioactive compounds. Naturally rich in plant-based protein, dietary fiber, antioxidants, vitamins A, C & E, calcium, iron, potassium, and essential amino acids, widely used in health supplements, functional foods, herbal products, smoothies, teas, and nutraceuticals.",
+        highlights: ["Premium-grade Moringa Leaf Powder","Rich in protein, antioxidants, vitamins & essential minerals","Naturally vibrant green color with high nutritional value","Hygienically processed and export-quality tested","Free from artificial colors, additives & preservatives","Customized packaging & private labeling available","Ideal for nutraceuticals, health foods, beverages & cosmetics","Reliable global supply with competitive wholesale pricing"],
+        tags: ["moringa", "leaves", "powder", "organic", "superfood"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Fine Powder (80-100 mesh)", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
       },
       // AGRICULTURE PRODUCTS
       {
         id: "rice",
         category: "agriculture",
         name: "Premium Basmati Rice",
-        desc: "Our Premium Export Quality Basmati Rice is sourced from the finest rice-growing regions of India, renowned for producing authentic long-grain basmati with exceptional aroma, delicate texture, and superior taste. Carefully processed and hygienically packed.",
+        desc: "Our Premium Export Quality Basmati Rice is sourced from the finest rice-growing regions of India, renowned for producing authentic long-grain basmati with exceptional aroma, delicate texture, and superior taste. Known for its extra-long grains, rich fragrance, and excellent cooking performance, our Basmati Rice cooks to a light, fluffy texture with distinct, non-sticky grains, making it ideal for biryanis, pilafs, gourmet cuisine, restaurants, hotels, and retail markets.",
+        highlights: ["Premium long-grain Indian Basmati Rice","Naturally aromatic with superior taste and texture","Excellent grain elongation after cooking","Carefully processed and hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, HoReCa & food service","Reliable global supply with competitive wholesale pricing"],
         tags: ["basmati", "rice", "grain", "aromatic"],
         image: "products/rice.png",
         specs: { "Grain": "Extra-long grain", "Texture": "Fluffy, non-sticky", "Quality": "Export-grade tested", "Origin": "India" }
@@ -1409,7 +1379,8 @@
         id: "wheat",
         category: "agriculture",
         name: "Premium Wheat",
-        desc: "Our Premium Export Quality Wheat is sourced from India's finest agricultural regions, ensuring superior grain quality, high nutritional value, and consistent performance. Carefully cleaned, graded, and processed under strict quality control.",
+        desc: "Our Premium Export Quality Wheat is sourced from India's finest agricultural regions, ensuring superior grain quality, high nutritional value, and consistent performance. Known for its uniform grain size, excellent milling characteristics, and rich nutritional profile, our premium wheat is widely used for producing flour, bread, pasta, biscuits, bakery products, and various food applications.",
+        highlights: ["Premium-quality Indian wheat with high purity","Uniform grain size and excellent milling performance","Rich in natural nutrients and high-quality protein","Carefully cleaned, graded, and hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for flour mills, food processing, wholesale & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["wheat", "milling", "flour"],
         image: "products/wheat.png",
         specs: { "Grain Size": "Uniform", "Milling Performance": "Excellent", "Quality": "High purity & freshness", "Origin": "India" }
@@ -1418,26 +1389,29 @@
         id: "peanuts",
         category: "agriculture",
         name: "Groundnuts (Peanuts)",
-        desc: "Our Premium Export Quality Groundnuts are sourced from India's leading agricultural regions. Available in Raw, Bold, Java, Blanched, Shelled, and In-Shell varieties, widely used in snack manufacturing, confectionery, peanut butter production, and edible oil extraction.",
+        desc: "Our Premium Export Quality Groundnuts (Peanuts) are sourced from India's leading agricultural regions, known for producing high-quality peanuts with excellent taste, high oil content, and superior nutritional value. Available in Raw, Bold, Java, Blanched, Shelled, and In-Shell varieties, widely used in snack manufacturing, confectionery, peanut butter production, edible oil extraction, and food processing.",
+        highlights: ["Premium-grade Indian Groundnuts (Peanuts)","Available in Bold, Java, Blanched, Shelled & In-Shell varieties","High oil content with rich flavor and natural crunch","Rich in protein, healthy fats & essential nutrients","Hygienically processed and export-quality tested","Customized packaging & private labeling available","Ideal for snacks, food processing, edible oil & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["groundnuts", "peanuts", "kernels", "bold", "java"],
         image: "products/peanuts.png",
         specs: { "Varieties": "Raw, Bold, Java, Blanched, Shelled, In-Shell", "Aflatoxin Level": "Within export limits", "Purity": "Cleaned & graded", "Origin": "India" }
       },
       {
-        id: "sesame_seeds",
+        id: "pulses",
         category: "agriculture",
-        name: "Sesame Seeds",
-        desc: "Premium sesame seeds sourced from carefully selected farms across India, offering natural golden, black, and mechanically hulled white sesame seeds rich in healthy oils, dietary fiber, and plant-based protein. Thoroughly cleaned, color-sorted, and processed.",
-        tags: ["natural", "hulled", "oil-seeds", "white", "black"],
-        image: "products/sesame-seeds.png",
-        specs: { "Purity": "99.95% min", "Moisture": "<4.5%", "Oil Content": "50% min", "Origin": "India" }
+        name: "Pulses & Lentils",
+        desc: "Our Premium Export Quality Pulses & Lentils are sourced from India's most fertile agricultural regions, ensuring superior quality, exceptional purity, and consistent nutritional value. We offer a comprehensive range including Chickpeas (Kabuli & Desi), Toor Dal, Moong Dal, Urad Dal, Masoor Dal, Chana Dal, Green Peas, Kidney Beans, Black-Eyed Beans, and other premium pulses. Rich in plant-based protein, dietary fiber, essential vitamins, and minerals.",
+        highlights: ["Premium-quality Indian Pulses & Lentils","Wide range of lentils, beans, chickpeas & peas","Rich in protein, fiber, vitamins & essential minerals","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Long shelf life with controlled moisture content","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+        tags: ["pulses", "lentils", "chickpeas", "toor dal", "moong"],
+        image: "products/peanuts.png",
+        specs: { "Varieties": "Chickpeas, Toor Dal, Moong, Urad, Masoor, Chana, Kidney Beans", "Quality": "Cleaned & graded", "Moisture": "Controlled", "Origin": "India" }
       },
       // SPICES
       {
         id: "turmeric",
         category: "spices",
         name: "Premium Turmeric",
-        desc: "Our Premium Export Quality Turmeric is sourced from carefully selected farms across India, renowned for vibrant golden color, rich aroma, and high curcumin content. Expertly cleaned and processed. Available in whole fingers, bulbs, and powder.",
+        desc: "Our Premium Export Quality Turmeric is sourced from carefully selected farms across India, renowned for vibrant golden color, rich aroma, and high curcumin content. Available in whole fingers, bulbs, and powder, widely used in the food, spice, pharmaceutical, nutraceutical, cosmetic, and wellness industries.",
+        highlights: ["Premium-grade Indian turmeric with high curcumin content","Available in whole fingers, bulbs & powder","Rich natural color, aroma & authentic flavor","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food, pharmaceuticals, cosmetics & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["turmeric", "finger", "bulbs", "powder", "curcumin"],
         image: "products/turmeric.png",
         specs: { "Form": "Whole fingers, Bulbs, Powder", "Curcumin Content": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -1446,7 +1420,8 @@
         id: "red_chilli",
         category: "spices",
         name: "Premium Red Chilli",
-        desc: "Our Premium Export Quality Red Chilli is sourced from India's renowned chilli-growing regions, known for vibrant natural color, rich aroma, exceptional pungency, and superior flavor. Available in whole, stemless, crushed, flakes, and powder.",
+        desc: "Our Premium Export Quality Red Chilli is sourced from India's renowned chilli-growing regions, known for vibrant natural color, rich aroma, exceptional pungency, and superior flavor. Available in whole, stemless, crushed, flakes, and powder, with customizable heat levels (SHU) and color values (ASTA).",
+        highlights: ["Premium-grade Indian Red Chilli with vibrant natural color","Available in whole, stemless, crushed, flakes & powder","Rich flavor, aroma & customizable heat levels","Hygienically processed under strict quality control","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for food processing, spice manufacturing, HoReCa & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["chilli", "red-chilli", "powder", "stemless", "whole", "flakes"],
         image: "products/red-chilli.png",
         specs: { "Form": "Whole, Stemless, Crushed, Flakes, Powder", "Pungency": "Customizable SHU levels", "Color": "Vibrant ASTA values", "Origin": "India" }
@@ -1455,7 +1430,8 @@
         id: "black_pepper",
         category: "spices",
         name: "Premium Black Pepper",
-        desc: "Our Premium Export Quality Black Pepper is sourced from the finest pepper-growing regions of India, with exceptional aroma, bold flavor, and high piperine content. Available in whole peppercorns, crushed, and powder.",
+        desc: "Our Premium Export Quality Black Pepper is sourced from the finest pepper-growing regions of India, renowned for producing pepper with exceptional aroma, bold flavor, and high piperine content. Available in whole peppercorns, crushed, and powder.",
+        highlights: ["Premium-grade Indian Black Pepper with high piperine content","Available in whole peppercorns, crushed & powder","Rich aroma, bold flavor & superior quality","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food processing, seasoning, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["black-pepper", "peppercorns", "crushed", "powder", "piperine"],
         image: "products/black-pepper.png",
         specs: { "Form": "Whole peppercorns, Crushed, Powder", "Piperine": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -1464,7 +1440,8 @@
         id: "cumin",
         category: "spices",
         name: "Premium Cumin Seeds",
-        desc: "Our Premium Export Quality Cumin Seeds are sourced from the finest cumin-growing regions of India, celebrated for their rich aroma, distinctive earthy flavor, and high essential oil content. Available in whole seeds and powder.",
+        desc: "Our Premium Export Quality Cumin Seeds are sourced from the finest cumin-growing regions of India, celebrated for their rich aroma, distinctive earthy flavor, and high essential oil content. Widely used in spice blends, food processing, seasonings, and pharmaceuticals.",
+        highlights: ["Premium-grade Indian Cumin Seeds with rich natural aroma","High essential oil content and authentic flavor","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food processing, spice blends, HoReCa & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["cumin", "seeds", "powder", "aromatic", "earthy"],
         image: "products/cumin.png",
         specs: { "Form": "Whole Seeds, Powder", "Aroma": "Rich natural aroma", "Essential Oil": "High content", "Origin": "India" }
@@ -1473,7 +1450,8 @@
         id: "coriander",
         category: "spices",
         name: "Premium Coriander Seeds",
-        desc: "Our Premium Export Quality Coriander Seeds are sourced from India's leading coriander-growing regions, known for a distinctive citrusy aroma and mild earthy flavor. Available in whole and powder forms.",
+        desc: "Our Premium Export Quality Coriander Seeds are sourced from India's leading coriander-growing regions, known for a distinctive citrusy aroma, mild earthy flavor, and high essential oil content. Available in whole and powder forms.",
+        highlights: ["Premium-grade Indian Coriander Seeds with rich natural aroma","Available in whole seeds & powder","High essential oil content and authentic flavor","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for spice blends, food processing, HoReCa & retail"],
         tags: ["coriander", "seeds", "powder", "citrusy", "earthy"],
         image: "products/coriander.png",
         specs: { "Form": "Whole Seeds, Powder", "Aroma": "Citrusy, mild earthy", "Essential Oil": "High content", "Origin": "India" }
@@ -1482,7 +1460,8 @@
         id: "cinnamon",
         category: "spices",
         name: "Premium Cinnamon",
-        desc: "Our Premium Export Quality Cinnamon is sourced from carefully selected plantations with a naturally sweet aroma and warm flavor. Available in whole quills, sticks, chips, cut pieces, and powder.",
+        desc: "Our Premium Export Quality Cinnamon is sourced from carefully selected plantations, processed under strict quality standards to preserve its naturally sweet aroma, warm flavor, and high essential oil content. Available in whole quills, sticks, chips, cut pieces, and powder.",
+        highlights: ["Premium-grade Cinnamon with rich aroma and natural flavor","Available in whole quills, sticks, chips & powder","High essential oil content and superior quality","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food, beverages, bakery, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["cinnamon", "quills", "sticks", "chips", "powder"],
         image: "products/cinnamon.png",
         specs: { "Form": "Whole quills, Sticks, Chips, Powder", "Aroma": "Naturally sweet, warm flavor", "Moisture": "Low moisture", "Origin": "India" }
@@ -1493,6 +1472,7 @@
         category: "natures_finest",
         name: "Pure Natural Honey",
         desc: "We supply premium, sustainably harvested natural honey sourced directly from pristine apiaries across India. Rich in natural enzymes with a robust, floral flavor profile. Completely free from added sugars, artificial syrups, and antibiotic residues.",
+        highlights: ["100% Pure natural honey, zero adulteration","Sustainably harvested from pristine Indian apiaries","Rich in natural enzymes with robust floral flavor","Free from added sugars, syrups & antibiotic residues","Optimal moisture control for transit stability","Customized packaging & private labeling available","Ideal for beverages, bakery, Ayurvedic & pharmaceutical use","Reliable global supply with competitive wholesale pricing"],
         tags: ["honey", "natural", "pure", "apiaries"],
         image: "products/natures-finest-composite.png",
         specs: { "Purity": "100% Pure (No added sugar)", "Moisture Control": "Optimal for transit stability", "Residues": "Free from antibiotics", "Origin": "India" }
@@ -1501,7 +1481,8 @@
         id: "jaggery",
         category: "natures_finest",
         name: "Chemical-Free Jaggery",
-        desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness. Completely free from chemical bleaching agents and harmful preservatives.",
+        desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane, processed using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness. Free from chemical bleaching agents, added sugar, and harmful preservatives.",
+        highlights: ["Traditional chemical-free jaggery","Made from freshly harvested sugarcane","Natural molasses content, rich color & earthy sweetness","Free from chemical bleaching agents & preservatives","Controlled moisture prevents hardening during export","Customized packaging & private labeling available","Ideal for bakery, sweets, Ayurvedic & food processing","Reliable global supply with competitive wholesale pricing"],
         tags: ["jaggery", "sugarcane", "molasses", "sweetener"],
         image: "products/natures-finest-composite.png",
         specs: { "Quality": "Chemical-free, additive-free", "Moisture": "Controlled for transit stability", "Purity": "Authentic, traditional", "Origin": "India" }
@@ -1510,7 +1491,8 @@
         id: "cow_ghee",
         category: "natures_finest",
         name: "Pure Cow Ghee",
-        desc: "We supply pure, traditionally prepared cow ghee made from the milk of grass-fed cows, slow-cooked using the authentic bilona/vaat method to preserve its rich aroma, golden color, and granular texture. Free from vegetable oil adulteration and preservatives.",
+        desc: "We supply pure, traditionally prepared cow ghee made from the milk of grass-fed cows, slow-cooked using the authentic bilona/vaat method to preserve its rich aroma, golden color, and granular texture. Completely free from vegetable oil adulteration, artificial flavoring, and preservatives.",
+        highlights: ["100% Pure cow ghee, no adulteration","Slow-cooked using authentic bilona/vaat method","From grass-fed cows with rich aroma & golden color","Free from vegetable oil substitutes & artificial flavoring","Long shelf life without refrigeration","Customized packaging & private labeling available","Ideal for retail, Ayurvedic, bakery & hospitality use","Reliable global supply with competitive wholesale pricing"],
         tags: ["ghee", "cow-ghee", "bilona", "butter"],
         image: "products/natures-finest-composite.png",
         specs: { "Method": "Bilona/Vaat slow-cooked", "Purity": "No vegetable oil adulteration", "Shelf Life": "Long (no refrigeration required)", "Origin": "India" }
@@ -1520,55 +1502,89 @@
         id: "cashews",
         category: "dried_fruits",
         name: "Cashew Kernels",
-        desc: "Our Premium Export Quality Cashews are carefully processed to deliver exceptional taste, freshness, and consistent quality. Available in a wide range of whole kernels, splits, pieces, and premium grades such as W180, W210, W240, W320, and W450.",
+        desc: "Our Premium Export Quality Cashews are sourced from the finest growing regions and carefully processed to deliver exceptional taste, freshness, and consistent quality. Available in W180, W210, W240, W320, W450 grades and other specifications.",
+        highlights: ["Premium-grade Cashew Kernels with rich buttery flavor","Available in W180, W210, W240, W320, W450 & other grades","Uniform size, natural color & superior crunch","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for snacks, confectionery, bakery, food processing & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["cashews", "kernels", "w180", "w240", "w320"],
         image: "products/dried-fruits.png",
         specs: { "Grades": "W180, W210, W240, W320, W450", "Moisture": "Low moisture", "Texture": "Rich buttery, superior crunch", "Origin": "India" }
       },
       {
+        id: "raisins",
+        category: "dried_fruits",
+        name: "Black & Golden Raisins",
+        desc: "Our Premium Export Quality Black & Golden Raisins are sourced from carefully selected vineyards and naturally processed to preserve their rich sweetness, soft texture, and nutritional value. Naturally rich in dietary fiber, antioxidants, vitamins, and essential minerals.",
+        highlights: ["Premium-grade Black & Golden Raisins","Naturally sweet with soft texture and rich flavor","Rich in fiber, antioxidants, vitamins & essential minerals","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+        tags: ["raisins", "golden", "black", "sweet"],
+        image: "products/dried-fruits.png",
+        specs: { "Varieties": "Black and Golden", "Moisture": "Low moisture", "Purity": "Hygienically cleaned & graded", "Origin": "India" }
+      },
+      {
         id: "almonds",
         category: "dried_fruits",
         name: "Premium Almonds",
-        desc: "Our Premium Export Quality Almonds are carefully sourced from trusted growers and processed under stringent quality standards to deliver exceptional freshness, rich flavor, and superior nutritional value. Available in whole, natural, blanched, sliced, diced, and almond powder.",
+        desc: "Our Premium Export Quality Almonds are carefully sourced from trusted growers and processed under stringent quality standards. Available in whole, natural, blanched, sliced, diced, and almond powder, widely used in snacks, bakery, confectionery, dairy, and nutraceuticals.",
+        highlights: ["Premium-grade Almonds with superior taste and natural crunch","Available in whole, blanched, sliced, diced & powder","Rich in protein, vitamin E, healthy fats & dietary fiber","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for snacks, bakery, confectionery, food processing & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["almonds", "raw", "nuts", "blanched", "powder"],
         image: "products/dried-fruits.png",
         specs: { "Form": "Whole, Blanched, Sliced, Diced, Powder", "Moisture": "Low moisture", "Quality": "Export-grade tested", "Origin": "India" }
       },
       {
-        id: "raisins",
+        id: "figs",
         category: "dried_fruits",
-        name: "Black & Golden Raisins",
-        desc: "Our Premium Export Quality Black & Golden Raisins are sourced from carefully selected vineyards and naturally processed to preserve their rich sweetness, soft texture, and nutritional value. Available in Black and Golden varieties.",
-        tags: ["raisins", "golden", "black", "sweet"],
+        name: "Figs (Anjeer)",
+        desc: "Our Premium Export Quality Figs (Anjeer) are carefully sourced from trusted growers and processed under strict quality standards to preserve their natural sweetness, soft texture, rich flavor, and exceptional nutritional value. Naturally rich in dietary fiber, antioxidants, calcium, iron, potassium, and essential vitamins.",
+        highlights: ["Premium-grade Dried Figs (Anjeer)","Naturally sweet with soft texture and rich flavor","Rich in fiber, calcium, iron, potassium & antioxidants","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Long shelf life with controlled moisture content","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+        tags: ["figs", "anjeer", "dried", "sweet"],
         image: "products/dried-fruits.png",
-        specs: { "Varieties": "Black and Golden", "Moisture": "Low moisture", "Purity": "Hygienically cleaned & graded", "Origin": "India" }
+        specs: { "Form": "Whole Dried Figs", "Moisture": "Controlled", "Purity": "Cleaned & graded", "Origin": "India" }
       },
       // FRUITS & VEGETABLES
       {
         id: "fresh_mangoes",
         category: "fresh_produce",
-        name: "Fresh Kesar Mangoes",
-        desc: "Our Premium Export Quality Kesar Mangoes are sourced directly from the renowned orchards of Gujarat, India, celebrated worldwide for producing the authentic GI-tagged Kesar Mango. Handpicked at optimum maturity and packed for international markets.",
+        name: "Kesar Mangoes",
+        desc: "Our Premium Export Quality Kesar Mangoes are sourced directly from the renowned orchards of Gujarat, India, celebrated worldwide for producing the authentic GI-tagged Kesar Mango. Known as the 'Queen of Mangoes,' prized for smooth texture, naturally sweet flavor, and minimal fiber content.",
+        highlights: ["Premium GI-tagged Kesar Mangoes from Gujarat, India","Naturally sweet with rich aroma and vibrant saffron-colored pulp","Handpicked, carefully graded & hygienically packed","Excellent shelf life with export-grade cold-chain handling","Quality tested to meet international export standards","Customized packaging & private labeling available","Ideal for fresh consumption, retail, wholesale & food processing","Reliable global supply with competitive export pricing"],
         tags: ["mangoes", "kesar", "fresh", "sweet", "saffron"],
         image: "products/fresh-produce.png",
         specs: { "Quality": "GI-tagged, Grade A Export", "Ripeness": "Optimum maturity", "Cold Chain": "Maintained in transit", "Origin": "India" }
       },
       {
+        id: "pomegranates",
+        category: "fresh_produce",
+        name: "Pomegranates",
+        desc: "Our Premium Export Quality Pomegranates are sourced from India's finest orchards, renowned for producing fruits with vibrant ruby-red arils, naturally sweet flavor, and exceptional nutritional value. Handpicked at peak maturity, graded, sorted, and hygienically packed.",
+        highlights: ["Premium-grade Indian Pomegranates with vibrant ruby-red arils","Naturally sweet, juicy & rich in antioxidants","Handpicked, carefully graded & hygienically packed","Export-quality tested to international standards","Extended shelf life with cold-chain logistics","Customized packaging & private labeling available","Ideal for fresh consumption, retail, wholesale & food processing","Reliable global supply with competitive export pricing"],
+        tags: ["pomegranates", "fresh", "antioxidants", "juice"],
+        image: "products/fresh-produce.png",
+        specs: { "Quality": "Grade A Export", "Sweetness": "Brix tested", "Cold Chain": "Maintained in transit", "Origin": "India" }
+      },
+      {
         id: "fresh_onions",
         category: "fresh_produce",
-        name: "Fresh Red Onions",
-        desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions. Known for their crisp texture, pungent taste, and deep red skin. Harvested at optimal maturity, meticulously cleaned, graded, and hygienically packed.",
+        name: "Red Onions",
+        desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions. Known for their crisp texture, pungent taste, and deep red skin, widely used in fresh consumption, food processing, restaurants, supermarkets, and wholesale distribution.",
+        highlights: ["Premium-grade Indian Red Onions","Uniform size, vibrant red color & firm texture","Naturally fresh with rich flavor and excellent shelf life","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, supermarkets & food processing","Reliable global supply with competitive export pricing"],
         tags: ["onions", "fresh", "red-onions", "pungent"],
         image: "products/fresh-produce.png",
         specs: { "Quality": "Grade A Export", "Size": "Uniform, firm texture", "Skin Quality": "Excellent", "Origin": "India" }
+      },
+      {
+        id: "potatoes",
+        category: "fresh_produce",
+        name: "Potatoes",
+        desc: "Our Premium Export Quality Potatoes are sourced from India's leading potato-growing regions. Known for their firm texture, consistent quality, and excellent cooking performance, suitable for fresh consumption, food processing, French fries, chips, and frozen products.",
+        highlights: ["Premium-grade Indian Potatoes","Uniform size, smooth skin & firm texture","Freshly harvested with excellent shelf life","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, food processing & HoReCa","Reliable global supply with competitive export pricing"],
+        tags: ["potatoes", "fresh", "firm", "starch"],
+        image: "products/fresh-produce.png",
+        specs: { "Quality": "Grade A Export", "Size": "Uniform", "Skin Quality": "Smooth & firm", "Origin": "India" }
       },
       // HANDICRAFT
       {
         id: "wooden_handicrafts",
         category: "handicraft",
         name: "Wooden Handicrafts",
-        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor and kitchenware. Custom designs available.",
-        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor, wooden toys, kitchenware, and decorative boxes, each piece showcases fine detailing, natural wood grain, and durable craftsmanship. Finished with eco-friendly polishes and treatments for long-lasting durability.",
+        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor, wooden toys, kitchenware, and decorative boxes, each piece showcases fine detailing, natural wood grain, and durable craftsmanship.",
         highlights: ["Traditional carving & joinery techniques","Intricately carved furniture, sculptures & décor","Premium quality wood with eco-friendly finishes","Customization in design, size & finish available","Export-ready quality checks on every piece","Ideal for global retail and hospitality requirements","Rich cultural heritage in every handcrafted piece","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "wooden", "furniture", "carving", "joinery"],
         image: "products/handicrafts.png",
@@ -1578,7 +1594,7 @@
         id: "brass_metal_handicrafts",
         category: "handicraft",
         name: "Brass & Metal Handicrafts",
-        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, metal wall art, copper utensils, and bronze figurines — each reflecting intricate detailing and traditional artistry. Available in antique, polished, and matte finishes.",
+        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, metal wall art, copper utensils, and bronze figurines — each reflecting intricate detailing and traditional artistry.",
         highlights: ["Handcrafted using age-old casting & engraving techniques","Range includes brass idols, bowls, candle stands & copper utensils","Intricate detailing and traditional artistry in every piece","Antique, polished & matte finishes available on request","Quality checks for finish, weight & durability","Ideal for home décor, gifting & hospitality markets","Rich cultural heritage reflected in every design","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "brass", "metal", "casting", "engraving"],
         image: "products/handicrafts.png",
@@ -1588,42 +1604,153 @@
         id: "terracotta_pottery",
         category: "handicraft",
         name: "Terracotta & Pottery",
-        desc: "Handmade from natural clay and shaped using traditional pottery techniques, our terracotta and pottery products include pots, decorative vases, clay figurines, hand-painted pottery, and garden décor items. Each piece carries an earthy, rustic charm while showcasing the skill of local artisans. Fired at controlled temperatures for strength and durability.",
+        desc: "Handmade from natural clay and shaped using traditional pottery techniques, our terracotta and pottery products include pots, decorative vases, clay figurines, hand-painted pottery, and garden décor items. Fired at controlled temperatures for strength and durability.",
         highlights: ["Handmade from natural clay using traditional pottery techniques","Range includes pots, vases, figurines & garden décor","Earthy rustic charm showcasing local artisan skill","Fired at controlled temperatures for strength & durability","Hand-painted detailing and customizable sizes/designs","Suitable for indoor & outdoor use","Ideal for home décor, gifting & landscape styling","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "terracotta", "pottery", "clay", "handmade"],
         image: "products/handicrafts.png",
         specs: { "Material": "Natural clay", "Technique": "Traditional pottery", "Finish": "Hand-painted detailing", "Origin": "India" }
       },
       {
+        id: "textile_embroidery",
+        category: "handicraft",
+        name: "Textile & Embroidery Products",
+        desc: "Our textile and embroidery products are handwoven and hand-embroidered by skilled craftsmen using traditional looms and needlework techniques. The collection includes handwoven fabrics, embroidered cushion covers, wall hangings, table linens, and block-printed textiles, each rich in color, pattern, and texture.",
+        highlights: ["Handwoven & hand-embroidered by skilled craftsmen","Collection includes cushion covers, wall hangings & table linens","Traditional looms and needlework techniques","Rich colors, patterns & textures","Traditional dyeing and printing methods","Custom sizing, embroidery patterns & fabric choices available","Ideal for home décor & fashion markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "textiles", "embroidery", "handwoven", "block-printed"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "High-quality natural fabrics", "Dyeing": "Traditional dyeing & printing", "Craftsmanship": "Handwoven & hand-embroidered", "Origin": "India" }
+      },
+      {
         id: "bamboo_cane",
         category: "handicraft",
         name: "Bamboo & Cane Products",
-        desc: "Sustainably sourced bamboo and cane are hand-woven into functional and decorative products, including baskets, furniture, lampshades, storage organizers, and décor items. Each piece combines eco-friendly material with skilled craftsmanship, offering a natural, earthy aesthetic. Lightweight yet durable, treated to resist moisture and pests for long-term use.",
+        desc: "Sustainably sourced bamboo and cane are hand-woven into functional and decorative products, including baskets, furniture, lampshades, storage organizers, and décor items. Lightweight yet durable, treated to resist moisture and pests for long-term use.",
         highlights: ["Sustainably sourced bamboo & cane hand-woven products","Range includes baskets, furniture, lampshades & organizers","Eco-friendly material with skilled craftsmanship","Lightweight yet durable with natural earthy aesthetic","Treated to resist moisture & pests for long-term use","Custom designs available for retail & lifestyle brands","Ideal for eco-conscious retail & sustainable living","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "bamboo", "cane", "eco-friendly", "sustainable"],
         image: "products/handicrafts.png",
         specs: { "Material": "Sustainably sourced bamboo & cane", "Treatment": "Moisture & pest resistant", "Craftsmanship": "Hand-woven", "Origin": "India" }
       },
-      // TEXTILE & APPAREL
       {
-        id: "textile_yarn",
-        category: "textile",
-        name: "Cotton Yarn",
-        desc: "Premium organic cotton yarn wound on cones, highly durable and ideal for knitting and weaving. Uniform in quality, moisture-controlled, and exported to manufacturers across Asia, Europe, and the Middle East.",
-        highlights: ["Premium organic cotton yarn","Uniform quality wound on cones","Ideal for knitting and weaving","Moisture-controlled for transit stability","Export-quality tested to international standards","Customized counts & specifications available","Reliable global supply with competitive wholesale pricing","Exported to manufacturers across Asia, Europe & Middle East"],
-        tags: ["yarn", "organic", "knitting", "cotton"],
-        image: "products/textile-yarn.png",
-        specs: { "Count": "NE 20s to NE 40s", "Material": "100% Cotton", "Quality": "Export-grade", "Origin": "India" }
+        id: "stone_marble",
+        category: "handicraft",
+        name: "Stone & Marble Handicrafts",
+        desc: "Our stone and marble handicrafts are meticulously crafted by skilled artisans specializing in inlay work and hand carving. The range includes marble inlay pieces, stone carvings, sculptures, decorative platters, and table tops, each showcasing intricate patterns and fine detailing.",
+        highlights: ["Meticulously crafted by skilled artisans specializing in inlay work","Range includes marble inlay, stone carvings & sculptures","Intricate patterns and fine detailing in every piece","High-quality marble & natural stone materials","Polished to smooth finish for lasting durability","Elegant additions to luxury home décor & gifting","Ideal for hospitality interiors & retail collections","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "stone", "marble", "inlay", "carving"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "High-quality marble & natural stone", "Finish": "Smooth polished", "Craftsmanship": "Inlay & hand carving", "Origin": "India" }
       },
       {
-        id: "cotton_fabrics",
+        id: "jewelry_accessories",
+        category: "handicraft",
+        name: "Jewelry & Fashion Accessories",
+        desc: "We offer a curated range of handmade jewelry and fashion accessories crafted using silver, beads, and oxidized metal, alongside bags, scarves, and traditional accessories. Each piece is designed to reflect authentic craftsmanship, cultural motifs, and contemporary style.",
+        highlights: ["Curated range of handmade jewelry & fashion accessories","Crafted using silver, beads & oxidized metal","Reflects authentic craftsmanship & cultural motifs","Contemporary style with traditional artisan detailing","Close attention to finish, durability & quality","Ideal for global retail collections & gifting","Wide variety of bags, scarves & traditional accessories","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "jewelry", "accessories", "silver", "beads"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Silver, beads, oxidized metal", "Craftsmanship": "Handcrafted accessories", "Style": "Authentic & contemporary", "Origin": "India" }
+      },
+      {
+        id: "paper_mache",
+        category: "handicraft",
+        name: "Paper Mache & Handmade Paper Products",
+        desc: "Our Paper Mache and Handmade Paper products are crafted by skilled artisans using traditional techniques that transform recycled paper pulp into beautiful decorative items. The range includes painted boxes, decorative trays, wall art, lampshades, vases, greeting cards, and stationery, each hand-painted with vibrant colors and intricate patterns.",
+        highlights: ["Handcrafted using traditional paper mache techniques","Range includes painted boxes, trays, wall art & lampshades","Vibrant hand-painted colors with intricate patterns","Made from eco-friendly recycled paper materials","Lightweight and ideal for gifting & home décor","Custom designs, colors & sizes available on request","Ideal for retail, gifting & home décor markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "paper-mache", "handmade", "paper", "decorative"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Recycled paper pulp", "Finish": "Hand-painted, lacquered", "Craftsmanship": "Traditional paper mache", "Origin": "India" }
+      },
+      {
+        id: "leather_handicrafts",
+        category: "handicraft",
+        name: "Leather Handicrafts",
+        desc: "Our premium leather handicrafts are crafted by skilled artisans using high-quality leather and traditional craftsmanship techniques. The range includes wallets, bags, belts, journal covers, decorative items, and fashion accessories, each featuring meticulous stitching, embossing, and finishing for export-ready quality.",
+        highlights: ["Premium leather handicrafts by skilled artisans","Range includes wallets, bags, belts & journal covers","High-quality leather with meticulous stitching & embossing","Export-ready finish with quality checks on every piece","Customizable designs, sizes & leather types available","Ideal for retail, corporate gifting & fashion markets","Durable craftsmanship for long-lasting use","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "leather", "bags", "wallets", "accessories"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Premium quality leather", "Finish": "Embossed, stitched, lacquered", "Craftsmanship": "Traditional artisan techniques", "Origin": "India" }
+      },
+      {
+        id: "glass_ceramic",
+        category: "handicraft",
+        name: "Glass & Ceramic Handicrafts",
+        desc: "Our Glass and Ceramic handicrafts are carefully crafted by skilled artisans using traditional techniques to create decorative pieces of exceptional beauty. The range includes hand-blown glass items, ceramic vases, bowls, tile art, decorative plates, and artistic pottery, each showcasing unique craftsmanship and vibrant designs.",
+        highlights: ["Hand-blown glass & traditionally crafted ceramic items","Range includes vases, bowls, tile art & decorative plates","Exceptional beauty with unique craftsmanship","Vibrant hand-painted designs and intricate detailing","Quality checked for finish, durability & consistency","Ideal for home décor, gifting & luxury retail","Custom designs, colors & sizes available on request","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "glass", "ceramic", "hand-blown", "decorative"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Glass & ceramic", "Finish": "Hand-painted, glazed", "Craftsmanship": "Traditional artisan techniques", "Origin": "India" }
+      },
+      // TEXTILE & APPAREL
+      {
+        id: "textile_fabrics",
         category: "textile",
-        name: "Cotton Fabrics",
-        desc: "Finished cotton fabrics in solid colors and prints, manufactured for international apparel and home textile markets. Woven with precision, available in various thread counts, weights, and compositions.",
-        highlights: ["Premium finished cotton fabrics","Available in solid colors & prints","Woven with precision for international markets","Various thread counts, weights & compositions","Mercerized and sanforized finish options","Customized designs & specifications available","Ideal for apparel, home textiles & retail","Reliable global supply with competitive wholesale pricing"],
-        tags: ["fabric", "cotton", "apparel", "textile"],
+        name: "Fabrics",
+        desc: "We offer premium cotton, linen, silk, and blended fabrics manufactured for international apparel and home textile markets. Woven with precision, available in various thread counts, weights, compositions, and finishes including mercerized and sanforized options for global buyers.",
+        highlights: ["Premium cotton, linen, silk & blended fabrics","Available in solid colors, prints & patterns","Precision woven to international standards","Various thread counts, weights & compositions","Mercerized and sanforized finish options","Customized designs, colors & specifications available","Ideal for apparel, home textiles & retail markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["fabric", "cotton", "linen", "silk", "blended"],
         image: "products/textile-apparel.png",
-        specs: { "Composition": "100% Cotton / Cotton Blends", "Width": "44-60 inches", "Finish": "Mercerized, sanforized", "Origin": "India" }
+        specs: { "Types": "Cotton, Linen, Silk, Blended", "Width": "44-60 inches", "Finish": "Mercerized, sanforized", "Origin": "India" }
+      },
+      {
+        id: "textile_apparel",
+        category: "textile",
+        name: "Apparel",
+        desc: "We supply premium finished garments manufactured to meet international quality standards. Our apparel range includes casual wear, formal wear, ethnic wear, activewear, and workwear, produced using quality fabrics with precise stitching and finishing for global retail and wholesale markets.",
+        highlights: ["Premium finished garments to international standards","Range includes casual, formal, ethnic & activewear","Produced using quality fabrics with precise stitching","Custom designs, sizes & specifications available","Export-quality tested to international standards","Private labeling & custom branding available","Ideal for retail, wholesale & fashion markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["apparel", "garments", "clothing", "fashion", "export"],
+        image: "products/textile-apparel.png",
+        specs: { "Range": "Casual, Formal, Ethnic, Activewear", "Material": "Quality fabrics", "Custom Design": "Supported", "Origin": "India" }
+      },
+      {
+        id: "home_textiles",
+        category: "textile",
+        name: "Home Textiles",
+        desc: "Our premium home textile range includes bed linens, curtains, cushion covers, table runners, bath towels, kitchen towels, and decorative home furnishings manufactured to meet international quality standards. Available in a wide range of colors, patterns, and fabric compositions.",
+        highlights: ["Premium home textiles to international standards","Range includes bed linens, curtains & cushion covers","Also includes towels, table runners & furnishings","Available in wide range of colors & patterns","Quality fabrics with precise weaving & stitching","Custom designs, sizes & specifications available","Ideal for retail, wholesale & hospitality markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["home-textiles", "bed-linen", "curtains", "towels", "cushions"],
+        image: "products/textile-apparel.png",
+        specs: { "Range": "Bed linen, curtains, towels, cushion covers", "Material": "Cotton, linen, polyester blends", "Custom Design": "Supported", "Origin": "India" }
+      },
+      {
+        id: "textile_accessories",
+        category: "textile",
+        name: "Accessories",
+        desc: "We offer a diverse range of textile accessories including scarves, stoles, shawls, bags, headbands, and fashion accessories crafted from premium fabrics. Each item is manufactured using quality materials with attention to detail, available in various designs, colors, and customizations for global markets.",
+        highlights: ["Diverse range of textile accessories","Includes scarves, stoles, shawls, bags & headbands","Crafted from premium fabrics with attention to detail","Available in various designs, colors & customizations","Export-quality tested to international standards","Private labeling & custom branding available","Ideal for retail, wholesale & fashion markets","Reliable global supply with competitive wholesale pricing"],
+        tags: ["accessories", "scarves", "stoles", "shawls", "bags"],
+        image: "products/textile-apparel.png",
+        specs: { "Range": "Scarves, stoles, shawls, bags, headbands", "Material": "Premium fabrics", "Custom Design": "Supported", "Origin": "India" }
+      },
+      // SUPERFOODS
+      {
+        id: "makhana",
+        category: "superfoods",
+        name: "Makhana (Fox Nuts)",
+        desc: "Our Premium Export Quality Makhana (Fox Nuts / Lotus Seeds) is sourced from the finest growing regions of India, known for producing high-quality lotus seeds that are naturally light, crunchy, and packed with nutrition. Carefully processed and hygienically packed, our Makhana is rich in protein, fiber, calcium, magnesium, potassium, and antioxidants, making it a premium superfood choice for health-conscious consumers worldwide. Widely used as a healthy snack, in desserts, kheer, trail mixes, and health food formulations.",
+        highlights: ["Premium-grade Indian Makhana (Fox Nuts)","Naturally rich in protein, calcium & antioxidants","Light, crunchy & delicious healthy snack","Free from artificial colors, preservatives & additives","Hygienically processed and export-quality tested","Low fat, low glycemic index superfood","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+        tags: ["makhana", "fox-nuts", "lotus-seeds", "superfood", "snack"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Whole dried lotus seeds", "Protein": "9-10g per 100g", "Fat": "Low fat (<0.5g)", "Origin": "India (Bihar)" }
+      },
+      {
+        id: "chia_seeds",
+        category: "superfoods",
+        name: "Chia Seeds",
+        desc: "We supply Premium Export Quality Chia Seeds carefully sourced and processed to preserve their exceptional nutritional profile. Rich in omega-3 fatty acids, dietary fiber, plant-based protein, calcium, magnesium, and antioxidants, chia seeds are a true nutritional powerhouse widely used in health foods, smoothies, yogurts, baked goods, energy bars, beverages, and nutraceutical formulations globally. Each batch is rigorously tested for purity, moisture content, and microbiological safety to ensure compliance with international export standards.",
+        highlights: ["Premium-grade Chia Seeds with superior nutrition","Rich in omega-3 fatty acids, fiber & plant protein","High in calcium, magnesium & antioxidants","Hygienically processed and export-quality tested","Free from artificial colors, preservatives & additives","Customized packaging & private labeling available","Ideal for health foods, smoothies, bakery & nutraceuticals","Reliable global supply with competitive wholesale pricing"],
+        tags: ["chia-seeds", "omega-3", "superfood", "nutrition", "health"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Whole seeds (Black & White)", "Omega-3": "High content", "Fiber": "34g per 100g", "Origin": "India" }
+      },
+      {
+        id: "millets",
+        category: "superfoods",
+        name: "Millets",
+        desc: "We supply a comprehensive range of Premium Export Quality Millets sourced from India's leading millet-growing regions. Our range includes Pearl Millet (Bajra), Finger Millet (Ragi), Foxtail Millet, Sorghum (Jowar), Barnyard Millet, Kodo Millet, Little Millet, and Proso Millet — all carefully cleaned, graded, and hygienically packed. Rich in complex carbohydrates, dietary fiber, protein, vitamins B1 & B2, iron, calcium, and phosphorus, millets are ancient grains experiencing a global resurgence as a superfood for health-conscious consumers.",
+        highlights: ["Comprehensive range of premium Indian Millets","Includes Pearl, Finger, Foxtail, Sorghum & Barnyard Millet","Rich in fiber, protein, vitamins & essential minerals","Gluten-free & low glycemic index superfood","Hygienically processed and export-quality tested","Customized packaging & private labeling available","Ideal for health foods, flour, snacks & nutraceuticals","Reliable global supply with competitive wholesale pricing"],
+        tags: ["millets", "bajra", "ragi", "jowar", "superfood", "gluten-free"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Varieties": "Pearl, Finger, Foxtail, Sorghum, Barnyard, Kodo, Little, Proso", "Gluten": "Gluten-free", "Moisture": "Controlled", "Origin": "India" }
       }
     ];
 
@@ -1673,7 +1800,13 @@
       textile: {
         name: "Textile & Apparel",
         image: "products/textile-apparel.png",
-        desc: "Finished garments, premium cotton fabrics, home textiles, and high-quality organic cotton yarns manufactured to meet international textile standards. Available in customizable weights, compositions, and finishes for export markets.",
+        desc: "Premium finished garments, fabrics, home textiles, and fashion accessories manufactured to meet international quality standards. Our textile range covers fabrics, apparel, home textiles, and accessories, available in customizable designs, compositions, and finishes for global markets.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
+      },
+      superfoods: {
+        name: "Superfoods",
+        image: "products/superfoods.png",
+        desc: "We offer a premium selection of nature's most nutrient-dense superfoods sourced from the finest growing regions of India. Our Superfoods range includes Makhana (Fox Nuts), Chia Seeds, and Millets — all carefully processed, hygienically packed, and export-quality tested to meet the growing global demand for healthy, natural, and functional foods.",
         highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       }
     };
@@ -1688,8 +1821,9 @@
         natures_finest: "Nature's Finest",
         dried_fruits: "Dried Fruits",
         fresh_produce: "Fruits & Vegetables",
-        handicraft: "Handicraft",
-        textile: "Textile & Apparel"
+        handicraft: "Handicrafts",
+        textile: "Textile & Apparel",
+        superfoods: "Superfoods"
       };
       return labels[catKey] || "Products";
     }
