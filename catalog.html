@@ -32,6 +32,7 @@
       background: #F8F6F1;
       border-bottom: 1px solid #E8E2D6;
       padding: 0 0 48px;
+      text-align: left;
     }
 
     .cat-back-bar {
@@ -1276,6 +1277,16 @@
 
   <script src="app.js"></script>
   <script>
+    // Immediate redirect if no valid category query parameter is provided
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get("cat");
+      const validCategories = ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "fresh_produce", "handicraft", "textile"];
+      if (!catParam || !validCategories.includes(catParam)) {
+        window.location.replace("index.html#products");
+      }
+    })();
+
     const productsList = [
       // DEHYDRATED VEGETABLES & FRUITS
       {
