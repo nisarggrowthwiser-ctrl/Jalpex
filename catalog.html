@@ -867,7 +867,7 @@
 
       <ul class="nav-links">
         <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
-        <li><a href="catalog.html" class="active" data-trans="nav_products">Products</a></li>
+        <li><a href="index.html#products" class="active" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
         <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -919,7 +919,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
-      <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+      <li><a href="index.html#products" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
       <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -1131,7 +1131,7 @@
           <h4>Quick Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
-            <li><a href="catalog.html">Products</a></li>
+            <li><a href="index.html#products">Products</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
             <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
@@ -1672,7 +1672,7 @@
         document.title = cat.name + " Export | Jalpex International";
 
         hero.innerHTML = `
-          <div class="cat-back-bar"><a href="catalog.html" class="cat-back-link">← Back to Products</a></div>
+          <div class="cat-back-bar"><a href="index.html#products" class="cat-back-link">← Back to Products</a></div>
           <div class="cat-hero-grid">
             <div class="cat-hero-img"><img src="${cat.image}" alt="${cat.name}"></div>
             <div class="cat-hero-content">
@@ -1915,7 +1915,7 @@
             // Navigate to the category page URL
             window.location.href = `catalog.html?cat=${filterVal}`;
           } else {
-            window.location.href = "catalog.html";
+            window.location.href = "index.html#products";
           }
         });
       });
