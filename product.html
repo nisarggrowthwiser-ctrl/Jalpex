@@ -309,14 +309,120 @@
       }
     }
 
-    @media (max-width: 576px) {
-      .pd-action-row {
-        flex-direction: column;
-        gap: 12px;
+    /* ── AVAILABLE TYPES SECTION ── */
+    .pd-types-section {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .pd-types-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .pd-types-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 10px;
+    }
+
+    .pd-types-header p {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .pd-types-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .pd-types-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
-      .pd-btn {
-        width: 100%;
-      }
+    }
+
+    .pd-type-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.3s;
+      box-shadow: 0 4px 15px rgba(24, 37, 67, 0.02);
+    }
+
+    .pd-type-card:hover {
+      box-shadow: 0 12px 30px rgba(24, 37, 67, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .pd-type-img {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .pd-type-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .pd-type-card:hover .pd-type-img img {
+      transform: scale(1.04);
+    }
+
+    .pd-type-body {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pd-type-title {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 12px;
+      line-height: 1.4;
+    }
+
+    .pd-type-desc {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text-mid);
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+
+    .pd-type-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: gap 0.2s;
+      margin-top: auto;
+    }
+
+    .pd-type-card:hover .pd-type-link {
+      gap: 10px;
     }
   </style>
 </head>
@@ -409,6 +515,16 @@
               <!-- Generated dynamically -->
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- Available Types section -->
+      <div id="pd-types-sec" style="display: none;" class="pd-types-section">
+        <div class="pd-types-header" id="pd-types-header">
+          <!-- Dynamically populated -->
+        </div>
+        <div class="pd-types-grid" id="pd-types-grid">
+          <!-- Dynamically populated -->
         </div>
       </div>
 
@@ -558,11 +674,29 @@
         {
           id: "dehydrated_onion",
           category: "dehydrated",
-          name: "Dehydrated Onion",
-          desc: "Our premium Dehydrated Red and White Onion is produced from carefully selected farm-fresh onions sourced from India's leading agricultural regions. Processed in state-of-the-art facilities using advanced dehydration technology, our onions retain their natural flavor, aroma, color, and nutritional value while offering an extended shelf life. Available in flakes, minced, chopped, granules, powder, and kibbled forms, our dehydrated onions are widely used in food processing, seasoning blends, ready-to-eat meals, soups, sauces, snacks, frozen foods, and spice manufacturing.",
-          tags: ["onion", "flakes", "minced", "chopped", "granules", "powder", "kibbled"],
+          name: "Dehydrated Onion Products",
+          desc: "Our premium Dehydrated Red and White Onion is produced from selected farm-fresh onions sourced from India's leading agricultural regions. Available in flakes, minced, chopped, granules, powder, and kibbled forms, our onions retain their natural flavor, aroma, and color, making them the ideal choice for global food industries.",
+          tags: ["onion", "flakes", "minced", "chopped", "granules", "powder"],
           image: "products/onion-powder.png",
-          specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural Red & White", "Origin": "India" }
+          types: ["dehydrated_red_onion", "dehydrated_white_onion"]
+        },
+        {
+          id: "dehydrated_red_onion",
+          category: "dehydrated",
+          name: "Dehydrated Red Onion",
+          desc: "Dehydrated Red Onion Flakes (5-15)mm, Chopped (3-5)mm, Minced (1-3)mm, Granules (0.4-1)mm, Powder (80-120)Mesh are made by removing the moisture content from fresh red onions under clean conditions. Export quality with natural pungent flavor and rich aroma, widely used in food processing, seasoning blends, and bulk exports.",
+          tags: ["red-onion", "flakes", "minced", "powder"],
+          image: "products/onion-powder.png",
+          specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural Red Onion", "Origin": "India" }
+        },
+        {
+          id: "dehydrated_white_onion",
+          category: "dehydrated",
+          name: "Dehydrated White Onion",
+          desc: "Dehydrated White Onion Flakes (5-15)mm, Chopped (3-5)mm, Minced (1-3)mm, Granules (0.4-1)mm, Powder (80-120)Mesh are made from freshly harvested white onions that are peeled, washed, sliced, and dehydrated. Retains the natural flavor and aroma of fresh white onion while offering transit stability and shelf life.",
+          tags: ["white-onion", "flakes", "minced", "powder"],
+          image: "products/onion-powder.png",
+          specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural White Onion", "Origin": "India" }
         },
         {
           id: "dehydrated_garlic",
@@ -1194,6 +1328,49 @@
         specsBody.innerHTML = specsHtml;
       } else {
         specsSec.style.display = 'none';
+      }
+
+      // ── Available Types Section (sub-types grid) ──
+      const typesSec = document.getElementById('pd-types-sec');
+      const typesHeader = document.getElementById('pd-types-header');
+      const typesGrid = document.getElementById('pd-types-grid');
+
+      if (product.types && product.types.length > 0) {
+        typesSec.style.display = 'block';
+        specsSec.style.display = 'none'; // hide specs on parent page
+
+        typesHeader.innerHTML = `
+          <h2>Available Types</h2>
+          <p>${product.name} is available in the following types — supplied loose or in custom retail and bulk packaging.</p>
+        `;
+
+        let gridHtml = '';
+        product.types.forEach(typeId => {
+          const tProd = productsData.find(p => p.id === typeId);
+          if (tProd) {
+            gridHtml += `
+              <div class="pd-type-card" onclick="window.location.href='product.html?id=${tProd.id}'">
+                <div class="pd-type-img">
+                  <img src="${tProd.image}" alt="${tProd.name}" loading="lazy">
+                </div>
+                <div class="pd-type-body">
+                  <h3 class="pd-type-title">${tProd.name}</h3>
+                  <p class="pd-type-desc">${tProd.desc.substring(0, 150)}...</p>
+                  <a class="pd-type-link" href="product.html?id=${tProd.id}" onclick="event.stopPropagation()">
+                    View details
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            `;
+          }
+        });
+        typesGrid.innerHTML = gridHtml;
+      } else {
+        typesSec.style.display = 'none';
       }
 
     })();
