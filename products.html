@@ -861,13 +861,13 @@
   <!-- ── NAVIGATION BAR ── -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="catalog.html" class="logo-link">
+      <a href="products.html" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
       </a>
 
       <ul class="nav-links">
         <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
-        <li><a href="catalog.html" class="active" data-trans="nav_products">Products</a></li>
+        <li><a href="products.html" class="active" data-trans="nav_products">Products</a></li>
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
         <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -919,7 +919,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
-      <li><a href="catalog.html" data-trans="nav_products">Products</a></li>
+      <li><a href="products.html" data-trans="nav_products">Products</a></li>
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
       <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
@@ -1121,7 +1121,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="catalog.html" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
+          <a href="products.html" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
             <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
           </a>
           <p style="margin-top: 15px;">Jalpex International is a premium export house of agricultural commodities. We
@@ -1131,7 +1131,7 @@
           <h4>Quick Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
-            <li><a href="catalog.html">Products</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
             <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
@@ -1140,14 +1140,14 @@
         <div class="footer-col">
           <h4 data-trans="footer_products">Our Offerings</h4>
           <ul class="footer-links">
-            <li><a href="catalog.html?cat=dehydrated">Dehydrated Vegetables & Fruits</a></li>
-            <li><a href="catalog.html?cat=agriculture">Agriculture Products</a></li>
-            <li><a href="catalog.html?cat=spices">Spices</a></li>
-            <li><a href="catalog.html?cat=natures_finest">Nature's Finest</a></li>
-            <li><a href="catalog.html?cat=dried_fruits">Dried Fruits</a></li>
-            <li><a href="catalog.html?cat=fresh_produce">Fruits & Vegetables</a></li>
-            <li><a href="catalog.html?cat=handicraft">Handicrafts</a></li>
-            <li><a href="catalog.html?cat=textile">Textile & Apparel</a></li>
+            <li><a href="products.html?cat=dehydrated">Dehydrated Vegetables & Fruits</a></li>
+            <li><a href="products.html?cat=agriculture">Agriculture Products</a></li>
+            <li><a href="products.html?cat=spices">Spices</a></li>
+            <li><a href="products.html?cat=natures_finest">Nature's Finest</a></li>
+            <li><a href="products.html?cat=dried_fruits">Dried Fruits</a></li>
+            <li><a href="products.html?cat=fresh_produce">Fruits & Vegetables</a></li>
+            <li><a href="products.html?cat=handicraft">Handicrafts</a></li>
+            <li><a href="products.html?cat=textile">Textile & Apparel</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1672,7 +1672,7 @@
         document.title = cat.name + " Export | Jalpex International";
 
         hero.innerHTML = `
-          <div class="cat-back-bar"><a href="catalog.html" class="cat-back-link">← Back to Products</a></div>
+          <div class="cat-back-bar"><a href="products.html" class="cat-back-link">← Back to Products</a></div>
           <div class="cat-hero-grid">
             <div class="cat-hero-img"><img src="${cat.image}" alt="${cat.name}"></div>
             <div class="cat-hero-content">
@@ -1794,7 +1794,7 @@
       otherCats.forEach(([key, cat]) => {
         const el = document.createElement("a");
         el.className = "other-cat-card";
-        el.href = `catalog.html?cat=${key}`;
+        el.href = `products.html?cat=${key}`;
         el.innerHTML = `
           <div class="other-cat-img">
             <img src="${cat.image}" alt="${cat.name}" loading="lazy">
@@ -1913,9 +1913,9 @@
           activeFilter = filterVal;
           if (filterVal !== "all") {
             // Navigate to the category page URL
-            window.location.href = `catalog.html?cat=${filterVal}`;
+            window.location.href = `products.html?cat=${filterVal}`;
           } else {
-            window.location.href = "catalog.html";
+            window.location.href = "products.html";
           }
         });
       });
