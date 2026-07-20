@@ -295,12 +295,37 @@
       font-size: 13.5px;
       line-height: 1.6;
       color: var(--text-mid);
-      margin: 0 0 18px;
-      flex-grow: 1;
+      margin: 0 0 12px;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    .ref-card-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ref-card-highlights li {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .ref-card-highlights li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4a8c3f;
+      font-weight: 700;
+      font-size: 12px;
     }
 
     .ref-view-link {
@@ -1543,6 +1568,8 @@
         category: "handicraft",
         name: "Wooden Handicrafts",
         desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor and kitchenware. Custom designs available.",
+        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor, wooden toys, kitchenware, and decorative boxes, each piece showcases fine detailing, natural wood grain, and durable craftsmanship. Finished with eco-friendly polishes and treatments for long-lasting durability.",
+        highlights: ["Traditional carving & joinery techniques","Intricately carved furniture, sculptures & décor","Premium quality wood with eco-friendly finishes","Customization in design, size & finish available","Export-ready quality checks on every piece","Ideal for global retail and hospitality requirements","Rich cultural heritage in every handcrafted piece","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "wooden", "furniture", "carving", "joinery"],
         image: "products/handicrafts.png",
         specs: { "Craftsmanship": "Traditional carving & joinery", "Finish": "Eco-friendly polishes", "Material": "Premium quality wood", "Origin": "India" }
@@ -1551,10 +1578,31 @@
         id: "brass_metal_handicrafts",
         category: "handicraft",
         name: "Brass & Metal Handicrafts",
-        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, and copper utensils, each reflecting intricate detailing.",
+        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, metal wall art, copper utensils, and bronze figurines — each reflecting intricate detailing and traditional artistry. Available in antique, polished, and matte finishes.",
+        highlights: ["Handcrafted using age-old casting & engraving techniques","Range includes brass idols, bowls, candle stands & copper utensils","Intricate detailing and traditional artistry in every piece","Antique, polished & matte finishes available on request","Quality checks for finish, weight & durability","Ideal for home décor, gifting & hospitality markets","Rich cultural heritage reflected in every design","Reliable global supply with competitive wholesale pricing"],
         tags: ["handicraft", "brass", "metal", "casting", "engraving"],
         image: "products/handicrafts.png",
         specs: { "Craftsmanship": "Handcrafted casting & engraving", "Finish": "Antique, polished, matte", "Quality": "Weight & sheen checked", "Origin": "India" }
+      },
+      {
+        id: "terracotta_pottery",
+        category: "handicraft",
+        name: "Terracotta & Pottery",
+        desc: "Handmade from natural clay and shaped using traditional pottery techniques, our terracotta and pottery products include pots, decorative vases, clay figurines, hand-painted pottery, and garden décor items. Each piece carries an earthy, rustic charm while showcasing the skill of local artisans. Fired at controlled temperatures for strength and durability.",
+        highlights: ["Handmade from natural clay using traditional pottery techniques","Range includes pots, vases, figurines & garden décor","Earthy rustic charm showcasing local artisan skill","Fired at controlled temperatures for strength & durability","Hand-painted detailing and customizable sizes/designs","Suitable for indoor & outdoor use","Ideal for home décor, gifting & landscape styling","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "terracotta", "pottery", "clay", "handmade"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Natural clay", "Technique": "Traditional pottery", "Finish": "Hand-painted detailing", "Origin": "India" }
+      },
+      {
+        id: "bamboo_cane",
+        category: "handicraft",
+        name: "Bamboo & Cane Products",
+        desc: "Sustainably sourced bamboo and cane are hand-woven into functional and decorative products, including baskets, furniture, lampshades, storage organizers, and décor items. Each piece combines eco-friendly material with skilled craftsmanship, offering a natural, earthy aesthetic. Lightweight yet durable, treated to resist moisture and pests for long-term use.",
+        highlights: ["Sustainably sourced bamboo & cane hand-woven products","Range includes baskets, furniture, lampshades & organizers","Eco-friendly material with skilled craftsmanship","Lightweight yet durable with natural earthy aesthetic","Treated to resist moisture & pests for long-term use","Custom designs available for retail & lifestyle brands","Ideal for eco-conscious retail & sustainable living","Reliable global supply with competitive wholesale pricing"],
+        tags: ["handicraft", "bamboo", "cane", "eco-friendly", "sustainable"],
+        image: "products/handicrafts.png",
+        specs: { "Material": "Sustainably sourced bamboo & cane", "Treatment": "Moisture & pest resistant", "Craftsmanship": "Hand-woven", "Origin": "India" }
       },
       // TEXTILE & APPAREL
       {
@@ -1562,6 +1610,7 @@
         category: "textile",
         name: "Cotton Yarn",
         desc: "Premium organic cotton yarn wound on cones, highly durable and ideal for knitting and weaving. Uniform in quality, moisture-controlled, and exported to manufacturers across Asia, Europe, and the Middle East.",
+        highlights: ["Premium organic cotton yarn","Uniform quality wound on cones","Ideal for knitting and weaving","Moisture-controlled for transit stability","Export-quality tested to international standards","Customized counts & specifications available","Reliable global supply with competitive wholesale pricing","Exported to manufacturers across Asia, Europe & Middle East"],
         tags: ["yarn", "organic", "knitting", "cotton"],
         image: "products/textile-yarn.png",
         specs: { "Count": "NE 20s to NE 40s", "Material": "100% Cotton", "Quality": "Export-grade", "Origin": "India" }
@@ -1571,6 +1620,7 @@
         category: "textile",
         name: "Cotton Fabrics",
         desc: "Finished cotton fabrics in solid colors and prints, manufactured for international apparel and home textile markets. Woven with precision, available in various thread counts, weights, and compositions.",
+        highlights: ["Premium finished cotton fabrics","Available in solid colors & prints","Woven with precision for international markets","Various thread counts, weights & compositions","Mercerized and sanforized finish options","Customized designs & specifications available","Ideal for apparel, home textiles & retail","Reliable global supply with competitive wholesale pricing"],
         tags: ["fabric", "cotton", "apparel", "textile"],
         image: "products/textile-apparel.png",
         specs: { "Composition": "100% Cotton / Cotton Blends", "Width": "44-60 inches", "Finish": "Mercerized, sanforized", "Origin": "India" }
@@ -1581,42 +1631,50 @@
       dehydrated: {
         name: "Dehydrated Vegetables & Fruits",
         image: "products/dehydrated-composite.png",
-        desc: "Jalpex International supplies premium dehydrated and dried vegetables & fruits processed in hygienic, FSSAI-compliant facilities to lock in colour, flavour and nutrition. Each batch is lab-tested and certified for international export standards."
+        desc: "Our premium range of Dehydrated Vegetables & Fruits is carefully processed using advanced dehydration technology to preserve natural flavor, color, aroma, and nutritional value while significantly extending shelf life. These products are widely used in the food processing, ready-to-eat meals, instant foods, soups, sauces, seasonings, snacks, bakery, dairy, and HoReCa industries across global markets.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       agriculture: {
         name: "Agriculture Products",
         image: "products/rice.png",
-        desc: "Comprehensive range of premium-quality agriculture commodities sourced from the finest growing regions of India, including rice, wheat, groundnuts, sesame seeds, and more. Every consignment is graded, cleaned, and tested before shipment."
+        desc: "We offer a comprehensive range of premium-quality Agriculture Products sourced directly from trusted Indian farms. Our products are carefully selected, graded, and packed to preserve freshness and meet international quality standards, making them ideal for global importers, wholesalers, retailers, and food processing industries.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       spices: {
         name: "Spices",
         image: "products/spices-composite.png",
-        desc: "India is globally recognized for producing some of the world's finest spices. We specialize in exporting a premium selection sourced from trusted cultivation regions and processed under stringent quality standards to ensure purity, consistency, and food safety compliance."
+        desc: "India is globally recognized for producing some of the world's finest spices, valued for their exceptional aroma, rich flavor, and superior quality. We specialize in exporting a premium selection of Indian spices sourced from trusted cultivation regions and processed under stringent quality standards to ensure purity, consistency, and compliance with international food safety requirements.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       natures_finest: {
         name: "Nature's Finest",
         image: "products/natures-finest-composite.png",
-        desc: "Our Nature's Finest collection features pure natural honey, premium cow ghee, and authentic jaggery — bringing the richness of nature and uncompromising quality to global markets. Each product is lab-tested and free from adulterants."
+        desc: "Our Nature's Finest collection features pure natural honey, premium cow ghee, and authentic jaggery — bringing the richness of nature and uncompromising quality to global markets. Each product is sourced from trusted producers, carefully processed, and rigorously tested for purity and authenticity.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       dried_fruits: {
         name: "Dried Fruits",
         image: "products/dried-fruits.png",
-        desc: "Premium quality dry fruits including cashews, almonds, and raisins carefully selected, graded, and tested for moisture and purity to meet international export standards. Available in multiple grades for retail and industrial use."
+        desc: "Premium quality dry fruits including cashews, almonds, raisins (Black and Golden), figs carefully selected, graded, and tested for moisture and purity to meet international export standards. Available in multiple grades for retail and industrial use.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       fresh_produce: {
         name: "Fruits & Vegetables",
         image: "products/fresh-produce.png",
-        desc: "Farm-fresh fruits and vegetables, handpicked and quality-graded at the source, then hygienically packed to preserve freshness, color, and nutritional value during export transit. Cold-chain logistics maintained throughout."
+        desc: "Farm-fresh fruits and vegetables, handpicked and quality-graded at the source, then hygienically packed to preserve freshness, color, and nutritional value during export transit. Cold-chain logistics maintained throughout.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       handicraft: {
         name: "Handicrafts",
         image: "products/handicrafts.png",
-        desc: "Authentic, handcrafted products made by skilled artisans using traditional techniques passed down through generations. Each piece reflects rich cultural heritage, fine craftsmanship, and attention to detail — ideal for global retail and gifting markets."
+        desc: "Authentic, handcrafted products made by skilled artisans using traditional techniques passed down through generations. Each piece reflects rich cultural heritage, fine craftsmanship, and attention to detail, making them ideal for global retail and gifting markets.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       },
       textile: {
         name: "Textile & Apparel",
         image: "products/textile-apparel.png",
-        desc: "Finished garments, premium cotton fabrics, home textiles, and high-quality organic cotton yarns manufactured to meet international textile standards. Available in customizable weights, compositions, and finishes for export markets."
+        desc: "Finished garments, premium cotton fabrics, home textiles, and high-quality organic cotton yarns manufactured to meet international textile standards. Available in customizable weights, compositions, and finishes for export markets.",
+        highlights: ["Quality Assured – Every batch is lab-tested and certified to meet international export standards","Custom Packaging & Labeling – Tailored packaging solutions to match your brand and market requirements","Competitive Bulk Pricing – Direct-from-source pricing that ensures the best value for large-volume orders","Global Reach – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond"]
       }
     };
 
@@ -1682,6 +1740,7 @@
 
         document.title = cat.name + " Export | Jalpex International";
 
+        const highlightsHTML = (cat.highlights || []).map(h => `<li>${h}</li>`).join('');
         hero.innerHTML = `
           <div class="cat-back-bar"><a href="index.html#products" class="cat-back-link">← Back to Products</a></div>
           <div class="cat-hero-grid">
@@ -1690,10 +1749,7 @@
               <h1 class="cat-hero-title">${cat.name}</h1>
               <p class="cat-hero-desc">${cat.desc}</p>
               <ul class="cat-checklist">
-                <li>Quality tested &amp; certified for export</li>
-                <li>Custom packaging &amp; labeling available</li>
-                <li>Competitive bulk pricing</li>
-                <li>Shipped to 22+ countries worldwide</li>
+                ${highlightsHTML}
               </ul>
               <div class="cat-hero-actions">
                 <a href="#inquiry" class="cat-btn-primary" onclick="prefillCategory('${activeFilter}')">
@@ -1773,6 +1829,7 @@
           window.location.href = `product.html?id=${prod.id}`;
         });
 
+        const keyHighlights = (prod.highlights || []).slice(0, 4).map(h => `<li>${h}</li>`).join('');
         card.innerHTML = `
           <div class="ref-card-img-wrap">
             <img src="${prod.image}" alt="${prod.name}" loading="lazy">
@@ -1781,6 +1838,7 @@
           <div class="ref-card-body">
             <h3 class="ref-card-title">${prod.name}</h3>
             <p class="ref-card-desc">${shortDesc}...</p>
+            ${keyHighlights ? `<ul class="ref-card-highlights">${keyHighlights}</ul>` : ''}
             <a class="ref-view-link" href="product.html?id=${prod.id}" onclick="event.stopPropagation()">
               View details
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
