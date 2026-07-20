@@ -2225,7 +2225,7 @@ function renderProducts() {
   seeAllCard.className = "product-card see-all-card";
   seeAllCard.style.cursor = "pointer";
   seeAllCard.addEventListener("click", () => {
-    window.location.href = `products.html?cat=${activeCategory}`;
+    window.location.href = `catalog.html?cat=${activeCategory}`;
   });
 
   const seeAllTitle = (translations[currentLang] && translations[currentLang].btn_view_all) || "See all products";
