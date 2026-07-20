@@ -964,6 +964,24 @@
         image: "products/chickpeas.png",
         specs: { "Range": "Chickpeas, Toor, Moong, Urad, Masoor, Rajma", "Purity": "Superior cleaning & grading", "Moisture": "Controlled", "Origin": "India" }
       },
+      {
+        id: "sesame_seeds",
+        category: "agriculture",
+        name: "Sesame Seeds",
+        desc: "Our Premium Export Quality Sesame Seeds are sourced from carefully selected farms across India, offering natural golden, black, and mechanically hulled white sesame seeds rich in healthy oils, dietary fiber, and plant-based protein. Thoroughly cleaned, color-sorted, and processed using advanced mechanical techniques to guarantee high purity, our sesame seeds are widely used in culinary baking, oil extraction, tahini production, confectionery, and seasoning blends worldwide.",
+        tags: ["natural", "hulled", "oil-seeds", "white", "black"],
+        image: "products/sesame-seeds.png",
+        specs: { "Purity": "99.95% min", "Moisture": "<4.5%", "Oil Content": "50% min", "Origin": "India" }
+      },
+      {
+        id: "makhana",
+        category: "agriculture",
+        name: "Foxnuts (Makhana)",
+        desc: "Our Export Quality Foxnuts (Makhana) are sustainably harvested from pristine freshwater ecosystems in India. Known as popped water lily seeds, they are thoroughly sorted, graded, and processed under strict hygienic guidelines to ensure large size, natural crunch, and premium grade. Naturally low in sodium, calories, and fat, while being high in protein, dietary fiber, and key minerals, our foxnuts are ideal for health-conscious snacks, private-label packaging, and food manufacturing.",
+        tags: ["makhana", "foxnuts", "healthy", "snack"],
+        image: "products/makhana.png",
+        specs: { "Grade": "Premium Phool Makhana", "Moisture": "<8%", "Purity": "99.5%", "Origin": "India" }
+      },
 
       // SPICES
       {
@@ -1388,7 +1406,7 @@
         const card = document.createElement("div");
         card.className = "product-card";
         card.addEventListener("click", () => {
-          openProductModal(prod);
+          window.location.href = `product.html?id=${prod.id}`;
         });
 
         // Category clean label
