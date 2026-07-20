@@ -27,6 +27,352 @@
       border-bottom: 1.5px solid rgba(194, 150, 82, 0.3);
     }
 
+    /* ── CATEGORY PAGE (LIGHT) HERO ── */
+    .catalog-header.cat-mode {
+      background: #F8F6F1;
+      border-bottom: 1px solid #E8E2D6;
+      padding: 0 0 48px;
+    }
+
+    .cat-back-bar {
+      padding: 18px 0 12px;
+      margin-bottom: 8px;
+    }
+
+    .cat-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .cat-back-link:hover { color: var(--text-dark); }
+
+    .cat-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .cat-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .cat-hero-img {
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .cat-hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cat-hero-content {}
+
+    .cat-hero-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--blue-deep);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+
+    .cat-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+
+    .cat-hero-desc {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-mid);
+      margin: 0 0 20px;
+    }
+
+    .cat-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .cat-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-dark);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .cat-checklist li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b08443' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 5 12'%3E%3C/polyline%3E%3C/svg%3E") center/contain no-repeat;
+      margin-top: 1px;
+    }
+
+    .cat-hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cat-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-deep);
+      color: #FFFFFF;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: 2px solid var(--blue-deep);
+    }
+
+    .cat-btn-primary:hover {
+      background: #0f1c38;
+      border-color: #0f1c38;
+      transform: translateY(-2px);
+    }
+
+    .cat-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-dark);
+      padding: 13px 30px;
+      border-radius: 50px;
+      border: 2px solid #D4C9B5;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .cat-btn-outline:hover {
+      border-color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ── CATEGORY PRODUCT GRID SECTION ── */
+    .cat-grid-section {
+      background: #F8F6F1;
+      padding: 56px 0;
+    }
+
+    .cat-grid-header {
+      margin-bottom: 36px;
+    }
+
+    .cat-grid-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 10px;
+    }
+
+    .cat-grid-header p {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      max-width: 640px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .cat-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .cat-product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 580px) {
+      .cat-product-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Reference-style product card */
+    .ref-product-card {
+      background: #FFFFFF;
+      border: 1px solid #E8E2D6;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ref-product-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+
+    .ref-card-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: #F0EDE6;
+    }
+
+    .ref-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .ref-product-card:hover .ref-card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .ref-types-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      border: 1px solid #D4C9B5;
+      color: var(--text-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .ref-card-body {
+      padding: 22px 24px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ref-card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 10px;
+      line-height: 1.35;
+    }
+
+    .ref-card-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-mid);
+      margin: 0 0 18px;
+      flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ref-view-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .ref-view-link:hover { gap: 9px; }
+
+    /* ── OTHER PRODUCTS SECTION ── */
+    .other-products-section {
+      background: #FFFFFF;
+      border-top: 1px solid #E8E2D6;
+      padding: 52px 0 60px;
+    }
+
+    .other-products-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 28px;
+    }
+
+    .other-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .other-cat-card {
+      display: flex;
+      flex-direction: column;
+      background: #F8F6F1;
+      border: 1px solid #E8E2D6;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: box-shadow 0.25s, transform 0.25s;
+      cursor: pointer;
+    }
+
+    .other-cat-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+
+    .other-cat-img {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+    }
+
+    .other-cat-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .other-cat-name {
+      padding: 14px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
     /* ── DYNAMIC CATEGORY HERO ── */
     .catalog-hero-inner {
       display: grid;
@@ -560,33 +906,50 @@
     <a href="index.html#inquiry" class="btn-primary mobile-menu-cta" data-trans="btn_quote">Get in Touch</a>
   </div>
 
-  <!-- ── CATALOG HEADER ── -->
-  <header class="catalog-header">
+  <!-- ── CATALOG HEADER (renders dark for all-view, light for category-view) ── -->
+  <header class="catalog-header" id="catalogHeader">
     <div class="container">
       <div id="catalogHero">
         <!-- Rendered dynamically by Javascript -->
       </div>
 
-      <div class="catalog-filters">
+      <!-- Filter tabs — only visible in all-products view -->
+      <div class="catalog-filters" id="catalogFilters">
         <button class="filter-btn active" data-cat="all">All Commodities</button>
-        <button class="filter-btn" data-cat="dehydrated">Dehydrated Vegetables & Fruits</button>
+        <button class="filter-btn" data-cat="dehydrated">Dehydrated Vegetables &amp; Fruits</button>
         <button class="filter-btn" data-cat="agriculture">Agriculture Products</button>
         <button class="filter-btn" data-cat="spices">Spices</button>
         <button class="filter-btn" data-cat="natures_finest">Nature's Finest</button>
         <button class="filter-btn" data-cat="dried_fruits">Dried Fruits</button>
-        <button class="filter-btn" data-cat="fresh_produce">Fruits & Vegetables</button>
+        <button class="filter-btn" data-cat="fresh_produce">Fruits &amp; Vegetables</button>
         <button class="filter-btn" data-cat="handicraft">Handicraft</button>
-        <button class="filter-btn" data-cat="textile">Textile & Apparel</button>
+        <button class="filter-btn" data-cat="textile">Textile &amp; Apparel</button>
       </div>
     </div>
   </header>
 
-  <!-- ── PRODUCT SECTION ── -->
-  <section class="catalog-section">
+  <!-- ── PRODUCT SECTION (all-view small cards) ── -->
+  <section class="catalog-section" id="allProductsSection">
     <div class="container">
       <div class="catalog-grid" id="catalogGrid">
         <!-- Rendered by Javascript -->
       </div>
+    </div>
+  </section>
+
+  <!-- ── CATEGORY PRODUCT GRID (reference-style large cards) ── -->
+  <section class="cat-grid-section" id="catProductsSection" style="display:none;">
+    <div class="container">
+      <div class="cat-grid-header" id="catGridHeader"></div>
+      <div class="cat-product-grid" id="catProductGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── OTHER PRODUCTS SECTION ── -->
+  <section class="other-products-section" id="otherProductsSection" style="display:none;">
+    <div class="container">
+      <h2>Explore Our Other Product Categories</h2>
+      <div class="other-cat-grid" id="otherCatGrid"></div>
     </div>
   </section>
 
@@ -878,61 +1241,95 @@
 
   <script src="app.js"></script>
   <script>
-    // Detailed local products database with specifications
     const productsList = [
       // DEHYDRATED VEGETABLES & FRUITS
       {
         id: "dehydrated_onion",
         category: "dehydrated",
-        name: "Dehydrated Onion",
-        desc: "Our premium Dehydrated Red and White Onion is produced from carefully selected farm-fresh onions sourced from India's leading agricultural regions. Processed in state-of-the-art facilities using advanced dehydration technology, our onions retain their natural flavor, aroma, color, and nutritional value while offering an extended shelf life. Available in flakes, minced, chopped, granules, powder, and kibbled forms, our dehydrated onions are widely used in food processing, seasoning blends, ready-to-eat meals, soups, sauces, snacks, frozen foods, and spice manufacturing.",
-        tags: ["onion", "flakes", "minced", "chopped", "granules", "powder", "kibbled"],
+        name: "Dehydrated Onion Products",
+        desc: "Available in 2 types — Dehydrated Red Onion Flakes/Chopped/Minced/Granules/Powder & Dehydrated White Onion Flakes/Chopped/Minced/Granules/Powder. Our premium onions retain their natural flavor, aroma, color, and nutritional value. Ideal for food processing, seasoning blends, soups, sauces, snacks, and frozen foods.",
+        tags: ["onion", "flakes", "minced", "chopped", "granules", "powder"],
         image: "products/onion-powder.png",
         specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural Red & White", "Origin": "India" }
       },
       {
         id: "dehydrated_garlic",
         category: "dehydrated",
-        name: "Dehydrated Garlic",
-        desc: "Our Export Quality Dehydrated Garlic is manufactured from freshly harvested, premium-grade garlic sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, our garlic retains its natural pungent flavor, rich aroma, and nutritional value while ensuring an extended shelf life. Available in flakes, minced, chopped, granules, and powder, our dehydrated garlic is widely used by food manufacturers, seasoning producers, snack companies, restaurants, ready-to-eat meal manufacturers, and spice processors worldwide.",
+        name: "Dehydrated Garlic Flakes/Chopped/Minced/Granules/Powder",
+        desc: "Dehydrated Garlic Flakes (5-15mm), Chopped (3-5mm), Minced (1-3mm), Granules (0.4-1mm), Powder (80-120)Mesh are made by finely chopping/grinding fresh garlic. Export quality with natural pungent flavor and rich aroma, widely used by food manufacturers, spice producers, and restaurants worldwide.",
         tags: ["garlic", "flakes", "minced", "chopped", "granules", "powder"],
         image: "products/garlic-powder.png",
-        specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder", "Moisture": "<6% (Low moisture)", "Purity": "100% Pure & Natural", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_ginger",
-        category: "dehydrated",
-        name: "Dehydrated Ginger",
-        desc: "Our Export Quality Dehydrated Ginger is produced from carefully selected fresh ginger sourced from premium farms across India. Processed using advanced dehydration techniques, it preserves its natural pungency, distinctive aroma, authentic flavor, and essential nutrients while offering an extended shelf life for global distribution. Available in slices, flakes, granules, and powder, our dehydrated ginger is widely used in the food, beverage, spice, pharmaceutical, and nutraceutical industries.",
-        tags: ["ginger", "slices", "flakes", "granules", "powder"],
-        image: "products/ginger-powder.png",
-        specs: { "Forms": "Slices, Flakes, Granules, Powder", "Moisture": "Low moisture", "Purity": "Authentic, pungent flavor", "Origin": "India" }
-      },
-      {
-        id: "dehydrated_beetroot",
-        category: "dehydrated",
-        name: "Dehydrated Beetroot",
-        desc: "Our Premium Export Quality Dehydrated Beetroot is produced from carefully selected fresh beetroots sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, it retains its natural vibrant red color, earthy flavor, and valuable nutrients while offering an extended shelf life for international markets. Available in flakes, slices, granules, and powder, our dehydrated beetroot is widely used in food processing, health supplements, natural food coloring, beverages, soups, sauces, bakery products, seasonings, and nutraceutical applications.",
-        tags: ["beetroot", "flakes", "slices", "granules", "powder"],
-        image: "products/dehydrated-veg.png",
-        specs: { "Forms": "Flakes, Slices, Granules, Powder", "Moisture": "Low moisture", "Nutrition": "Vitamins, fiber & antioxidants", "Origin": "India" }
+        specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder", "Moisture": "<6%", "Purity": "100% Pure & Natural", "Origin": "India" }
       },
       {
         id: "moringa_powder",
         category: "dehydrated",
-        name: "Premium Moringa Powder",
-        desc: "Our Premium Export Quality Moringa Powder is produced from carefully selected fresh Moringa (Drumstick) leaves sourced from trusted farms in India. The leaves are hygienically washed, shade-dried, and finely processed using advanced techniques to preserve their natural green color, rich nutritional profile, and bioactive compounds, ensuring premium quality for international markets. Naturally rich in plant-based protein, dietary fiber, antioxidants, vitamins A, C & E, calcium, iron, potassium, and essential amino acids, our Moringa Powder is widely used in health supplements, functional foods, herbal products, smoothies, teas, nutraceuticals, cosmetics, and wellness formulations.",
-        tags: ["moringa", "leaves", "powder", "organic"],
+        name: "Moringa Powder",
+        desc: "Moringa Leaves are the edible, nutrient-rich leaves of the Moringa Oleifera tree, also known as the Drumstick Tree, Miracle Tree, or Tree of Life. Our moringa powder preserves the natural green color, rich nutritional profile, and bioactive compounds. Used in health supplements, functional foods, smoothies, and wellness formulations.",
+        tags: ["moringa", "leaves", "powder", "organic", "superfood"],
         image: "products/dehydrated-veg.png",
         specs: { "Form": "Fine Powder (80-100 mesh)", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
       },
-
+      {
+        id: "dehydrated_ginger",
+        category: "dehydrated",
+        name: "Dehydrated Ginger Whole / Flakes / Powder",
+        desc: "Deliver pure, concentrated warmth and robust flavor with our premium dehydrated ginger. Carefully sourced and gently dried to lock in its natural essential oils. Available in whole, slices, flakes, and powder forms, used in food, beverage, pharmaceutical, and nutraceutical industries.",
+        tags: ["ginger", "slices", "flakes", "whole", "powder"],
+        image: "products/ginger-powder.png",
+        specs: { "Forms": "Whole, Slices, Flakes, Powder", "Moisture": "Low moisture", "Purity": "Authentic, pungent flavor", "Origin": "India" }
+      },
+      {
+        id: "dehydrated_potato",
+        category: "dehydrated",
+        name: "Dehydrated Potato Chips / Flakes / Granules / Powder",
+        desc: "Deliver authentic flavor and unmatched convenience with our versatile range of dehydrated potatoes. Sourced from high-quality potatoes and carefully processed to retain their natural starch content, taste, and texture.",
+        tags: ["potato", "chips", "flakes", "granules", "powder"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Forms": "Chips, Flakes, Granules, Powder", "Moisture": "<8%", "Color": "Cream white", "Origin": "India" }
+      },
+      {
+        id: "dehydrated_mango",
+        category: "dehydrated",
+        name: "Dehydrated Mango Flakes / Powder",
+        desc: "Bring the vibrant, tropical taste of mangoes to your product line all year round. Carefully sourced and gently dehydrated to preserve their natural aroma, color, and nutritional value. Ideal for beverages, ice cream, bakery, confectionery, and snack applications.",
+        tags: ["mango", "flakes", "powder", "tropical", "fruit"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Forms": "Flakes, Powder", "Moisture": "<5%", "Color": "Golden yellow", "Origin": "India" }
+      },
+      {
+        id: "dehydrated_spinach",
+        category: "dehydrated",
+        name: "Spinach Powder",
+        desc: "Add rich, earthy green colour and a clean nutritional boost to your formulations with our dehydrated spinach powder. We source fresh, vibrant spinach leaves and gently mill them to preserve their natural colour and nutritional profile.",
+        tags: ["spinach", "powder", "green", "vegetable"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Fine Powder", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
+      },
+      {
+        id: "dehydrated_tomato",
+        category: "dehydrated",
+        name: "Tomato Powder",
+        desc: "Get the rich, tangy flavor and deep red color of vine-ripened tomatoes in a highly stable, easy-to-use format. Our tomato powder is milled from carefully selected, fully ripe tomatoes to deliver consistent color, flavor, and acidity.",
+        tags: ["tomato", "powder", "red", "vegetable"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Fine Powder", "Moisture": "<5%", "Color": "Deep Red", "Origin": "India" }
+      },
+      {
+        id: "dehydrated_beetroot",
+        category: "dehydrated",
+        name: "Papaya Powder",
+        desc: "Carefully dehydrated and milled to preserve its active nutritional profile, this free-flowing powder is built for seamless manufacturing. Ideal for health supplements, nutraceuticals, beverages, and functional food applications.",
+        tags: ["papaya", "powder", "tropical", "fruit"],
+        image: "products/dehydrated-veg.png",
+        specs: { "Form": "Fine Powder", "Moisture": "<6%", "Color": "Golden orange", "Origin": "India" }
+      },
       // AGRICULTURE PRODUCTS
       {
         id: "rice",
         category: "agriculture",
         name: "Premium Basmati Rice",
-        desc: "Our Premium Export Quality Basmati Rice is sourced from the finest rice-growing regions of India, renowned for producing authentic long-grain basmati with exceptional aroma, delicate texture, and superior taste. Carefully processed and hygienically packed, our rice retains its natural purity, nutritional value, and premium quality to meet the expectations of global buyers. Known for its extra-long grains, rich fragrance, and excellent cooking performance, our Basmati Rice cooks to a light, fluffy texture with distinct, non-sticky grains, making it ideal for biryanis, pilafs, gourmet cuisine, restaurants, hotels, and retail markets.",
+        desc: "Our Premium Export Quality Basmati Rice is sourced from the finest rice-growing regions of India, renowned for producing authentic long-grain basmati with exceptional aroma, delicate texture, and superior taste. Carefully processed and hygienically packed.",
         tags: ["basmati", "rice", "grain", "aromatic"],
         image: "products/rice.png",
         specs: { "Grain": "Extra-long grain", "Texture": "Fluffy, non-sticky", "Quality": "Export-grade tested", "Origin": "India" }
@@ -941,8 +1338,8 @@
         id: "wheat",
         category: "agriculture",
         name: "Premium Wheat",
-        desc: "Our Premium Export Quality Wheat is sourced from India's finest agricultural regions, ensuring superior grain quality, high nutritional value, and consistent performance. Carefully cleaned, graded, and processed under strict quality control, our wheat meets the highest international standards for purity, freshness, and food safety. Known for its uniform grain size, excellent milling characteristics, and rich nutritional profile, our premium wheat is widely used for producing flour, bread, pasta, biscuits, bakery products, and various food applications.",
-        tags: ["wheat", "milling", "milling-grade", "flour"],
+        desc: "Our Premium Export Quality Wheat is sourced from India's finest agricultural regions, ensuring superior grain quality, high nutritional value, and consistent performance. Carefully cleaned, graded, and processed under strict quality control.",
+        tags: ["wheat", "milling", "flour"],
         image: "products/wheat.png",
         specs: { "Grain Size": "Uniform", "Milling Performance": "Excellent", "Quality": "High purity & freshness", "Origin": "India" }
       },
@@ -950,45 +1347,26 @@
         id: "peanuts",
         category: "agriculture",
         name: "Groundnuts (Peanuts)",
-        desc: "Our Premium Export Quality Groundnuts (Peanuts) are sourced from India's leading agricultural regions, known for producing high-quality peanuts with excellent taste, high oil content, and superior nutritional value. Carefully cleaned, graded, and hygienically processed, our groundnuts retain their natural freshness, rich flavor, and crisp texture, making them an ideal choice for international markets. Available in Raw, Bold, Java, Blanched, Shelled, and In-Shell varieties, our groundnuts are widely used in snack manufacturing, confectionery, peanut butter production, edible oil extraction, food processing, and retail distribution.",
+        desc: "Our Premium Export Quality Groundnuts are sourced from India's leading agricultural regions. Available in Raw, Bold, Java, Blanched, Shelled, and In-Shell varieties, widely used in snack manufacturing, confectionery, peanut butter production, and edible oil extraction.",
         tags: ["groundnuts", "peanuts", "kernels", "bold", "java"],
         image: "products/peanuts.png",
         specs: { "Varieties": "Raw, Bold, Java, Blanched, Shelled, In-Shell", "Aflatoxin Level": "Within export limits", "Purity": "Cleaned & graded", "Origin": "India" }
       },
       {
-        id: "pulses",
-        category: "agriculture",
-        name: "Pulses & Lentils",
-        desc: "Our Premium Export Quality Pulses & Lentils are sourced from India's most fertile agricultural regions, ensuring superior quality, exceptional purity, and consistent nutritional value. Carefully cleaned, graded, and hygienically processed, our products retain their natural freshness, rich taste, and excellent cooking characteristics, making them highly preferred in international markets. We offer a comprehensive range of Chickpeas (Kabuli & Desi), Toor Dal (Pigeon Peas), Moong Dal (Green Gram), Urad Dal (Black Gram), Masoor Dal (Red Lentils), Chana Dal, Green Peas, Kidney Beans (Rajma), Black-Eyed Beans, and other premium pulses.",
-        tags: ["pulses", "lentils", "chickpeas", "beans", "dals"],
-        image: "products/chickpeas.png",
-        specs: { "Range": "Chickpeas, Toor, Moong, Urad, Masoor, Rajma", "Purity": "Superior cleaning & grading", "Moisture": "Controlled", "Origin": "India" }
-      },
-      {
         id: "sesame_seeds",
         category: "agriculture",
         name: "Sesame Seeds",
-        desc: "Our Premium Export Quality Sesame Seeds are sourced from carefully selected farms across India, offering natural golden, black, and mechanically hulled white sesame seeds rich in healthy oils, dietary fiber, and plant-based protein. Thoroughly cleaned, color-sorted, and processed using advanced mechanical techniques to guarantee high purity, our sesame seeds are widely used in culinary baking, oil extraction, tahini production, confectionery, and seasoning blends worldwide.",
+        desc: "Premium sesame seeds sourced from carefully selected farms across India, offering natural golden, black, and mechanically hulled white sesame seeds rich in healthy oils, dietary fiber, and plant-based protein. Thoroughly cleaned, color-sorted, and processed.",
         tags: ["natural", "hulled", "oil-seeds", "white", "black"],
         image: "products/sesame-seeds.png",
         specs: { "Purity": "99.95% min", "Moisture": "<4.5%", "Oil Content": "50% min", "Origin": "India" }
       },
-      {
-        id: "makhana",
-        category: "agriculture",
-        name: "Foxnuts (Makhana)",
-        desc: "Our Export Quality Foxnuts (Makhana) are sustainably harvested from pristine freshwater ecosystems in India. Known as popped water lily seeds, they are thoroughly sorted, graded, and processed under strict hygienic guidelines to ensure large size, natural crunch, and premium grade. Naturally low in sodium, calories, and fat, while being high in protein, dietary fiber, and key minerals, our foxnuts are ideal for health-conscious snacks, private-label packaging, and food manufacturing.",
-        tags: ["makhana", "foxnuts", "healthy", "snack"],
-        image: "products/makhana.png",
-        specs: { "Grade": "Premium Phool Makhana", "Moisture": "<8%", "Purity": "99.5%", "Origin": "India" }
-      },
-
       // SPICES
       {
         id: "turmeric",
         category: "spices",
         name: "Premium Turmeric",
-        desc: "Our Premium Export Quality Turmeric is sourced from carefully selected farms across India, renowned for producing turmeric with vibrant golden color, rich aroma, and high curcumin content. Expertly cleaned, processed, and hygienically packed, our turmeric retains its natural purity, flavor, and medicinal properties while meeting the highest international quality standards. Available in whole fingers, bulbs, and powder, our turmeric is widely used in the food, spice, pharmaceutical, nutraceutical, cosmetic, and wellness industries.",
+        desc: "Our Premium Export Quality Turmeric is sourced from carefully selected farms across India, renowned for vibrant golden color, rich aroma, and high curcumin content. Expertly cleaned and processed. Available in whole fingers, bulbs, and powder.",
         tags: ["turmeric", "finger", "bulbs", "powder", "curcumin"],
         image: "products/turmeric.png",
         specs: { "Form": "Whole fingers, Bulbs, Powder", "Curcumin Content": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -997,7 +1375,7 @@
         id: "red_chilli",
         category: "spices",
         name: "Premium Red Chilli",
-        desc: "Our Premium Export Quality Red Chilli is sourced from India's renowned chilli-growing regions, known for producing chilies with vibrant natural color, rich aroma, exceptional pungency, and superior flavor. Carefully cleaned, graded, and hygienically processed, our red chillies are packed to preserve their freshness, quality, and nutritional value for international markets. Available in whole, stemless, crushed, flakes, and powder, our red chillies are widely used in spice blends, food processing, sauces, seasonings, snacks, ready-to-eat meals, and culinary applications worldwide.",
+        desc: "Our Premium Export Quality Red Chilli is sourced from India's renowned chilli-growing regions, known for vibrant natural color, rich aroma, exceptional pungency, and superior flavor. Available in whole, stemless, crushed, flakes, and powder.",
         tags: ["chilli", "red-chilli", "powder", "stemless", "whole", "flakes"],
         image: "products/red-chilli.png",
         specs: { "Form": "Whole, Stemless, Crushed, Flakes, Powder", "Pungency": "Customizable SHU levels", "Color": "Vibrant ASTA values", "Origin": "India" }
@@ -1006,7 +1384,7 @@
         id: "black_pepper",
         category: "spices",
         name: "Premium Black Pepper",
-        desc: "Our Premium Export Quality Black Pepper is sourced from the finest pepper-growing regions of India, renowned for producing pepper with exceptional aroma, bold flavor, and high piperine content. Carefully cleaned, graded, and hygienically processed, our black pepper retains its natural essential oils, freshness, and premium quality to meet the demands of international markets. Available in whole peppercorns, crushed, and powder, our black pepper is widely used in the food processing, spice manufacturing, seasoning, pharmaceutical, nutraceutical, and hospitality industries.",
+        desc: "Our Premium Export Quality Black Pepper is sourced from the finest pepper-growing regions of India, with exceptional aroma, bold flavor, and high piperine content. Available in whole peppercorns, crushed, and powder.",
         tags: ["black-pepper", "peppercorns", "crushed", "powder", "piperine"],
         image: "products/black-pepper.png",
         specs: { "Form": "Whole peppercorns, Crushed, Powder", "Piperine": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -1015,7 +1393,7 @@
         id: "cumin",
         category: "spices",
         name: "Premium Cumin Seeds",
-        desc: "Our Premium Export Quality Cumin Seeds are sourced from the finest cumin-growing regions of India, celebrated for their rich aroma, distinctive earthy flavor, and high essential oil content. Carefully cleaned, graded, and hygienically processed, our cumin seeds retain their natural freshness, purity, and nutritional value, making them ideal for international markets. Known for their uniform size, natural color, and superior quality, our cumin seeds are widely used in spice blends, food processing, seasonings, ready-to-eat meals, pharmaceuticals, and culinary applications.",
+        desc: "Our Premium Export Quality Cumin Seeds are sourced from the finest cumin-growing regions of India, celebrated for their rich aroma, distinctive earthy flavor, and high essential oil content. Available in whole seeds and powder.",
         tags: ["cumin", "seeds", "powder", "aromatic", "earthy"],
         image: "products/cumin.png",
         specs: { "Form": "Whole Seeds, Powder", "Aroma": "Rich natural aroma", "Essential Oil": "High content", "Origin": "India" }
@@ -1024,7 +1402,7 @@
         id: "coriander",
         category: "spices",
         name: "Premium Coriander Seeds",
-        desc: "Our Premium Export Quality Coriander Seeds are sourced from India's leading coriander-growing regions, known for producing seeds with a distinctive citrusy aroma, mild earthy flavor, and high essential oil content. Carefully cleaned, graded, and hygienically processed, our coriander seeds preserve their natural freshness, purity, and nutritional value to meet the highest international quality standards. Available in whole and powder forms, our coriander seeds are widely used in spice blends, seasonings, curry powders, food processing, beverages, pharmaceuticals, and culinary applications.",
+        desc: "Our Premium Export Quality Coriander Seeds are sourced from India's leading coriander-growing regions, known for a distinctive citrusy aroma and mild earthy flavor. Available in whole and powder forms.",
         tags: ["coriander", "seeds", "powder", "citrusy", "earthy"],
         image: "products/coriander.png",
         specs: { "Form": "Whole Seeds, Powder", "Aroma": "Citrusy, mild earthy", "Essential Oil": "High content", "Origin": "India" }
@@ -1033,18 +1411,17 @@
         id: "cinnamon",
         category: "spices",
         name: "Premium Cinnamon",
-        desc: "Our Premium Export Quality Cinnamon is sourced from carefully selected plantations and processed under strict quality standards to preserve its naturally sweet aroma, warm flavor, and high essential oil content. Expertly cleaned, graded, and hygienically packed, our cinnamon delivers exceptional quality, purity, and freshness for international markets. Available in whole quills, sticks, chips, cut pieces, and powder, our cinnamon is widely used in the food, beverage, bakery, confectionery, spice, pharmaceutical, and cosmetic industries.",
+        desc: "Our Premium Export Quality Cinnamon is sourced from carefully selected plantations with a naturally sweet aroma and warm flavor. Available in whole quills, sticks, chips, cut pieces, and powder.",
         tags: ["cinnamon", "quills", "sticks", "chips", "powder"],
         image: "products/cinnamon.png",
         specs: { "Form": "Whole quills, Sticks, Chips, Powder", "Aroma": "Naturally sweet, warm flavor", "Moisture": "Low moisture", "Origin": "India" }
       },
-
       // NATURE'S FINEST
       {
         id: "natural_honey",
         category: "natures_finest",
         name: "Pure Natural Honey",
-        desc: "We supply premium, sustainably harvested natural honey sourced directly from pristine apiaries across India. Rich in natural enzymes with a robust, floral flavor profile, our honey is gently warmed and carefully filtered to remove beeswax and raw impurities — while strictly preserving its natural nutritional integrity. We understand that purity is the top priority for global wholesale buyers. That's why our honey undergoes rigorous quality control to ensure it is completely free from added sugars, artificial syrups, and antibiotic residues — delivering a stable, true-to-source product batch after batch.",
+        desc: "We supply premium, sustainably harvested natural honey sourced directly from pristine apiaries across India. Rich in natural enzymes with a robust, floral flavor profile. Completely free from added sugars, artificial syrups, and antibiotic residues.",
         tags: ["honey", "natural", "pure", "apiaries"],
         image: "products/natures-finest-composite.png",
         specs: { "Purity": "100% Pure (No added sugar)", "Moisture Control": "Optimal for transit stability", "Residues": "Free from antibiotics", "Origin": "India" }
@@ -1053,7 +1430,7 @@
         id: "jaggery",
         category: "natures_finest",
         name: "Chemical-Free Jaggery",
-        desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane, processed using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness. Unlike refined sugar, our jaggery is minimally processed, preserving natural minerals and nutrients valued by health-conscious consumers worldwide. We recognize that buyers seek jaggery that is authentic, additive-free, and consistent in quality across shipments. Our product undergoes strict quality checks to ensure it is free from chemical bleaching agents, added sugar, and harmful preservatives.",
+        desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness. Completely free from chemical bleaching agents and harmful preservatives.",
         tags: ["jaggery", "sugarcane", "molasses", "sweetener"],
         image: "products/natures-finest-composite.png",
         specs: { "Quality": "Chemical-free, additive-free", "Moisture": "Controlled for transit stability", "Purity": "Authentic, traditional", "Origin": "India" }
@@ -1062,121 +1439,64 @@
         id: "cow_ghee",
         category: "natures_finest",
         name: "Pure Cow Ghee",
-        desc: "We supply pure, traditionally prepared cow ghee made from the milk of grass-fed cows, slow-cooked using the authentic bilona/vaat method to preserve its rich aroma, golden color, and granular texture. Our ghee retains the natural nutritional benefits associated with traditional preparation, offering a true-to-source product trusted by discerning global buyers. We understand that authenticity and purity are non-negotiable for cow ghee buyers. That's why our ghee undergoes rigorous quality control to ensure it is completely free from vegetable oil adulteration, artificial flavoring, and preservatives.",
+        desc: "We supply pure, traditionally prepared cow ghee made from the milk of grass-fed cows, slow-cooked using the authentic bilona/vaat method to preserve its rich aroma, golden color, and granular texture. Free from vegetable oil adulteration and preservatives.",
         tags: ["ghee", "cow-ghee", "bilona", "butter"],
         image: "products/natures-finest-composite.png",
         specs: { "Method": "Bilona/Vaat slow-cooked", "Purity": "No vegetable oil adulteration", "Shelf Life": "Long (no refrigeration required)", "Origin": "India" }
       },
-      {
-        id: "chia_seeds",
-        category: "natures_finest",
-        name: "Organic Chia Seeds",
-        desc: "Nutrient-dense organic chia seeds, high in Omega-3 fats and clean protein.",
-        tags: ["chia", "organic", "superfood"],
-        image: "products/chia-seeds.png",
-        specs: { "Purity": "99.9% min", "Moisture": "<8%", "Form": "Seeds", "Origin": "India" }
-      },
-      {
-        id: "flax_seeds",
-        category: "natures_finest",
-        name: "Organic Flax Seeds",
-        desc: "Premium golden flax seeds, rich in fiber and healthy lignans for wellness.",
-        tags: ["flax", "seeds", "wellness"],
-        image: "products/flax-seeds.png",
-        specs: { "Purity": "99% min", "Moisture": "<8%", "Form": "Seeds", "Origin": "India" }
-      },
-      {
-        id: "amaranth_seeds",
-        category: "natures_finest",
-        name: "Amaranth Seeds",
-        desc: "High-purity organic amaranth grains, gluten-free and loaded with amino acids.",
-        tags: ["amaranth", "grain", "gluten-free"],
-        image: "products/amaranth-seeds.png",
-        specs: { "Purity": "99.5% min", "Moisture": "<10%", "Form": "Grains", "Origin": "India" }
-      },
-
       // DRIED FRUITS
       {
         id: "cashews",
         category: "dried_fruits",
         name: "Cashew Kernels",
-        desc: "Our Premium Export Quality Cashews are sourced from the finest growing regions and carefully processed to deliver exceptional taste, freshness, and consistent quality. Expertly graded, hygienically processed, and packed using advanced quality control measures, our cashews retain their natural crunch, rich buttery flavor, and nutritional value, making them a preferred choice in international markets. Available in a wide range of whole kernels, splits, pieces, and premium grades such as W180, W210, W240, W320, and W450.",
+        desc: "Our Premium Export Quality Cashews are carefully processed to deliver exceptional taste, freshness, and consistent quality. Available in a wide range of whole kernels, splits, pieces, and premium grades such as W180, W210, W240, W320, and W450.",
         tags: ["cashews", "kernels", "w180", "w240", "w320"],
         image: "products/dried-fruits.png",
         specs: { "Grades": "W180, W210, W240, W320, W450", "Moisture": "Low moisture", "Texture": "Rich buttery, superior crunch", "Origin": "India" }
       },
       {
-        id: "raisins",
-        category: "dried_fruits",
-        name: "Black & Golden Raisins",
-        desc: "Our Premium Export Quality Black & Golden Raisins are sourced from carefully selected vineyards and naturally processed to preserve their rich sweetness, soft texture, and nutritional value. Hygienically cleaned, graded, and packed under strict quality standards, our raisins offer exceptional freshness, uniform quality, and an extended shelf life for global markets. Available in Black and Golden varieties, our raisins are naturally rich in dietary fiber, antioxidants, vitamins, and essential minerals.",
-        tags: ["raisins", "golden", "black", "sweet"],
-        image: "products/dried-fruits.png",
-        specs: { "Varieties": "Black and Golden", "Moisture": "Low moisture", "Purity": "Hygienically cleaned & graded", "Origin": "India" }
-      },
-      {
         id: "almonds",
         category: "dried_fruits",
         name: "Premium Almonds",
-        desc: "Our Premium Export Quality Almonds are carefully sourced from trusted growers and processed under stringent quality standards to deliver exceptional freshness, rich flavor, and superior nutritional value. Expertly cleaned, graded, and hygienically packed, our almonds retain their natural crunch, premium appearance, and extended shelf life, making them an excellent choice for international markets. Available in whole, natural, blanched, sliced, diced, and almond powder.",
+        desc: "Our Premium Export Quality Almonds are carefully sourced from trusted growers and processed under stringent quality standards to deliver exceptional freshness, rich flavor, and superior nutritional value. Available in whole, natural, blanched, sliced, diced, and almond powder.",
         tags: ["almonds", "raw", "nuts", "blanched", "powder"],
         image: "products/dried-fruits.png",
         specs: { "Form": "Whole, Blanched, Sliced, Diced, Powder", "Moisture": "Low moisture", "Quality": "Export-grade tested", "Origin": "India" }
       },
       {
-        id: "figs",
+        id: "raisins",
         category: "dried_fruits",
-        name: "Dried Figs (Anjeer)",
-        desc: "Our Premium Export Quality Figs (Anjeer) are carefully sourced from trusted growers and processed under strict quality standards to preserve their natural sweetness, soft texture, rich flavor, and exceptional nutritional value. Hygienically cleaned, graded, and packed, our figs maintain their premium quality and extended shelf life, making them a preferred choice in international markets. Available in whole dried figs and customized bulk packaging.",
-        tags: ["figs", "anjeer", "dried", "sweet"],
+        name: "Black & Golden Raisins",
+        desc: "Our Premium Export Quality Black & Golden Raisins are sourced from carefully selected vineyards and naturally processed to preserve their rich sweetness, soft texture, and nutritional value. Available in Black and Golden varieties.",
+        tags: ["raisins", "golden", "black", "sweet"],
         image: "products/dried-fruits.png",
-        specs: { "Form": "Whole Dried Figs", "Moisture": "Controlled moisture", "Texture": "Soft, naturally sweet", "Origin": "India" }
+        specs: { "Varieties": "Black and Golden", "Moisture": "Low moisture", "Purity": "Hygienically cleaned & graded", "Origin": "India" }
       },
-
       // FRUITS & VEGETABLES
       {
         id: "fresh_mangoes",
         category: "fresh_produce",
         name: "Fresh Kesar Mangoes",
-        desc: "Our Premium Export Quality Kesar Mangoes are sourced directly from the renowned orchards of Gujarat, India, celebrated worldwide for producing the authentic GI-tagged Kesar Mango. Handpicked at optimum maturity, our mangoes are carefully sorted, graded, and hygienically packed to preserve their exceptional sweetness, vibrant saffron-colored pulp, and rich tropical aroma. Known as the 'Queen of Mangoes,' Kesar Mangoes are prized for their smooth texture, naturally sweet flavor, and minimal fiber content.",
+        desc: "Our Premium Export Quality Kesar Mangoes are sourced directly from the renowned orchards of Gujarat, India, celebrated worldwide for producing the authentic GI-tagged Kesar Mango. Handpicked at optimum maturity and packed for international markets.",
         tags: ["mangoes", "kesar", "fresh", "sweet", "saffron"],
         image: "products/fresh-produce.png",
         specs: { "Quality": "GI-tagged, Grade A Export", "Ripeness": "Optimum maturity", "Cold Chain": "Maintained in transit", "Origin": "India" }
       },
       {
-        id: "fresh_pomegranates",
-        category: "fresh_produce",
-        name: "Fresh Pomegranates",
-        desc: "Our Premium Export Quality Pomegranates are sourced from India's finest orchards, renowned for producing fruits with vibrant ruby-red arils, naturally sweet flavor, and exceptional nutritional value. Carefully handpicked at peak maturity, each fruit is graded, sorted, and hygienically packed to ensure maximum freshness, superior appearance, and extended shelf life for international markets. Known for their high antioxidant content, rich vitamins, and juicy arils, our pomegranates are widely appreciated.",
-        tags: ["pomegranates", "fresh", "ruby-red", "arils", "juice"],
-        image: "products/fresh-produce.png",
-        specs: { "Quality": "Vibrant ruby-red arils, soft-seeded", "Maturity": "Peak maturity, handpicked", "Juice Content": "High", "Origin": "India" }
-      },
-      {
         id: "fresh_onions",
         category: "fresh_produce",
         name: "Fresh Red Onions",
-        desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions and carefully selected to ensure superior quality, uniform size, vibrant color, and excellent shelf life. Harvested at optimal maturity, our onions are meticulously cleaned, graded, and hygienically packed to preserve their natural freshness, rich flavor, and nutritional value for international markets. Known for their crisp texture, pungent taste, and deep red skin, our red onions are widely used.",
+        desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions. Known for their crisp texture, pungent taste, and deep red skin. Harvested at optimal maturity, meticulously cleaned, graded, and hygienically packed.",
         tags: ["onions", "fresh", "red-onions", "pungent"],
         image: "products/fresh-produce.png",
         specs: { "Quality": "Grade A Export", "Size": "Uniform, firm texture", "Skin Quality": "Excellent", "Origin": "India" }
       },
-      {
-        id: "fresh_potatoes",
-        category: "fresh_produce",
-        name: "Fresh Potatoes",
-        desc: "Our Premium Export Quality Potatoes are sourced from India's leading potato-growing regions and carefully selected to ensure superior quality, uniform size, smooth skin, and excellent shelf life. Harvested at the ideal stage of maturity, our potatoes are meticulously cleaned, graded, and hygienically packed to preserve their natural freshness, taste, and nutritional value for international markets. Known for their firm texture, consistent quality, and excellent cooking performance.",
-        tags: ["potatoes", "fresh", "table-grade", "cooking"],
-        image: "products/fresh-produce.png",
-        specs: { "Quality": "Grade A Export", "Characteristics": "Uniform, smooth skin", "Dry Matter": "High", "Origin": "India" }
-      },
-
       // HANDICRAFT
       {
         id: "wooden_handicrafts",
         category: "handicraft",
         name: "Wooden Handicrafts",
-        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor, wooden toys, kitchenware, and decorative boxes, each piece showcases fine detailing, natural wood grain, and durable craftsmanship. We use premium quality wood, finished with eco-friendly polishes and treatments to ensure long-lasting durability and a smooth, export-ready finish. Customization in design, size, and finish is available.",
+        desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor and kitchenware. Custom designs available.",
         tags: ["handicraft", "wooden", "furniture", "carving", "joinery"],
         image: "products/handicrafts.png",
         specs: { "Craftsmanship": "Traditional carving & joinery", "Finish": "Eco-friendly polishes", "Material": "Premium quality wood", "Origin": "India" }
@@ -1185,75 +1505,29 @@
         id: "brass_metal_handicrafts",
         category: "handicraft",
         name: "Brass & Metal Handicrafts",
-        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, metal wall art, copper utensils, and bronze figurines — each reflecting intricate detailing and traditional artistry. Every piece undergoes quality checks for finish, weight, and durability, ensuring products retain their sheen and structural integrity over time.",
+        desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, and copper utensils, each reflecting intricate detailing.",
         tags: ["handicraft", "brass", "metal", "casting", "engraving"],
         image: "products/handicrafts.png",
         specs: { "Craftsmanship": "Handcrafted casting & engraving", "Finish": "Antique, polished, matte", "Quality": "Weight & sheen checked", "Origin": "India" }
       },
-      {
-        id: "terracotta_pottery",
-        category: "handicraft",
-        name: "Terracotta & Pottery",
-        desc: "Handmade from natural clay and shaped using traditional pottery techniques, our terracotta and pottery products include pots, decorative vases, clay figurines, hand-painted pottery, and garden décor items. Each piece carries an earthy, rustic charm while showcasing the skill of local artisans. Fired at controlled temperatures for strength and durability, our pottery is designed to withstand both indoor and outdoor use.",
-        tags: ["handicraft", "pottery", "terracotta", "clay", "hand-painted"],
-        image: "products/handicrafts.png",
-        specs: { "Material": "Natural clay", "Durability": "Fired for strength", "Custom Design": "Supported", "Origin": "India" }
-      },
-      {
-        id: "textile_embroidery",
-        category: "handicraft",
-        name: "Textile & Embroidery Products",
-        desc: "Our textile and embroidery products are handwoven and hand-embroidered by skilled craftsmen using traditional looms and needlework techniques. The collection includes handwoven fabrics, embroidered cushion covers, wall hangings, table linens, and block-printed textiles, each rich in color, pattern, and texture. We source high-quality natural fabrics and use traditional dyeing and printing methods.",
-        tags: ["handicraft", "textiles", "embroidery", "handwoven", "block-printed"],
-        image: "products/handicrafts.png",
-        specs: { "Material": "High-quality natural fabrics", "Dyeing": "Traditional dyeing & printing", "Craftsmanship": "Handwoven & hand-embroidered", "Origin": "India" }
-      },
-      {
-        id: "bamboo_cane",
-        category: "handicraft",
-        name: "Bamboo & Cane Products",
-        desc: "Sustainably sourced bamboo and cane are hand-woven into functional and decorative products, including baskets, furniture, lampshades, storage organizers, and décor items. Each piece combines eco-friendly material with skilled craftsmanship, offering a natural, earthy aesthetic. Our bamboo and cane products are lightweight yet durable, treated to resist moisture and pests.",
-        tags: ["handicraft", "bamboo", "cane", "eco-friendly", "woven"],
-        image: "products/handicrafts.png",
-        specs: { "Material": "Sustainably sourced bamboo & cane", "Treatment": "Resists moisture & pests", "Weight": "Lightweight & durable", "Origin": "India" }
-      },
-      {
-        id: "stone_marble",
-        category: "handicraft",
-        name: "Stone & Marble Handicrafts",
-        desc: "Our stone and marble handicrafts are meticulously crafted by skilled artisans specializing in inlay work and hand carving. The range includes marble inlay pieces, stone carvings, sculptures, decorative platters, and table tops, each showcasing intricate patterns and fine detailing. Using high-quality marble and natural stone, our products are polished to a smooth finish and built for lasting durability.",
-        tags: ["handicraft", "stone", "marble", "inlay", "carving"],
-        image: "products/handicrafts.png",
-        specs: { "Material": "High-quality marble & natural stone", "Finish": "Smooth polished", "Craftsmanship": "Inlay & hand carving", "Origin": "India" }
-      },
-      {
-        id: "jewelry_accessories",
-        category: "handicraft",
-        name: "Jewelry & Fashion Accessories",
-        desc: "We offer a curated range of handmade jewelry and fashion accessories crafted using silver, beads, and oxidized metal, alongside bags, scarves, and traditional accessories. Each piece is designed to reflect authentic craftsmanship, cultural motifs, and contemporary styles, making them excellent additions to global retail collections.",
-        tags: ["handicraft", "jewelry", "accessories", "silver", "beads"],
-        image: "products/handicrafts.png",
-        specs: { "Material": "Silver, beads, oxidized metal", "Craftsmanship": "Handcrafted accessories", "Style": "Authentic & contemporary", "Origin": "India" }
-      },
-
       // TEXTILE & APPAREL
       {
         id: "textile_yarn",
         category: "textile",
         name: "Cotton Yarn",
-        desc: "Premium organic cotton yarn wound on cones, highly durable and ideal for knitting.",
-        tags: ["yarn", "organic", "knitting"],
+        desc: "Premium organic cotton yarn wound on cones, highly durable and ideal for knitting and weaving. Uniform in quality, moisture-controlled, and exported to manufacturers across Asia, Europe, and the Middle East.",
+        tags: ["yarn", "organic", "knitting", "cotton"],
         image: "products/textile-yarn.png",
-        specs: { "Count Range": "NE 20s to NE 40s", "Type": "100% Cotton", "Strength": "Premium", "Origin": "India" }
+        specs: { "Count": "NE 20s to NE 40s", "Material": "100% Cotton", "Quality": "Export-grade", "Origin": "India" }
       },
       {
-        id: "textile_apparel",
+        id: "cotton_fabrics",
         category: "textile",
-        name: "Finished Fabrics & Apparel",
-        desc: "Premium organic cotton apparel, linen clothes, home textiles, and custom fabrics.",
-        tags: ["fabrics", "apparel", "linen"],
+        name: "Cotton Fabrics",
+        desc: "Finished cotton fabrics in solid colors and prints, manufactured for international apparel and home textile markets. Woven with precision, available in various thread counts, weights, and compositions.",
+        tags: ["fabric", "cotton", "apparel", "textile"],
         image: "products/textile-apparel.png",
-        specs: { "Material": "100% Cotton / Linen", "Type": "Garments & Textiles", "Custom Design": "Supported", "Origin": "India" }
+        specs: { "Composition": "100% Cotton / Cotton Blends", "Width": "44-60 inches", "Finish": "Mercerized, sanforized", "Origin": "India" }
       }
     ];
 
@@ -1261,164 +1535,151 @@
       dehydrated: {
         name: "Dehydrated Vegetables & Fruits",
         image: "products/dehydrated-composite.png",
-        desc: `Our premium range of Dehydrated Vegetables & Fruits is carefully processed using advanced dehydration technology to preserve natural flavor, color, aroma, and nutritional value while significantly extending shelf life. These products are widely used in the food processing, ready-to-eat meals, instant foods, soups, sauces, seasonings, snacks, bakery, dairy, and HoReCa industries across global markets.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Jalpex International supplies premium dehydrated and dried vegetables & fruits processed in hygienic, FSSAI-compliant facilities to lock in colour, flavour and nutrition. Each batch is lab-tested and certified for international export standards."
       },
       agriculture: {
         name: "Agriculture Products",
         image: "products/rice.png",
-        desc: `We offer a comprehensive range of premium-quality Agriculture Products sourced directly from trusted Indian farms. Our products are carefully selected, graded, and packed to preserve freshness and meet international quality standards, making them ideal for global importers, wholesalers, retailers, and food processing industries.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Comprehensive range of premium-quality agriculture commodities sourced from the finest growing regions of India, including rice, wheat, groundnuts, sesame seeds, and more. Every consignment is graded, cleaned, and tested before shipment."
       },
       spices: {
         name: "Spices",
         image: "products/spices-composite.png",
-        desc: `India is globally recognized for producing some of the world's finest spices, valued for their exceptional aroma, rich flavor, and superior quality. We specialize in exporting a premium selection of Indian spices sourced from trusted cultivation regions and processed under stringent quality standards to ensure purity, consistency, and compliance with international food safety requirements.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "India is globally recognized for producing some of the world's finest spices. We specialize in exporting a premium selection sourced from trusted cultivation regions and processed under stringent quality standards to ensure purity, consistency, and food safety compliance."
       },
       natures_finest: {
         name: "Nature's Finest",
         image: "products/natures-finest-composite.png",
-        desc: `Our Nature's Finest collection features pure natural honey, premium cow ghee, and authentic jaggery—bringing the richness of nature and uncompromising quality to global markets.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Our Nature's Finest collection features pure natural honey, premium cow ghee, and authentic jaggery — bringing the richness of nature and uncompromising quality to global markets. Each product is lab-tested and free from adulterants."
       },
       dried_fruits: {
         name: "Dried Fruits",
         image: "products/dried-fruits.png",
-        desc: `Premium quality dry fruits including cashews, almonds, raisins (Black and Golden), figs carefully selected, graded, and tested for moisture and purity to meet international export standards.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Premium quality dry fruits including cashews, almonds, and raisins carefully selected, graded, and tested for moisture and purity to meet international export standards. Available in multiple grades for retail and industrial use."
       },
       fresh_produce: {
         name: "Fruits & Vegetables",
         image: "products/fresh-produce.png",
-        desc: `Farm-fresh fruits and vegetables, handpicked and quality-graded at the source, then hygienically packed to preserve freshness, color, and nutritional value during export transit.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Farm-fresh fruits and vegetables, handpicked and quality-graded at the source, then hygienically packed to preserve freshness, color, and nutritional value during export transit. Cold-chain logistics maintained throughout."
       },
       handicraft: {
         name: "Handicrafts",
         image: "products/handicrafts.png",
-        desc: `Authentic, handcrafted products made by skilled artisans using traditional techniques passed down through generations. Each piece reflects rich cultural heritage, fine craftsmanship, and attention to detail, making them ideal for global retail and gifting markets.
-        <ul style="list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 8px;">
-          <li>✅ <strong>Quality Assured</strong> – Every batch is lab-tested and certified to meet international export standards</li>
-          <li>✅ <strong>Custom Packaging & Labeling</strong> – Tailored packaging solutions to match your brand and market requirements</li>
-          <li>✅ <strong>Competitive Bulk Pricing</strong> – Direct-from-source pricing that ensures the best value for large-volume orders</li>
-          <li>✅ <strong>Global Reach</strong> – Trusted by importers in 22+ countries across Asia, Europe, the Middle East, and beyond</li>
-        </ul>`
+        desc: "Authentic, handcrafted products made by skilled artisans using traditional techniques passed down through generations. Each piece reflects rich cultural heritage, fine craftsmanship, and attention to detail — ideal for global retail and gifting markets."
       },
       textile: {
         name: "Textile & Apparel",
         image: "products/textile-apparel.png",
-        desc: "Finished garments, premium cotton fabrics, home textiles, and high-quality organic cotton yarns."
+        desc: "Finished garments, premium cotton fabrics, home textiles, and high-quality organic cotton yarns manufactured to meet international textile standards. Available in customizable weights, compositions, and finishes for export markets."
       }
     };
 
     let activeFilter = "all";
 
+    function getCatLabel(catKey) {
+      const labels = {
+        dehydrated: "Dehydrated Vegetables & Fruits",
+        agriculture: "Agriculture Products",
+        spices: "Spices",
+        natures_finest: "Nature's Finest",
+        dried_fruits: "Dried Fruits",
+        fresh_produce: "Fruits & Vegetables",
+        handicraft: "Handicraft",
+        textile: "Textile & Apparel"
+      };
+      return labels[catKey] || "Products";
+    }
+
+    const productTypeCount = {
+      dehydrated_onion: "6 FORMS",
+      dehydrated_garlic: "5 FORMS",
+      cashews: "5 GRADES",
+    };
+
     function renderHero() {
       const hero = document.getElementById("catalogHero");
+      const header = document.getElementById("catalogHeader");
+      const filtersDiv = document.getElementById("catalogFilters");
+      const allSection = document.getElementById("allProductsSection");
+      const catSection = document.getElementById("catProductsSection");
+      const otherSection = document.getElementById("otherProductsSection");
       if (!hero) return;
 
       if (activeFilter === "all") {
+        header.className = "catalog-header";
+        filtersDiv.style.display = "";
+        allSection.style.display = "";
+        catSection.style.display = "none";
+        otherSection.style.display = "none";
         hero.innerHTML = `
           <div class="catalog-hero-inner">
             <div class="catalog-hero-text">
               <h1 class="catalog-hero-title">Global Export Product Portfolio</h1>
-              <div class="catalog-hero-desc">Explore our carefully curated range of premium certified agricultural products, spices, and custom packaging solutions.</div>
+              <div class="catalog-hero-desc">Explore our curated range of premium certified agricultural products, spices, and custom packaging solutions.</div>
               <div class="catalog-hero-buttons">
                 <a href="#inquiry" class="catalog-hero-btn primary">Inquire Now</a>
-                <a href="https://wa.me/919879915124" class="catalog-hero-btn outline" target="_blank" rel="noopener noreferrer">Contact Us</a>
               </div>
             </div>
-            <div class="catalog-hero-img-wrap">
-              <img src="products/process-sourcing.png" alt="Sourcing Process">
+            <div class="catalog-hero-img-wrap"><img src="products/process-sourcing.png" alt="Sourcing"></div>
+          </div>
+        `;
+        renderAllCatalog();
+      } else {
+        const cat = categoriesList[activeFilter];
+        if (!cat) return;
+
+        header.className = "catalog-header cat-mode";
+        filtersDiv.style.display = "none";
+        allSection.style.display = "none";
+        catSection.style.display = "";
+        otherSection.style.display = "";
+
+        document.title = cat.name + " Export | Jalpex International";
+
+        hero.innerHTML = `
+          <div class="cat-back-bar"><a href="catalog.html" class="cat-back-link">← Back to Products</a></div>
+          <div class="cat-hero-grid">
+            <div class="cat-hero-img"><img src="${cat.image}" alt="${cat.name}"></div>
+            <div class="cat-hero-content">
+              <h1 class="cat-hero-title">${cat.name}</h1>
+              <p class="cat-hero-desc">${cat.desc}</p>
+              <ul class="cat-checklist">
+                <li>Quality tested &amp; certified for export</li>
+                <li>Custom packaging &amp; labeling available</li>
+                <li>Competitive bulk pricing</li>
+                <li>Shipped to 22+ countries worldwide</li>
+              </ul>
+              <div class="cat-hero-actions">
+                <a href="#inquiry" class="cat-btn-primary" onclick="prefillCategory('${activeFilter}')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Inquire Now
+                </a>
+                <a href="https://wa.me/919879915124?text=Hello%20Jalpex%20International,%20I%20want%20to%20inquire%20about%20${encodeURIComponent(cat.name)}%20products." class="cat-btn-outline" target="_blank" rel="noopener noreferrer">Contact Us</a>
+              </div>
             </div>
           </div>
         `;
-      } else {
-        const cat = categoriesList[activeFilter];
-        if (cat) {
-          hero.innerHTML = `
-            <div class="catalog-hero-inner">
-              <div class="catalog-hero-text">
-                <h1 class="catalog-hero-title">${cat.name}</h1>
-                <div class="catalog-hero-desc">${cat.desc}</div>
-                <div class="catalog-hero-buttons">
-                  <a href="#inquiry" class="catalog-hero-btn primary" onclick="prefillCategory('${activeFilter}')">Inquire Now</a>
-                  <a href="https://wa.me/919879915124?text=Hello%20Jalpex%20International,%20I%20want%20to%20inquire%20about%20your%20${encodeURIComponent(cat.name)}%20products." class="catalog-hero-btn outline" target="_blank" rel="noopener noreferrer">Contact Us</a>
-                </div>
-              </div>
-              <div class="catalog-hero-img-wrap">
-                <img src="${cat.image}" alt="${cat.name}">
-              </div>
-            </div>
-          `;
-        }
+        renderCategoryGrid();
+        renderOtherProducts();
       }
     }
 
     function prefillCategory(catKey) {
       const categorySelect = document.getElementById("formProduct");
-      if (categorySelect) {
-        categorySelect.value = catKey;
-      }
+      if (categorySelect) categorySelect.value = catKey;
     }
 
-    function renderCatalog() {
+    function renderAllCatalog() {
       const grid = document.getElementById("catalogGrid");
       if (!grid) return;
       grid.innerHTML = "";
-
-      const filtered = activeFilter === "all"
-        ? productsList
-        : productsList.filter(p => p.category === activeFilter);
-
-      filtered.forEach(prod => {
+      productsList.forEach(prod => {
         const card = document.createElement("div");
         card.className = "product-card";
         card.addEventListener("click", () => {
           window.location.href = `product.html?id=${prod.id}`;
         });
-
-        // Category clean label
-        let catLabel = "Agriculture Products";
-        if (prod.category === "dehydrated") catLabel = "Dehydrated Vegetables & Fruits";
-        if (prod.category === "spices") catLabel = "Spices";
-        if (prod.category === "natures_finest") catLabel = "Nature's Finest";
-        if (prod.category === "dried_fruits") catLabel = "Dried Fruits";
-        if (prod.category === "fresh_produce") catLabel = "Fruits & Vegetables";
-        if (prod.category === "handicraft") catLabel = "Handicraft";
-        if (prod.category === "textile") catLabel = "Textile & Apparel";
-
+        const catLabel = getCatLabel(prod.category);
         card.innerHTML = `
           <div class="product-img-wrap">
             <img src="${prod.image}" alt="${prod.name}" loading="lazy">
@@ -1426,16 +1687,91 @@
           </div>
           <div class="product-body">
             <h3 class="product-title">${prod.name}</h3>
-            <p class="product-desc">${prod.desc}</p>
+            <p class="product-desc">${prod.desc.substring(0, 100)}...</p>
             <div class="product-tags">
-              ${prod.tags.map(t => `<span class="product-tag">${t}</span>`).join("")}
+              ${(prod.tags || []).slice(0, 4).map(t => `<span class="product-tag">${t}</span>`).join("")}
             </div>
-            <button class="btn-card-inquire">Inquire Details</button>
+            <button class="btn-card-inquire">View Details</button>
           </div>
         `;
         grid.appendChild(card);
       });
     }
+
+    // CATEGORY reference-style large-card grid
+    function renderCategoryGrid() {
+      const header = document.getElementById("catGridHeader");
+      const grid = document.getElementById("catProductGrid");
+      if (!grid) return;
+
+      const cat = categoriesList[activeFilter];
+      const catName = cat ? cat.name : getCatLabel(activeFilter);
+
+      if (header) {
+        header.innerHTML = `
+          <h2>Categories of ${catName}</h2>
+          <p>We supply the full ${catName.toLowerCase()} range across the following categories — mix and match in a single shipment.</p>
+        `;
+      }
+
+      grid.innerHTML = "";
+      const filtered = productsList.filter(p => p.category === activeFilter);
+
+      filtered.forEach(prod => {
+        const badge = productTypeCount[prod.id];
+        const shortDesc = prod.desc.replace(/<[^>]*>/g, '').substring(0, 140);
+
+        const card = document.createElement("div");
+        card.className = "ref-product-card";
+        card.addEventListener("click", () => {
+          window.location.href = `product.html?id=${prod.id}`;
+        });
+
+        card.innerHTML = `
+          <div class="ref-card-img-wrap">
+            <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+            ${badge ? `<span class="ref-types-badge">${badge}</span>` : ''}
+          </div>
+          <div class="ref-card-body">
+            <h3 class="ref-card-title">${prod.name}</h3>
+            <p class="ref-card-desc">${shortDesc}...</p>
+            <a class="ref-view-link" href="product.html?id=${prod.id}" onclick="event.stopPropagation()">
+              View details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // OTHER PRODUCTS section
+    function renderOtherProducts() {
+      const grid = document.getElementById("otherCatGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      const otherCats = Object.entries(categoriesList).filter(([key]) => key !== activeFilter);
+
+      otherCats.forEach(([key, cat]) => {
+        const el = document.createElement("a");
+        el.className = "other-cat-card";
+        el.href = `catalog.html?cat=${key}`;
+        el.innerHTML = `
+          <div class="other-cat-img">
+            <img src="${cat.image}" alt="${cat.name}" loading="lazy">
+          </div>
+          <div class="other-cat-name">${cat.name}</div>
+        `;
+        grid.appendChild(el);
+      });
+    }
+
+    // Legacy alias
+    function renderCatalog() { renderAllCatalog(); }
 
     // Modal popup triggers
     const modal = document.getElementById("productModal");
@@ -1527,6 +1863,7 @@
         activeFilter = catParam;
       }
 
+      // Only wire filter buttons when in all-products mode
       const buttons = document.querySelectorAll(".filter-btn");
       buttons.forEach(btn => {
         const filterVal = btn.getAttribute("data-cat");
@@ -1539,10 +1876,12 @@
           buttons.forEach(b => b.classList.remove("active"));
           btn.classList.add("active");
           activeFilter = filterVal;
-          const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?cat=" + activeFilter;
-          window.history.pushState({ path: newUrl }, "", newUrl);
-          renderHero();
-          renderCatalog();
+          if (filterVal !== "all") {
+            // Navigate to the category page URL
+            window.location.href = `catalog.html?cat=${filterVal}`;
+          } else {
+            window.location.href = "catalog.html";
+          }
         });
       });
     }
@@ -1550,7 +1889,6 @@
     document.addEventListener("DOMContentLoaded", () => {
       initFilters();
       renderHero();
-      renderCatalog();
     });
   </script>
 
