@@ -2129,7 +2129,7 @@ section {
   gap: 16px;
   background: #FFFFFF;
   /* premium white background for contrast */
-  padding: 24px 40px 24px 24px;
+  padding: 24px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(194, 150, 82, 0.2);
   /* soft gold/beige border */
@@ -2138,29 +2138,11 @@ section {
   transition: var(--transition);
 }
 
-.pl-feat-item::after {
-  content: '↗';
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  font-size: 16px;
-  color: #A3988A;
-  /* soft grey/tan arrow */
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.pl-feat-item:hover::after {
-  color: #1e4d2b;
-  /* shifts to dark green on hover */
-  transform: translate(2px, -2px);
-}
-
 .pl-feat-item:hover {
   background: #FFFFFF;
-  border-color: #1e4d2b;
-  box-shadow: 0 10px 30px rgba(30, 77, 43, 0.08);
-  /* soft dark green tint shadow */
+  border-color: var(--accent-gold-bright);
+  box-shadow: 0 10px 30px rgba(189, 143, 69, 0.12);
+  /* soft gold tint shadow */
   transform: translateY(-2px);
 }
 
@@ -2169,8 +2151,8 @@ section {
   height: 48px;
   border-radius: 12px;
   /* rounded-square like the uploaded image */
-  background: #EAF2EB;
-  /* soft sage green background to match the green theme properly */
+  background: var(--accent-orange-light);
+  /* soft gold background to match the website theme */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2179,15 +2161,15 @@ section {
 }
 
 .pl-feat-item:hover .pl-feat-icon-box {
-  background: #1e4d2b;
-  /* shifts to dark green on hover */
+  background: var(--accent-gold-bright);
+  /* shifts to gold on hover */
 }
 
 .pl-feat-icon-box svg {
   width: 22px;
   height: 22px;
-  stroke: #1e4d2b;
-  /* dark green icon stroke */
+  stroke: var(--accent-gold-bright);
+  /* gold icon stroke */
   transition: stroke 0.3s;
 }
 
@@ -2199,8 +2181,8 @@ section {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  color: #1e4d2b;
-  /* dark green title */
+  color: var(--text-dark);
+  /* dark title to match website theme text style */
   text-transform: uppercase;
   /* uppercase title like in the image */
   letter-spacing: 0.5px;
@@ -2210,8 +2192,8 @@ section {
 .pl-feat-desc {
   font-size: 13.5px;
   line-height: 1.5;
-  color: #4a5568;
-  /* slate grey description for excellent readability */
+  color: var(--text-mid);
+  /* mid-tone description for excellent readability */
   margin: 0;
 }
 
