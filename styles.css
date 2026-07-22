@@ -2127,19 +2127,22 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: #FAF6EE;
-  /* soft warm cream */
-  padding: 20px 40px 20px 20px;
+  background: #FFFFFF;
+  /* premium white background for contrast */
+  padding: 24px 40px 24px 24px;
   border-radius: var(--radius-lg);
-  border: 1px solid #EADEC9;
+  border: 1px solid rgba(194, 150, 82, 0.2);
+  /* soft gold/beige border */
+  box-shadow: 0 4px 20px rgba(27, 42, 71, 0.02);
+  /* subtle shadow to stand out */
   transition: var(--transition);
 }
 
 .pl-feat-item::after {
   content: '↗';
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 24px;
+  right: 24px;
   font-size: 16px;
   color: #A3988A;
   /* soft grey/tan arrow */
@@ -2156,7 +2159,8 @@ section {
 .pl-feat-item:hover {
   background: #FFFFFF;
   border-color: #1e4d2b;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 30px rgba(30, 77, 43, 0.08);
+  /* soft dark green tint shadow */
   transform: translateY(-2px);
 }
 
@@ -2165,8 +2169,8 @@ section {
   height: 48px;
   border-radius: 12px;
   /* rounded-square like the uploaded image */
-  background: #F5EBE6;
-  /* pinkish-tan/peach icon background */
+  background: #EAF2EB;
+  /* soft sage green background to match the green theme properly */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2206,8 +2210,8 @@ section {
 .pl-feat-desc {
   font-size: 13.5px;
   line-height: 1.5;
-  color: #555555;
-  /* dark grey description */
+  color: #4a5568;
+  /* slate grey description for excellent readability */
   margin: 0;
 }
 
