@@ -2668,43 +2668,43 @@ section {
 
 /* ── INQUIRY SECTION ── */
 .inquiry-section {
-  background: linear-gradient(rgba(27, 42, 71, 0.96), rgba(27, 42, 71, 0.96)), url('products/air-freight.png') center / cover no-repeat;
-  padding: 50px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #FAF6EE;
+  padding: 80px 0;
+  border-top: 1px solid rgba(27, 42, 71, 0.05);
+  border-bottom: 1px solid rgba(27, 42, 71, 0.05);
+}
+
+.inquiry-section .section-label {
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 .inquiry-section .section-title {
-  color: #FFFFFF;
+  color: var(--text-dark);
+  font-size: 42px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
-.inquiry-section p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.inquiry-info .inquiry-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
-}
-
-.inquiry-info .inquiry-contact-item a {
-  color: #FFFFFF;
-}
-
-.inquiry-info .ici-title {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.inquiry-info .ici-value {
-  color: #FFFFFF;
+.inquiry-section .section-desc {
+  color: var(--text-mid);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 40px;
 }
 
 .inquiry-wrap {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
   align-items: flex-start;
 }
 
@@ -2713,65 +2713,118 @@ section {
   top: 120px;
 }
 
-.inquiry-card {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  margin-top: 30px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.inquiry-contact-item {
+/* Contact Cards Grid */
+.contact-cards-grid {
   display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.inquiry-contact-item:last-child {
-  margin-bottom: 0;
+.contact-profile-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 42, 71, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ici-icon {
-  font-size: 20px;
-  color: var(--accent-orange);
+.contact-profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(27, 42, 71, 0.05);
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--text-dark);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
   flex-shrink: 0;
 }
 
-.ici-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-mid);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.profile-avatar.bg-gold {
+  background: var(--accent-gold);
+}
+
+.profile-avatar svg {
+  stroke: #FFFFFF;
+}
+
+.profile-details {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
   margin-bottom: 4px;
 }
 
-.ici-value {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-dark);
+.profile-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
-.ici-value a {
-  color: inherit;
+.profile-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-mid);
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.ici-value a:hover {
-  color: var(--accent-orange);
+.profile-link:hover {
+  color: var(--text-dark);
 }
 
+.profile-link svg {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.profile-address {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+/* Form Card */
 .inquiry-form-card {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--border);
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 42, 71, 0.06);
   border-radius: var(--radius-lg);
   padding: 48px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(27, 42, 71, 0.04);
+}
+
+.form-card-title {
+  font-size: 24px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 28px;
 }
 
 .form-group-row {
@@ -2787,45 +2840,53 @@ section {
 
 .form-group label {
   display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-mid);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
   margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .form-control {
   width: 100%;
-  background: #FFFFFF;
-  border: 1px solid var(--border);
+  background: #FAF8F5;
+  border: 1px solid rgba(27, 42, 71, 0.1);
   border-radius: 8px;
-  padding: 12px 16px;
-  font-family: inherit;
+  padding: 14px 16px;
   font-size: 14px;
   color: var(--text-dark);
-  transition: var(--transition);
+  transition: border-color 0.3s, background-color 0.3s;
+  outline: none;
 }
 
 .form-control:focus {
-  outline: none;
-  border-color: var(--accent-orange);
-  box-shadow: 0 0 15px rgba(30, 77, 43, 0.25);
+  border-color: var(--text-dark);
+  background-color: #FFFFFF;
 }
 
 textarea.form-control {
+  height: 130px;
   resize: vertical;
-  min-height: 120px;
 }
 
 .form-submit-btn {
   width: 100%;
-  margin-top: 10px;
-  background: linear-gradient(135deg, var(--blue-mid) 0%, var(--blue-deep) 100%);
-  box-shadow: 0 4px 18px rgba(24, 37, 67, 0.3);
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--text-dark);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(27, 42, 71, 0.15);
 }
 
 .form-submit-btn:hover {
-  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-mid) 100%);
-  box-shadow: 0 8px 24px rgba(24, 37, 67, 0.5);
+  background: var(--accent-gold);
+  transform: translateY(-1px);
 }
 
 .form-status {
