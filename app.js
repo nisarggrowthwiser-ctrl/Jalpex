@@ -1319,7 +1319,7 @@ const productsData = [
   { id: "makhana", category: "agriculture", name: "Foxnuts (Makhana)", desc: "High-grade popped organic foxnuts (Makhana), sorted and graded for export quality.", tags: ["makhana", "foxnuts", "healthy"], image: "products/makhana.png" },
   { id: "sesame_seeds", category: "agriculture", name: "Sesame Seeds", desc: "Premium natural golden and mechanically hulled white sesame seeds, rich in healthy oils.", tags: ["natural", "hulled", "oil-seeds"], image: "products/sesame-seeds.png" },
   { id: "peanuts", category: "agriculture", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by size, rich in flavor and oil content.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" },
-  { id: "pulses", category: "agriculture", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/chickpeas.png" },
+  { id: "pulses", category: "agriculture", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/pulses.png" },
   { id: "wheat", category: "agriculture", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png" },
 
   // SPICES
@@ -1337,8 +1337,8 @@ const productsData = [
   // DRIED FRUITS
   { id: "raisins", category: "dried_fruits", name: "Premium Golden Raisins", desc: "Naturally sweet, sun-dried golden raisins, carefully graded for size consistency.", tags: ["raisins", "golden", "sweet"], image: "products/dried-fruits.png" },
   { id: "cashews", category: "dried_fruits", name: "Cashew Kernels", desc: "Export-grade cashew kernels (W240, W320 counts), vacuum packed for crunch.", tags: ["cashews", "kernels", "w320"], image: "products/dried-fruits.png" },
-  { id: "almonds", category: "dried_fruits", name: "Premium Almonds", desc: "Raw whole almonds, uniform count and size, rich in healthy fats and vitamin E.", tags: ["almonds", "raw", "nuts"], image: "products/dried-fruits.png" },
-  { id: "figs", category: "dried_fruits", name: "Dried Figs (Anjeer)", desc: "Plump, soft string figs (Anjeer) naturally dried and string-packed for freshness.", tags: ["figs", "anjeer", "string-figs"], image: "products/dried-fruits.png" },
+  { id: "almonds", category: "dried_fruits", name: "Premium Almonds", desc: "Raw whole almonds, uniform count and size, rich in healthy fats and vitamin E.", tags: ["almonds", "raw", "nuts"], image: "products/almonds.png" },
+  { id: "figs", category: "dried_fruits", name: "Dried Figs (Anjeer)", desc: "Plump, soft string figs (Anjeer) naturally dried and string-packed for freshness.", tags: ["figs", "anjeer", "string-figs"], image: "products/figs.png" },
 
   // FRUITS & VEGETABLES
   { id: "fresh_mangoes", category: "fresh_produce", name: "Fresh Kesar Mangoes", desc: "Sweet, highly aromatic Kesar mangoes weight-graded and packed under GAP guidelines.", tags: ["mangoes", "fresh", "sweet"], image: "products/fresh-produce.png" },
