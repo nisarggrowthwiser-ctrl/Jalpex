@@ -908,6 +908,7 @@
         <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
         <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
         <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+        <li><a href="faq.html" data-trans="nav_faq">FAQ</a></li>
         <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
       </ul>
 
@@ -940,8 +941,6 @@
           </div>
         </div>
 
-        <a href="index.html#inquiry" class="btn-primary header-cta" data-trans="btn_quote">Get in Touch</a>
-
         <!-- Mobile Menu Toggle Button -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
           <span class="bar"></span>
@@ -960,6 +959,7 @@
       <li><a href="gallery.html" data-trans="nav_gallery">Gallery</a></li>
       <li><a href="news.html" data-trans="nav_news">Trade Intelligence</a></li>
       <li><a href="index.html#why-choose-us" data-trans="nav_why">Why Us</a></li>
+      <li><a href="faq.html" data-trans="nav_faq">FAQ</a></li>
       <li><a href="index.html#inquiry" data-trans="nav_inquiry">Contact Us</a></li>
     </ul>
     <div class="mobile-lang-section">
@@ -987,15 +987,14 @@
 
       <!-- Filter tabs — only visible in all-products view -->
       <div class="catalog-filters" id="catalogFilters" style="display: none;">
-        <button class="filter-btn active" data-cat="all">All Commodities</button>
-        <button class="filter-btn" data-cat="dehydrated">Dehydrated Vegetables &amp; Fruits</button>
-        <button class="filter-btn" data-cat="agriculture">Agriculture Products</button>
-        <button class="filter-btn" data-cat="spices">Spices</button>
-        <button class="filter-btn" data-cat="natures_finest">Nature's Finest</button>
-        <button class="filter-btn" data-cat="dried_fruits">Dried Fruits</button>
-        <button class="filter-btn" data-cat="fresh_produce">Fruits &amp; Vegetables</button>
-        <button class="filter-btn" data-cat="handicraft">Handicraft</button>
-        <button class="filter-btn" data-cat="textile">Textile &amp; Apparel</button>
+        <button class="filter-btn active" data-cat="all" data-trans="news_filter_all">All Commodities</button>
+        <button class="filter-btn" data-cat="dehydrated" data-trans="cat_dehydrated">Dehydrated Vegetables &amp; Fruits</button>
+        <button class="filter-btn" data-cat="agriculture" data-trans="cat_agriculture">Agriculture Products</button>
+        <button class="filter-btn" data-cat="spices" data-trans="cat_spices">Spices</button>
+        <button class="filter-btn" data-cat="natures_finest" data-trans="cat_natures_finest">Nature's Finest</button>
+        <button class="filter-btn" data-cat="dried_fruits" data-trans="cat_dried_fruits">Dried Fruits</button>
+        <button class="filter-btn" data-cat="handicraft" data-trans="cat_handicrafts">Handicraft</button>
+        <button class="filter-btn" data-cat="textile" data-trans="cat_textile">Textile &amp; Apparel</button>
       </div>
     </div>
   </header>
@@ -1020,7 +1019,7 @@
   <!-- ── OTHER PRODUCTS SECTION ── -->
   <section class="other-products-section" id="otherProductsSection" style="display:none;">
     <div class="container">
-      <h2>Other Products</h2>
+      <h2 data-trans="catalog_other_products">Other Products</h2>
       <div class="other-cat-grid" id="otherCatGrid"></div>
     </div>
   </section>
@@ -1137,7 +1136,6 @@
                 <option value="spices">Spices</option>
                 <option value="natures_finest">Nature's Finest</option>
                 <option value="dried_fruits">Dried Fruits</option>
-                <option value="fresh_produce">Fruits & Vegetables</option>
                 <option value="handicraft">Handicraft</option>
                 <option value="textile">Textile & Apparel</option>
               </select>
@@ -1169,7 +1167,7 @@
             represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
         </div>
         <div class="footer-col">
-          <h4>Quick Navigation</h4>
+          <h4 data-trans="footer_quick_links">Quick Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
@@ -1186,7 +1184,6 @@
             <li><a href="catalog.html?cat=spices">Spices</a></li>
             <li><a href="catalog.html?cat=natures_finest">Nature's Finest</a></li>
             <li><a href="catalog.html?cat=dried_fruits">Dried Fruits</a></li>
-            <li><a href="catalog.html?cat=fresh_produce">Fruits & Vegetables</a></li>
             <li><a href="catalog.html?cat=handicraft">Handicrafts</a></li>
             <li><a href="catalog.html?cat=textile">Textile & Apparel</a></li>
           </ul>
@@ -1209,7 +1206,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <a href="tel:+919879915124" style="color: inherit; text-decoration: none;">+91-9879915124</a>
+              <a href="tel:+919879915124" style="color: inherit; text-decoration: none;">+91 98799 15124</a>
             </span>
             <span style="display: flex; gap: 8px;">
               <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
@@ -1228,8 +1225,8 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
                 </path>
               </svg>
-              <a href="https://www.jalpexinternational.com" target="_blank" rel="noopener noreferrer"
-                style="color: inherit; text-decoration: none;">www.jalpexinternational.com</a>
+              <a href="https://jalpexinternational.com" target="_blank" rel="noopener noreferrer"
+                style="color: inherit; text-decoration: none;">jalpexinternational.com</a>
             </span>
           </div>
         </div>
@@ -1302,7 +1299,9 @@
           </div>
 
           <div class="product-modal-actions">
-            <button id="modalInquireBtn" class="btn-primary" data-trans="btn_inquire_product">Inquire Now</button>
+            <a id="modalInquireBtn" class="btn-primary" target="_blank" rel="noopener noreferrer"
+               style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #FFFFFF;"
+               data-trans="btn_inquire_product">Inquire Now</a>
             <a id="modalWhatsappBtn" href="" class="btn-outline" target="_blank" rel="noopener noreferrer"
               style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
@@ -1323,7 +1322,7 @@
     (function () {
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get("cat");
-      const validCategories = ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "fresh_produce", "handicraft", "textile", "superfoods"];
+      const validCategories = ["dehydrated", "agriculture", "spices", "natures_finest", "dried_fruits", "handicraft", "textile", "superfoods"];
       if (!catParam || !validCategories.includes(catParam)) {
         window.location.replace("index.html#products");
       }
@@ -1501,7 +1500,7 @@
         desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane, processed using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness. Free from chemical bleaching agents, added sugar, and harmful preservatives.",
         highlights: ["Traditional chemical-free jaggery", "Made from freshly harvested sugarcane", "Natural molasses content, rich color & earthy sweetness", "Free from chemical bleaching agents & preservatives", "Controlled moisture prevents hardening during export", "Customized packaging & private labeling available", "Ideal for bakery, sweets, Ayurvedic & food processing", "Reliable global supply with competitive wholesale pricing"],
         tags: ["jaggery", "sugarcane", "molasses", "sweetener"],
-        image: "products/natures-finest-composite.png",
+        image: "products/jaggery.png",
         specs: { "Quality": "Chemical-free, additive-free", "Moisture": "Controlled for transit stability", "Purity": "Authentic, traditional", "Origin": "India" }
       },
       {
@@ -1555,30 +1554,10 @@
         image: "products/figs.png",
         specs: { "Form": "Whole Dried Figs", "Moisture": "Controlled", "Purity": "Cleaned & graded", "Origin": "India" }
       },
-      // FRUITS & VEGETABLES
-      {
-        id: "fresh_mangoes",
-        category: "fresh_produce",
-        name: "Kesar Mangoes",
-        desc: "Our Premium Export Quality Kesar Mangoes are sourced directly from the renowned orchards of Gujarat, India, celebrated worldwide for producing the authentic GI-tagged Kesar Mango. Known as the 'Queen of Mangoes,' prized for smooth texture, naturally sweet flavor, and minimal fiber content.",
-        highlights: ["Premium GI-tagged Kesar Mangoes from Gujarat, India", "Naturally sweet with rich aroma and vibrant saffron-colored pulp", "Handpicked, carefully graded & hygienically packed", "Excellent shelf life with export-grade cold-chain handling", "Quality tested to meet international export standards", "Customized packaging & private labeling available", "Ideal for fresh consumption, retail, wholesale & food processing", "Reliable global supply with competitive export pricing"],
-        tags: ["mangoes", "kesar", "fresh", "sweet", "saffron"],
-        image: "products/fresh-mangoes.jpg",
-        specs: { "Quality": "GI-tagged, Grade A Export", "Ripeness": "Optimum maturity", "Cold Chain": "Maintained in transit", "Origin": "India" }
-      },
-      {
-        id: "pomegranates",
-        category: "fresh_produce",
-        name: "Pomegranates",
-        desc: "Our Premium Export Quality Pomegranates are sourced from India's finest orchards, renowned for producing fruits with vibrant ruby-red arils, naturally sweet flavor, and exceptional nutritional value. Handpicked at peak maturity, graded, sorted, and hygienically packed.",
-        highlights: ["Premium-grade Indian Pomegranates with vibrant ruby-red arils", "Naturally sweet, juicy & rich in antioxidants", "Handpicked, carefully graded & hygienically packed", "Export-quality tested to international standards", "Extended shelf life with cold-chain logistics", "Customized packaging & private labeling available", "Ideal for fresh consumption, retail, wholesale & food processing", "Reliable global supply with competitive export pricing"],
-        tags: ["pomegranates", "fresh", "antioxidants", "juice"],
-        image: "products/fresh-pomegranates.webp",
-        specs: { "Quality": "Grade A Export", "Sweetness": "Brix tested", "Cold Chain": "Maintained in transit", "Origin": "India" }
-      },
+      // AGRICULTURE PRODUCTS (Fresh produce merge)
       {
         id: "fresh_onions",
-        category: "fresh_produce",
+        category: "agriculture",
         name: "Red Onions",
         desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions. Known for their crisp texture, pungent taste, and deep red skin, widely used in fresh consumption, food processing, restaurants, supermarkets, and wholesale distribution.",
         highlights: ["Premium-grade Indian Red Onions", "Uniform size, vibrant red color & firm texture", "Naturally fresh with rich flavor and excellent shelf life", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, supermarkets & food processing", "Reliable global supply with competitive export pricing"],
@@ -1588,7 +1567,7 @@
       },
       {
         id: "potatoes",
-        category: "fresh_produce",
+        category: "agriculture",
         name: "Potatoes",
         desc: "Our Premium Export Quality Potatoes are sourced from India's leading potato-growing regions. Known for their firm texture, consistent quality, and excellent cooking performance, suitable for fresh consumption, food processing, French fries, chips, and frozen products.",
         highlights: ["Premium-grade Indian Potatoes", "Uniform size, smooth skin & firm texture", "Freshly harvested with excellent shelf life", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, food processing & HoReCa", "Reliable global supply with competitive export pricing"],
@@ -1831,13 +1810,16 @@
     let activeFilter = "all";
 
     function getCatLabel(catKey) {
+      const savedLang = localStorage.getItem("selectedLang") || "en";
+      const transLabel = (translations[savedLang] && (translations[savedLang]["cat_" + catKey] || translations[savedLang]["tab_" + catKey]));
+      if (transLabel) return transLabel;
+
       const labels = {
         dehydrated: "Dehydrated Vegetables & Fruits",
         agriculture: "Agriculture Products",
         spices: "Spices",
         natures_finest: "Nature's Finest",
         dried_fruits: "Dried Fruits",
-        fresh_produce: "Fruits & Vegetables",
         handicraft: "Handicrafts",
         textile: "Textile & Apparel",
         superfoods: "Superfoods"
@@ -1860,19 +1842,26 @@
       const otherSection = document.getElementById("otherProductsSection");
       if (!hero) return;
 
+      const savedLang = localStorage.getItem("selectedLang") || "en";
+
       if (activeFilter === "all") {
         header.className = "catalog-header";
         filtersDiv.style.display = "";
         allSection.style.display = "";
         catSection.style.display = "none";
         otherSection.style.display = "none";
+
+        const transTitle = (translations[savedLang] && translations[savedLang].catalog_title) || "Global Export Product Portfolio";
+        const transSubtitle = (translations[savedLang] && translations[savedLang].catalog_subtitle) || "Explore our curated range of premium certified agricultural products, spices, and custom packaging solutions.";
+        const transInquire = (translations[savedLang] && translations[savedLang].btn_inquire_product) || "Inquire Now";
+
         hero.innerHTML = `
           <div class="catalog-hero-inner">
             <div class="catalog-hero-text">
-              <h1 class="catalog-hero-title">Global Export Product Portfolio</h1>
-              <div class="catalog-hero-desc">Explore our curated range of premium certified agricultural products, spices, and custom packaging solutions.</div>
+              <h1 class="catalog-hero-title">${transTitle}</h1>
+              <div class="catalog-hero-desc">${transSubtitle}</div>
               <div class="catalog-hero-buttons">
-                <a href="#inquiry" class="catalog-hero-btn primary">Inquire Now</a>
+                <a href="#inquiry" class="catalog-hero-btn primary">${transInquire}</a>
               </div>
             </div>
             <div class="catalog-hero-img-wrap"><img src="products/process-sourcing.png" alt="Sourcing"></div>
@@ -1889,25 +1878,31 @@
         catSection.style.display = "";
         otherSection.style.display = "";
 
-        document.title = cat.name + " Export | Jalpex International";
+        const transCatName = (translations[savedLang] && (translations[savedLang]["cat_" + activeFilter] || translations[savedLang]["tab_" + activeFilter])) || cat.name;
+        const transCatDesc = (translations[savedLang] && translations[savedLang]["cat_" + activeFilter + "_desc"]) || cat.desc;
+        const transBack = (translations[savedLang] && translations[savedLang].btn_view_all) || "Back to Products";
+        const transInquire = (translations[savedLang] && translations[savedLang].btn_inquire_product) || "Inquire Now";
+        const transContact = (translations[savedLang] && translations[savedLang].nav_inquiry) || "Contact Us";
+
+        document.title = transCatName + " Export | Jalpex International";
 
         const highlightsHTML = (cat.highlights || []).map(h => `<li>${h}</li>`).join('');
         hero.innerHTML = `
-          <div class="cat-back-bar"><a href="index.html#products" class="cat-back-link">← Back to Products</a></div>
+          <div class="cat-back-bar"><a href="index.html#products" class="cat-back-link">← ${transBack}</a></div>
           <div class="cat-hero-grid">
-            <div class="cat-hero-img"><img src="${cat.image}" alt="${cat.name}"></div>
+            <div class="cat-hero-img"><img src="${cat.image}" alt="${transCatName}"></div>
             <div class="cat-hero-content">
-              <h1 class="cat-hero-title">${cat.name}</h1>
-              <p class="cat-hero-desc">${cat.desc}</p>
+              <h1 class="cat-hero-title">${transCatName}</h1>
+              <p class="cat-hero-desc">${transCatDesc}</p>
               <ul class="cat-checklist">
                 ${highlightsHTML}
               </ul>
               <div class="cat-hero-actions">
-                <a href="#inquiry" class="cat-btn-primary" onclick="prefillCategory('${activeFilter}')">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jalpexinternational@gmail.com&su=Import%20Inquiry%3A%20${encodeURIComponent(transCatName)}&body=Hello%20Jalpex%20International%2C%0A%0AI%20am%20interested%20in%20importing%20your%20premium%20%22${encodeURIComponent(transCatName)}%22%20products.%0A%0APlease%20provide%20pricing%2C%20specifications%2C%20and%20shipping%20terms.%0A%0ARegards" target="_blank" rel="noopener noreferrer" class="cat-btn-primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  Inquire Now
+                  ${transInquire}
                 </a>
-                <a href="https://wa.me/919879915124?text=Hello%20Jalpex%20International,%20I%20want%20to%20inquire%20about%20${encodeURIComponent(cat.name)}%20products." class="cat-btn-outline" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                <a href="#inquiry" class="cat-btn-outline">${transContact}</a>
               </div>
             </div>
           </div>
@@ -1926,6 +1921,9 @@
       const grid = document.getElementById("catalogGrid");
       if (!grid) return;
       grid.innerHTML = "";
+      const savedLang = localStorage.getItem("selectedLang") || "en";
+      const transDetails = (translations[savedLang] && translations[savedLang].btn_view_details) || "View Details";
+
       productsList.forEach(prod => {
         const card = document.createElement("div");
         card.className = "product-card";
@@ -1944,7 +1942,7 @@
             <div class="product-tags">
               ${(prod.tags || []).slice(0, 4).map(t => `<span class="product-tag">${t}</span>`).join("")}
             </div>
-            <button class="btn-card-inquire">View Details</button>
+            <button class="btn-card-inquire">${transDetails}</button>
           </div>
         `;
         grid.appendChild(card);
@@ -2010,16 +2008,18 @@
       grid.innerHTML = "";
 
       const otherCats = Object.entries(categoriesList).filter(([key]) => key !== activeFilter);
+      const savedLang = localStorage.getItem("selectedLang") || "en";
 
       otherCats.forEach(([key, cat]) => {
         const el = document.createElement("a");
         el.className = "other-cat-card";
         el.href = `catalog.html?cat=${key}`;
+        const transCatName = (translations[savedLang] && (translations[savedLang]["cat_" + key] || translations[savedLang]["tab_" + key])) || cat.name;
         el.innerHTML = `
           <div class="other-cat-img">
-            <img src="${cat.image}" alt="${cat.name}" loading="lazy">
+            <img src="${cat.image}" alt="${transCatName}" loading="lazy">
           </div>
-          <div class="other-cat-name">${cat.name}</div>
+          <div class="other-cat-name">${transCatName}</div>
         `;
         grid.appendChild(el);
       });
@@ -2059,9 +2059,9 @@
 
       // Actions
       const inquireBtn = document.getElementById("modalInquireBtn");
+      inquireBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=jalpexinternational@gmail.com&su=Import%20Inquiry%3A%20${encodeURIComponent(prod.name)}&body=Hello%20Jalpex%20International%2C%0A%0AI%20am%20interested%20in%20importing%20your%20premium%20%22${encodeURIComponent(prod.name)}%22.%0A%0APlease%20provide%20pricing%2C%20pack%20sizing%20options%2C%20and%20shipping%20terms.%0A%0ARegards`;
       inquireBtn.onclick = () => {
         closeModal();
-        inquireProduct(prod.name, prod.category);
       };
 
       const waBtn = document.getElementById("modalWhatsappBtn");
@@ -2150,6 +2150,9 @@
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
     title="Chat with us on WhatsApp">
+    <div class="whatsapp-tooltip">
+      <span data-trans="whatsapp_need_help">Need Help?</span> <strong data-trans="whatsapp_chat_us">Chat with us</strong>
+    </div>
     <div class="whatsapp-float-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
         <path

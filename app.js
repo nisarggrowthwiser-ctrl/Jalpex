@@ -8,6 +8,8 @@ const translations = {
     nav_gallery: "Gallery",
     nav_news: "Trade Intelligence",
     nav_why: "Why Us",
+    nav_faq: "FAQ",
+    faq_pretitle: "Frequently Asked",
     nav_inquiry: "Contact Us",
     nav_gallery: "Gallery",
     nav_news: "Trade Intelligence",
@@ -168,6 +170,8 @@ const translations = {
     nav_gallery: "गैलरी",
     nav_news: "व्यापारिक जानकारी",
     nav_why: "हमें क्यों चुनें",
+    nav_faq: "FAQ",
+    faq_pretitle: "अक्सर पूछे जाने वाले",
     nav_inquiry: "संपर्क करें",
     nav_gallery: "गैलरी",
     nav_news: "व्यापारिक जानकारी",
@@ -328,6 +332,8 @@ const translations = {
     nav_gallery: "معرض الصور",
     nav_news: "معلومات التجارة",
     nav_why: "لماذا نحن",
+    nav_faq: "الأسئلة الشائعة",
+    faq_pretitle: "الأسئلة المتكررة",
     nav_inquiry: "اتصل بنا",
     nav_gallery: "معرض الصور",
     nav_news: "معلومات التجارة",
@@ -476,6 +482,8 @@ const translations = {
     nav_gallery: "Galerie",
     nav_news: "Renseignements Commerciaux",
     nav_why: "Pourquoi Nous",
+    nav_faq: "FAQ",
+    faq_pretitle: "Questions Fréquentes",
     nav_inquiry: "Contactez-nous",
     nav_gallery: "Galerie",
     nav_news: "Renseignements Commerciaux",
@@ -624,6 +632,8 @@ const translations = {
     nav_gallery: "Galería",
     nav_news: "Inteligencia Comercial",
     nav_why: "Por Qué Nosotros",
+    nav_faq: "FAQ",
+    faq_pretitle: "Preguntas Frecuentes",
     nav_inquiry: "Contacto",
     nav_gallery: "Galería",
     nav_news: "Inteligencia Comercial",
@@ -772,6 +782,8 @@ const translations = {
     nav_gallery: "Galerie",
     nav_news: "Handelsinformationen",
     nav_why: "Warum wir",
+    nav_faq: "FAQ",
+    faq_pretitle: "Häufig Gestellte",
     nav_inquiry: "Kontakt",
     nav_gallery: "Galerie",
     nav_news: "Handelsinformationen",
@@ -920,6 +932,8 @@ const translations = {
     nav_gallery: "Galeria",
     nav_news: "Inteligência Comercial",
     nav_why: "Por Que Nós",
+    nav_faq: "FAQ",
+    faq_pretitle: "Perguntas Frequentes",
     nav_inquiry: "Contacto",
     nav_gallery: "Galeria",
     nav_news: "Inteligência Comercial",
@@ -1068,6 +1082,8 @@ const translations = {
     nav_gallery: "画廊",
     nav_news: "贸易情报",
     nav_why: "合作优势",
+    nav_faq: "常见问题",
+    faq_pretitle: "常见问题",
     nav_inquiry: "联系我们",
     nav_gallery: "画廊",
     nav_news: "贸易情报",
@@ -1235,6 +1251,143 @@ translations.hi.info_cofounder_val = "डॉ. जलपा दाभी";
 translations.hi.select_default = "श्रेणी चुनें";
 translations.hi.form_phone_error = "कृपया '+' और अपना देश कोड शामिल करें (जैसे +91 98799 15124)।";
 
+// ── CUSTOM TRANSLATIONS EXTENSIONS ──
+translations.en.cat_dehydrated = "Dehydrated Vegetables & Fruits";
+translations.en.cat_dehydrated_desc = "Premium onion flakes, garlic powder, ginger, and dehydrated vegetables dried to lock in natural flavor.";
+translations.en.cat_natures_finest = "Nature's Finest";
+translations.en.cat_natures_finest_desc = "Pure organic herbs, moringa leaves, moringa powder, and nutrient-dense organic seeds.";
+translations.en.cat_dried_fruits = "Dried Fruits";
+translations.en.cat_dried_fruits_desc = "Export-grade golden raisins, premium cashew kernels, almonds, walnuts, and premium dried figs.";
+translations.en.cat_fresh_produce_desc = "Farm-direct table potatoes, onions, mangoes, and pomegranates.";
+translations.en.cat_superfoods = "Superfoods";
+translations.en.cat_superfoods_desc = "Makhana (Fox Nuts), Chia Seeds, and Millets — nutrient-dense superfoods.";
+translations.en.pd_properties = "Key Properties";
+translations.en.pd_applications = "Applications";
+translations.en.pd_specifications = "Specifications";
+translations.en.btn_view_details = "View Details";
+translations.en.catalog_other_products = "Other Products";
+translations.en.hero_explore = "Explore Products";
+translations.en.hero_exporting = "Exporting";
+translations.en.stat_countries = "Countries";
+translations.en.stat_tons_shipped = "Tons Shipped";
+translations.en.stat_experience = "Years Experience";
+translations.en.ticker_spices = "Authentic Spices";
+translations.en.whatsapp_need_help = "Need Help?";
+translations.en.whatsapp_chat_us = "Chat with us";
+
+// FAQ Translations (English)
+translations.en.faq_q1 = "Why choose Jalpex International?";
+translations.en.faq_a1 = "We focus on premium quality products, direct farm sourcing, timely delivery, competitive pricing, and professional export service tailored to global standards. We build long-term partnerships through complete transparency.";
+translations.en.faq_q2 = "In what forms are your dehydrated products available?";
+translations.en.faq_a2 = "We supply our premium dehydrated vegetables and fruits in various formats, including flakes, chopped, minced, kibbed/sliced, granules, and powder, to suit diverse industrial and culinary applications.";
+translations.en.faq_q3 = "What kind of spices do you supply?";
+translations.en.faq_a3 = "We export a variety of premium whole and powdered Indian spices, including high-curcumin Turmeric Fingers, vibrant Red Chilli (whole pods and powder), aromatic Cumin Seeds, and premium Coriander Seeds.";
+translations.en.faq_q4 = "Are your agricultural products certified?";
+translations.en.faq_a4 = "Yes, we strictly adhere to international food safety and sanitary regulations. Our sourcing operations carry verifiable certifications, including ISO 22000:2018, FSSAI Central License, APEDA, and Spices Board registrations.";
+translations.en.faq_q5 = "What are your standard terms of delivery (Incoterms)?";
+translations.en.faq_a5 = "We exclusively deal in standard international delivery terms, primarily FOB (Free On Board) and CIF (Cost, Insurance, and Freight).";
+translations.en.faq_q6 = "How do you ensure the safe transit of products?";
+translations.en.faq_a6 = "We use premium, export-standard packaging such as airtight vacuum pouches, multi-layer PP bags, and custom containers. This shields the products from moisture, oxidation, and transit damage over long sea routes.";
+translations.en.faq_q7 = "How long does it take to ship an order?";
+translations.en.faq_a7 = "Shipping timelines depend on the destination country, container volume, and processing requirements. We provide an estimated timeline immediately upon order confirmation and document verification.";
+translations.en.faq_q8 = "What is your Minimum Order Quantity (MOQ)?";
+translations.en.faq_a8 = "MOQ varies depending on the specific product category (spices, grains, seeds, dehydrated veggies). Please contact our sourcing desk with your specific requirement to receive a custom quote.";
+translations.en.faq_q9 = "What payment methods do you accept?";
+translations.en.faq_a9 = "We accept secure international payment methods, including Letter of Credit (L/C), Telegraphic Transfer (T/T), and Documents Against Payment (D/P) in accordance with agreed contract terms.";
+translations.en.faq_q10 = "Can I get product samples before placing a bulk order?";
+translations.en.faq_a10 = "Yes, we provide product samples free of cost for quality testing. Depending on the destination and shipping requirements, courier fees may apply.";
+translations.en.faq_q11 = "Do you offer customized packaging and private labeling?";
+translations.en.faq_a11 = "Yes! We help global brands and distributors build their market presence by offering complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging sizes.";
+translations.en.faq_cta_title = "Have More Questions?";
+translations.en.faq_cta_desc = "Our trade desk is ready to assist you. Send us your sourcing inquiry and we will reply within 24 hours.";
+
+translations.en.morph_cat_turmeric = "Premium Spices • Organically Sourced";
+translations.en.morph_name_turmeric = "TURMERIC FINGER";
+translations.en.morph_spec_turmeric = "Curcumin Content: >3.5% | Moisture: <10%";
+translations.en.morph_cat_rice = "Grains & Rice • Premium Aged";
+translations.en.morph_name_rice = "BASMATI RICE";
+translations.en.morph_spec_rice = "Avg Length: >7.4mm | Broken: <1%";
+translations.en.morph_cat_cotton = "Agricultural Exports • Textile Grade";
+translations.en.morph_name_cotton = "RAW COTTON";
+translations.en.morph_spec_cotton = "Staple Length: 28-32mm | Trash: <3%";
+translations.en.morph_cat_dehydrated_veg = "Food Products • Natural Flakes";
+translations.en.morph_name_dehydrated_veg = "DEHYDRATED VEG";
+translations.en.morph_spec_dehydrated_veg = "Moisture: <6% | Preservatives: None";
+translations.en.morph_cat_fresh_produce = "Fresh Fruits & Vegetables • Farm Direct";
+translations.en.morph_name_fresh_produce = "FRESH PRODUCE";
+translations.en.morph_spec_fresh_produce = "Quality: Grade A Export | Cold Chain Ready";
+translations.en.morph_cat_handicrafts = "Indian Handicrafts • Handcrafted Items";
+translations.en.morph_name_handicrafts = "ARTISANAL HANDICRAFTS";
+translations.en.morph_spec_handicrafts = "Brassware & Woodwork | Custom Designs";
+
+translations.hi.cat_dehydrated = "निर्जलित सब्जियां और फल";
+translations.hi.cat_dehydrated_desc = "प्रीमियम प्याज के फ्लेक्स, लहसुन पाउडर, अदरक और निर्जलित सब्जियां प्राकृतिक स्वाद बनाए रखने के लिए सुखाए गए हैं।";
+translations.hi.cat_natures_finest = "प्रकृति का सर्वोत्तम";
+translations.hi.cat_natures_finest_desc = "शुद्ध जैविक जड़ी-बूटियाँ, मोरिंगा की पत्तियाँ, मोरिंगा पाउडर और पोषक तत्वों से भरपूर जैविक बीज।";
+translations.hi.cat_dried_fruits = "सूखे मेवे (ड्राई फ्रूट्स)";
+translations.hi.cat_dried_fruits_desc = "निर्यात-श्रेणी की सुनहरी किशमिश, प्रीमियम काजू, बादाम, अखरोट और प्रीमियम सूखे अंजीर।";
+translations.hi.cat_fresh_produce_desc = "खेतों से सीधे ताजे आलू, लाल प्याज, मौसमी आम और ताजे अनार।";
+translations.hi.cat_superfoods = "सुपरफूड्स";
+translations.hi.cat_superfoods_desc = "मखाना, चिया सीड्स और बाजरा — वैश्विक स्वास्थ्य बाजारों के लिए पोषक तत्वों से भरपूर सुपरफूड।";
+
+translations.hi.morph_cat_turmeric = "प्रीमियम मसाले • जैविक रूप से प्राप्त";
+translations.hi.morph_name_turmeric = "हल्दी फिंगर (Turmeric Finger)";
+translations.hi.morph_spec_turmeric = "करक्यूमिन मात्रा: >3.5% | नमी: <10%";
+translations.hi.morph_cat_rice = "अनाज और चावल • प्रीमियम पुराना";
+translations.hi.morph_name_rice = "बासमती चावल (Basmati Rice)";
+translations.hi.morph_spec_rice = "औसत लंबाई: >7.4mm | टूटे हुए: <1%";
+translations.hi.morph_cat_cotton = "कृषि निर्यात • कपड़ा श्रेणी";
+translations.hi.morph_name_cotton = "कच्चा कपास (Raw Cotton)";
+translations.hi.morph_spec_cotton = "स्टेपल लंबाई: 28-32mm | कचरा: <3%";
+translations.hi.morph_cat_dehydrated_veg = "खाद्य उत्पाद • प्राकृतिक फ्लेक्स";
+translations.hi.morph_name_dehydrated_veg = "निर्जलित सब्जियां (Dehydrated Veg)";
+translations.hi.morph_spec_dehydrated_veg = "नमी: <6% | परिरक्षक: कोई नहीं";
+translations.hi.morph_cat_fresh_produce = "ताजे फल और सब्जियां • खेत से सीधे";
+translations.hi.morph_name_fresh_produce = "ताजा उत्पाद (Fresh Produce)";
+translations.hi.morph_spec_fresh_produce = "गुणवत्ता: श्रेणी ए निर्यात | कोल्ड चेन रेडी";
+translations.hi.morph_cat_handicrafts = "भारतीय हस्तशिल्प • हस्तनिर्मित वस्तुएं";
+translations.hi.morph_name_handicrafts = "हस्तनिर्मित हस्तशिल्प";
+translations.hi.morph_spec_handicrafts = "पीतल के बर्तन और लकड़ी का काम | कस्टम डिजाइन";
+translations.hi.pd_properties = "प्रमुख विशेषताएं";
+translations.hi.pd_applications = "उपयोग / अनुप्रयोग";
+translations.hi.pd_specifications = "तकनीकी विवरण (स्पेसिफिकेशन्स)";
+translations.hi.btn_view_details = "विवरण देखें";
+translations.hi.catalog_other_products = "अन्य उत्पाद";
+translations.hi.hero_explore = "उत्पादों का अन्वेषण करें";
+translations.hi.hero_exporting = "निर्यात कर रहे हैं";
+translations.hi.stat_countries = "देश";
+translations.hi.stat_tons_shipped = "टन शिप किया गया";
+translations.hi.stat_experience = "वर्षों का अनुभव";
+translations.hi.ticker_spices = "प्रामाणिक भारतीय मसाले";
+translations.hi.whatsapp_need_help = "सहायता चाहिए?";
+translations.hi.whatsapp_chat_us = "हमसे चैट करें";
+
+// FAQ Translations (Hindi)
+translations.hi.faq_q1 = "जालपेक्स इंटरनेशनल क्यों चुनें?";
+translations.hi.faq_a1 = "हम वैश्विक मानकों के अनुसार प्रीमियम गुणवत्ता वाले उत्पादों, सीधे खेत से सोर्सिंग, समय पर डिलीवरी, प्रतिस्पर्धी मूल्य निर्धारण और पेशेवर निर्यात सेवा पर ध्यान केंद्रित करते हैं। हम पूर्ण पारदर्शिता के माध्यम से दीर्घकालिक साझेदारी का निर्माण करते हैं।";
+translations.hi.faq_q2 = "आपके निर्जलित (Dehydrated) उत्पाद किन रूपों में उपलब्ध हैं?";
+translations.hi.faq_a2 = "हम विभिन्न औद्योगिक और पाक अनुप्रयोगों के अनुरूप फ्लेक्स, कटा हुआ, कीमा बनाया हुआ, किब्ड/कटा हुआ, दानेदार और पाउडर सहित विभिन्न रूपों में अपनी प्रीमियम निर्जलित सब्जियों और फलों की आपूर्ति करते हैं।";
+translations.hi.faq_q3 = "आप किस प्रकार के मसालों की आपूर्ति करते हैं?";
+translations.hi.faq_a3 = "हम विभिन्न प्रकार के प्रीमियम साबुत और पिसे हुए भारतीय मसालों का निर्यात करते हैं, जिनमें उच्च करक्यूमिन वाली हल्दी फिंगर, जीवंत लाल मिर्च (साबुत मिर्च और पाउडर), सुगंधित जीरा और प्रीमियम धनिया शामिल हैं।";
+translations.hi.faq_q4 = "क्या आपके कृषि उत्पाद प्रमाणित हैं?";
+translations.hi.faq_a4 = "हाँ, हम अंतरराष्ट्रीय खाद्य सुरक्षा और स्वच्छता नियमों का कड़ाई से पालन करते हैं। हमारी सोर्सिंग प्रक्रियाओं में सत्यापित प्रमाणपत्र शामिल हैं, जिनमें आईएसओ 22000:2018, केंद्रीय एफएसएसएआई लाइसेंस, एपीडा और मसाला बोर्ड पंजीकरण शामिल हैं।";
+translations.hi.faq_q5 = "आपके डिलीवरी के मानक नियम (Incoterms) क्या हैं?";
+translations.hi.faq_a5 = "हम विशेष रूप से मानक अंतरराष्ट्रीय डिलीवरी शर्तों पर काम करते हैं, मुख्य रूप से एफओबी (फ्री ऑन बोर्ड) और सीआईएफ (लागत, बीमा और भाड़ा)।";
+translations.hi.faq_q6 = "आप उत्पादों के सुरक्षित पारगमन (Transit) को कैसे सुनिश्चित करते हैं?";
+translations.hi.faq_a6 = "हम निर्यात-मानक पैकेजिंग जैसे वायुरोधी वैक्यूम पाउच, बहु-परत पीपी बैग और कस्टम कंटेनरों का उपयोग करते हैं। यह उत्पादों को लंबी समुद्री यात्राओं के दौरान नमी, ऑक्सीकरण और पारगमन क्षति से बचाता है।";
+translations.hi.faq_q7 = "ऑर्डर शिप करने में कितना समय लगता है?";
+translations.hi.faq_a7 = "शिपिंग समय गंतव्य देश, कंटेनर की मात्रा और प्रसंस्करण आवश्यकताओं पर निर्भर करता है। हम ऑर्डर की पुष्टि और दस्तावेज़ सत्यापन के तुरंत बाद अनुमानित समय प्रदान करते हैं।";
+translations.hi.faq_q8 = "आपकी न्यूनतम ऑर्डर मात्रा (MOQ) क्या है?";
+translations.hi.faq_a8 = "MOQ विशिष्ट उत्पाद श्रेणी (मसाले, अनाज, बीज, निर्जलित सब्जियां) के आधार पर भिन्न होता है। कस्टम उद्धरण प्राप्त करने के लिए कृपया अपनी विशिष्ट आवश्यकता के साथ हमारे सोर्सिंग डेस्क से संपर्क करें।";
+translations.hi.faq_q9 = "आप भुगतान के कौन से तरीके स्वीकार करते हैं?";
+translations.hi.faq_a9 = "हम अंतरराष्ट्रीय भुगतान के सुरक्षित तरीके स्वीकार करते हैं, जिनमें साख पत्र (L/C), टेलीग्राफिक ट्रांसफर (T/T), और दस्तावेज़ भुगतान के विरुद्ध (D/P) शामिल हैं।";
+translations.hi.faq_q10 = "क्या मुझे थोक ऑर्डर देने से पहले उत्पाद के नमूने (Samples) मिल सकते हैं?";
+translations.hi.faq_a10 = "हाँ, हम गुणवत्ता परीक्षण के लिए मुफ्त उत्पाद नमूने प्रदान करते हैं। गंतव्य और शिपिंग आवश्यकताओं के आधार पर, कूरियर शुल्क लागू हो सकते हैं।";
+translations.hi.faq_q11 = "क्या आप अनुकूलित (Customized) पैकेजिंग और प्राइवेट लेबलिंग की पेशकश करते हैं?";
+translations.hi.faq_a11 = "हाँ! हम पूर्ण प्राइवेट लेबलिंग अनुबंध सेवाएं प्रदान करके वैश्विक ब्रांडों और वितरकों को अपनी बाजार उपस्थिति बनाने में मदद करते हैं, जिससे आपके उत्पादों को थोक सोर्सिंग से लेकर खुदरा-तैयार कस्टम पैकेजिंग आकारों तक ले जाया जा सके।";
+translations.hi.faq_cta_title = "क्या आपके पास और प्रश्न हैं?";
+translations.hi.faq_cta_desc = "हमारा ट्रेड डेस्क आपकी सहायता के लिए तैयार है। हमें अपनी सोर्सिंग पूछताछ भेजें और हम 24 घंटे के भीतर जवाब देंगे।";
+
 translations.ar.tab_agriculture = "المنتجات الزراعية";
 translations.ar.tab_handicraft = "الحرف اليدوية";
 translations.ar.tab_textile = "المنسوجات";
@@ -1246,6 +1399,11 @@ translations.ar.info_cofounder_title = "المؤسس المشارك";
 translations.ar.info_cofounder_val = "د. جالبة دابهي";
 translations.ar.select_default = "اختر الفئة";
 translations.ar.form_phone_error = "يرجى تضمين '+' ورمز بلدك (مثل +91 98799 15124).";
+translations.ar.pd_properties = "الخصائص الرئيسية";
+translations.ar.pd_applications = "التطبيقات";
+translations.ar.pd_specifications = "المواصفات";
+translations.ar.btn_view_details = "عرض التفاصيل";
+translations.ar.catalog_other_products = "منتجات أخرى";
 
 translations.fr.tab_agriculture = "Produits Agricoles";
 translations.fr.tab_handicraft = "Artisanat";
@@ -1258,11 +1416,21 @@ translations.fr.info_cofounder_title = "Co-fondateur";
 translations.fr.info_cofounder_val = "Dr. Jalpa Dabhi";
 translations.fr.select_default = "Choisir la catégorie";
 translations.fr.form_phone_error = "Veuillez inclure '+' et votre code pays (ex: +91 98799 15124).";
+translations.fr.pd_properties = "Propriétés Clés";
+translations.fr.pd_applications = "Applications";
+translations.fr.pd_specifications = "Spécifications";
+translations.fr.btn_view_details = "Voir les Détails";
+translations.fr.catalog_other_products = "Autres Produits";
 
 translations.es.tab_agriculture = "Productos Agrícolas";
 translations.es.tab_handicraft = "Artesanías";
 translations.es.tab_textile = "Textil";
 translations.es.tab_construction = "Maquinaria de Construcción";
+translations.es.pd_properties = "Propiedades Clave";
+translations.es.pd_applications = "Aplicaciones";
+translations.es.pd_specifications = "Especificaciones";
+translations.es.btn_view_details = "Ver Detalles";
+translations.es.catalog_other_products = "Otros Productos";
 
 translations.es.info_contact_title = "Fundador";
 translations.es.info_contact_val = "Piyush Dabhi";
@@ -1282,6 +1450,11 @@ translations.de.info_cofounder_title = "Mitgründer";
 translations.de.info_cofounder_val = "Dr. Jalpa Dabhi";
 translations.de.select_default = "Kategorie auswählen";
 translations.de.form_phone_error = "Bitte geben Sie '+' und Ihre Landesvorwahl an (z. B. +91 98799 15124).";
+translations.de.pd_properties = "Wichtige Eigenschaften";
+translations.de.pd_applications = "Anwendungen";
+translations.de.pd_specifications = "Spezifikationen";
+translations.de.btn_view_details = "Details anzeigen";
+translations.de.catalog_other_products = "Andere Produkte";
 
 translations.pt.tab_agriculture = "Produtos Agrícolas";
 translations.pt.tab_handicraft = "Artesanato";
@@ -1294,6 +1467,11 @@ translations.pt.info_cofounder_title = "Co-fundador";
 translations.pt.info_cofounder_val = "Dra. Jalpa Dabhi";
 translations.pt.select_default = "Selecionar categoria";
 translations.pt.form_phone_error = "Por favor, inclua '+' e o código do seu país (ex: +91 98799 15124).";
+translations.pt.pd_properties = "Propriedades Principais";
+translations.pt.pd_applications = "Aplicações";
+translations.pt.pd_specifications = "Especificações";
+translations.pt.btn_view_details = "Ver Detalhes";
+translations.pt.catalog_other_products = "Outros Produtos";
 
 translations.zh.tab_agriculture = "农业产品";
 translations.zh.tab_handicraft = "手工艺品";
@@ -1306,6 +1484,11 @@ translations.zh.info_cofounder_title = "联合创始人";
 translations.zh.info_cofounder_val = "Dr. Jalpa Dabhi";
 translations.zh.select_default = "选择类别";
 translations.zh.form_phone_error = "请包含 '+' 和您的国家代码（例如：+91 98799 15124）。";
+translations.zh.pd_properties = "关键属性";
+translations.zh.pd_applications = "应用领域";
+translations.zh.pd_specifications = "技术规格";
+translations.zh.btn_view_details = "查看详情";
+translations.zh.catalog_other_products = "其他产品";
 
 // ── PRODUCTS DATA ──
 const productsData = [
@@ -1321,6 +1504,8 @@ const productsData = [
   { id: "peanuts", category: "agriculture", name: "Groundnuts (Peanuts)", desc: "Bold and Java peanut kernels sorted by size, rich in flavor and oil content.", tags: ["bold", "java", "kernels"], image: "products/peanuts.png" },
   { id: "pulses", category: "agriculture", name: "Pulses & Lentils", desc: "Premium grade split and whole Indian pulses, including Moong Dal, Chana Dal, and Urad Dal.", tags: ["lentils", "splits", "whole"], image: "products/pulses.png" },
   { id: "wheat", category: "agriculture", name: "Premium Wheat", desc: "Golden high-protein wheat grains, ideal for milling into premium flour and baking.", tags: ["golden", "grains", "high-protein"], image: "products/wheat.png" },
+  { id: "fresh_onions", category: "agriculture", name: "Fresh Red Onions", desc: "Fresh grade-A red onions, cured and sorted for export with excellent skin quality.", tags: ["onions", "fresh", "red-onions"], image: "products/fresh-produce.png" },
+  { id: "fresh_potatoes", category: "agriculture", name: "Fresh Potatoes", desc: "Premium table potatoes, washed and sorted, ideal for global wholesale markets.", tags: ["potatoes", "fresh", "table-grade"], image: "products/fresh-produce.png" },
 
   // SPICES
   { id: "turmeric", category: "spices", name: "Turmeric Finger", desc: "Premium quality golden-yellow Indian turmeric fingers, high in curcumin content.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
@@ -1340,12 +1525,6 @@ const productsData = [
   { id: "almonds", category: "dried_fruits", name: "Premium Almonds", desc: "Raw whole almonds, uniform count and size, rich in healthy fats and vitamin E.", tags: ["almonds", "raw", "nuts"], image: "products/almonds.png" },
   { id: "figs", category: "dried_fruits", name: "Dried Figs (Anjeer)", desc: "Plump, soft string figs (Anjeer) naturally dried and string-packed for freshness.", tags: ["figs", "anjeer", "string-figs"], image: "products/figs.png" },
 
-  // FRUITS & VEGETABLES
-  { id: "fresh_mangoes", category: "fresh_produce", name: "Fresh Kesar Mangoes", desc: "Sweet, highly aromatic Kesar mangoes weight-graded and packed under GAP guidelines.", tags: ["mangoes", "fresh", "sweet"], image: "products/fresh-produce.png" },
-  { id: "fresh_pomegranates", category: "fresh_produce", name: "Fresh Bhagwa Pomegranates", desc: "Deep red Bhagwa pomegranate fruits, soft-seeded and sorted for high juice content.", tags: ["pomegranates", "fresh", "red-arils"], image: "products/fresh-produce.png" },
-  { id: "fresh_onions", category: "fresh_produce", name: "Fresh Red Onions", desc: "Fresh grade-A red onions, cured and sorted for export with excellent skin quality.", tags: ["onions", "fresh", "red-onions"], image: "products/fresh-produce.png" },
-  { id: "fresh_potatoes", category: "fresh_produce", name: "Fresh Potatoes", desc: "Premium table potatoes, washed and sorted, ideal for global wholesale markets.", tags: ["potatoes", "fresh", "table-grade"], image: "products/fresh-produce.png" },
-
   // HANDICRAFT
   { id: "handicrafts", category: "handicraft", name: "Artisanal Handicrafts", desc: "Exquisite traditional Indian handicrafts made of brass, wood, and handcrafted textiles.", tags: ["handmade", "artisanal", "traditional"], image: "products/handicrafts.png" },
 
@@ -1364,6 +1543,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguagePicker();
   initMobileMenu();
   initStorySlideshow();
+  
+  // Set initial language from storage on page load
+  const savedLang = localStorage.getItem("selectedLang") || "en";
+  changeLanguage(savedLang);
+
   if (document.getElementById("products-grid") || document.querySelector(".product-tabs")) {
     initProductTabs();
     initProductsSlider();
@@ -1378,6 +1562,62 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   try { initScrollFx(); } catch (e) { }
   try { initMorphSlider(); } catch (e) { }
+
+  // Handle hash scrolling on page load (specifically for why-choose-us, inquiry, etc.) after layout settles
+  if (window.location.hash) {
+    const hash = window.location.hash;
+    setTimeout(() => {
+      try {
+        const target = document.querySelector(hash);
+        if (target) {
+          const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
+      } catch (err) {
+        console.warn("Hash scroll failed:", err);
+      }
+    }, 450);
+  }
+
+  // Same-page smooth scroll intercepts for links pointing to hashes (accounts for sticky header height)
+  document.querySelectorAll('a').forEach(anchor => {
+    const href = anchor.getAttribute('href');
+    if (!href || href === "#") return;
+    
+    try {
+      const url = new URL(anchor.href, window.location.href);
+      if (url.pathname === window.location.pathname && url.hash) {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(url.hash);
+          if (target) {
+            e.preventDefault();
+            
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileToggle = document.getElementById("mobileToggle");
+            if (mobileMenu && mobileMenu.classList.contains("active")) {
+              mobileMenu.classList.remove("active");
+              if (mobileToggle) mobileToggle.classList.remove("active");
+            }
+            
+            const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth"
+            });
+            
+            // Update URL hash without page reload/jump
+            history.pushState(null, null, url.hash);
+          }
+        });
+      }
+    } catch (err) {
+      // Ignore invalid URLs
+    }
+  });
 });
 
 // ── STORY SLIDESHOW ──
@@ -1454,11 +1694,6 @@ function initLanguagePicker() {
     item.addEventListener("click", () => {
       const selectedLang = item.getAttribute("data-lang");
       changeLanguage(selectedLang);
-      langItems.forEach(i => i.classList.remove("active"));
-      item.classList.add("active");
-
-      // Update UI active label
-      langToggle.querySelector("span").textContent = selectedLang.toUpperCase();
     });
   });
 
@@ -1467,8 +1702,6 @@ function initLanguagePicker() {
     btn.addEventListener("click", () => {
       const selectedLang = btn.getAttribute("data-lang");
       changeLanguage(selectedLang);
-      mobLangBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
 
       // Close mobile menu
       const mobileToggleEl = document.getElementById("mobileToggle");
@@ -1481,6 +1714,7 @@ function changeLanguage(lang) {
   if (!translations[lang]) return;
   currentLang = lang;
   document.documentElement.lang = lang;
+  localStorage.setItem("selectedLang", lang);
 
   // Translate all marked elements
   const translateElements = document.querySelectorAll("[data-trans]");
@@ -1496,6 +1730,54 @@ function changeLanguage(lang) {
       }
     }
   });
+
+  // Keep dropdown picker selection aligned
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    const span = langToggle.querySelector("span");
+    if (span) span.textContent = lang.toUpperCase();
+  }
+  const langItems = document.querySelectorAll(".lang-item");
+  langItems.forEach(i => {
+    if (i.getAttribute("data-lang") === lang) {
+      i.classList.add("active");
+    } else {
+      i.classList.remove("active");
+    }
+  });
+  const mobLangBtns = document.querySelectorAll(".mob-lang-btn");
+  mobLangBtns.forEach(b => {
+    if (b.getAttribute("data-lang") === lang) {
+      b.classList.add("active");
+    } else {
+      b.classList.remove("active");
+    }
+  });
+
+  // Re-render products grid dynamically with selected language translations if function exists
+  if (typeof renderProducts === "function" && (document.getElementById("products-grid") || document.getElementById("productsSliderTrack"))) {
+    renderProducts();
+  }
+
+  // Update morph slider copies if they exist on index page
+  const morphTitle = document.querySelector(".morph-hero-copy .title");
+  if (morphTitle && typeof morphProducts !== "undefined") {
+    const currentProduct = morphProducts[morphCurrentIndex];
+    if (currentProduct) {
+      const translatedCat = (translations[lang] && translations[lang]["morph_cat_" + currentProduct.id]) || currentProduct.category;
+      const translatedName = (translations[lang] && translations[lang]["morph_name_" + currentProduct.id]) || currentProduct.name;
+      const translatedSpec = (translations[lang] && translations[lang]["morph_spec_" + currentProduct.id]) || currentProduct.spec;
+      
+      const captionEl = document.querySelector(".morph-hero-copy .caption");
+      const specEl = document.querySelector(".morph-hero-copy .spec");
+      if (captionEl) captionEl.textContent = translatedCat;
+      if (morphTitle) morphTitle.textContent = translatedName;
+      if (specEl) specEl.textContent = translatedSpec;
+    }
+    if (typeof updateStackCards === "function") {
+      updateStackCards();
+    }
+  }
 }
 
 // ── MOBILE MENU ──
@@ -1535,13 +1817,21 @@ function initHeroIntro() {
   }
 
   // ── 2. Ticker word cycling ──
+  const tickerWordsKeys = [
+    'cat_dehydrated',
+    'cat_agriculture',
+    'ticker_spices',
+    'cat_natures_finest',
+    'cat_dried_fruits',
+    'cat_handicrafts',
+    'cat_textile'
+  ];
   const tickerWords = [
     'Dehydrated Vegetables & Fruits',
     'Agriculture Products',
     'Authentic Spices',
     'Nature’s Finest',
     'Premium Dried Fruits',
-    'Fresh Fruits & Vegetables',
     'Artisanal Handicrafts',
     'Textile & Apparel'
   ];
@@ -1549,14 +1839,19 @@ function initHeroIntro() {
   const hdtWordEl = document.getElementById('hdtWord');
 
   if (hdtWordEl) {
+    // Set initial translated word
+    const initialKey = tickerWordsKeys[tickerIdx];
+    hdtWordEl.textContent = (translations[currentLang] && translations[currentLang][initialKey]) || tickerWords[tickerIdx];
+
     setInterval(() => {
       // Exit animation
       hdtWordEl.style.opacity = '0';
       hdtWordEl.style.transform = 'translateY(-16px)';
       hdtWordEl.style.filter = 'none';
       setTimeout(() => {
-        tickerIdx = (tickerIdx + 1) % tickerWords.length;
-        hdtWordEl.textContent = tickerWords[tickerIdx];
+        tickerIdx = (tickerIdx + 1) % tickerWordsKeys.length;
+        const key = tickerWordsKeys[tickerIdx];
+        hdtWordEl.textContent = (translations[currentLang] && translations[currentLang][key]) || tickerWords[tickerIdx];
         hdtWordEl.style.transform = 'translateY(16px)';
         // Enter animation
         requestAnimationFrame(() => {
@@ -1575,25 +1870,20 @@ function initHeroIntro() {
   // Also handle the old dynamicWord if it still exists
   const wordElement = document.getElementById('dynamicWord');
   if (wordElement) {
-    const words = [
-      'Dehydrated Vegetables & Fruits',
-      'Agriculture Products',
-      'Authentic Spices',
-      'Nature’s Finest',
-      'Premium Dried Fruits',
-      'Fresh Fruits & Vegetables',
-      'Artisanal Handicrafts',
-      'Textile & Apparel'
-    ];
     let currentWordIndex = 0;
+    // Set initial translated word
+    const initialKey = tickerWordsKeys[currentWordIndex];
+    wordElement.textContent = (translations[currentLang] && translations[currentLang][initialKey]) || tickerWords[currentWordIndex];
+
     wordElement.style.transition = 'all 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
     setInterval(() => {
       wordElement.style.opacity = '0';
       wordElement.style.transform = 'translateY(12px)';
       wordElement.style.filter = 'none';
       setTimeout(() => {
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        wordElement.textContent = words[currentWordIndex];
+        currentWordIndex = (currentWordIndex + 1) % tickerWordsKeys.length;
+        const key = tickerWordsKeys[currentWordIndex];
+        wordElement.textContent = (translations[currentLang] && translations[currentLang][key]) || tickerWords[currentWordIndex];
         wordElement.style.opacity = '1';
         wordElement.style.transform = 'translateY(0)';
         wordElement.style.filter = 'none';

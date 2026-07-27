@@ -1156,8 +1156,8 @@ section {
 
 .about-intro-inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
   align-items: center;
 }
 
@@ -2692,21 +2692,21 @@ section {
 
 .inquiry-wrap {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
   align-items: flex-start;
 }
 
 .inquiry-info {
-  position: sticky;
-  top: 120px;
+  position: static;
+  margin: 0;
 }
 
 .inquiry-card {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 30px;
   margin-top: 0;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2757,7 +2757,7 @@ section {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 48px;
+  padding: 32px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -3739,6 +3739,43 @@ footer .logo-link:hover .logo-img {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
+.whatsapp-tooltip {
+  position: absolute;
+  right: 76px;
+  background-color: #f4f5f8;
+  color: #242d38;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  width: 140px;
+  white-space: normal;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9998;
+  text-align: left;
+}
+
+/* Subtle speech bubble pointer */
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #f4f5f8;
+}
+
+.whatsapp-tooltip strong {
+  font-weight: 700;
+  color: #111;
+}
+
 .whatsapp-float-icon {
   display: flex;
   align-items: center;
@@ -3802,6 +3839,10 @@ footer .logo-link:hover .logo-img {
   .whatsapp-float svg {
     width: 28px;
     height: 28px;
+  }
+
+  .whatsapp-tooltip {
+    display: none !important;
   }
 }
 
@@ -3987,23 +4028,24 @@ footer .logo-link:hover .logo-img {
 
 /* ── NEWS & ARTICLES PAGE ── */
 .news-header {
-  background: linear-gradient(135deg, rgba(24, 37, 67, 0.95) 0%, rgba(6, 10, 18, 0.95) 100%), url('gallery/shipping_port.png') center/cover no-repeat;
+  background: var(--bg-gradient);
   padding: 55px 0;
-  color: #FFFFFF;
+  color: var(--text-dark);
   text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 
 .news-header .catalog-title {
   font-family: var(--font-heading);
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-dark);
   margin-bottom: 4px;
 }
 
 .news-header .catalog-subtitle {
   font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-mid);
   max-width: 600px;
   margin: 0 auto 12px;
   font-weight: 300;
@@ -4018,9 +4060,9 @@ footer .logo-link:hover .logo-img {
 }
 
 .news-header .filter-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.75);
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
   padding: 10px 24px;
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
@@ -4028,14 +4070,13 @@ footer .logo-link:hover .logo-img {
   border-radius: 40px;
   cursor: pointer;
   transition: var(--transition);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
 }
 
 .news-header .filter-btn:hover {
-  border-color: rgba(255, 255, 255, 0.45);
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-gold);
+  color: var(--text-dark);
+  background: #FFFFFF;
 }
 
 .news-header .filter-btn.active {
@@ -4046,15 +4087,15 @@ footer .logo-link:hover .logo-img {
 }
 
 .news-header .filter-btn.govt-alerts-btn {
-  background: rgba(201, 146, 46, 0.15);
-  border-color: rgba(201, 146, 46, 0.4);
-  color: #f0c36a;
+  background: rgba(194, 150, 82, 0.08);
+  border-color: rgba(194, 150, 82, 0.35);
+  color: var(--accent-gold-bright);
   text-decoration: none;
 }
 
 .news-header .filter-btn.govt-alerts-btn:hover {
-  background: rgba(201, 146, 46, 0.3);
-  border-color: #f0c36a;
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
   color: #FFFFFF;
 }
 
@@ -5226,16 +5267,17 @@ footer .logo-link:hover .logo-img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(194, 150, 82, 0.12);
-  border: 1px solid rgba(194, 150, 82, 0.35);
-  color: rgba(255, 255, 255, 0.88);
-  padding: 5px 14px;
+  background: rgba(36, 29, 18, 0.88);
+  border: 1px solid rgba(194, 150, 82, 0.45);
+  color: rgba(255, 255, 255, 0.95);
+  padding: 6px 16px;
   border-radius: 50px;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   width: fit-content;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(36, 29, 18, 0.2);
 }
 
 .hdb-dot {
@@ -5284,6 +5326,25 @@ footer .logo-link:hover .logo-img {
   -webkit-text-fill-color: transparent;
   animation: gold-shimmer 4s linear infinite;
   display: inline-block;
+}
+
+/* Avoid italic rendering breaking letters in non-Latin scripts (Hindi, Arabic, Chinese) */
+html[lang="hi"] .hd-gold-italic,
+html[lang="hi"] .hero-dark-heading em,
+html[lang="hi"] em,
+html[lang="hi"] i,
+html[lang="ar"] .hd-gold-italic,
+html[lang="ar"] .hero-dark-heading em,
+html[lang="ar"] em,
+html[lang="ar"] i,
+html[lang="zh"] .hd-gold-italic,
+html[lang="zh"] .hero-dark-heading em,
+html[lang="zh"] em,
+html[lang="zh"] i {
+  font-style: normal !important;
+  padding-left: 0.12em;
+  padding-right: 0.05em;
+  margin-left: -0.12em;
 }
 
 @keyframes gold-shimmer {
@@ -5955,10 +6016,6 @@ footer .logo-link:hover .logo-img {
 
   .hero-dark-desc {
     font-size: 13px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .hero-dark-stats {
