@@ -1839,20 +1839,22 @@ section {
   font-family: 'Playfair Display', serif;
   font-size: 21px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-dark) !important;
   margin-bottom: 6px;
   transition: color 0.3s ease;
+  text-decoration: none !important;
 }
 
 .products-grid-track .product-card.see-all-card:hover .see-all-title {
-  color: var(--accent-gold-deep);
+  color: var(--accent-gold-deep) !important;
 }
 
 .see-all-subtitle {
   font-size: 13.5px;
-  color: var(--text-mid);
+  color: var(--text-mid) !important;
   margin: 0;
   font-weight: 400;
+  text-decoration: none !important;
 }
 
 /* ── WHY CHOOSE US ── */
