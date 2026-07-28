@@ -212,6 +212,13 @@ function news_build(array $ministryPatterns): array
         if (!isset($seen[$it['url']])) { $seen[$it['url']] = true; $unique[] = $it; }
     }
 
+    // Sort descending by date
+    usort($unique, function($a, $b) {
+        if (empty($a['date'])) return 1;
+        if (empty($b['date'])) return -1;
+        return strtotime($b['date']) - strtotime($a['date']);
+    });
+
     $out = [
         'updatedAt' => gmdate('c'),
         'count'     => min(count($unique), MAX_ITEMS),

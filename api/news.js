@@ -248,6 +248,13 @@ module.exports = async (req, res) => {
     return true;
   });
 
+  // Sort descending by date
+  unique.sort((a, b) => {
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date) - new Date(a.date);
+  });
+
   res.setHeader("Content-Type", "application/json; charset=utf-8");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(

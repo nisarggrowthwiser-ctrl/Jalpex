@@ -1509,7 +1509,7 @@ const productsData = [
 
   // SPICES
   { id: "turmeric", category: "spices", name: "Turmeric Finger", desc: "Premium quality golden-yellow Indian turmeric fingers, high in curcumin content.", tags: ["finger", "powder", "high-curcumin"], image: "products/turmeric.png" },
-  { id: "red_chilli", category: "spices", name: "Red Chilli", desc: "Vibrant red and fiery Indian red chillies, available as stemless whole pods or powder.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli.png" },
+  { id: "red_chilli", category: "spices", name: "Red Chilli", desc: "Vibrant red and fiery Indian red chillies, available as stemless whole pods or powder.", tags: ["whole", "powder", "stemless"], image: "products/red-chilli-composite.png" },
   { id: "cumin", category: "spices", name: "Cumin Seeds", desc: "Highly aromatic cumin seeds with deep earthy flavor, thoroughly cleaned and processed.", tags: ["seeds", "powder", "earthy"], image: "products/cumin.png" },
   { id: "coriander", category: "spices", name: "Coriander Seeds", desc: "Uniform whole coriander seeds and premium finely milled coriander powder.", tags: ["seeds", "powder", "aromatic"], image: "products/coriander.png" },
 
@@ -1563,23 +1563,22 @@ document.addEventListener("DOMContentLoaded", () => {
   try { initScrollFx(); } catch (e) { }
   try { initMorphSlider(); } catch (e) { }
 
-  // Handle hash scrolling on page load (specifically for why-choose-us, inquiry, etc.) after layout settles
+  // Handle hash scrolling on page load (specifically for why-choose-us, inquiry, etc.)
   if (window.location.hash) {
     const hash = window.location.hash;
-    setTimeout(() => {
+    const scrollToHash = () => {
       try {
         const target = document.querySelector(hash);
         if (target) {
           const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: "smooth"
-          });
+          window.scrollTo(0, offsetTop);
         }
       } catch (err) {
         console.warn("Hash scroll failed:", err);
       }
-    }, 450);
+    };
+    scrollToHash();
+    setTimeout(scrollToHash, 200);
   }
 
   // Same-page smooth scroll intercepts for links pointing to hashes (accounts for sticky header height)
@@ -1589,7 +1588,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     try {
       const url = new URL(anchor.href, window.location.href);
-      if (url.pathname === window.location.pathname && url.hash) {
+      const currentNormPath = window.location.pathname.replace(/\/index\.html$/, '/');
+      const targetNormPath = url.pathname.replace(/\/index\.html$/, '/');
+
+      if (currentNormPath === targetNormPath && url.hash) {
         anchor.addEventListener('click', function (e) {
           const target = document.querySelector(url.hash);
           if (target) {
@@ -1758,6 +1760,9 @@ function changeLanguage(lang) {
   if (typeof renderProducts === "function" && (document.getElementById("products-grid") || document.getElementById("productsSliderTrack"))) {
     renderProducts();
   }
+
+  // Broadcast language change to custom page scripts
+  window.dispatchEvent(new CustomEvent("languageChanged", { detail: { lang } }));
 
   // Update morph slider copies if they exist on index page
   const morphTitle = document.querySelector(".morph-hero-copy .title");
@@ -2579,11 +2584,16 @@ function initInquiryForm() {
       return;
     }
 
-    // Log values & mock success
-    console.log("Inquiry Submitted:", { name, email, phone, category, message });
+    // Construct mailto URL to launch client mail app
+    const subject = encodeURIComponent(`Import Inquiry (${category}) from ${name}`);
+    const body = encodeURIComponent(`Hello Jalpex International,\n\nI would like to submit an import inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nDetails:\n${message}\n\nRegards,\n${name}`);
+    const mailtoUrl = `mailto:jalpexinternational@gmail.com?subject=${subject}&body=${body}`;
 
     status.className = "form-status success";
     status.textContent = translations[currentLang].form_success;
+
+    // Trigger mail client
+    window.location.href = mailtoUrl;
 
     // Reset form
     form.reset();
