@@ -3418,6 +3418,14 @@ footer .logo-link:hover .logo-img {
     padding: 24px 16px;
   }
 
+  .inquiry-wrap {
+    gap: 20px;
+  }
+
+  .inquiry-card {
+    padding: 22px 16px !important;
+  }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
@@ -4818,15 +4826,36 @@ footer .logo-link:hover .logo-img {
 
   /* ── INQUIRY SECTION ── */
   .inquiry-section {
-    padding: 56px 0;
+    padding: 40px 0;
   }
 
   .inquiry-wrap {
-    gap: 32px;
+    gap: 24px;
+  }
+
+  /* Info card — reduce the heavy inline padding on mobile */
+  .inquiry-card {
+    padding: 24px 18px !important;
+  }
+
+  /* Contact detail rows inside the card */
+  .contact-card-list {
+    gap: 20px !important;
+  }
+
+  /* Stack email + phone into one column on mobile */
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .inquiry-form-card {
-    padding: 24px 18px;
+    padding: 22px 16px;
+    border-radius: 12px;
+  }
+
+  .inquiry-header {
+    margin-bottom: 16px !important;
   }
 
   .form-group input,
@@ -4834,6 +4863,12 @@ footer .logo-link:hover .logo-img {
   .form-group textarea {
     font-size: 14px;
     padding: 12px 14px;
+  }
+
+  /* Comfortable tap target for submit button */
+  .form-submit-btn {
+    padding: 14px 20px;
+    font-size: 15px;
   }
 
   /* ── NEWS PAGE HEADER ── */
