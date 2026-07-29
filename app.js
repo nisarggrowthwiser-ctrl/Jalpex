@@ -1,7 +1,7 @@
 // ── MULTILINGUAL TRANSLATION DICTIONARY ──
 const translations = {
   en: {
-    company_tagline: "“FLOWING ACROSS BORDERS, DELIVERING WITH PRECISION”",
+    company_tagline: "FLOWING ACROSS BORDERS, DELIVERING WITH PRECISION",
     nav_home: "Home",
     nav_story: "Our Story",
     nav_products: "Products",
@@ -55,22 +55,22 @@ const translations = {
     process_title: "Our Export Process",
     process_1_step: "Step 01",
     process_1_title: "Direct Sourcing",
-    process_1_desc: "We handpick materials directly from agricultural hubs and certified farms in India.",
+    process_1_desc: "We handpick materials directly from agricultural hubs and certified farms across India.",
     process_2_step: "Step 02",
     process_2_title: "Quality Inspection",
-    process_2_desc: "Products undergo thorough testing to ensure compliance with global sanitary standards.",
+    process_2_desc: "Every product undergoes thorough testing to ensure full compliance with global sanitary standards.",
     process_3_step: "Step 03",
     process_3_title: "Modern Processing",
-    process_3_desc: "State-of-the-art cleaning, sorting, and grounding technology maintains purity.",
+    process_3_desc: "State-of-the-art cleaning, sorting, and grinding technology preserves purity at every stage.",
     process_4_step: "Step 04",
     process_4_title: "Secure Packaging",
-    process_4_desc: "Advanced vacuum and airtight packaging shields products during long sea routes.",
+    process_4_desc: "Advanced vacuum and airtight packaging protect products throughout long sea routes.",
     process_5_step: "Step 05",
     process_5_title: "Global Distribution",
-    process_5_desc: "Handled by trusted freight forwarders, ensuring on-time delivery at destination ports.",
+    process_5_desc: "Handled by trusted freight forwarders, ensuring on-time delivery to destination ports worldwide.",
     inquiry_label: "Get in Touch",
-    inquiry_title: "Start your Import Inquiry",
-    inquiry_desc: "Send us your requirement, packaging needs, and destination port. Our trade desk will reply with competitive CNF/FOB quotes within 24 hours.",
+    inquiry_title: "Start Your Import Inquiry",
+    inquiry_desc: "Share your requirements, packaging preferences, and destination port with us. Our trade desk will respond with competitive CNF/FOB quotes within 24 hours.",
     info_address_title: "Registered Office",
     info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
     info_email_title: "Email Support",
@@ -86,7 +86,7 @@ const translations = {
     form_btn: "Send Inquiry",
     form_success: "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.",
     form_error: "Please fill out all required fields.",
-    footer_desc: "Jalpex International is a premium export house of agricultural commodities. We represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.",
+    footer_desc: "Jalpex International stands at the intersection of heritage and global trade, a premier export house bringing the best of Indian agriculture to import networks in 40+ countries around the world.",
     footer_quick_links: "Quick Navigation",
     footer_products: "Our Offerings",
     footer_contact: "Contact Sourcing Desk",
@@ -108,45 +108,45 @@ const translations = {
     cat_construction_desc: "Heavy-duty concrete mixers, hydraulic excavators, and compact compaction road rollers.",
     logistics_label: "Our Logistics Services!",
     logistics_title: "Reliable Worldwide Freight Services",
-    logistics_desc: "Seamless Import Export Transportation solutions designed to ensure secure, timely, and efficient global delivery of premium agricultural products.",
+    logistics_desc: "Seamless Import & Export Transportation Solutions designed to ensure the secure, timely, and efficient global delivery of premium agricultural products, backed by reliable logistics and end-to-end supply chain expertise.",
     logistics_road_title: "Road Freight",
-    logistics_road_desc: "Reliable inland transportation solutions ensuring safe and timely delivery of agricultural products across domestic and international supply chains with efficiency and professionalism.",
+    logistics_road_desc: "Dependable Road freight solutions for the safe, on-time, and cost-effective movement of agricultural products across domestic and cross-border supply chains. Backed by efficient logistics and professional handling, we deliver your cargo with precision and care.",
     logistics_ocean_title: "Ocean Freight",
-    logistics_ocean_desc: "Cost-effective global sea freight services designed for bulk agricultural exports, secure container handling, and seamless trade operations across worldwide markets with reliability and efficiency.",
+    logistics_ocean_desc: "Cost-effective global sea freight solutions for bulk agricultural exports, secure container handling, and seamless trade operations across worldwide markets. Backed by reliability and efficiency, we connect your cargo to markets everywhere.",
     logistics_air_title: "Air Freight",
-    logistics_air_desc: "Fast and dependable air cargo solutions for urgent shipments, delivering premium agricultural products quickly while maintaining quality and freshness standards.",
+    logistics_air_desc: "Fast and dependable air cargo solutions for time-critical shipments, delivering premium agricultural products quickly while preserving quality and freshness. Backed by precision handling, we ensure your cargo arrives in peak condition.",
     pl_label: "Value-Added Services",
     pl_title: "Private Labeling & Custom Packaging Solutions",
-    pl_desc: "We help global brands, distributors, and supermarkets build their own brand presence. Jalpex International offers complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging.",
+    pl_desc: "Complete private labeling and contract packaging solutions, helping global brands, distributors, and supermarkets build their own market presence. Backed by end-to-end capability, we take your products from bulk sourcing to retail-ready custom packaging.",
     pl_f1_title: "Custom Brand Labeling",
-    pl_f1_desc: "Your logos, colors, barcodes, and custom designs on premium export jars or pouches.",
+    pl_f1_desc: "Your logos, colors, barcodes, and custom designs applied to premium export jars or pouches.",
     pl_f2_title: "Flexible Packing Sizes",
-    pl_f2_desc: "Available in small retail pouches (50g - 1kg) to bulk bags (10kg - 50kg) based on requirements.",
+    pl_f2_desc: "Available in small retail pouches (50g–1kg) up to bulk bags (10kg–50kg), tailored to your requirements.",
     pl_f3_title: "Hygienic Pouch Packing",
-    pl_f3_desc: "Modern multi-layer vacuum pouch setups that lock in flavor and avoid moisture entry.",
+    pl_f3_desc: "Modern multi-layer vacuum pouch technology that locks in flavor and freshness while keeping moisture out.",
     pl_f4_title: "Compliance Ready",
-    pl_f4_desc: "Label details conform with international custom laws and FDA regulations.",
+    pl_f4_desc: "Label details fully comply with international customs regulations and FDA standards.",
     cert_label: "Global Standards",
     cert_title: "Accredited Quality Certifications",
-    cert_desc: "We adhere strictly to global sanitary and phytosanitary requirements. Our sourcing operations carry internationally recognized benchmarks.",
+    cert_desc: "Quality you can trust, backed by certification. We strictly adhere to global sanitary and phytosanitary requirements, with sourcing operations built on internationally recognized benchmarks — so every shipment meets the highest standards of safety and compliance.",
     cert_verifiable: "All certifications are verifiable and available on request for due diligence.",
     boards_title: "Boards & Councils We Work With",
-    boards_subtitle: "Jalpex International is registered and affiliated with key trade promotion councils and development boards.",
+    boards_subtitle: "Jalpex International is registered and affiliated with key trade promotion councils and development boards, ensuring compliance, credibility, and access to global markets.",
     cert_1_title: "ISO 22000:2018 Certification",
     cert_1_issuer: "Food Safety Management System",
-    cert_1_desc: "Internationally recognized food safety management standard verifying our clean storage, quality testing, and processing operations.",
+    cert_1_desc: "An internationally recognized food safety standard, verifying our clean storage, rigorous quality testing, and controlled processing operations.",
     cert_2_title: "Import Export Code (IEC)",
     cert_2_issuer: "DGFT, Government of India",
-    cert_2_desc: "Mandatory 10-digit registration issued by the Directorate General of Foreign Trade required for all international trade transactions.",
+    cert_2_desc: "Mandatory 10-digit registration issued by the Directorate General of Foreign Trade, required for all international trade transactions.",
     cert_3_title: "APEDA Registration Certificate",
-    cert_3_issuer: "Agricultural Products Export Authority",
-    cert_3_desc: "Enables official export of premium Indian grains, seeds, pulses, and fresh produce with absolute phytosanitary clearances.",
+    cert_3_issuer: "Agricultural & Processed Food Products Export Development Authority",
+    cert_3_desc: "Authorizes the official export of premium Indian grains, seeds, pulses, and fresh produce, backed by full phytosanitary clearance.",
     cert_4_title: "Spices Board Registration",
     cert_4_issuer: "Ministry of Commerce & Industry",
-    cert_4_desc: "Registration cum Membership Certificate (RCMC) authorizing direct export of whole and ground spices to global destinations.",
+    cert_4_desc: "Registration-cum-Membership Certificate (RCMC) authorizing direct export of whole and ground spices to global markets.",
     cert_5_title: "Central FSSAI License",
-    cert_5_issuer: "Food Safety & Standards Authority",
-    cert_5_desc: "Full licensing compliance for processing, packaging, and exporting food products, ensuring all batches meet sanitary guidelines.",
+    cert_5_issuer: "Food Safety & Standards Authority of India",
+    cert_5_desc: "Full regulatory compliance for the processing, packaging, and export of food products, ensuring every batch meets sanitary and safety guidelines.",
     cert_6_title: "MSME Registered Enterprise",
     cert_6_issuer: "Ministry of MSME, Government of India",
     cert_6_desc: "Government-registered status facilitating standard compliances, export priority, and trade incentives.",
@@ -163,7 +163,7 @@ const translations = {
     news_filter_sourcing: "Sourcing &amp; Logistics"
   },
   hi: {
-    company_tagline: "“सीमाओं से परे प्रवाह, सटीकता के साथ वितरण”",
+    company_tagline: "सीमाओं से परे प्रवाह, सटीकता के साथ वितरण",
     nav_home: "मुख्य पृष्ठ",
     nav_story: "हमारी कहानी",
     nav_products: "उत्पाद",
@@ -325,7 +325,7 @@ const translations = {
     news_filter_sourcing: "सोर्सिंग और लॉजिस्टिक्स"
   },
   ar: {
-    company_tagline: "“التدفق عبر الحدود، والتسليم بدقة”",
+    company_tagline: "التدفق عبر الحدود، والتسليم بدقة",
     nav_home: "الرئيسية",
     nav_story: "قصتنا",
     nav_products: "المنتجات",
@@ -475,7 +475,7 @@ const translations = {
     news_filter_sourcing: "التوريد والخدمات اللوجستية"
   },
   fr: {
-    company_tagline: "« Couler à travers les frontières, livrer avec précision »",
+    company_tagline: "Couler à travers les frontières, livrer avec précision",
     nav_home: "Accueil",
     nav_story: "Notre Histoire",
     nav_products: "Produits",
@@ -625,7 +625,7 @@ const translations = {
     news_filter_sourcing: "Approvisionnement et Logistique"
   },
   es: {
-    company_tagline: "“Fluyendo a través de las fronteras, entregando con precisión”",
+    company_tagline: "Fluyendo a través de las fronteras, entregando con precisión",
     nav_home: "Inicio",
     nav_story: "Nuestra Historia",
     nav_products: "Productos",
@@ -775,7 +775,7 @@ const translations = {
     news_filter_sourcing: "Abastecimiento y Logística"
   },
   de: {
-    company_tagline: "„Grenzenlos fließen, mit Präzision liefern“",
+    company_tagline: "Grenzenlos fließen, mit Präzision liefern",
     nav_home: "Startseite",
     nav_story: "Unsere Story",
     nav_products: "Produkte",
@@ -925,7 +925,7 @@ const translations = {
     news_filter_sourcing: "Beschaffung & Logistik"
   },
   pt: {
-    company_tagline: "“Fluindo através das fronteiras, entregando com precisão”",
+    company_tagline: "Fluindo através das fronteiras, entregando com precisão",
     nav_home: "Início",
     nav_story: "Nossa História",
     nav_products: "Produtos",
@@ -1075,7 +1075,7 @@ const translations = {
     news_filter_sourcing: "Fornecimento e Logística"
   },
   zh: {
-    company_tagline: "“跨越国界流动，精准交付”",
+    company_tagline: "跨越国界流动，精准交付",
     nav_home: "首页",
     nav_story: "品牌故事",
     nav_products: "出口产品",
@@ -1635,12 +1635,70 @@ function initStorySlideshow() {
   const slides = document.querySelectorAll(".about-bowl-img .slide");
   if (!slides || slides.length === 0) return;
 
+  const titleEl = document.getElementById("aboutBowlTitle");
+  const dotsContainer = document.getElementById("aboutBowlDots");
+
   let currentIdx = 0;
-  setInterval(() => {
+  let timer = null;
+
+  // Build pagination dots dynamically
+  if (dotsContainer) {
+    dotsContainer.innerHTML = "";
+    slides.forEach((slide, i) => {
+      const dot = document.createElement("button");
+      dot.className = `about-bowl-dot ${i === 0 ? "active" : ""}`;
+      dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+      dot.addEventListener("click", (e) => {
+        e.preventDefault();
+        goToSlide(i);
+        resetTimer();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function updateTitle(idx) {
+    if (!titleEl) return;
+    const name = slides[idx].getAttribute("data-name") || slides[idx].getAttribute("alt") || "";
+    titleEl.textContent = name;
+  }
+
+  function updateDots(idx) {
+    if (!dotsContainer) return;
+    const dots = dotsContainer.querySelectorAll(".about-bowl-dot");
+    dots.forEach((dot, i) => {
+      if (i === idx) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  function goToSlide(nextIdx) {
     slides[currentIdx].classList.remove("active");
-    currentIdx = (currentIdx + 1) % slides.length;
+    currentIdx = nextIdx;
     slides[currentIdx].classList.add("active");
-  }, 3500);
+    updateTitle(currentIdx);
+    updateDots(currentIdx);
+  }
+
+  function startTimer() {
+    timer = setInterval(() => {
+      const nextIdx = (currentIdx + 1) % slides.length;
+      goToSlide(nextIdx);
+    }, 3500);
+  }
+
+  function resetTimer() {
+    if (timer) clearInterval(timer);
+    startTimer();
+  }
+
+  // Set initial state
+  updateTitle(0);
+  updateDots(0);
+  startTimer();
 }
 
 // ── NAVBAR SCROLL ──

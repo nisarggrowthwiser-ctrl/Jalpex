@@ -1274,6 +1274,12 @@
       if (productId === 'ginger_powder') productId = 'dehydrated_ginger';
       if (productId === 'moringa') productId = 'moringa_powder';
       if (productId === 'chickpeas') productId = 'pulses';
+      if (productId === 'basmati' || productId === 'basmati_rice') productId = 'rice';
+      if (productId === 'peanut' || productId === 'groundnut' || productId === 'groundnuts') productId = 'peanuts';
+      if (productId === 'cotton' || productId === 'yarn' || productId === 'textile_yarn') productId = 'textile_fabrics';
+      if (productId === 'fabric' || productId === 'fabrics' || productId === 'apparel') productId = 'textile_apparel';
+      if (productId === 'handicraft') productId = 'wooden_handicrafts';
+      if (productId === 'spices') productId = 'turmeric';
 
       const product = productsData.find(p => p.id === productId);
 
@@ -1396,12 +1402,15 @@
             `;
           }
         });
+        typesGrid.innerHTML = gridHtml;
+      } else {
         typesSec.style.display = 'none';
       }
     }
 
     renderProductPage();
     window.addEventListener("languageChanged", renderProductPage);
+  })();
   </script>
 
 </body>
