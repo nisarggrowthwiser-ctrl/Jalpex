@@ -752,6 +752,11 @@
     document.addEventListener("DOMContentLoaded", () => {
       renderNews();
     });
+
+    // Re-render when user switches language (keeps UI strings consistent across pages)
+    window.addEventListener("languageChanged", () => {
+      renderNews();
+    });
   </script>
 </body>
 </html>

@@ -29,7 +29,7 @@ const translations = {
     story_label: "Trusted Global Export Partner",
     story_title: "Premium Quality. Ethical Sourcing. Global Trust.",
     story_p1: "At Jalpex International, we are committed to delivering premium Indian products to international markets through a reliable and transparent supply chain. We source directly from trusted farmers and manufacturers across India, ensuring every product reflects the country's rich agricultural heritage and uncompromising quality.",
-    story_p2: "Our export portfolio includes agricultural commodities, spices, dehydrated vegetables, fresh produce, pulses, grains, seeds, and handicrafts. Every shipment undergoes rigorous quality checks, hygienic processing, and secure packaging to meet international standards and customer expectations.",
+    story_p2: "Our export portfolio includes Agricultural Commodities, Spices, Dehydrated Vegetables, Fresh Produce, Pulses, Grains, Seeds, and Handicrafts. Every shipment undergoes rigorous quality checks, hygienic processing, and secure packaging to meet international standards and customer expectations.",
     story_p3: "With a strong focus on consistency, timely delivery, and long-term partnerships, we strive to provide seamless export solutions tailored to the needs of importers, distributors, wholesalers, and retailers worldwide. At Jalpex International, we don't just export products—we deliver trust, reliability, and lasting business relationships.",
     story_link: "Explore our export collections &rarr;",
     ticker_text: "Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • ",
@@ -1563,22 +1563,30 @@ document.addEventListener("DOMContentLoaded", () => {
   try { initScrollFx(); } catch (e) { }
   try { initMorphSlider(); } catch (e) { }
 
-  // Handle hash scrolling on page load (specifically for why-choose-us, inquiry, etc.)
+  // Handle hash scrolling on page load
+  // Handles: gallery/faq/product.html → index.html#inquiry
+  //          gallery/faq/product.html → index.html#why-choose-us
+  // Multiple retries needed: hero animations and lazy content shift element positions
+  // after the initial paint, so a single attempt misses the final scroll target.
   if (window.location.hash) {
     const hash = window.location.hash;
-    const scrollToHash = () => {
+    const scrollToHash = (smooth = false) => {
       try {
         const target = document.querySelector(hash);
         if (target) {
           const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo(0, offsetTop);
+          window.scrollTo({ top: offsetTop, behavior: smooth ? "smooth" : "instant" });
         }
       } catch (err) {
         console.warn("Hash scroll failed:", err);
       }
     };
+    // Early retries snap instantly to avoid repeated smooth-scroll jank;
+    // final retry at 1500ms uses smooth after all animations have settled.
     scrollToHash();
-    setTimeout(scrollToHash, 200);
+    setTimeout(() => scrollToHash(), 100);
+    setTimeout(() => scrollToHash(), 500);
+    setTimeout(() => scrollToHash(true), 1500);
   }
 
   // Same-page smooth scroll intercepts for links pointing to hashes (accounts for sticky header height)
@@ -2589,11 +2597,18 @@ function initInquiryForm() {
     const body = encodeURIComponent(`Hello Jalpex International,\n\nI would like to submit an import inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nDetails:\n${message}\n\nRegards,\n${name}`);
     const mailtoUrl = `mailto:jalpexinternational@gmail.com?subject=${subject}&body=${body}`;
 
+    // Trigger mail client via hidden anchor — avoids navigating away from the page
+    // which would wipe the success message and could silently swallow the mailto in
+    // some browsers when window.location.href is used.
+    const mailLink = document.createElement("a");
+    mailLink.href = mailtoUrl;
+    mailLink.style.display = "none";
+    document.body.appendChild(mailLink);
+    mailLink.click();
+    setTimeout(() => document.body.removeChild(mailLink), 500);
+
     status.className = "form-status success";
     status.textContent = translations[currentLang].form_success;
-
-    // Trigger mail client
-    window.location.href = mailtoUrl;
 
     // Reset form
     form.reset();
