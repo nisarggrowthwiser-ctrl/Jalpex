@@ -17,7 +17,8 @@
     body {
       background: var(--bg);
       color: var(--text-dark);
-      padding-top: 66px; /* standard subpage navbar height, matching other pages */
+      padding-top: 66px;
+      /* standard subpage navbar height, matching other pages */
       font-family: var(--font-body);
     }
 
@@ -324,11 +325,13 @@
       .pd-container {
         padding: 24px 20px 60px;
       }
+
       .pd-intro-grid {
         grid-template-columns: 1fr;
         gap: 32px;
         margin-bottom: 40px;
       }
+
       .pd-image-card {
         max-width: 600px;
         margin: 0 auto;
@@ -474,9 +477,18 @@
         <!-- Language Picker -->
         <div class="lang-picker">
           <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
-            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
             <span>EN</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
             <button class="lang-item active" data-lang="en">🇬🇧 English</button>
@@ -528,7 +540,7 @@
 
   <!-- ── MAIN CONTAINER ── -->
   <main class="pd-container" id="pd-main-wrap">
-    
+
     <!-- Top Nav (Breadcrumbs + Back link) -->
     <div class="pd-top-nav" id="pd-top-nav">
       <!-- Generated dynamically -->
@@ -536,12 +548,13 @@
 
     <!-- Intro Grid (Image on left, details on right) -->
     <div class="pd-intro-grid" id="pd-intro-grid">
-      <div style="color:var(--text-mid); font-size:14px; padding:40px 0; text-align:center; grid-column: 1/-1;">Loading product details...</div>
+      <div style="color:var(--text-mid); font-size:14px; padding:40px 0; text-align:center; grid-column: 1/-1;">Loading
+        product details...</div>
     </div>
 
     <!-- Centered Sections (Properties, Applications, Specs, and Form) -->
     <div class="pd-sections-wrap">
-      
+
 
       <!-- Available Types section -->
       <div id="pd-types-sec" style="display: none;" class="pd-types-section">
@@ -554,7 +567,7 @@
       </div>
 
       <!-- Inquiry Form removed: CTAs handled by Inquire Now (mailto) and Contact Us buttons in hero -->
-      
+
     </div>
   </main>
 
@@ -618,8 +631,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a href="mailto:jalpexinternational@gmail.com"
-                style="color: inherit; text-decoration: none;">jalpexinternational@gmail.com</a>
+              <a href="mailto:info@jalpexinternational.com"
+                style="color: inherit; text-decoration: none;">info@jalpexinternational.com</a>
             </span>
             <span style="display: flex; gap: 8px;">
               <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
@@ -647,7 +660,8 @@
                 d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
             </svg>
           </a>
-          <a href="https://www.instagram.com/jalpexinternational/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/jalpexinternational/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
               <path
                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
@@ -684,11 +698,13 @@
   <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
     title="Chat on WhatsApp">
     <div class="whatsapp-tooltip">
-      <span data-trans="whatsapp_need_help">Need Help?</span> <strong data-trans="whatsapp_chat_us">Chat with us</strong>
+      <span data-trans="whatsapp_need_help">Need Help?</span> <strong data-trans="whatsapp_chat_us">Chat with
+        us</strong>
     </div>
     <div class="whatsapp-float-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
-        <path d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.259-1.377a9.794 9.794 0 0 0 4.726 1.226h.004c5.454 0 9.907-4.45 9.911-9.91a9.824 9.824 0 0 0-2.899-7.031zM11.992 20.12a8.084 8.084 0 0 1-4.123-1.127l-.296-.176-3.071.805.82-2.996-.192-.306a8.093 8.093 0 0 1-1.242-4.418c.004-4.468 3.64-8.102 8.112-8.102 2.162 0 4.197.844 5.727 2.378a8.026 8.026 0 0 1 2.372 5.733c-.004 4.47-3.64 8.106-8.109 8.106zM16.424 13.7c-.243-.122-1.439-.71-1.662-.79-.222-.081-.383-.122-.544.122-.162.243-.627.79-.768.95-.142.162-.283.183-.526.061-.243-.122-1.026-.378-1.954-1.206-.723-.645-1.211-1.442-1.353-1.685-.142-.243-.015-.374.107-.495.11-.11.243-.284.364-.426.122-.142.162-.243.243-.406.081-.162.041-.304-.02-.426-.061-.122-.544-1.31-.746-1.793-.197-.475-.397-.41-.544-.418-.14-.007-.302-.008-.465-.008a.895.895 0 0 0-.648.304c-.223.243-.85.83-.85 2.025 0 1.196.87 2.35 1.01 2.533.142.183 1.71 2.61 4.144 3.66.578.249 1.03.398 1.381.51.58.184 1.11.158 1.528.096.465-.07 1.439-.588 1.642-1.155.202-.568.202-1.054.141-1.155-.06-.1-.222-.162-.465-.284z"/>
+        <path
+          d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.259-1.377a9.794 9.794 0 0 0 4.726 1.226h.004c5.454 0 9.907-4.45 9.911-9.91a9.824 9.824 0 0 0-2.899-7.031zM11.992 20.12a8.084 8.084 0 0 1-4.123-1.127l-.296-.176-3.071.805.82-2.996-.192-.306a8.093 8.093 0 0 1-1.242-4.418c.004-4.468 3.64-8.102 8.112-8.102 2.162 0 4.197.844 5.727 2.378a8.026 8.026 0 0 1 2.372 5.733c-.004 4.47-3.64 8.106-8.109 8.106zM16.424 13.7c-.243-.122-1.439-.71-1.662-.79-.222-.081-.383-.122-.544.122-.162.243-.627.79-.768.95-.142.162-.283.183-.526.061-.243-.122-1.026-.378-1.954-1.206-.723-.645-1.211-1.442-1.353-1.685-.142-.243-.015-.374.107-.495.11-.11.243-.284.364-.426.122-.142.162-.243.243-.406.081-.162.041-.304-.02-.426-.061-.122-.544-1.31-.746-1.793-.197-.475-.397-.41-.544-.418-.14-.007-.302-.008-.465-.008a.895.895 0 0 0-.648.304c-.223.243-.85.83-.85 2.025 0 1.196.87 2.35 1.01 2.533.142.183 1.71 2.61 4.144 3.66.578.249 1.03.398 1.381.51.58.184 1.11.158 1.528.096.465-.07 1.439-.588 1.642-1.155.202-.568.202-1.054.141-1.155-.06-.1-.222-.162-.465-.284z" />
       </svg>
     </div>
   </a>
@@ -703,7 +719,7 @@
           category: "dehydrated",
           name: "Dehydrated Onion Products",
           desc: "Our premium Dehydrated Red and White Onion is produced from carefully selected farm-fresh onions sourced from India's leading agricultural regions. Processed in state-of-the-art facilities using advanced dehydration technology, our onions retain their natural flavor, aroma, color, and nutritional value while offering an extended shelf life.\n\nAvailable in flakes, minced, chopped, granules, powder, and kibbled forms, our dehydrated onions are widely used in food processing, seasoning blends, ready-to-eat meals, soups, sauces, snacks, frozen foods, and spice manufacturing.",
-          highlights: ["Premium quality Red & White Dehydrated Onion","Naturally rich flavor, aroma, and color","Long shelf life with low moisture content","Available in flakes, minced, chopped, granules & powder","Hygienically processed under strict quality control","Export-grade packaging with private labeling options","Ideal for food processing, HoReCa, and retail markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium quality Red & White Dehydrated Onion", "Naturally rich flavor, aroma, and color", "Long shelf life with low moisture content", "Available in flakes, minced, chopped, granules & powder", "Hygienically processed under strict quality control", "Export-grade packaging with private labeling options", "Ideal for food processing, HoReCa, and retail markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["onion", "flakes", "minced", "chopped", "granules", "powder"],
           image: "products/dehydrated-onion.webp",
           types: ["dehydrated_red_onion", "dehydrated_white_onion"]
@@ -713,7 +729,7 @@
           category: "dehydrated",
           name: "Dehydrated Red Onion",
           desc: "Dehydrated Red Onion Flakes (5-15)mm, Chopped (3-5)mm, Minced (1-3)mm, Granules (0.4-1)mm, Powder (80-120)Mesh are made by removing the moisture content from fresh red onions under clean conditions. Export quality with natural pungent flavor and rich aroma, widely used in food processing, seasoning blends, and bulk exports.",
-          highlights: ["Premium-grade Dehydrated Red Onion","Flakes (5-15mm), Chopped, Minced, Granules & Powder forms","Naturally rich flavor, aroma, and deep red color","Low moisture content (<6%) for extended shelf life","Hygienically processed under strict quality control","Export-grade packaging with private labeling options","Ideal for food processing, seasoning blends & HoReCa","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Dehydrated Red Onion", "Flakes (5-15mm), Chopped, Minced, Granules & Powder forms", "Naturally rich flavor, aroma, and deep red color", "Low moisture content (<6%) for extended shelf life", "Hygienically processed under strict quality control", "Export-grade packaging with private labeling options", "Ideal for food processing, seasoning blends & HoReCa", "Reliable global supply with competitive wholesale pricing"],
           tags: ["red-onion", "flakes", "minced", "powder"],
           image: "products/dehydrated-red-onion.png",
           specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural Red Onion", "Origin": "India" }
@@ -723,7 +739,7 @@
           category: "dehydrated",
           name: "Dehydrated White Onion",
           desc: "Dehydrated White Onion Flakes (5-15)mm, Chopped (3-5)mm, Minced (1-3)mm, Granules (0.4-1)mm, Powder (80-120)Mesh are made from freshly harvested white onions that are peeled, washed, sliced, and dehydrated. Retains the natural flavor and aroma of fresh white onion while offering transit stability and shelf life.",
-          highlights: ["Premium-grade Dehydrated White Onion","Flakes (5-15mm), Chopped, Minced, Granules & Powder forms","Naturally rich flavor, aroma, and clean white color","Low moisture content (<6%) for extended shelf life","Hygienically processed under strict quality control","Export-grade packaging with private labeling options","Ideal for food processing, seasoning blends & HoReCa","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Dehydrated White Onion", "Flakes (5-15mm), Chopped, Minced, Granules & Powder forms", "Naturally rich flavor, aroma, and clean white color", "Low moisture content (<6%) for extended shelf life", "Hygienically processed under strict quality control", "Export-grade packaging with private labeling options", "Ideal for food processing, seasoning blends & HoReCa", "Reliable global supply with competitive wholesale pricing"],
           tags: ["white-onion", "flakes", "minced", "powder"],
           image: "products/dehydrated-white-onion.png",
           specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder, Kibbled", "Moisture": "<6%", "Purity & Color": "100% Natural White Onion", "Origin": "India" }
@@ -733,7 +749,7 @@
           category: "dehydrated",
           name: "Dehydrated Garlic",
           desc: "Our Export Quality Dehydrated Garlic is manufactured from freshly harvested, premium-grade garlic sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, our garlic retains its natural pungent flavor, rich aroma, and nutritional value while ensuring an extended shelf life.\n\nAvailable in flakes, minced, chopped, granules, and powder, widely used by food manufacturers, seasoning producers, snack companies, restaurants, ready-to-eat meal manufacturers, and spice processors worldwide.",
-          highlights: ["Premium-grade dehydrated garlic with superior flavor and aroma","Available in flakes, minced, chopped, granules & powder","Low moisture content for extended shelf life","Hygienically processed under strict quality standards","Free from artificial colors and preservatives","Export-quality packaging with private labeling options","Ideal for food processing, seasoning blends, HoReCa & retail","Competitive wholesale pricing with reliable global supply"],
+          highlights: ["Premium-grade dehydrated garlic with superior flavor and aroma", "Available in flakes, minced, chopped, granules & powder", "Low moisture content for extended shelf life", "Hygienically processed under strict quality standards", "Free from artificial colors and preservatives", "Export-quality packaging with private labeling options", "Ideal for food processing, seasoning blends, HoReCa & retail", "Competitive wholesale pricing with reliable global supply"],
           tags: ["garlic", "flakes", "minced", "chopped", "granules", "powder"],
           image: "products/dehydrated-garlic.webp",
           specs: { "Forms": "Flakes, Minced, Chopped, Granules, Powder", "Moisture": "<6% (Low moisture)", "Purity": "100% Pure & Natural", "Origin": "India" }
@@ -743,7 +759,7 @@
           category: "dehydrated",
           name: "Dehydrated Ginger",
           desc: "Our Export Quality Dehydrated Ginger is produced from carefully selected fresh ginger sourced from premium farms across India. Processed using advanced dehydration techniques, it preserves its natural pungency, distinctive aroma, authentic flavor, and essential nutrients while offering an extended shelf life for global distribution.\n\nAvailable in slices, flakes, granules, and powder, widely used in the food, beverage, spice, pharmaceutical, and nutraceutical industries.",
-          highlights: ["Premium-grade dehydrated ginger with rich aroma and natural flavor","Available in slices, flakes, granules & powder","Low moisture content for extended shelf life","Hygienically processed under strict quality control","Free from artificial colors and preservatives","Export-grade packaging with private labeling options","Ideal for food processing, beverages, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade dehydrated ginger with rich aroma and natural flavor", "Available in slices, flakes, granules & powder", "Low moisture content for extended shelf life", "Hygienically processed under strict quality control", "Free from artificial colors and preservatives", "Export-grade packaging with private labeling options", "Ideal for food processing, beverages, pharmaceuticals & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["ginger", "slices", "flakes", "granules", "powder"],
           image: "products/dehydrated-ginger.webp",
           specs: { "Forms": "Slices, Flakes, Granules, Powder", "Moisture": "Low moisture", "Purity": "Authentic, pungent flavor", "Origin": "India" }
@@ -753,7 +769,7 @@
           category: "dehydrated",
           name: "Dehydrated Beetroot",
           desc: "Our Premium Export Quality Dehydrated Beetroot is produced from carefully selected fresh beetroots sourced from trusted farms across India. Processed using advanced dehydration technology under strict hygienic conditions, it retains its natural vibrant red color, earthy flavor, and valuable nutrients while offering an extended shelf life.\n\nAvailable in flakes, slices, granules, and powder, widely used in food processing, health supplements, natural food coloring, beverages, soups, sauces, bakery products, seasonings, and nutraceutical applications.",
-          highlights: ["Premium-grade Dehydrated Beetroot","Available in flakes, slices, granules & powder","Naturally rich in antioxidants, fiber & essential nutrients","Vibrant natural color with authentic flavor","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Dehydrated Beetroot", "Available in flakes, slices, granules & powder", "Naturally rich in antioxidants, fiber & essential nutrients", "Vibrant natural color with authentic flavor", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Reliable global supply with competitive wholesale pricing"],
           tags: ["beetroot", "flakes", "slices", "granules", "powder"],
           image: "products/dehydrated-beetroot.webp",
           specs: { "Forms": "Flakes, Slices, Granules, Powder", "Moisture": "Low moisture", "Nutrition": "Vitamins, fiber & antioxidants", "Origin": "India" }
@@ -763,7 +779,7 @@
           category: "dehydrated",
           name: "Premium Moringa Powder",
           desc: "Our Premium Export Quality Moringa Powder is produced from carefully selected fresh Moringa (Drumstick) leaves sourced from trusted farms in India. The leaves are hygienically washed, shade-dried, and finely processed to preserve their natural green color, rich nutritional profile, and bioactive compounds.\n\nNaturally rich in plant-based protein, dietary fiber, antioxidants, vitamins A, C & E, calcium, iron, potassium, and essential amino acids, widely used in health supplements, functional foods, herbal products, smoothies, teas, nutraceuticals, and cosmetics.",
-          highlights: ["Premium-grade Moringa Leaf Powder","Rich in protein, antioxidants, vitamins & essential minerals","Naturally vibrant green color with high nutritional value","Hygienically processed and export-quality tested","Free from artificial colors, additives & preservatives","Customized packaging & private labeling available","Ideal for nutraceuticals, health foods, beverages & cosmetics","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Moringa Leaf Powder", "Rich in protein, antioxidants, vitamins & essential minerals", "Naturally vibrant green color with high nutritional value", "Hygienically processed and export-quality tested", "Free from artificial colors, additives & preservatives", "Customized packaging & private labeling available", "Ideal for nutraceuticals, health foods, beverages & cosmetics", "Reliable global supply with competitive wholesale pricing"],
           tags: ["moringa", "leaves", "powder", "organic"],
           image: "products/moringa-powder.png",
           specs: { "Form": "Fine Powder (80-100 mesh)", "Moisture": "<6%", "Color": "Vibrant Green", "Origin": "India" }
@@ -774,7 +790,7 @@
           category: "agriculture",
           name: "Premium Basmati Rice",
           desc: "Our Premium Export Quality Basmati Rice is sourced from the finest rice-growing regions of India, renowned for producing authentic long-grain basmati with exceptional aroma, delicate texture, and superior taste. Carefully processed and hygienically packed.\n\nKnown for its extra-long grains, rich fragrance, and excellent cooking performance, our Basmati Rice cooks to a light, fluffy texture with distinct, non-sticky grains, making it ideal for biryanis, pilafs, gourmet cuisine, restaurants, hotels, and retail markets.",
-          highlights: ["Premium long-grain Indian Basmati Rice","Naturally aromatic with superior taste and texture","Excellent grain elongation after cooking","Carefully processed and hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, HoReCa & food service","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium long-grain Indian Basmati Rice", "Naturally aromatic with superior taste and texture", "Excellent grain elongation after cooking", "Carefully processed and hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, HoReCa & food service", "Reliable global supply with competitive wholesale pricing"],
           tags: ["basmati", "rice", "grain", "aromatic"],
           image: "products/basmati-rice-better.png",
           specs: { "Grain": "Extra-long grain", "Texture": "Fluffy, non-sticky", "Quality": "Export-grade tested", "Origin": "India" }
@@ -784,7 +800,7 @@
           category: "agriculture",
           name: "Premium Wheat",
           desc: "Our Premium Export Quality Wheat is sourced from India's finest agricultural regions, ensuring superior grain quality, high nutritional value, and consistent performance.\n\nKnown for its uniform grain size, excellent milling characteristics, and rich nutritional profile, our premium wheat is widely used for producing flour, bread, pasta, biscuits, bakery products, and various food applications.",
-          highlights: ["Premium-quality Indian wheat with high purity","Uniform grain size and excellent milling performance","Rich in natural nutrients and high-quality protein","Carefully cleaned, graded, and hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for flour mills, food processing, wholesale & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-quality Indian wheat with high purity", "Uniform grain size and excellent milling performance", "Rich in natural nutrients and high-quality protein", "Carefully cleaned, graded, and hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for flour mills, food processing, wholesale & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["wheat", "milling", "flour"],
           image: "products/wheat.png",
           specs: { "Grain Size": "Uniform", "Milling Performance": "Excellent", "Quality": "High purity & freshness", "Origin": "India" }
@@ -794,7 +810,7 @@
           category: "agriculture",
           name: "Groundnuts (Peanuts)",
           desc: "Our Premium Export Quality Groundnuts (Peanuts) are sourced from India's leading agricultural regions, known for producing high-quality peanuts with excellent taste, high oil content, and superior nutritional value.\n\nAvailable in Raw, Bold, Java, Blanched, Shelled, and In-Shell varieties, widely used in snack manufacturing, confectionery, peanut butter production, edible oil extraction, and food processing.",
-          highlights: ["Premium-grade Indian Groundnuts (Peanuts)","Available in Bold, Java, Blanched, Shelled & In-Shell varieties","High oil content with rich flavor and natural crunch","Rich in protein, healthy fats & essential nutrients","Hygienically processed and export-quality tested","Customized packaging & private labeling available","Ideal for snacks, food processing, edible oil & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian Groundnuts (Peanuts)", "Available in Bold, Java, Blanched, Shelled & In-Shell varieties", "High oil content with rich flavor and natural crunch", "Rich in protein, healthy fats & essential nutrients", "Hygienically processed and export-quality tested", "Customized packaging & private labeling available", "Ideal for snacks, food processing, edible oil & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["groundnuts", "peanuts", "kernels", "bold", "java"],
           image: "products/peanuts.png",
           specs: { "Varieties": "Raw, Bold, Java, Blanched, Shelled, In-Shell", "Aflatoxin Level": "Within export limits", "Purity": "Cleaned & graded", "Origin": "India" }
@@ -804,7 +820,7 @@
           category: "agriculture",
           name: "Pulses & Lentils",
           desc: "Our Premium Export Quality Pulses & Lentils are sourced from India's most fertile agricultural regions. We offer a comprehensive range including Chickpeas (Kabuli & Desi), Toor Dal, Moong Dal, Urad Dal, Masoor Dal, Chana Dal, Green Peas, Kidney Beans, Black-Eyed Beans, and other premium pulses.\n\nRich in plant-based protein, dietary fiber, essential vitamins, and minerals, widely used in food processing, packaged foods, health foods, and direct retail markets.",
-          highlights: ["Premium-quality Indian Pulses & Lentils","Wide range of lentils, beans, chickpeas & peas","Rich in protein, fiber, vitamins & essential minerals","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Long shelf life with controlled moisture content","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-quality Indian Pulses & Lentils", "Wide range of lentils, beans, chickpeas & peas", "Rich in protein, fiber, vitamins & essential minerals", "Carefully cleaned, graded & hygienically processed", "Export-quality tested to international standards", "Long shelf life with controlled moisture content", "Customized packaging & private labeling available", "Reliable global supply with competitive wholesale pricing"],
           tags: ["pulses", "lentils", "chickpeas", "toor dal", "moong"],
           image: "products/pulses.png",
           specs: { "Varieties": "Chickpeas, Toor Dal, Moong, Urad, Masoor, Chana, Kidney Beans", "Quality": "Cleaned & graded", "Moisture": "Controlled", "Origin": "India" }
@@ -815,7 +831,7 @@
           category: "spices",
           name: "Premium Turmeric",
           desc: "Our Premium Export Quality Turmeric is sourced from carefully selected farms across India, renowned for vibrant golden color, rich aroma, and high curcumin content.\n\nAvailable in whole fingers, bulbs, and powder, widely used in the food, spice, pharmaceutical, nutraceutical, cosmetic, and wellness industries globally.",
-          highlights: ["Premium-grade Indian turmeric with high curcumin content","Available in whole fingers, bulbs & powder","Rich natural color, aroma & authentic flavor","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food, pharmaceuticals, cosmetics & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian turmeric with high curcumin content", "Available in whole fingers, bulbs & powder", "Rich natural color, aroma & authentic flavor", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for food, pharmaceuticals, cosmetics & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["turmeric", "finger", "bulbs", "powder", "curcumin"],
           image: "products/spices-turmeric.png",
           specs: { "Form": "Whole fingers, Bulbs, Powder", "Curcumin Content": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -825,7 +841,7 @@
           category: "spices",
           name: "Premium Red Chilli",
           desc: "Our Premium Export Quality Red Chilli is sourced from India's renowned chilli-growing regions, known for vibrant natural color, rich aroma, exceptional pungency, and superior flavor.\n\nAvailable in whole, stemless, crushed, flakes, and powder forms, with customizable heat levels (SHU) and color values (ASTA) to meet specific buyer requirements.",
-          highlights: ["Premium-grade Indian Red Chilli with vibrant natural color","Available in whole, stemless, crushed, flakes & powder","Rich flavor, aroma & customizable heat levels","Hygienically processed under strict quality control","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for food processing, spice manufacturing, HoReCa & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian Red Chilli with vibrant natural color", "Available in whole, stemless, crushed, flakes & powder", "Rich flavor, aroma & customizable heat levels", "Hygienically processed under strict quality control", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for food processing, spice manufacturing, HoReCa & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["chilli", "red-chilli", "powder", "stemless", "whole", "flakes"],
           image: "products/red-chilli-composite.png",
           specs: { "Form": "Whole, Stemless, Crushed, Flakes, Powder", "Pungency": "Customizable SHU levels", "Color": "Vibrant ASTA values", "Origin": "India" }
@@ -835,7 +851,7 @@
           category: "spices",
           name: "Premium Black Pepper",
           desc: "Our Premium Export Quality Black Pepper is sourced from the finest pepper-growing regions of India, renowned for exceptional aroma, bold flavor, and high piperine content.\n\nAvailable in whole peppercorns, crushed, and powder forms, widely used in food processing, seasonings, pharmaceuticals, and retail spice markets worldwide.",
-          highlights: ["Premium-grade Indian Black Pepper with high piperine content","Available in whole peppercorns, crushed & powder","Rich aroma, bold flavor & superior quality","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food processing, seasoning, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian Black Pepper with high piperine content", "Available in whole peppercorns, crushed & powder", "Rich aroma, bold flavor & superior quality", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for food processing, seasoning, pharmaceuticals & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["black-pepper", "peppercorns", "crushed", "powder", "piperine"],
           image: "products/spices-black-pepper.webp",
           specs: { "Form": "Whole peppercorns, Crushed, Powder", "Piperine": "High content", "Moisture": "Low moisture", "Origin": "India" }
@@ -845,7 +861,7 @@
           category: "spices",
           name: "Premium Cumin Seeds",
           desc: "Our Premium Export Quality Cumin Seeds are sourced from the finest cumin-growing regions of India, celebrated for their rich aroma, distinctive earthy flavor, and high essential oil content.\n\nWidely used in spice blends, food processing, seasonings, and pharmaceutical applications globally.",
-          highlights: ["Premium-grade Indian Cumin Seeds with rich natural aroma","High essential oil content and authentic flavor","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food processing, spice blends, HoReCa & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian Cumin Seeds with rich natural aroma", "High essential oil content and authentic flavor", "Carefully cleaned, graded & hygienically processed", "Export-quality tested to international standards", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for food processing, spice blends, HoReCa & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["cumin", "seeds", "powder", "aromatic", "earthy"],
           image: "products/spices-cumin.webp",
           specs: { "Form": "Whole Seeds, Powder", "Aroma": "Rich natural aroma", "Essential Oil": "High content", "Origin": "India" }
@@ -855,7 +871,7 @@
           category: "spices",
           name: "Premium Coriander Seeds",
           desc: "Our Premium Export Quality Coriander Seeds are sourced from India's leading coriander-growing regions, known for distinctive citrusy aroma, mild earthy flavor, and high essential oil content.\n\nAvailable in whole seeds and powder forms, widely used in spice blends, food processing, seasonings, and pharmaceutical formulations.",
-          highlights: ["Premium-grade Indian Coriander Seeds with rich natural aroma","Available in whole seeds & powder","High essential oil content and authentic flavor","Carefully cleaned, graded & hygienically processed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for spice blends, food processing, HoReCa & retail"],
+          highlights: ["Premium-grade Indian Coriander Seeds with rich natural aroma", "Available in whole seeds & powder", "High essential oil content and authentic flavor", "Carefully cleaned, graded & hygienically processed", "Export-quality tested to international standards", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for spice blends, food processing, HoReCa & retail"],
           tags: ["coriander", "seeds", "powder", "citrusy", "earthy"],
           image: "products/spices-coriander.webp",
           specs: { "Form": "Whole Seeds, Powder", "Aroma": "Citrusy, mild earthy", "Essential Oil": "High content", "Origin": "India" }
@@ -865,7 +881,7 @@
           category: "spices",
           name: "Premium Cinnamon",
           desc: "Our Premium Export Quality Cinnamon is sourced from carefully selected plantations, processed under strict quality standards to preserve its naturally sweet aroma, warm flavor, and high essential oil content.\n\nAvailable in whole quills, sticks, chips, cut pieces, and powder forms, widely used in food, beverages, bakery, pharmaceutical, and personal care industries.",
-          highlights: ["Premium-grade Cinnamon with rich aroma and natural flavor","Available in whole quills, sticks, chips & powder","High essential oil content and superior quality","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for food, beverages, bakery, pharmaceuticals & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Cinnamon with rich aroma and natural flavor", "Available in whole quills, sticks, chips & powder", "High essential oil content and superior quality", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for food, beverages, bakery, pharmaceuticals & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["cinnamon", "quills", "sticks", "chips", "powder"],
           image: "products/spices-cinnamon.webp",
           specs: { "Form": "Whole quills, Sticks, Chips, Powder", "Aroma": "Naturally sweet, warm flavor", "Moisture": "Low moisture", "Origin": "India" }
@@ -876,7 +892,7 @@
           category: "natures_finest",
           name: "Pure Natural Honey",
           desc: "We supply premium, sustainably harvested natural honey sourced directly from pristine apiaries across India. Rich in natural enzymes with a robust, floral flavor profile, our honey is completely free from added sugars, artificial syrups, and antibiotic residues.\n\nOur honey undergoes rigorous quality testing including HMF, diastase, and microbiological checks to ensure compliance with international export standards.",
-          highlights: ["100% Pure natural honey, zero adulteration","Sustainably harvested from pristine Indian apiaries","Rich in natural enzymes with robust floral flavor","Free from added sugars, syrups & antibiotic residues","Optimal moisture control for transit stability","Customized packaging & private labeling available","Ideal for beverages, bakery, Ayurvedic & pharmaceutical use","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["100% Pure natural honey, zero adulteration", "Sustainably harvested from pristine Indian apiaries", "Rich in natural enzymes with robust floral flavor", "Free from added sugars, syrups & antibiotic residues", "Optimal moisture control for transit stability", "Customized packaging & private labeling available", "Ideal for beverages, bakery, Ayurvedic & pharmaceutical use", "Reliable global supply with competitive wholesale pricing"],
           tags: ["honey", "natural", "pure", "apiaries"],
           image: "products/honey.webp",
           specs: { "Purity": "100% Pure (No added sugar)", "Moisture Control": "Optimal for transit stability", "Residues": "Free from antibiotics", "Origin": "India" }
@@ -886,7 +902,7 @@
           category: "natures_finest",
           name: "Chemical-Free Jaggery",
           desc: "We supply traditional, chemical-free jaggery made from freshly harvested sugarcane, processed using time-honored methods that retain its natural molasses content, rich color, and distinct earthy sweetness.\n\nFree from chemical bleaching agents, added sugar, and harmful preservatives, our jaggery is widely used in bakery, confectionery, health foods, and Ayurvedic formulations.",
-          highlights: ["Traditional chemical-free jaggery","Made from freshly harvested sugarcane","Natural molasses content, rich color & earthy sweetness","Free from chemical bleaching agents & preservatives","Controlled moisture prevents hardening during export","Customized packaging & private labeling available","Ideal for bakery, sweets, Ayurvedic & food processing","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Traditional chemical-free jaggery", "Made from freshly harvested sugarcane", "Natural molasses content, rich color & earthy sweetness", "Free from chemical bleaching agents & preservatives", "Controlled moisture prevents hardening during export", "Customized packaging & private labeling available", "Ideal for bakery, sweets, Ayurvedic & food processing", "Reliable global supply with competitive wholesale pricing"],
           tags: ["jaggery", "sugarcane", "molasses", "sweetener"],
           image: "products/jaggery.png",
           specs: { "Quality": "Chemical-free, additive-free", "Moisture": "Controlled for transit stability", "Purity": "Authentic, traditional", "Origin": "India" }
@@ -896,7 +912,7 @@
           category: "natures_finest",
           name: "Pure Cow Ghee",
           desc: "We supply pure, traditionally prepared cow ghee made from the milk of grass-fed cows, slow-cooked using the authentic bilona/vaat method to preserve its rich aroma, golden color, and granular texture.\n\nCompletely free from vegetable oil adulteration, artificial flavoring, and preservatives, our cow ghee has a long shelf life without refrigeration and is widely used in Ayurvedic medicine, cooking, bakery, and hospitality.",
-          highlights: ["100% Pure cow ghee, no adulteration","Slow-cooked using authentic bilona/vaat method","From grass-fed cows with rich aroma & golden color","Free from vegetable oil substitutes & artificial flavoring","Long shelf life without refrigeration","Customized packaging & private labeling available","Ideal for retail, Ayurvedic, bakery & hospitality use","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["100% Pure cow ghee, no adulteration", "Slow-cooked using authentic bilona/vaat method", "From grass-fed cows with rich aroma & golden color", "Free from vegetable oil substitutes & artificial flavoring", "Long shelf life without refrigeration", "Customized packaging & private labeling available", "Ideal for retail, Ayurvedic, bakery & hospitality use", "Reliable global supply with competitive wholesale pricing"],
           tags: ["ghee", "cow-ghee", "bilona", "butter"],
           image: "products/ghee.webp",
           specs: { "Method": "Bilona/Vaat slow-cooked", "Purity": "No vegetable oil adulteration", "Shelf Life": "Long (no refrigeration required)", "Origin": "India" }
@@ -907,7 +923,7 @@
           category: "dried_fruits",
           name: "Cashew Kernels",
           desc: "Our Premium Export Quality Cashews are sourced from the finest growing regions and carefully processed to deliver exceptional taste, freshness, and consistent quality.\n\nAvailable in W180, W210, W240, W320, W450 grades and other specifications, widely used in snacks, confectionery, bakery, food processing, and retail markets.",
-          highlights: ["Premium-grade Cashew Kernels with rich buttery flavor","Available in W180, W210, W240, W320, W450 & other grades","Uniform size, natural color & superior crunch","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for snacks, confectionery, bakery, food processing & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Cashew Kernels with rich buttery flavor", "Available in W180, W210, W240, W320, W450 & other grades", "Uniform size, natural color & superior crunch", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for snacks, confectionery, bakery, food processing & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["cashews", "kernels", "w180", "w240", "w320"],
           image: "products/dried-cashews.webp",
           specs: { "Grades": "W180, W210, W240, W320, W450", "Moisture": "Low moisture", "Texture": "Rich buttery, superior crunch", "Origin": "India" }
@@ -917,7 +933,7 @@
           category: "dried_fruits",
           name: "Black & Golden Raisins",
           desc: "Our Premium Export Quality Black & Golden Raisins are sourced from carefully selected vineyards and naturally processed to preserve their rich sweetness, soft texture, and nutritional value.\n\nNaturally rich in dietary fiber, antioxidants, vitamins, and essential minerals, widely used in bakery, confectionery, health foods, cereals, and snack formulations.",
-          highlights: ["Premium-grade Black & Golden Raisins","Naturally sweet with soft texture and rich flavor","Rich in fiber, antioxidants, vitamins & essential minerals","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Low moisture content for extended shelf life","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Black & Golden Raisins", "Naturally sweet with soft texture and rich flavor", "Rich in fiber, antioxidants, vitamins & essential minerals", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Reliable global supply with competitive wholesale pricing"],
           tags: ["raisins", "golden", "black", "sweet"],
           image: "products/dried-raisins.png",
           specs: { "Varieties": "Black and Golden", "Moisture": "Low moisture", "Purity": "Hygienically cleaned & graded", "Origin": "India" }
@@ -927,7 +943,7 @@
           category: "dried_fruits",
           name: "Premium Almonds",
           desc: "Our Premium Export Quality Almonds are carefully sourced from trusted growers and processed under stringent quality standards.\n\nAvailable in whole, natural, blanched, sliced, diced, and almond powder forms, widely used in snacks, bakery, confectionery, dairy, and nutraceuticals.",
-          highlights: ["Premium-grade Almonds with superior taste and natural crunch","Available in whole, blanched, sliced, diced & powder","Rich in protein, vitamin E, healthy fats & dietary fiber","Hygienically processed and export-quality tested","Low moisture content for extended shelf life","Customized packaging & private labeling available","Ideal for snacks, bakery, confectionery, food processing & retail","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Almonds with superior taste and natural crunch", "Available in whole, blanched, sliced, diced & powder", "Rich in protein, vitamin E, healthy fats & dietary fiber", "Hygienically processed and export-quality tested", "Low moisture content for extended shelf life", "Customized packaging & private labeling available", "Ideal for snacks, bakery, confectionery, food processing & retail", "Reliable global supply with competitive wholesale pricing"],
           tags: ["almonds", "raw", "nuts", "blanched", "powder"],
           image: "products/almonds.png",
           specs: { "Form": "Whole, Blanched, Sliced, Diced, Powder", "Moisture": "Low moisture", "Quality": "Export-grade tested", "Origin": "India" }
@@ -937,7 +953,7 @@
           category: "dried_fruits",
           name: "Figs (Anjeer)",
           desc: "Our Premium Export Quality Figs (Anjeer) are carefully sourced and processed under strict quality standards to preserve their natural sweetness, soft texture, rich flavor, and exceptional nutritional value.\n\nNaturally rich in dietary fiber, antioxidants, calcium, iron, potassium, and essential vitamins, widely used in bakery, confectionery, health foods, and nutritional formulations.",
-          highlights: ["Premium-grade Dried Figs (Anjeer)","Naturally sweet with soft texture and rich flavor","Rich in fiber, calcium, iron, potassium & antioxidants","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Long shelf life with controlled moisture content","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Dried Figs (Anjeer)", "Naturally sweet with soft texture and rich flavor", "Rich in fiber, calcium, iron, potassium & antioxidants", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Long shelf life with controlled moisture content", "Customized packaging & private labeling available", "Reliable global supply with competitive wholesale pricing"],
           tags: ["figs", "anjeer", "dried", "sweet"],
           image: "products/figs.png",
           specs: { "Form": "Whole Dried Figs", "Moisture": "Controlled", "Purity": "Cleaned & graded", "Origin": "India" }
@@ -948,7 +964,7 @@
           category: "agriculture",
           name: "Fresh Onions",
           desc: "Our Premium Export Quality Fresh Onions are sourced from India's leading onion-growing regions, known for their crisp texture, pungent taste, and excellent shelf life.\n\nAvailable in Red Onions and White Onions varieties, widely used in fresh consumption, food processing, restaurants, supermarkets, and wholesale distribution worldwide.",
-          highlights: ["Premium-grade Indian Fresh Onions","Available in Red and White Onion varieties","Uniform size, firm texture & excellent shelf life","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, supermarkets & food processing","Reliable global supply with competitive export pricing"],
+          highlights: ["Premium-grade Indian Fresh Onions", "Available in Red and White Onion varieties", "Uniform size, firm texture & excellent shelf life", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, supermarkets & food processing", "Reliable global supply with competitive export pricing"],
           tags: ["onions", "fresh", "red-onions", "white-onions"],
           image: "products/fresh-onions.webp",
           specs: { "Varieties": "Red Onions, White Onions", "Quality": "Grade A Export", "Size": "Uniform, firm texture", "Origin": "India" },
@@ -959,7 +975,7 @@
           category: "agriculture",
           name: "Red Onions",
           desc: "Our Premium Export Quality Red Onions are sourced from India's leading onion-growing regions. Known for their crisp texture, deep red skin, and pungent taste.\n\nWidely used in fresh consumption, food processing, restaurants, supermarkets, and wholesale distribution.",
-          highlights: ["Premium-grade Indian Red Onions","Uniform size, vibrant red color & firm texture","Naturally fresh with rich flavor and excellent shelf life","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, supermarkets & food processing","Reliable global supply with competitive export pricing"],
+          highlights: ["Premium-grade Indian Red Onions", "Uniform size, vibrant red color & firm texture", "Naturally fresh with rich flavor and excellent shelf life", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, supermarkets & food processing", "Reliable global supply with competitive export pricing"],
           tags: ["onions", "fresh", "red-onions", "pungent"],
           image: "products/fresh-onions.webp",
           specs: { "Quality": "Grade A Export", "Size": "Uniform, firm texture", "Color": "Deep red skin", "Origin": "India" }
@@ -969,7 +985,7 @@
           category: "agriculture",
           name: "White Onions",
           desc: "Our Premium Export Quality White Onions are sourced from trusted farms across India. Known for their mild, sweet flavor, crisp white skin, and excellent shelf life.\n\nPreferred for use in salads, pickles, Mexican cuisine, food processing, and wholesale distribution.",
-          highlights: ["Premium-grade Indian White Onions","Mild, sweet flavor with crisp white skin","Uniform size & firm texture","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, food processing & HoReCa","Reliable global supply with competitive export pricing"],
+          highlights: ["Premium-grade Indian White Onions", "Mild, sweet flavor with crisp white skin", "Uniform size & firm texture", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, food processing & HoReCa", "Reliable global supply with competitive export pricing"],
           tags: ["onions", "fresh", "white-onions", "mild"],
           image: "products/white-onions.png",
           specs: { "Quality": "Grade A Export", "Size": "Uniform, firm texture", "Flavor": "Mild, sweet", "Origin": "India" }
@@ -979,7 +995,7 @@
           category: "agriculture",
           name: "Potatoes",
           desc: "Our Premium Export Quality Potatoes are sourced from India's leading potato-growing regions. Known for their firm texture, consistent quality, and excellent cooking performance.\n\nSuitable for fresh consumption, food processing, French fries, chips, and frozen products for global markets.",
-          highlights: ["Premium-grade Indian Potatoes","Uniform size, smooth skin & firm texture","Freshly harvested with excellent shelf life","Carefully cleaned, graded & hygienically packed","Export-quality tested to international standards","Customized packaging & private labeling available","Ideal for retail, wholesale, food processing & HoReCa","Reliable global supply with competitive export pricing"],
+          highlights: ["Premium-grade Indian Potatoes", "Uniform size, smooth skin & firm texture", "Freshly harvested with excellent shelf life", "Carefully cleaned, graded & hygienically packed", "Export-quality tested to international standards", "Customized packaging & private labeling available", "Ideal for retail, wholesale, food processing & HoReCa", "Reliable global supply with competitive export pricing"],
           tags: ["potatoes", "fresh", "firm", "starch"],
           image: "products/fresh-potatoes.webp",
           specs: { "Quality": "Grade A Export", "Size": "Uniform", "Skin Quality": "Smooth & firm", "Origin": "India" }
@@ -990,7 +1006,7 @@
           category: "handicraft",
           name: "Wooden Handicrafts",
           desc: "Skilled artisans handcraft our wooden products using traditional carving and joinery techniques passed down through generations. From intricately carved furniture and sculptures to wall décor, wooden toys, kitchenware, and decorative boxes, each piece showcases fine detailing, natural wood grain, and durable craftsmanship.\n\nWe use premium quality wood, finished with eco-friendly polishes and treatments to ensure long-lasting durability and export-ready finish. Customization in design, size, and finish is available.",
-          highlights: ["Traditional carving & joinery techniques","Intricately carved furniture, sculptures & décor","Premium quality wood with eco-friendly finishes","Customization in design, size & finish available","Export-ready quality checks on every piece","Ideal for global retail and hospitality requirements","Rich cultural heritage in every handcrafted piece","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Traditional carving & joinery techniques", "Intricately carved furniture, sculptures & décor", "Premium quality wood with eco-friendly finishes", "Customization in design, size & finish available", "Export-ready quality checks on every piece", "Ideal for global retail and hospitality requirements", "Rich cultural heritage in every handcrafted piece", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "wooden", "furniture", "carving", "joinery"],
           image: "products/wooden-handicrafts.png",
           specs: { "Craftsmanship": "Traditional carving & joinery", "Finish": "Eco-friendly polishes", "Material": "Premium quality wood", "Origin": "India" }
@@ -1000,7 +1016,7 @@
           category: "handicraft",
           name: "Brass & Metal Handicrafts",
           desc: "Our brass and metal handicrafts are handcrafted by experienced artisans using age-old casting and engraving techniques. The range includes brass idols, decorative bowls, candle stands, metal wall art, copper utensils, and bronze figurines — each reflecting intricate detailing and traditional artistry.\n\nEvery piece undergoes quality checks for finish, weight, and durability, ensuring products retain their sheen and structural integrity over time.",
-          highlights: ["Handcrafted using age-old casting & engraving techniques","Range includes brass idols, bowls, candle stands & copper utensils","Intricate detailing and traditional artistry in every piece","Antique, polished & matte finishes available on request","Quality checks for finish, weight & durability","Ideal for home décor, gifting & hospitality markets","Rich cultural heritage reflected in every design","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Handcrafted using age-old casting & engraving techniques", "Range includes brass idols, bowls, candle stands & copper utensils", "Intricate detailing and traditional artistry in every piece", "Antique, polished & matte finishes available on request", "Quality checks for finish, weight & durability", "Ideal for home décor, gifting & hospitality markets", "Rich cultural heritage reflected in every design", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "brass", "metal", "casting", "engraving"],
           image: "products/brass-handicrafts.png",
           specs: { "Craftsmanship": "Handcrafted casting & engraving", "Finish": "Antique, polished, matte", "Quality": "Weight & sheen checked", "Origin": "India" }
@@ -1010,7 +1026,7 @@
           category: "handicraft",
           name: "Terracotta & Pottery",
           desc: "Handmade from natural clay and shaped using traditional pottery techniques, our terracotta and pottery products include pots, decorative vases, clay figurines, hand-painted pottery, and garden décor items. Each piece carries an earthy, rustic charm while showcasing the skill of local artisans.\n\nFired at controlled temperatures for strength and durability, our pottery is designed to withstand both indoor and outdoor use.",
-          highlights: ["Handmade from natural clay using traditional pottery techniques","Range includes pots, vases, figurines & garden décor","Earthy rustic charm showcasing local artisan skill","Fired at controlled temperatures for strength & durability","Hand-painted detailing and customizable sizes/designs","Suitable for indoor & outdoor use","Ideal for home décor, gifting & landscape styling","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Handmade from natural clay using traditional pottery techniques", "Range includes pots, vases, figurines & garden décor", "Earthy rustic charm showcasing local artisan skill", "Fired at controlled temperatures for strength & durability", "Hand-painted detailing and customizable sizes/designs", "Suitable for indoor & outdoor use", "Ideal for home décor, gifting & landscape styling", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "pottery", "terracotta", "clay", "hand-painted"],
           image: "products/terracotta.png",
           specs: { "Material": "Natural clay", "Durability": "Fired for strength", "Custom Design": "Supported", "Origin": "India" }
@@ -1020,7 +1036,7 @@
           category: "handicraft",
           name: "Textile & Embroidery Products",
           desc: "Our textile and embroidery products are handwoven and hand-embroidered by skilled craftsmen using traditional looms and needlework techniques. The collection includes handwoven fabrics, embroidered cushion covers, wall hangings, table linens, and block-printed textiles, each rich in color, pattern, and texture.\n\nWe source high-quality natural fabrics and use traditional dyeing and printing methods.",
-          highlights: ["Handwoven & hand-embroidered by skilled craftsmen","Collection includes cushion covers, wall hangings & table linens","Traditional looms and needlework techniques","Rich colors, patterns & textures","Traditional dyeing and printing methods","Custom sizing, embroidery patterns & fabric choices available","Ideal for home décor & fashion markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Handwoven & hand-embroidered by skilled craftsmen", "Collection includes cushion covers, wall hangings & table linens", "Traditional looms and needlework techniques", "Rich colors, patterns & textures", "Traditional dyeing and printing methods", "Custom sizing, embroidery patterns & fabric choices available", "Ideal for home décor & fashion markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "textiles", "embroidery", "handwoven", "block-printed"],
           image: "products/textile-embroidery.png",
           specs: { "Material": "High-quality natural fabrics", "Dyeing": "Traditional dyeing & printing", "Craftsmanship": "Handwoven & hand-embroidered", "Origin": "India" }
@@ -1030,7 +1046,7 @@
           category: "handicraft",
           name: "Bamboo & Cane Products",
           desc: "Sustainably sourced bamboo and cane are hand-woven into functional and decorative products, including baskets, furniture, lampshades, storage organizers, and décor items. Each piece combines eco-friendly material with skilled craftsmanship, offering a natural, earthy aesthetic.\n\nOur bamboo and cane products are lightweight yet durable, treated to resist moisture and pests.",
-          highlights: ["Sustainably sourced bamboo & cane hand-woven products","Range includes baskets, furniture, lampshades & organizers","Eco-friendly material with skilled craftsmanship","Lightweight yet durable with natural earthy aesthetic","Treated to resist moisture & pests for long-term use","Custom designs available for retail & lifestyle brands","Ideal for eco-conscious retail & sustainable living","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Sustainably sourced bamboo & cane hand-woven products", "Range includes baskets, furniture, lampshades & organizers", "Eco-friendly material with skilled craftsmanship", "Lightweight yet durable with natural earthy aesthetic", "Treated to resist moisture & pests for long-term use", "Custom designs available for retail & lifestyle brands", "Ideal for eco-conscious retail & sustainable living", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "bamboo", "cane", "eco-friendly", "woven"],
           image: "products/bamboo-cane.png",
           specs: { "Material": "Sustainably sourced bamboo & cane", "Treatment": "Resists moisture & pests", "Weight": "Lightweight & durable", "Origin": "India" }
@@ -1040,7 +1056,7 @@
           category: "handicraft",
           name: "Stone & Marble Handicrafts",
           desc: "Our stone and marble handicrafts are meticulously crafted by skilled artisans specializing in inlay work and hand carving. The range includes marble inlay pieces, stone carvings, sculptures, decorative platters, and table tops, each showcasing intricate patterns and fine detailing.\n\nUsing high-quality marble and natural stone, our products are polished to a smooth finish and built for lasting durability.",
-          highlights: ["Meticulously crafted by skilled artisans specializing in inlay work","Range includes marble inlay, stone carvings & sculptures","Intricate patterns and fine detailing in every piece","High-quality marble & natural stone materials","Polished to smooth finish for lasting durability","Elegant additions to luxury home décor & gifting","Ideal for hospitality interiors & retail collections","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Meticulously crafted by skilled artisans specializing in inlay work", "Range includes marble inlay, stone carvings & sculptures", "Intricate patterns and fine detailing in every piece", "High-quality marble & natural stone materials", "Polished to smooth finish for lasting durability", "Elegant additions to luxury home décor & gifting", "Ideal for hospitality interiors & retail collections", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "stone", "marble", "inlay", "carving"],
           image: "products/stone-marble.png",
           specs: { "Material": "High-quality marble & natural stone", "Finish": "Smooth polished", "Craftsmanship": "Inlay & hand carving", "Origin": "India" }
@@ -1050,7 +1066,7 @@
           category: "handicraft",
           name: "Jewelry & Fashion Accessories",
           desc: "We offer a curated range of handmade jewelry and fashion accessories crafted using silver, beads, and oxidized metal, alongside bags, scarves, and traditional accessories. Each piece is designed to reflect authentic craftsmanship, cultural motifs, and contemporary styles, making them excellent additions to global retail collections.",
-          highlights: ["Curated range of handmade jewelry & fashion accessories","Crafted using silver, beads & oxidized metal","Reflects authentic craftsmanship & cultural motifs","Contemporary style with traditional artisan detailing","Close attention to finish, durability & quality","Ideal for global retail collections & gifting","Wide variety of bags, scarves & traditional accessories","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Curated range of handmade jewelry & fashion accessories", "Crafted using silver, beads & oxidized metal", "Reflects authentic craftsmanship & cultural motifs", "Contemporary style with traditional artisan detailing", "Close attention to finish, durability & quality", "Ideal for global retail collections & gifting", "Wide variety of bags, scarves & traditional accessories", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "jewelry", "accessories", "silver", "beads"],
           image: "products/jewelry-accessories.png",
           specs: { "Material": "Silver, beads, oxidized metal", "Craftsmanship": "Handcrafted accessories", "Style": "Authentic & contemporary", "Origin": "India" }
@@ -1060,7 +1076,7 @@
           category: "handicraft",
           name: "Paper Mache & Handmade Paper Products",
           desc: "Our Paper Mache and Handmade Paper products are crafted by skilled artisans using traditional techniques that transform recycled paper pulp into beautiful decorative items. The range includes painted boxes, decorative trays, wall art, lampshades, vases, greeting cards, and stationery, each hand-painted with vibrant colors and intricate patterns.\n\nLightweight and ideal for gifting, home décor, and retail markets globally.",
-          highlights: ["Handcrafted using traditional paper mache techniques","Range includes painted boxes, trays, wall art & lampshades","Vibrant hand-painted colors with intricate patterns","Made from eco-friendly recycled paper materials","Lightweight and ideal for gifting & home décor","Custom designs, colors & sizes available on request","Ideal for retail, gifting & home décor markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Handcrafted using traditional paper mache techniques", "Range includes painted boxes, trays, wall art & lampshades", "Vibrant hand-painted colors with intricate patterns", "Made from eco-friendly recycled paper materials", "Lightweight and ideal for gifting & home décor", "Custom designs, colors & sizes available on request", "Ideal for retail, gifting & home décor markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "paper-mache", "handmade", "paper", "decorative"],
           image: "products/paper-mache.png",
           specs: { "Material": "Recycled paper pulp", "Finish": "Hand-painted, lacquered", "Craftsmanship": "Traditional paper mache", "Origin": "India" }
@@ -1070,7 +1086,7 @@
           category: "handicraft",
           name: "Leather Handicrafts",
           desc: "Our premium leather handicrafts are crafted by skilled artisans using high-quality leather and traditional craftsmanship techniques. The range includes wallets, bags, belts, journal covers, decorative items, and fashion accessories, each featuring meticulous stitching, embossing, and finishing for export-ready quality.\n\nCustomizable designs, sizes, and leather types are available for private labeling and retail collections.",
-          highlights: ["Premium leather handicrafts by skilled artisans","Range includes wallets, bags, belts & journal covers","High-quality leather with meticulous stitching & embossing","Export-ready finish with quality checks on every piece","Customizable designs, sizes & leather types available","Ideal for retail, corporate gifting & fashion markets","Durable craftsmanship for long-lasting use","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium leather handicrafts by skilled artisans", "Range includes wallets, bags, belts & journal covers", "High-quality leather with meticulous stitching & embossing", "Export-ready finish with quality checks on every piece", "Customizable designs, sizes & leather types available", "Ideal for retail, corporate gifting & fashion markets", "Durable craftsmanship for long-lasting use", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "leather", "bags", "wallets", "accessories"],
           image: "products/leather-handicrafts.png",
           specs: { "Material": "Premium quality leather", "Finish": "Embossed, stitched, lacquered", "Craftsmanship": "Traditional artisan techniques", "Origin": "India" }
@@ -1080,7 +1096,7 @@
           category: "handicraft",
           name: "Glass & Ceramic Handicrafts",
           desc: "Our Glass and Ceramic handicrafts are carefully crafted by skilled artisans using traditional techniques to create decorative pieces of exceptional beauty. The range includes hand-blown glass items, ceramic vases, bowls, tile art, decorative plates, and artistic pottery, each showcasing unique craftsmanship and vibrant designs.\n\nIdeal for home décor, gifting, and luxury retail markets worldwide.",
-          highlights: ["Hand-blown glass & traditionally crafted ceramic items","Range includes vases, bowls, tile art & decorative plates","Exceptional beauty with unique craftsmanship","Vibrant hand-painted designs and intricate detailing","Quality checked for finish, durability & consistency","Ideal for home décor, gifting & luxury retail","Custom designs, colors & sizes available on request","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Hand-blown glass & traditionally crafted ceramic items", "Range includes vases, bowls, tile art & decorative plates", "Exceptional beauty with unique craftsmanship", "Vibrant hand-painted designs and intricate detailing", "Quality checked for finish, durability & consistency", "Ideal for home décor, gifting & luxury retail", "Custom designs, colors & sizes available on request", "Reliable global supply with competitive wholesale pricing"],
           tags: ["handicraft", "glass", "ceramic", "hand-blown", "decorative"],
           image: "products/glass-ceramic.png",
           specs: { "Material": "Glass & ceramic", "Finish": "Hand-painted, glazed", "Craftsmanship": "Traditional artisan techniques", "Origin": "India" }
@@ -1091,7 +1107,7 @@
           category: "textile",
           name: "Fabrics",
           desc: "We offer premium cotton, linen, silk, and blended fabrics manufactured for international apparel and home textile markets. Woven with precision, available in various thread counts, weights, compositions, and finishes including mercerized and sanforized options for global buyers.",
-          highlights: ["Premium cotton, linen, silk & blended fabrics","Available in solid colors, prints & patterns","Precision woven to international standards","Various thread counts, weights & compositions","Mercerized and sanforized finish options","Customized designs, colors & specifications available","Ideal for apparel, home textiles & retail markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium cotton, linen, silk & blended fabrics", "Available in solid colors, prints & patterns", "Precision woven to international standards", "Various thread counts, weights & compositions", "Mercerized and sanforized finish options", "Customized designs, colors & specifications available", "Ideal for apparel, home textiles & retail markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["fabric", "cotton", "linen", "silk", "blended"],
           image: "products/textile-fabrics.png",
           specs: { "Types": "Cotton, Linen, Silk, Blended", "Width": "44-60 inches", "Finish": "Mercerized, sanforized", "Origin": "India" }
@@ -1101,7 +1117,7 @@
           category: "textile",
           name: "Apparel",
           desc: "We supply premium finished garments manufactured to meet international quality standards. Our apparel range includes casual wear, formal wear, ethnic wear, activewear, and workwear, produced using quality fabrics with precise stitching and finishing for global retail and wholesale markets.",
-          highlights: ["Premium finished garments to international standards","Range includes casual, formal, ethnic & activewear","Produced using quality fabrics with precise stitching","Custom designs, sizes & specifications available","Export-quality tested to international standards","Private labeling & custom branding available","Ideal for retail, wholesale & fashion markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium finished garments to international standards", "Range includes casual, formal, ethnic & activewear", "Produced using quality fabrics with precise stitching", "Custom designs, sizes & specifications available", "Export-quality tested to international standards", "Private labeling & custom branding available", "Ideal for retail, wholesale & fashion markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["apparel", "garments", "clothing", "fashion", "export"],
           image: "products/textile-apparel-item.png",
           specs: { "Range": "Casual, Formal, Ethnic, Activewear", "Material": "Quality fabrics", "Custom Design": "Supported", "Origin": "India" }
@@ -1111,7 +1127,7 @@
           category: "textile",
           name: "Home Textiles",
           desc: "Our premium home textile range includes bed linens, curtains, cushion covers, table runners, bath towels, kitchen towels, and decorative home furnishings manufactured to meet international quality standards. Available in a wide range of colors, patterns, and fabric compositions.",
-          highlights: ["Premium home textiles to international standards","Range includes bed linens, curtains & cushion covers","Also includes towels, table runners & furnishings","Available in wide range of colors & patterns","Quality fabrics with precise weaving & stitching","Custom designs, sizes & specifications available","Ideal for retail, wholesale & hospitality markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium home textiles to international standards", "Range includes bed linens, curtains & cushion covers", "Also includes towels, table runners & furnishings", "Available in wide range of colors & patterns", "Quality fabrics with precise weaving & stitching", "Custom designs, sizes & specifications available", "Ideal for retail, wholesale & hospitality markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["home-textiles", "bed-linen", "curtains", "towels", "cushions"],
           image: "products/home-textiles.png",
           specs: { "Range": "Bed linen, curtains, towels, cushion covers", "Material": "Cotton, linen, polyester blends", "Custom Design": "Supported", "Origin": "India" }
@@ -1121,7 +1137,7 @@
           category: "textile",
           name: "Accessories",
           desc: "We offer a diverse range of textile accessories including scarves, stoles, shawls, bags, headbands, and fashion accessories crafted from premium fabrics. Available in various designs, colors, and customizations for global markets.",
-          highlights: ["Diverse range of textile accessories","Includes scarves, stoles, shawls, bags & headbands","Crafted from premium fabrics with attention to detail","Available in various designs, colors & customizations","Export-quality tested to international standards","Private labeling & custom branding available","Ideal for retail, wholesale & fashion markets","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Diverse range of textile accessories", "Includes scarves, stoles, shawls, bags & headbands", "Crafted from premium fabrics with attention to detail", "Available in various designs, colors & customizations", "Export-quality tested to international standards", "Private labeling & custom branding available", "Ideal for retail, wholesale & fashion markets", "Reliable global supply with competitive wholesale pricing"],
           tags: ["accessories", "scarves", "stoles", "shawls", "bags"],
           image: "products/textile-accessories.png",
           specs: { "Range": "Scarves, stoles, shawls, bags, headbands", "Material": "Premium fabrics", "Custom Design": "Supported", "Origin": "India" }
@@ -1132,7 +1148,7 @@
           category: "superfoods",
           name: "Makhana (Fox Nuts)",
           desc: "Our Premium Export Quality Makhana (Fox Nuts / Lotus Seeds) is sourced from the finest growing regions of India, known for producing high-quality lotus seeds that are naturally light, crunchy, and packed with nutrition. Carefully processed and hygienically packed.\n\nRich in protein, fiber, calcium, magnesium, potassium, and antioxidants, widely used as a healthy snack, in desserts, kheer, trail mixes, and health food formulations.",
-          highlights: ["Premium-grade Indian Makhana (Fox Nuts)","Naturally rich in protein, calcium & antioxidants","Light, crunchy & delicious healthy snack","Free from artificial colors, preservatives & additives","Hygienically processed and export-quality tested","Low fat, low glycemic index superfood","Customized packaging & private labeling available","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Indian Makhana (Fox Nuts)", "Naturally rich in protein, calcium & antioxidants", "Light, crunchy & delicious healthy snack", "Free from artificial colors, preservatives & additives", "Hygienically processed and export-quality tested", "Low fat, low glycemic index superfood", "Customized packaging & private labeling available", "Reliable global supply with competitive wholesale pricing"],
           tags: ["makhana", "fox-nuts", "lotus-seeds", "superfood", "snack"],
           image: "products/makhana.png",
           specs: { "Form": "Whole dried lotus seeds", "Protein": "9-10g per 100g", "Fat": "Low fat (<0.5g)", "Origin": "India (Bihar)" }
@@ -1142,7 +1158,7 @@
           category: "superfoods",
           name: "Chia Seeds",
           desc: "We supply Premium Export Quality Chia Seeds carefully sourced and processed to preserve their exceptional nutritional profile. Rich in omega-3 fatty acids, dietary fiber, plant-based protein, calcium, magnesium, and antioxidants.\n\nWidely used in health foods, smoothies, yogurts, baked goods, energy bars, beverages, and nutraceutical formulations globally.",
-          highlights: ["Premium-grade Chia Seeds with superior nutrition","Rich in omega-3 fatty acids, fiber & plant protein","High in calcium, magnesium & antioxidants","Hygienically processed and export-quality tested","Free from artificial colors, preservatives & additives","Customized packaging & private labeling available","Ideal for health foods, smoothies, bakery & nutraceuticals","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Premium-grade Chia Seeds with superior nutrition", "Rich in omega-3 fatty acids, fiber & plant protein", "High in calcium, magnesium & antioxidants", "Hygienically processed and export-quality tested", "Free from artificial colors, preservatives & additives", "Customized packaging & private labeling available", "Ideal for health foods, smoothies, bakery & nutraceuticals", "Reliable global supply with competitive wholesale pricing"],
           tags: ["chia-seeds", "omega-3", "superfood", "nutrition", "health"],
           image: "products/chia-seeds.png",
           specs: { "Form": "Whole seeds (Black & White)", "Omega-3": "High content", "Fiber": "34g per 100g", "Origin": "India" }
@@ -1152,7 +1168,7 @@
           category: "superfoods",
           name: "Millets",
           desc: "We supply a comprehensive range of Premium Export Quality Millets including Pearl Millet (Bajra), Finger Millet (Ragi), Foxtail Millet, Sorghum (Jowar), Barnyard Millet, Kodo Millet, Little Millet, and Proso Millet — all carefully cleaned, graded, and hygienically packed.\n\nRich in complex carbohydrates, dietary fiber, protein, vitamins B1 & B2, iron, calcium, and phosphorus, widely used in health foods, flour, snacks, and nutraceuticals.",
-          highlights: ["Comprehensive range of premium Indian Millets","Includes Pearl, Finger, Foxtail, Sorghum & Barnyard Millet","Rich in fiber, protein, vitamins & essential minerals","Gluten-free & low glycemic index superfood","Hygienically processed and export-quality tested","Customized packaging & private labeling available","Ideal for health foods, flour, snacks & nutraceuticals","Reliable global supply with competitive wholesale pricing"],
+          highlights: ["Comprehensive range of premium Indian Millets", "Includes Pearl, Finger, Foxtail, Sorghum & Barnyard Millet", "Rich in fiber, protein, vitamins & essential minerals", "Gluten-free & low glycemic index superfood", "Hygienically processed and export-quality tested", "Customized packaging & private labeling available", "Ideal for health foods, flour, snacks & nutraceuticals", "Reliable global supply with competitive wholesale pricing"],
           tags: ["millets", "bajra", "ragi", "jowar", "superfood", "gluten-free"],
           image: "products/millet.png",
           specs: { "Varieties": "Pearl, Finger, Foxtail, Sorghum, Barnyard, Kodo, Little, Proso", "Gluten": "Gluten-free", "Moisture": "Controlled", "Origin": "India" }
@@ -1298,56 +1314,56 @@
         }
       };
 
-    function renderProductPage() {
-      const urlParams = new URLSearchParams(window.location.search);
-      let productId = urlParams.get('id') || 'dehydrated_garlic';
+      function renderProductPage() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let productId = urlParams.get('id') || 'dehydrated_garlic';
 
-      // Backward compatibility alias mappings
-      if (productId === 'onion_flakes') productId = 'dehydrated_onion';
-      if (productId === 'garlic_powder') productId = 'dehydrated_garlic';
-      if (productId === 'ginger_powder') productId = 'dehydrated_ginger';
-      if (productId === 'moringa') productId = 'moringa_powder';
-      if (productId === 'chickpeas') productId = 'pulses';
-      if (productId === 'basmati' || productId === 'basmati_rice') productId = 'rice';
-      if (productId === 'peanut' || productId === 'groundnut' || productId === 'groundnuts') productId = 'peanuts';
-      if (productId === 'cotton' || productId === 'yarn' || productId === 'textile_yarn') productId = 'textile_fabrics';
-      if (productId === 'fabric' || productId === 'fabrics' || productId === 'apparel') productId = 'textile_apparel';
-      if (productId === 'handicraft') productId = 'wooden_handicrafts';
-      if (productId === 'spices') productId = 'turmeric';
+        // Backward compatibility alias mappings
+        if (productId === 'onion_flakes') productId = 'dehydrated_onion';
+        if (productId === 'garlic_powder') productId = 'dehydrated_garlic';
+        if (productId === 'ginger_powder') productId = 'dehydrated_ginger';
+        if (productId === 'moringa') productId = 'moringa_powder';
+        if (productId === 'chickpeas') productId = 'pulses';
+        if (productId === 'basmati' || productId === 'basmati_rice') productId = 'rice';
+        if (productId === 'peanut' || productId === 'groundnut' || productId === 'groundnuts') productId = 'peanuts';
+        if (productId === 'cotton' || productId === 'yarn' || productId === 'textile_yarn') productId = 'textile_fabrics';
+        if (productId === 'fabric' || productId === 'fabrics' || productId === 'apparel') productId = 'textile_apparel';
+        if (productId === 'handicraft') productId = 'wooden_handicrafts';
+        if (productId === 'spices') productId = 'turmeric';
 
-      const product = productsData.find(p => p.id === productId);
+        const product = productsData.find(p => p.id === productId);
 
-      if (!product) {
-        document.getElementById('pd-main-wrap').innerHTML = `
+        if (!product) {
+          document.getElementById('pd-main-wrap').innerHTML = `
           <div style="text-align: center; padding: 60px 20px;">
             <h2 style="font-family: var(--font-heading); font-size: 28px; color: var(--text-dark); margin-bottom: 16px;">Product Not Found</h2>
             <p style="color: var(--text-mid); margin-bottom: 24px;">The requested product could not be found in our export portfolio.</p>
             <a href="index.html#products" class="pd-btn primary">← Back to Catalogue</a>
           </div>
         `;
-        return;
-      }
+          return;
+        }
 
-      const activeCategory = product.category;
-      const categoryMeta = categoriesData[activeCategory] || { name: "Products", properties: [], applications: [] };
+        const activeCategory = product.category;
+        const categoryMeta = categoriesData[activeCategory] || { name: "Products", properties: [], applications: [] };
 
-      // Update page title & metadata
-      document.title = `${product.name} Export from India | Jalpex International`;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute('content', `${product.name}: ${product.desc.substring(0, 150)}...`);
-      }
+        // Update page title & metadata
+        document.title = `${product.name} Export from India | Jalpex International`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', `${product.name}: ${product.desc.substring(0, 150)}...`);
+        }
 
-      // Render Top Nav (Breadcrumb + Back Link)
-      const topNavEl = document.getElementById('pd-top-nav');
-      const savedLang = localStorage.getItem("selectedLang") || "en";
-      const transCatName = (translations[savedLang] && (translations[savedLang]["cat_" + activeCategory] || translations[savedLang]["tab_" + activeCategory])) || categoryMeta.name;
-      const transHome = (translations[savedLang] && translations[savedLang].nav_home) || "Home";
-      const transProducts = (translations[savedLang] && translations[savedLang].nav_products) || "Products";
-      const transInquire = (translations[savedLang] && translations[savedLang].btn_inquire_product) || "Inquire Now";
-      const transContact = (translations[savedLang] && translations[savedLang].nav_inquiry) || "Contact Us";
+        // Render Top Nav (Breadcrumb + Back Link)
+        const topNavEl = document.getElementById('pd-top-nav');
+        const savedLang = localStorage.getItem("selectedLang") || "en";
+        const transCatName = (translations[savedLang] && (translations[savedLang]["cat_" + activeCategory] || translations[savedLang]["tab_" + activeCategory])) || categoryMeta.name;
+        const transHome = (translations[savedLang] && translations[savedLang].nav_home) || "Home";
+        const transProducts = (translations[savedLang] && translations[savedLang].nav_products) || "Products";
+        const transInquire = (translations[savedLang] && translations[savedLang].btn_inquire_product) || "Inquire Now";
+        const transContact = (translations[savedLang] && translations[savedLang].nav_inquiry) || "Contact Us";
 
-      topNavEl.innerHTML = `
+        topNavEl.innerHTML = `
         <a class="pd-back-link" href="catalog.html?cat=${activeCategory}" onclick="if(document.referrer){event.preventDefault();window.history.back();}">
           <svg class="pd-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 0; width: 14px; height: 14px;">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -1363,18 +1379,18 @@
         </div>
       `;
 
-      // Render Intro Grid
-      const introGridEl = document.getElementById('pd-intro-grid');
-      // Format product description with paragraphs
-      const paragraphs = product.desc.split('\n\n').map(p => `<p>${p}</p>`).join('');
+        // Render Intro Grid
+        const introGridEl = document.getElementById('pd-intro-grid');
+        // Format product description with paragraphs
+        const paragraphs = product.desc.split('\n\n').map(p => `<p>${p}</p>`).join('');
 
-      const highlightsHTML = (product.highlights || []).map(h => `
+        const highlightsHTML = (product.highlights || []).map(h => `
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 5 12"></polyline></svg>
             <span>${h}</span>
           </li>`).join('');
 
-      introGridEl.innerHTML = `
+        introGridEl.innerHTML = `
         <div class="pd-image-card">
           <img src="${product.image}" alt="${product.name}">
         </div>
@@ -1386,7 +1402,7 @@
           </div>
           ${highlightsHTML ? `<ul class="pd-highlights-list">${highlightsHTML}</ul>` : ''}
           <div class="pd-action-row">
-            <a href="mailto:jalpexinternational@gmail.com?subject=Import%20Inquiry%3A%20${encodeURIComponent(product.name)}&body=Hello%20Jalpex%20International%2C%0A%0AI%20am%20interested%20in%20importing%20your%20premium%20%22${encodeURIComponent(product.name)}%22.%0A%0APlease%20provide%20pricing%2C%20pack%20sizing%20options%2C%20and%20shipping%20terms.%0A%0ARegards" class="pd-btn primary">
+            <a href="mailto:info@jalpexinternational.com?subject=Import%20Inquiry%3A%20${encodeURIComponent(product.name)}&body=Hello%20Jalpex%20International%2C%0A%0AI%20am%20interested%20in%20importing%20your%20premium%20%22${encodeURIComponent(product.name)}%22.%0A%0APlease%20provide%20pricing%2C%20pack%20sizing%20options%2C%20and%20shipping%20terms.%0A%0ARegards" class="pd-btn primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -1399,24 +1415,24 @@
       `;
 
 
-      // ── Available Types Section (sub-types grid) ──
-      const typesSec = document.getElementById('pd-types-sec');
-      const typesHeader = document.getElementById('pd-types-header');
-      const typesGrid = document.getElementById('pd-types-grid');
+        // ── Available Types Section (sub-types grid) ──
+        const typesSec = document.getElementById('pd-types-sec');
+        const typesHeader = document.getElementById('pd-types-header');
+        const typesGrid = document.getElementById('pd-types-grid');
 
-      if (product.types && product.types.length > 0) {
-        typesSec.style.display = 'block';
+        if (product.types && product.types.length > 0) {
+          typesSec.style.display = 'block';
 
-        typesHeader.innerHTML = `
+          typesHeader.innerHTML = `
           <h2>Available Types</h2>
           <p>${product.name} is available in the following types — supplied loose or in custom retail and bulk packaging.</p>
         `;
 
-        let gridHtml = '';
-        product.types.forEach(typeId => {
-          const tProd = productsData.find(p => p.id === typeId);
-          if (tProd) {
-            gridHtml += `
+          let gridHtml = '';
+          product.types.forEach(typeId => {
+            const tProd = productsData.find(p => p.id === typeId);
+            if (tProd) {
+              gridHtml += `
               <div class="pd-type-card" onclick="window.location.href='product.html?id=${tProd.id}'">
                 <div class="pd-type-img">
                   <img src="${tProd.image}" alt="${tProd.name}" loading="lazy">
@@ -1434,17 +1450,17 @@
                 </div>
               </div>
             `;
-          }
-        });
-        typesGrid.innerHTML = gridHtml;
-      } else {
-        typesSec.style.display = 'none';
+            }
+          });
+          typesGrid.innerHTML = gridHtml;
+        } else {
+          typesSec.style.display = 'none';
+        }
       }
-    }
 
-    renderProductPage();
-    window.addEventListener("languageChanged", renderProductPage);
-  })();
+      renderProductPage();
+      window.addEventListener("languageChanged", renderProductPage);
+    })();
   </script>
 
 </body>

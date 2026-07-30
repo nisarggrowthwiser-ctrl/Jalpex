@@ -3017,7 +3017,7 @@ function initInquiryForm() {
     // Construct mailto URL to launch client mail app
     const subject = encodeURIComponent(`Import Inquiry (${category}) from ${name}`);
     const body = encodeURIComponent(`Hello Jalpex International,\n\nI would like to submit an import inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nDetails:\n${message}\n\nRegards,\n${name}`);
-    const mailtoUrl = `mailto:jalpexinternational@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:info@jalpexinternational.com?subject=${subject}&body=${body}`;
 
     // Trigger mail client via hidden anchor — avoids navigating away from the page
     // which would wipe the success message and could silently swallow the mailto in

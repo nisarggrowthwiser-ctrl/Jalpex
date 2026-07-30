@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -7,7 +8,9 @@
   <title>Frequently Asked Questions (FAQ) | Jalpex International</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=2.5">
   <style>
     body {
@@ -15,12 +18,12 @@
       color: var(--text-dark);
       padding-top: 100px;
     }
-    
+
     .faq-header {
       text-align: center;
       padding: 60px 20px 40px 20px;
     }
-    
+
     .faq-pretitle {
       font-family: var(--font-heading);
       font-size: 11px;
@@ -32,7 +35,7 @@
       display: block;
       margin-bottom: 15px;
     }
-    
+
     .faq-title {
       font-family: var(--font-heading);
       font-size: clamp(34px, 4.5vw, 52px);
@@ -41,7 +44,7 @@
       margin: 0 0 20px 0;
       letter-spacing: -0.02em;
     }
-    
+
     .faq-subtitle {
       font-family: var(--font-body);
       font-size: clamp(14.5px, 1.8vw, 16px);
@@ -50,13 +53,13 @@
       max-width: 680px;
       margin: 0 auto;
     }
-    
+
     .faq-container {
       max-width: 850px;
       margin: 0 auto 80px auto;
       padding: 0 25px;
     }
-    
+
     .faq-card {
       background: transparent;
       border: none;
@@ -67,17 +70,17 @@
       margin-bottom: 0;
       transition: border-color 0.3s ease;
     }
-    
+
     .faq-card:hover {
       box-shadow: none;
       border-color: rgba(36, 29, 18, 0.3);
       transform: none;
     }
-    
+
     details {
       width: 100%;
     }
-    
+
     summary {
       display: flex;
       justify-content: space-between;
@@ -91,11 +94,11 @@
       list-style: none;
       outline: none;
     }
-    
+
     summary::-webkit-details-marker {
       display: none;
     }
-    
+
     .faq-icon {
       font-family: var(--font-body);
       font-size: 24px;
@@ -109,13 +112,13 @@
       background: none;
       border-radius: 0;
     }
-    
+
     details[open] .faq-icon {
       transform: rotate(45deg);
       background: none;
       color: var(--text-dark);
     }
-    
+
     .faq-content {
       padding-bottom: 24px;
       font-family: var(--font-body);
@@ -125,7 +128,7 @@
       border-top: none;
       padding-top: 0;
     }
-    
+
     .faq-cta-box {
       background: linear-gradient(135deg, rgba(24, 37, 67, 0.02) 0%, rgba(194, 150, 82, 0.04) 100%);
       border: 1px solid var(--border);
@@ -134,7 +137,7 @@
       text-align: center;
       margin-top: 60px;
     }
-    
+
     .faq-cta-box h3 {
       font-family: var(--font-heading);
       font-size: 22px;
@@ -142,14 +145,14 @@
       margin-bottom: 10px;
       font-weight: 700;
     }
-    
+
     .faq-cta-box p {
       font-family: var(--font-body);
       font-size: 15px;
       color: var(--text-secondary);
       margin-bottom: 25px;
     }
-    
+
     .faq-cta-btn {
       display: inline-block;
       background: var(--btn-bg);
@@ -161,7 +164,7 @@
       transition: all 0.3s var(--ease-out);
       border: 1px solid transparent;
     }
-    
+
     .faq-cta-btn:hover {
       background: transparent;
       color: var(--btn-bg);
@@ -170,6 +173,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ── NAVIGATION BAR ── -->
@@ -178,7 +182,7 @@
       <a href="index.html" class="logo-link">
         <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
       </a>
-      
+
       <ul class="nav-links">
         <li><a href="index.html#home" data-trans="nav_home">Home</a></li>
         <li><a href="index.html#products" data-trans="nav_products">Products</a></li>
@@ -193,9 +197,18 @@
         <!-- Language Picker -->
         <div class="lang-picker">
           <button class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
-            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg class="globe-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
             <span>EN</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
             <button class="lang-item active" data-lang="en">🇬🇧 English</button>
@@ -252,12 +265,14 @@
   <div class="faq-header container">
     <span class="faq-pretitle" data-trans="faq_pretitle">Frequently Asked</span>
     <h1 class="faq-title" data-trans="faq_header_title">Frequently Asked Questions</h1>
-    <p class="faq-subtitle" data-trans="faq_header_subtitle">Everything you need to know about ordering, shipping, certifications, and payments. Can't find what you're looking for? Reach out — we typically reply within one business day.</p>
+    <p class="faq-subtitle" data-trans="faq_header_subtitle">Everything you need to know about ordering, shipping,
+      certifications, and payments. Can't find what you're looking for? Reach out — we typically reply within one
+      business day.</p>
   </div>
 
   <!-- ── FAQ CONTAINER ── -->
   <div class="faq-container">
-    
+
     <div class="faq-card" data-anim="fade-up" data-delay="100">
       <details>
         <summary>
@@ -265,7 +280,9 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a1">
-          We focus on premium quality products, direct farm sourcing, timely delivery, competitive pricing, and professional export service tailored to global standards. We build long-term partnerships through complete transparency.
+          We focus on premium quality products, direct farm sourcing, timely delivery, competitive pricing, and
+          professional export service tailored to global standards. We build long-term partnerships through complete
+          transparency.
         </div>
       </details>
     </div>
@@ -277,7 +294,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a2">
-          We supply our premium dehydrated vegetables and fruits in various formats, including flakes, chopped, minced, kibbed/sliced, granules, and powder, to suit diverse industrial and culinary applications.
+          We supply our premium dehydrated vegetables and fruits in various formats, including flakes, chopped, minced,
+          kibbed/sliced, granules, and powder, to suit diverse industrial and culinary applications.
         </div>
       </details>
     </div>
@@ -289,7 +307,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a3">
-          We export a variety of premium whole and powdered Indian spices, including high-curcumin Turmeric Fingers, vibrant Red Chilli (whole pods and powder), aromatic Cumin Seeds, and premium Coriander Seeds.
+          We export a variety of premium whole and powdered Indian spices, including high-curcumin Turmeric Fingers,
+          vibrant Red Chilli (whole pods and powder), aromatic Cumin Seeds, and premium Coriander Seeds.
         </div>
       </details>
     </div>
@@ -301,7 +320,9 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a4">
-          Yes, we strictly adhere to international food safety and sanitary regulations. Our sourcing operations carry verifiable certifications, including ISO 22000:2018, FSSAI Central License, APEDA, and Spices Board registrations.
+          Yes, we strictly adhere to international food safety and sanitary regulations. Our sourcing operations carry
+          verifiable certifications, including ISO 22000:2018, FSSAI Central License, APEDA, and Spices Board
+          registrations.
         </div>
       </details>
     </div>
@@ -313,7 +334,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a5">
-          We exclusively deal in standard international delivery terms, primarily FOB (Free On Board) and CIF (Cost, Insurance, and Freight).
+          We exclusively deal in standard international delivery terms, primarily FOB (Free On Board) and CIF (Cost,
+          Insurance, and Freight).
         </div>
       </details>
     </div>
@@ -325,7 +347,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a6">
-          We use premium, export-standard packaging such as airtight vacuum pouches, multi-layer PP bags, and custom containers. This shields the products from moisture, oxidation, and transit damage over long sea routes.
+          We use premium, export-standard packaging such as airtight vacuum pouches, multi-layer PP bags, and custom
+          containers. This shields the products from moisture, oxidation, and transit damage over long sea routes.
         </div>
       </details>
     </div>
@@ -337,7 +360,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a7">
-          Shipping timelines depend on the destination country, container volume, and processing requirements. We provide an estimated timeline immediately upon order confirmation and document verification.
+          Shipping timelines depend on the destination country, container volume, and processing requirements. We
+          provide an estimated timeline immediately upon order confirmation and document verification.
         </div>
       </details>
     </div>
@@ -349,7 +373,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a8">
-          MOQ varies depending on the specific product category (spices, grains, seeds, dehydrated veggies). Please contact our sourcing desk with your specific requirement to receive a custom quote.
+          MOQ varies depending on the specific product category (spices, grains, seeds, dehydrated veggies). Please
+          contact our sourcing desk with your specific requirement to receive a custom quote.
         </div>
       </details>
     </div>
@@ -361,7 +386,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a9">
-          We accept secure international payment methods, including Letter of Credit (L/C), Telegraphic Transfer (T/T), and Documents Against Payment (D/P) in accordance with agreed contract terms.
+          We accept secure international payment methods, including Letter of Credit (L/C), Telegraphic Transfer (T/T),
+          and Documents Against Payment (D/P) in accordance with agreed contract terms.
         </div>
       </details>
     </div>
@@ -373,7 +399,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a10">
-          Yes, we provide product samples free of cost for quality testing. Depending on the destination and shipping requirements, courier fees may apply.
+          Yes, we provide product samples free of cost for quality testing. Depending on the destination and shipping
+          requirements, courier fees may apply.
         </div>
       </details>
     </div>
@@ -385,7 +412,8 @@
           <div class="faq-icon">+</div>
         </summary>
         <div class="faq-content" data-trans="faq_a11">
-          Yes! We help global brands and distributors build their market presence by offering complete private labeling contract services, taking your products from bulk sourcing to retail-ready custom packaging sizes.
+          Yes! We help global brands and distributors build their market presence by offering complete private labeling
+          contract services, taking your products from bulk sourcing to retail-ready custom packaging sizes.
         </div>
       </details>
     </div>
@@ -393,7 +421,8 @@
     <!-- CTA Box -->
     <div class="faq-cta-box" data-anim="fade-up" data-delay="650">
       <h3 data-trans="faq_cta_title">Have More Questions?</h3>
-      <p data-trans="faq_cta_desc">Our trade desk is ready to assist you. Send us your sourcing inquiry and we will reply within 24 hours.</p>
+      <p data-trans="faq_cta_desc">Our trade desk is ready to assist you. Send us your sourcing inquiry and we will
+        reply within 24 hours.</p>
       <a href="index.html#inquiry" class="faq-cta-btn" data-trans="form_btn">Send Inquiry</a>
     </div>
 
@@ -407,7 +436,8 @@
           <a href="index.html" class="logo-link" style="margin-bottom: 20px; display: inline-block;">
             <img src="logo.svg" alt="Jalpex International Logo" class="logo-img">
           </a>
-          <p style="margin-top: 15px;" data-trans="footer_desc">Jalpex International is a premium export house of agricultural commodities. We
+          <p style="margin-top: 15px;" data-trans="footer_desc">Jalpex International is a premium export house of
+            agricultural commodities. We
             represent the pinnacle of Indian farming heritage, catering to import networks in 40+ countries.</p>
         </div>
         <div class="footer-col">
@@ -459,8 +489,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a href="mailto:jalpexinternational@gmail.com"
-                style="color: inherit; text-decoration: none;">jalpexinternational@gmail.com</a>
+              <a href="mailto:info@jalpexinternational.com"
+                style="color: inherit; text-decoration: none;">info@jalpexinternational.com</a>
             </span>
             <span style="display: flex; gap: 8px;">
               <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
@@ -488,11 +518,12 @@
                 d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
             </svg>
           </a>
-          <a href="https://www.instagram.com/jalpexinternational/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/jalpexinternational/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
               <path
                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-          </svg>
+            </svg>
           </a>
           <a href="https://x.com/jalpexint" target="_blank" aria-label="Twitter">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
@@ -525,7 +556,8 @@
   <a href="https://wa.me/919879915124" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
     title="Chat with us on WhatsApp">
     <div class="whatsapp-tooltip">
-      <span data-trans="whatsapp_need_help">Need Help?</span> <strong data-trans="whatsapp_chat_us">Chat with us</strong>
+      <span data-trans="whatsapp_need_help">Need Help?</span> <strong data-trans="whatsapp_chat_us">Chat with
+        us</strong>
     </div>
     <div class="whatsapp-float-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
@@ -537,4 +569,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
