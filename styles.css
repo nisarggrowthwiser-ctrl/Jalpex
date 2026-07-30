@@ -5516,10 +5516,11 @@ html[lang="zh"] i {
 .hero-dark-ticker {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   font-size: 18.5px;
   color: var(--text-secondary);
   font-weight: 400;
+  flex-wrap: wrap;
 }
 
 .hdt-bar {
@@ -5536,7 +5537,7 @@ html[lang="zh"] i {
 
 .hdt-word-track {
   overflow: hidden;
-  height: 30px;
+  height: 34px;
   display: flex;
   align-items: center;
 }
@@ -5546,6 +5547,8 @@ html[lang="zh"] i {
   font-weight: 700;
   font-size: 18.5px;
   color: #182543;
+  white-space: nowrap;
+  line-height: 1.2;
   transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -6075,11 +6078,24 @@ html[lang="zh"] i {
     height: auto;
     min-height: auto;
     overflow: visible;
-    padding: 115px 0 60px;
+    padding: 130px 0 60px;
   }
 
   .hero-dark-heading {
     font-size: clamp(32px, 9vw, 50px);
+  }
+
+  .hero-dark-ticker {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .hdt-word-track {
+    height: 30px;
+  }
+
+  .hdt-word {
+    font-size: 16px;
   }
 
   .hero-video-overlay {
@@ -6089,15 +6105,32 @@ html[lang="zh"] i {
 
 @media (max-width: 480px) {
   .hero-dark {
-    padding: 110px 0 50px;
+    padding: 125px 0 50px;
   }
 
   .hero-dark-heading {
-    font-size: clamp(28px, 9vw, 42px);
+    font-size: clamp(26px, 8vw, 38px);
   }
 
   .hero-dark-desc {
     font-size: 15.5px;
+  }
+
+  .hero-dark-ticker {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .hdt-bar {
+    width: 22px;
+  }
+
+  .hdt-word-track {
+    height: 28px;
+  }
+
+  .hdt-word {
+    font-size: 14px;
   }
 
   .hero-dark-btns {
@@ -6109,7 +6142,6 @@ html[lang="zh"] i {
     width: 100%;
     justify-content: center;
   }
-
 }
 
 /* ── VIEWPORT HEIGHT MEDIA QUERIES FOR SINGLE SCROLL FOLD ── */
