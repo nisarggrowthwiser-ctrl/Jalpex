@@ -30,12 +30,12 @@ const translations = {
     story_title: "Premium Quality. Ethical Sourcing. Global Trust.",
     story_p1: "At Jalpex International, we are committed to delivering premium Indian products to international markets through a reliable and transparent supply chain. We source directly from trusted farmers and manufacturers across India, ensuring every product reflects the country's rich agricultural heritage and uncompromising quality.",
     story_p2: "Our export portfolio includes Agricultural Commodities, Spices, Dehydrated Vegetables, Fresh Produce, Pulses, Grains, Seeds, and Handicrafts. Every shipment undergoes rigorous quality checks, hygienic processing, and secure packaging to meet international standards and customer expectations.",
-    story_p3: "With a strong focus on consistency, timely delivery, and long-term partnerships, we strive to provide seamless export solutions tailored to the needs of importers, distributors, wholesalers, and retailers worldwide. At Jalpex International, we don't just export products—we deliver trust, reliability, and lasting business relationships.",
-    story_link: "Explore our export collections &rarr;",
+    story_p3: "With a strong focus on consistency, timely delivery, and long-term partnerships, we strive to provide seamless export solutions tailored to the needs of importers, distributors, wholesalers, and retailers worldwide. At Jalpex International, we don't just export products we deliver trust, reliability, and lasting business relationships.",
+    story_link: "Explore Products &rarr;",
     ticker_text: "Reliable Worldwide Logistics Services • Delivering Indian Quality Globally • Premium Agricultural Export Solutions • Sourced with Care, Processed with Integrity • Trusted Global Export Partner • ",
     prod_label: "Our Catalog",
     prod_title: "Export Products",
-    prod_desc: "Premium Indian products, carefully sourced and quality-checked for global markets.",
+    prod_desc: "Premium Indian products, carefully sourced and quality checked for global markets.",
     tab_agricultural: "Agricultural Products",
     tab_food_dehydrated: "Food Products",
     tab_fresh_produce: "Fresh Fruits & Vegetables",
@@ -1431,6 +1431,9 @@ translations.en.whatsapp_need_help = "Need Help?";
 translations.en.whatsapp_chat_us = "Chat with us";
 
 // FAQ Translations (English)
+translations.en.faq_pretitle = "Frequently Asked";
+translations.en.faq_header_title = "Frequently Asked Questions";
+translations.en.faq_header_subtitle = "Everything you need to know about ordering, shipping, certifications, and payments. Can't find what you're looking for? Reach out — we typically reply within one business day.";
 translations.en.faq_q1 = "Why choose Jalpex International?";
 translations.en.faq_a1 = "We focus on premium quality products, direct farm sourcing, timely delivery, competitive pricing, and professional export service tailored to global standards. We build long-term partnerships through complete transparency.";
 translations.en.faq_q2 = "In what forms are your dehydrated products available?";
@@ -1518,6 +1521,9 @@ translations.hi.whatsapp_need_help = "सहायता चाहिए?";
 translations.hi.whatsapp_chat_us = "हमसे चैट करें";
 
 // FAQ Translations (Hindi)
+translations.hi.faq_pretitle = "अक्सर पूछे जाने वाले";
+translations.hi.faq_header_title = "अक्सर पूछे जाने वाले प्रश्न";
+translations.hi.faq_header_subtitle = "ऑर्डर करने, शिपिंग, प्रमाणन और भुगतान के बारे में सब कुछ जानें। जो आप खोज रहे हैं वह नहीं मिला? हमसे संपर्क करें — हम आमतौर पर एक कार्य दिवस के भीतर उत्तर देते हैं।";
 translations.hi.faq_q1 = "जालपेक्स इंटरनेशनल क्यों चुनें?";
 translations.hi.faq_a1 = "हम वैश्विक मानकों के अनुसार प्रीमियम गुणवत्ता वाले उत्पादों, सीधे खेत से सोर्सिंग, समय पर डिलीवरी, प्रतिस्पर्धी मूल्य निर्धारण और पेशेवर निर्यात सेवा पर ध्यान केंद्रित करते हैं। हम पूर्ण पारदर्शिता के माध्यम से दीर्घकालिक साझेदारी का निर्माण करते हैं।";
 translations.hi.faq_q2 = "आपके निर्जलित (Dehydrated) उत्पाद किन रूपों में उपलब्ध हैं?";
@@ -1645,10 +1651,213 @@ translations.zh.pd_specifications = "技术规格";
 translations.zh.btn_view_details = "查看详情";
 translations.zh.catalog_other_products = "其他产品";
 
+// FAQ Translations for Arabic (ar)
+translations.ar.faq_pretitle = "الأسئلة الشائعة";
+translations.ar.faq_header_title = "الأسئلة الأكثر تكراراً";
+translations.ar.faq_header_subtitle = "كل ما تحتاج إلى معرفته حول الطلب والشحن والشهادات والمدفوعات. هل لديك استفسار آخر؟ تواصل معنا وسنرد عليك خلال يوم عمل واحد.";
+translations.ar.faq_q1 = "لماذا تختار جالبيكس إنترناشيونال؟";
+translations.ar.faq_a1 = "نحن نركز على منتجات عالية الجودة، والتوريد المباشر من المزارع، والتسليم في الوقت المحدد، والأسعار التنافسية، والخدمة الاحترافية المجهزة وفقاً للمعايير العالمية. نحن نبني شراكات طويلة الأجل من خلال الشفافية التامة.";
+translations.ar.faq_q2 = "ما هي الأشكال التي تتوفر بها منتجاتكم المجففة؟";
+translations.ar.faq_a2 = "نقوم بتوريد الفواكه والخضروات المجففة بأشكال مختلفة تشمل الرقائق، والمفروم، والمكعبات، والمحبب، والبودرة لتلبية الاحتياجات الصناعية والطهي المختلفة.";
+translations.ar.faq_q3 = "ما هي أنواع التوابل التي تقومون بتوريدها؟";
+translations.ar.faq_a3 = "نصدر مجموعة متنوعة من التوابل الهندية الكاملة والمطحونة، بما في ذلك الكركم العالي الكركومين، والفلفل الأحمر، والكمون، والكزبرة الممتازة.";
+translations.ar.faq_q4 = "هل منتجاتكم الزراعية معتمدة؟";
+translations.ar.faq_a4 = "نعم، نلتزم بشدة باللوائح الدولية لسلامة الأغذية والصحة. نمتلك شهادات معتمدة تشمل ISO 22000:2018 و FSSAI و APEDA ومجلس التوابل.";
+translations.ar.faq_q5 = "ما هي شروط التسليم القياسية لديكم (Incoterms)؟";
+translations.ar.faq_a5 = "نتعامل حصرياً بشروط التسليم الدولية القياسية، وبشكل أساسي FOB (تسليم على متن السفينة) و CIF (التكلفة والتأمين والشحن).";
+translations.ar.faq_q6 = "كيف تضمنون النقل الآمن للمنتجات؟";
+translations.ar.faq_a6 = "نستخدم عبوات مطابقة لمعايير التصدير مثل الأكياس المفرغة من الهواء والأكياس متعددة الطبقات لحماية المنتجات من الرطوبة والتلف.";
+translations.ar.faq_q7 = "كم من الوقت يستغرق شحن الطلب؟";
+translations.ar.faq_a7 = "تعتمد الجداول الزمنية للشحن على بلد الوجهة وحجم الشحنة. نحدد الجدول الزمني الفعلي فور تأكيد الطلب وتوثيقه.";
+translations.ar.faq_q8 = "ما هو الحد الأدنى لكمية الطلب (MOQ)؟";
+translations.ar.faq_a8 = "يختلف الحد الأدنى لكمية الطلب حسب فئة المنتج. يرجى الاتصال بمكتب التوريد للحصول على عرض سعر مخصص.";
+translations.ar.faq_q9 = "ما هي طرق الدفع التي تقبلونها؟";
+translations.ar.faq_a9 = "نقبل طرق الدفع الدولية الآمنة بما في ذلك الاعتماد المستندي (L/C) والتحويل البرقي (T/T) والمستندات مقابل الدفع (D/P).";
+translations.ar.faq_q10 = "هل يمكنني الحصول على عينات من المنتجات قبل طلب كميات كبيرة؟";
+translations.ar.faq_a10 = "نعم، نقدم عينات مجانية لاختبار الجودة. قد تطبق رسوم الشحن السريع حسب الوجهة.";
+translations.ar.faq_q11 = "هل تقدمون خدمات التعبئة والتغليف المخصصة والملصقات الخاصة؟";
+translations.ar.faq_a11 = "نعم! نساعد العلامات التجارية العالمية من خلال تقديم خدمات التغليف الخاص والملصقات المخصصة والجاهزة للتجزئة.";
+translations.ar.faq_cta_title = "هل لديك المزيد من الأسئلة؟";
+translations.ar.faq_cta_desc = "مكتب التجارة لدينا مستعد لمساعدتك. أرسل لنا استفسارك وسنرد خلال 24 ساعة.";
+
+// FAQ Translations for French (fr)
+translations.fr.faq_pretitle = "Foire Aux Questions";
+translations.fr.faq_header_title = "Questions Fréquemment Posées";
+translations.fr.faq_header_subtitle = "Tout ce que vous devez savoir sur les commandes, l'expédition, les certifications et les paiements. Vous ne trouvez pas ce que vous cherchez ? Contactez-nous — nous répondons sous un jour ouvrable.";
+translations.fr.faq_q1 = "Pourquoi choisir Jalpex International ?";
+translations.fr.faq_a1 = "Nous privilégions des produits de qualité supérieure, un approvisionnement direct auprès des fermes, des livraisons rapides, des prix compétitifs et un service d'exportation professionnel.";
+translations.fr.faq_q2 = "Sous quelles formes vos produits déshydratés sont-ils disponibles ?";
+translations.fr.faq_a2 = "Nous fournissons nos fruits et légumes déshydratés sous forme de flocons, hachés, granulés et poudre pour répondre à divers besoins industriels et culinaires.";
+translations.fr.faq_q3 = "Quels types d'épices fournissez-vous ?";
+translations.fr.faq_a3 = "Nous exportons une variété d'épices indiennes entières et en poudre, notamment le curcuma riche en curcumine, le piment rouge, le cumin et la coriandre.";
+translations.fr.faq_q4 = "Vos produits agricoles sont-ils certifiés ?";
+translations.fr.faq_a4 = "Oui, nous respectons strictement les réglementations sanitaires internationales. Nous détenons les certifications ISO 22000:2018, FSSAI, APEDA et Spices Board.";
+translations.fr.faq_q5 = "Quelles sont vos conditions de livraison standard (Incoterms) ?";
+translations.fr.faq_a5 = "Nous travaillons principalement sous les Incoterms internationaux standard FOB (Free On Board) et CIF (Cost, Insurance, Freight).";
+translations.fr.faq_q6 = "Comment assurez-vous le transport sécurisé des produits ?";
+translations.fr.faq_a6 = "Nous utilisons des emballages de qualité d'exportation tels que des sachets sous vide étanches et des sacs multicouches pour protéger contre l'humidité et les dommages.";
+translations.fr.faq_q7 = "Combien de temps faut-il pour expédier une commande ?";
+translations.fr.faq_a7 = "Les délais dépendent du pays de destination et du volume du conteneur. Nous fournissons un délai estimé dès la confirmation de la commande.";
+translations.fr.faq_q8 = "Quelle est votre quantité minimale de commande (MOQ) ?";
+translations.fr.faq_a8 = "Le MOQ varie selon la catégorie de produit. Veuillez contacter notre bureau d'approvisionnement pour obtenir un devis personnalisé.";
+translations.fr.faq_q9 = "Quels modes de paiement acceptez-vous ?";
+translations.fr.faq_a9 = "Nous acceptons la lettre de crédit (L/C), le virement télégraphique (T/T) et les documents contre paiement (D/P).";
+translations.fr.faq_q10 = "Puis-je obtenir des échantillons de produits avant de passer une commande en gros ?";
+translations.fr.faq_a10 = "Oui, nous fournissons gratuitement des échantillons pour les tests de qualité. Des frais de livraison peuvent s'appliquer.";
+translations.fr.faq_q11 = "Proposez-vous un emballage personnalisé et un étiquetage privé ?";
+translations.fr.faq_a11 = "Oui ! Nous offrons des services complets de marque de distributeur (private label) avec emballages personnalisés prêts pour la vente au détail.";
+translations.fr.faq_cta_title = "Vous avez d'autres questions ?";
+translations.fr.faq_cta_desc = "Notre équipe est prête à vous aider. Envoyez-nous votre demande et nous vous répondrons sous 24 heures.";
+
+// FAQ Translations for Spanish (es)
+translations.es.faq_pretitle = "Preguntas Frecuentes";
+translations.es.faq_header_title = "Preguntas Frecuentes";
+translations.es.faq_header_subtitle = "Todo lo que necesita saber sobre pedidos, envíos, certificaciones y pagos. ¿No encuentra lo que busca? Contáctenos — normalmente respondemos en un plazo de un día hábil.";
+translations.es.faq_q1 = "¿Por qué elegir Jalpex International?";
+translations.es.faq_a1 = "Nos enfocamos en productos de calidad superior, abastecimiento directo del campo, entregas oportunas, precios competitivos y un servicio de exportación profesional adaptable a estándares globales.";
+translations.es.faq_q2 = "¿En qué formatos están disponibles sus productos deshidratados?";
+translations.es.faq_a2 = "Suministramos nuestras frutas y verduras deshidratadas en hojuelas, picadas, granuladas y en polvo para diversas aplicaciones industriales y culinarias.";
+translations.es.faq_q3 = "¿Qué tipo de especias suministran?";
+translations.es.faq_a3 = "Exportamos especias indias enteras y en polvo, incluyendo cúrcuma con alto contenido de curcumina, chile rojo, comino y cilantro.";
+translations.es.faq_q4 = "¿Sus productos agrícolas están certificados?";
+translations.es.faq_a4 = "Sí, cumplimos estrictamente con las regulaciones internacionales de seguridad alimentaria. Contamos con certificaciones ISO 22000:2018, FSSAI, APEDA y Spices Board.";
+translations.es.faq_q5 = "¿Cuáles son sus términos de entrega estándar (Incoterms)?";
+translations.es.faq_a5 = "Trabajamos principalmente bajo términos de entrega internacionales estándar como FOB (Free On Board) y CIF (Cost, Insurance, and Freight).";
+translations.es.faq_q6 = "¿Cómo garantizan el transporte seguro de los productos?";
+translations.es.faq_a6 = "Utilizamos empaques estándar de exportación, como bolsas al vacío herméticas y sacos multicapa, para protegerlos de la humedad y daños.";
+translations.es.faq_q7 = "¿Cuánto tiempo tarda en enviarse un pedido?";
+translations.es.faq_a7 = "El tiempo de envío depende del país de destino y el volumen del contenedor. Proporcionamos un tiempo estimado tras la confirmación.";
+translations.es.faq_q8 = "¿Cuál es su cantidad mínima de pedido (MOQ)?";
+translations.es.faq_a8 = "El MOQ varía según la categoría de producto. Póngase en contacto con nuestro equipo de ventas para recibir una cotización personalizada.";
+translations.es.faq_q9 = "¿Qué métodos de pago aceptan?";
+translations.es.faq_a9 = "Aceptamos Carta de Crédito (L/C), Transferencia Telegráfica (T/T) y Documentos contra Pago (D/P).";
+translations.es.faq_q10 = "¿Puedo obtener muestras de productos antes de realizar un pedido al por mayor?";
+translations.es.faq_a10 = "Sí, proporcionamos muestras de productos gratuitas para pruebas de calidad. Se pueden aplicar cargos de mensajería.";
+translations.es.faq_q11 = "¿Ofrecen empaque personalizado y marca propia (etiqueta privada)?";
+translations.es.faq_a11 = "¡Sí! Ofrecemos servicios completos de marca propia y empaque personalizado listo para la venta al por menor.";
+translations.es.faq_cta_title = "¿Tiene más preguntas?";
+translations.es.faq_cta_desc = "Nuestro equipo está listo para ayudarle. Envíenos su consulta de abastecimiento y le responderemos en un plazo de 24 horas.";
+
+// FAQ Translations for German (de)
+translations.de.faq_pretitle = "Häufig Gestellte Fragen";
+translations.de.faq_header_title = "Häufig Gestellte Fragen";
+translations.de.faq_header_subtitle = "Alles, was Sie über Bestellung, Versand, Zertifizierungen und Zahlungen wissen müssen. Haben Sie Fragen? Kontaktieren Sie uns — wir antworten in der Regel innerhalb eines Werktages.";
+translations.de.faq_q1 = "Warum Jalpex International wählen?";
+translations.de.faq_a1 = "Wir konzentrieren uns auf erstklassige Produktqualität, direkten Bezug von Farmen, pünktliche Lieferung, wettbewerbsfähige Preise und professionellen Exportservice.";
+translations.de.faq_q2 = "In welchen Formen sind Ihre getrockneten/dehydrierten Produkte erhältlich?";
+translations.de.faq_a2 = "Wir liefern getrocknetes Gemüse und Obst in Flocken, gehackt, granuliert und als Pulver für verschiedene industrielle und kulinarische Anwendungen.";
+translations.de.faq_q3 = "Welche Art von Gewürzen liefern Sie?";
+translations.de.faq_a3 = "Wir exportieren indische Gewürze im Ganzen und gemahlen, darunter Kurkuma mit hohem Curcumin-Gehalt, roten Chili, Kreuzkümmel und Koriander.";
+translations.de.faq_q4 = "Sind Ihre landwirtschaftlichen Produkte zertifiziert?";
+translations.de.faq_a4 = "Ja, wir halten uns strikt an internationale Lebensmittelsicherheitsbestimmungen. Wir verfügen über Zertifizierungen wie ISO 22000:2018, FSSAI, APEDA und Spices Board.";
+translations.de.faq_q5 = "Was sind Ihre Standard-Lieferbedingungen (Incoterms)?";
+translations.de.faq_a5 = "Wir arbeiten hauptsächlich nach den internationalen Standard-Lieferbedingungen FOB (Free On Board) und CIF (Cost, Insurance, Freight).";
+translations.de.faq_q6 = "Wie stellen Sie den sicheren Transport der Produkte sicher?";
+translations.de.faq_a6 = "Wir verwenden exportgerechte Verpackungen wie luftdichte Vakuumbeutel und mehrlagige Säcke zum Schutz vor Feuchtigkeit und Transportschäden.";
+translations.de.faq_q7 = "Wie lange dauert der Versand einer Bestellung?";
+translations.de.faq_a7 = "Die Lieferzeiten hängen vom Bestimmungsland und dem Containervolumen ab. Wir teilen Ihnen den Zeitplan nach Auftragsbestätigung mit.";
+translations.de.faq_q8 = "Mindestbestellmenge (MOQ)?";
+translations.de.faq_a8 = "Die Mindestbestellmenge variiert je nach Produktkategorie. Bitte kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.";
+translations.de.faq_q9 = "Welche Zahlungsmethoden akzeptieren Sie?";
+translations.de.faq_a9 = "Wir akzeptieren Akkreditiv (L/C), Banküberweisung (T/T) und Dokumente gegen Zahlung (D/P).";
+translations.de.faq_q10 = "Kann ich vor einer Großbestellung Produktmuster erhalten?";
+translations.de.faq_a10 = "Ja, wir stellen kostenlose Produktmuster für Qualitätsprüfungen zur Verfügung. Kurieregebühren können anfallen.";
+translations.de.faq_q11 = "Bieten Sie maßgeschneiderte Verpackungen und Eigenmarken (Private Label) an?";
+translations.de.faq_a11 = "Ja! Wir bieten umfassende Private-Label-Services mit verpackten Produkten für den Einzelhandel.";
+translations.de.faq_cta_title = "Haben Sie weitere Fragen?";
+translations.de.faq_cta_desc = "Unser Team steht Ihnen gerne zur Verfügung. Senden Sie uns Ihre Anfrage, wir antworten innerhalb von 24 Stunden.";
+
+// FAQ Translations for Portuguese (pt)
+translations.pt.faq_pretitle = "Perguntas Frequentes";
+translations.pt.faq_header_title = "Perguntas Frequentes";
+translations.pt.faq_header_subtitle = "Tudo o que você precisa saber sobre pedidos, envios, certificações e pagamentos. Não encontrou o que procura? Entre em contato conosco — geralmente respondemos em até um dia útil.";
+translations.pt.faq_q1 = "Por que escolher a Jalpex International?";
+translations.pt.faq_a1 = "Focamos em produtos de qualidade premium, fornecimento direto da fazenda, entregas no prazo, preços competitivos e serviços profissionais de exportação.";
+translations.pt.faq_q2 = "Em quais formatos seus produtos desidratados estão disponíveis?";
+translations.pt.faq_a2 = "Fornecemos vegetais e frutas desidratadas em flocos, picados, granulados e em pó para atender a diversas aplicações industriais e culinárias.";
+translations.pt.faq_q3 = "Que tipo de especiarias vocês fornecem?";
+translations.pt.faq_a3 = "Exportamos especiarias indianas inteiras e em pó, incluindo cúrcuma de alto teor de curcumina, pimenta vermelha, cominho e coentro.";
+translations.pt.faq_q4 = "Seus produtos agrícolas são certificados?";
+translations.pt.faq_a4 = "Sim, cumprimos rigorosamente as normas internacionais de segurança alimentar. Possuímos certificações ISO 22000:2018, FSSAI, APEDA e Spices Board.";
+translations.pt.faq_q5 = "Quais são seus termos de entrega padrão (Incoterms)?";
+translations.pt.faq_a5 = "Trabalhamos principalmente com os Incoterms padrão internacional FOB (Free On Board) e CIF (Cost, Insurance, and Freight).";
+translations.pt.faq_q6 = "Como vocês garantem o transporte seguro dos produtos?";
+translations.pt.faq_a6 = "Utilizamos embalagens de padrão de exportação, como sacos a vácuo herméticos e sacos multicamadas para proteção contra umidade.";
+translations.pt.faq_q7 = "Quanto tempo leva para enviar um pedido?";
+translations.pt.faq_a7 = "Os prazos de envio dependem do país de destino e do volume do contêiner. Fornecemos uma estimativa após a confirmação do pedido.";
+translations.pt.faq_q8 = "Qual é a sua Quantidade Mínima de Pedido (MOQ)?";
+translations.pt.faq_a8 = "O MOQ varia de acordo com a categoria do produto. Entre em contato conosco para receber uma cotação personalizada.";
+translations.pt.faq_q9 = "Quais métodos de pagamento vocês aceitam?";
+translations.pt.faq_a9 = "Aceitamos Carta de Crédito (L/C), Transferência Telegráfica (T/T) e Documentos contra Pagamento (D/P).";
+translations.pt.faq_q10 = "Posso obter amostras de produtos antes de fazer um pedido em grande quantidade?";
+translations.pt.faq_a10 = "Sim, fornecemos amostras grátis para testes de qualidade. Taxas de envio podem ser aplicadas.";
+translations.pt.faq_q11 = "Vocês oferecem embalagem personalizada e marca própria (Private Label)?";
+translations.pt.faq_a11 = "Sim! Oferecemos serviços completos de marca própria com embalagens personalizadas prontas para o varejo.";
+translations.pt.faq_cta_title = "Tem mais perguntas?";
+translations.pt.faq_cta_desc = "Nossa equipe está pronta para ajudar. Envie sua consulta e responderemos em até 24 horas.";
+
+// FAQ Translations for Chinese (zh)
+translations.zh.faq_pretitle = "常见问题";
+translations.zh.faq_header_title = "常见问题解答";
+translations.zh.faq_header_subtitle = "关于订单、运输、认证和付款的所有信息。找不到您要找的内容？请联系我们 — 我们通常会在一个工作日内回复。";
+translations.zh.faq_q1 = "为什么选择 Jalpex International？";
+translations.zh.faq_a1 = "我们专注于优质产品、农场直采、按时交货、具有竞争力的价格以及符合国际标准的专业出口服务。";
+translations.zh.faq_q2 = "您的脱水产品有哪些形式？";
+translations.zh.faq_a2 = "我们提供片状、切碎、颗粒和粉末等多种形式的脱水蔬菜和水果，以满足不同的工业和烹饪需求。";
+translations.zh.faq_q3 = "您供应哪些香料？";
+translations.zh.faq_a3 = "我们出口各种优质整料和粉状印度香料，包括高姜黄素姜黄、红辣椒、孜然和香菜籽。";
+translations.zh.faq_q4 = "您的农产品经过认证吗？";
+translations.zh.faq_a4 = "是的，我们严格遵守国际食品安全法规。我们拥有 ISO 22000:2018、FSSAI、APEDA 和 Spices Board 认证。";
+translations.zh.faq_q5 = "你们的标准交货条款 (Incoterms) 是什么？";
+translations.zh.faq_a5 = "我们主要采用 FOB（离岸价）和 CIF（成本、保险加运费）等标准国际交货条款。";
+translations.zh.faq_q6 = "您如何确保产品的运输安全？";
+translations.zh.faq_a6 = "我们使用出口标准包装，如密封真空袋和多层包装袋，以防止湿气和运输损坏。";
+translations.zh.faq_q7 = "发货需要多长时间？";
+translations.zh.faq_a7 = "运输时间取决于目的地国家和集装箱数量。确认订单后，我们将立即提供预计时间。";
+translations.zh.faq_q8 = "您的最小起订量 (MOQ) 是多少？";
+translations.zh.faq_a8 = "MOQ 因具体产品类别而异。请联系我们的采购部门以获取定制报价。";
+translations.zh.faq_q9 = "您接受哪些付款方式？";
+translations.zh.faq_a9 = "我们接受信用证 (L/C)、电汇 (T/T) 和付款交单 (D/P)。";
+translations.zh.faq_q10 = "批量订购前可以获得样品吗？";
+translations.zh.faq_a10 = "是的，我们免费提供产品样品用于质量检测。根据目的地不同，可能会收取快递费用。";
+translations.zh.faq_q11 = "您提供定制包装和自有品牌 (Private Label) 服务吗？";
+translations.zh.faq_a11 = "是的！我们提供完整的自有品牌代工服务，提供零售级定制包装。";
+translations.zh.faq_cta_title = "还有其他问题吗？";
+translations.zh.faq_cta_desc = "我们的交易团队随时准备为您服务。发送您的采购需求，我们将在 24 小时内回复。";
+
+// FAQ Translations for Russian (ru)
+translations.ru.faq_pretitle = "Часто Задаваемые Вопросы";
+translations.ru.faq_header_title = "Часто Задаваемые Вопросы";
+translations.ru.faq_header_subtitle = "Все, что вам нужно знать о заказах, доставке, сертификации и оплате. Не нашли то, что искали? Свяжитесь с нами — мы обычно отвечаем в течение одного рабочего дня.";
+translations.ru.faq_q1 = "Почему выбирают Jalpex International?";
+translations.ru.faq_a1 = "Мы ориентируемся на продукцию премиум-качества, прямые поставки с ферм, своевременную доставку, конкурентные цены и профессиональный экспортный сервис.";
+translations.ru.faq_q2 = "В каких формах доступны ваши сушеные (сублимированные) продукты?";
+translations.ru.faq_a2 = "Мы поставляем сушеные овощи и фрукты в виде хлопьев, нарезанных кусочков, гранул и порошка для различных целей.";
+translations.ru.faq_q3 = "Какие специи вы поставляете?";
+translations.ru.faq_a3 = "Мы экспортируем цельные и молотые индийские специи, включая куркуму с высоким содержанием куркумина, красный перец чили, кумин и кориандр.";
+translations.ru.faq_q4 = "Сертифицирована ли ваша сельхозпродукция?";
+translations.ru.faq_a4 = "Да, мы строго соблюдаем международные нормы пищевой безопасности. Наши операции сертифицированы ISO 22000:2018, FSSAI, APEDA и Spices Board.";
+translations.ru.faq_q5 = "Каковы ваши стандартные условия поставки (Инкотермс)?";
+translations.ru.faq_a5 = "Мы работаем по международным экспортным условиям FOB (Free On Board) и CIF (Cost, Insurance, Freight).";
+translations.ru.faq_q6 = "Как вы обеспечиваете безопасность продуктов при транспортировке?";
+translations.ru.faq_a6 = "Мы используем экспортную упаковку: вакуумные пакеты и многослойные мешки, защищающие от влаги и повреждений.";
+translations.ru.faq_q7 = "Сколько времени занимает доставка заказа?";
+translations.ru.faq_a7 = "Сроки доставки зависят от страны назначения и объема контейнера. Мы предоставляем расчет сразу после подтверждения заказа.";
+translations.ru.faq_q8 = "Каков ваш минимальный объем заказа (MOQ)?";
+translations.ru.faq_a8 = "MOQ зависит от категории товара. Свяжитесь с нашим отделом продаж для получения индивидуального предложения.";
+translations.ru.faq_q9 = "Какие способы оплаты вы принимаете?";
+translations.ru.faq_a9 = "Мы принимаем аккредитив (L/C), банковский перевод (T/T) и документы против платежа (D/P).";
+translations.ru.faq_q10 = "Могу ли я получить образцы перед крупным заказом?";
+translations.ru.faq_a10 = "Да, мы бесплатно предоставляем образцы для проверки качества. Может взиматься плата за курьерскую доставку.";
+translations.ru.faq_q11 = "Предлагаете ли вы упаковку под собственной торговой маркой (Private Label)?";
+translations.ru.faq_a11 = "Да! Мы предоставляем полный спектр услуг Private Label — от фасовки сырья до создания розничной упаковки.";
+translations.ru.faq_cta_title = "Остались вопросы?";
+translations.ru.faq_cta_desc = "Наша торговая команда готова помочь вам. Отправьте нам запрос, и мы ответим в течение 24 часов.";
+
 // ── PRODUCTS DATA ──
 const productsData = [
   // DEHYDRATED VEGETABLES & FRUITS
-  { id: "onion_flakes", category: "dehydrated", name: "Dehydrated Onion Flakes", desc: "Premium quality dehydrated onion flakes, dried to lock in natural flavor and color.", tags: ["onion", "flakes", "dehydrated"], image: "products/dehydrated-veg.png" },
+  { id: "onion_flakes", category: "dehydrated", name: "Dehydrated Red Onion Flakes", desc: "Premium quality dehydrated red onion flakes, dried to lock in natural flavor and rich burgundy color.", tags: ["onion", "flakes", "dehydrated", "red-onion"], image: "products/dehydrated-red-onion.png" },
   { id: "garlic_powder", category: "dehydrated", name: "Dehydrated Garlic Powder", desc: "Finely ground dehydrated garlic powder, rich in flavor, perfect for seasonings.", tags: ["garlic", "powder", "seasoning"], image: "products/garlic-powder.png" },
   { id: "ginger_powder", category: "dehydrated", name: "Dehydrated Ginger Powder", desc: "Premium grade dehydrated ginger powder, aromatic and spicy.", tags: ["ginger", "powder", "spicy"], image: "products/ginger-powder.png" },
 
@@ -1698,7 +1907,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguagePicker();
   initMobileMenu();
   initStorySlideshow();
-  
+
   // Set initial language from storage on page load
   const savedLang = localStorage.getItem("selectedLang") || "en";
   changeLanguage(savedLang);
@@ -1748,7 +1957,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a').forEach(anchor => {
     const href = anchor.getAttribute('href');
     if (!href || href === "#") return;
-    
+
     try {
       const url = new URL(anchor.href, window.location.href);
       const currentNormPath = window.location.pathname.replace(/\/index\.html$/, '/');
@@ -1759,7 +1968,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const target = document.querySelector(url.hash);
           if (target) {
             e.preventDefault();
-            
+
             // Close mobile menu if open
             const mobileMenu = document.getElementById("mobileMenu");
             const mobileToggle = document.getElementById("mobileToggle");
@@ -1767,13 +1976,13 @@ document.addEventListener("DOMContentLoaded", () => {
               mobileMenu.classList.remove("active");
               if (mobileToggle) mobileToggle.classList.remove("active");
             }
-            
+
             const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
             window.scrollTo({
               top: offsetTop,
               behavior: "smooth"
             });
-            
+
             // Update URL hash without page reload/jump
             history.pushState(null, null, url.hash);
           }
@@ -1860,7 +2069,7 @@ function initStorySlideshow() {
 function initNavbarScroll() {
   const navbar = document.getElementById("navbar");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 20) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
@@ -1993,7 +2202,7 @@ function changeLanguage(lang) {
       const translatedCat = (translations[lang] && translations[lang]["morph_cat_" + currentProduct.id]) || currentProduct.category;
       const translatedName = (translations[lang] && translations[lang]["morph_name_" + currentProduct.id]) || currentProduct.name;
       const translatedSpec = (translations[lang] && translations[lang]["morph_spec_" + currentProduct.id]) || currentProduct.spec;
-      
+
       const captionEl = document.querySelector(".morph-hero-copy .caption");
       const specEl = document.querySelector(".morph-hero-copy .spec");
       if (captionEl) captionEl.textContent = translatedCat;
