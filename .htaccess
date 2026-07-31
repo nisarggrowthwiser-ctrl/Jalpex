@@ -16,16 +16,16 @@
   RewriteRule ^ /news [R=301,L]
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+catalog\.html [NC]
-  RewriteRule ^ /catalog%{QUERY_STRING} [R=301,L]
+  RewriteRule ^ /catalog [R=301,L]
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+product\.html [NC]
-  RewriteRule ^ /product%{QUERY_STRING} [R=301,L]
+  RewriteRule ^ /product [R=301,L]
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+faq\.html [NC]
   RewriteRule ^ /faq [R=301,L]
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+legal\.html [NC]
-  RewriteRule ^ /legal%{QUERY_STRING} [R=301,L]
+  RewriteRule ^ /legal [R=301,L]
 
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
   RewriteRule ^ / [R=301,L]
