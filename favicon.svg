@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 170 205">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 240 240">
   <defs>
     <style>
       .gold { fill: #c29652; }
@@ -15,7 +15,10 @@
     </linearGradient>
   </defs>
 
-  <g id="JP_Official_Icon">
+  <!-- White background card with subtle rounded corners -->
+  <rect width="240" height="240" fill="#ffffff" rx="24"/>
+
+  <g id="JP_Official_Icon" transform="translate(40, 20)">
     <!-- Globe Arches -->
     <path class="gold" d="M70.1,11.22c-2.86,1.44-6.19.98-9.1.73-7.01-.6-14.57-1.12-19.65-5.85,1.28-2.43,2.45-4.57,4.94-6.1.52,1.99,1.53,3.08,3.14,3.87,11.19,5.45,18.7,1.69,20.96,4.47.44.54.81,2.33-.29,2.88Z"/>
     <path class="gold" d="M79.81,23.56c-12.87,2.81-30.59,2.42-42.2-3.86-.5-3.28.34-6.24,1.67-9.11,1.81,3.26,4.58,4.8,7.87,5.9,10.33,3.48,21.13,4.07,31.92,2.5,1.08-.16,1.5,1.19,1.65,1.81s.21,2.52-.91,2.76Z"/>
