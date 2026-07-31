@@ -20,7 +20,7 @@ const translations = {
     btn_quote: "Get in Touch",
     hero_badge: "ESTABLISHED SINCE 2021",
     hero_title: "Bridging Indian<br><em>Heritage</em> with Global<br>Markets.",
-    hero_desc: "Jalpex International is a trusted Indian export company delivering premium agricultural commodities, spices, dehydrated vegetables, fresh produce, and handicrafts to buyers across global markets. Guided by quality, integrity, and reliability, we build long-term partnerships through seamless export solutions and uncompromising service.",
+    hero_desc: "Jalpex International is a trusted Indian Export company delivering premium Agricultural Commodities, Spices, Dehydrated Vegetables, Fresh Produce, and Handicrafts to buyers across global markets. Guided by Quality, Integrity, and Reliability, we build long-term partnerships through seamless Export solutions and uncompromising service.",
     hero_explore: "Explore Portfolio",
     hero_legacy: "Our Values",
     stat_heritage: "Heritage Quality",
@@ -69,7 +69,7 @@ const translations = {
     process_5_title: "Global Distribution",
     process_5_desc: "Handled by trusted freight forwarders, ensuring on-time delivery to destination ports worldwide.",
     inquiry_label: "Get in Touch",
-    inquiry_title: "Start Your Import Inquiry",
+    inquiry_title: "Ready To Place Your Order?",
     inquiry_desc: "Share your requirements, packaging preferences, and destination port with us. Our trade desk will respond with competitive CNF/FOB quotes within 24 hours.",
     info_address_title: "Registered Office",
     info_address_val: "23, Dayakunj, Vrundavan Nagar, Near Madhuram Bypass, Junagadh, Gujarat, India, 362001",
@@ -86,7 +86,7 @@ const translations = {
     form_btn: "Send Inquiry",
     form_success: "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.",
     form_error: "Please fill out all required fields.",
-    footer_desc: "Jalpex International stands at the intersection of heritage and global trade, a premier export house bringing the best of Indian agriculture to import networks in 40+ countries around the world.",
+    footer_desc: "Jalpex International stands at the intersection of Heritage and Global Trade, a premier Export house bringing the best of Indian Agriculture to Import networks in 40+ countries around the world.",
     footer_quick_links: "Quick Navigation",
     footer_products: "Our Offerings",
     footer_contact: "Contact Sourcing Desk",
@@ -1972,10 +1972,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Close mobile menu if open
             const mobileMenu = document.getElementById("mobileMenu");
             const mobileToggle = document.getElementById("mobileToggle");
-            if (mobileMenu && mobileMenu.classList.contains("active")) {
-              mobileMenu.classList.remove("active");
-              if (mobileToggle) mobileToggle.classList.remove("active");
-            }
+            if (mobileMenu) mobileMenu.classList.remove("open", "active");
+            if (mobileToggle) mobileToggle.classList.remove("open", "active");
+            document.body.classList.remove("no-scroll");
+            document.documentElement.classList.remove("no-scroll");
 
             const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
             window.scrollTo({
@@ -2224,9 +2224,10 @@ function initMobileMenu() {
   if (!mobileToggle || !mobileMenu) return;
 
   mobileToggle.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
     mobileToggle.classList.toggle("open");
-    mobileMenu.classList.toggle("open");
-    document.body.classList.toggle("no-scroll");
+    document.body.classList.toggle("no-scroll", isOpen);
+    document.documentElement.classList.toggle("no-scroll", isOpen);
   });
 
   mobileLinks.forEach(link => {
@@ -2234,6 +2235,7 @@ function initMobileMenu() {
       mobileToggle.classList.remove("open");
       mobileMenu.classList.remove("open");
       document.body.classList.remove("no-scroll");
+      document.documentElement.classList.remove("no-scroll");
     });
   });
 }

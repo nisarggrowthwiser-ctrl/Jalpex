@@ -83,9 +83,10 @@ html {
   width: 100%;
 }
 
-section[id] {
-  scroll-margin-top: 90px;
-  /* Offset for fixed navbar + breathing room */
+section[id],
+header[id] {
+  scroll-margin-top: 82px;
+  /* Offset for fixed navbar */
 }
 
 body {
@@ -518,25 +519,32 @@ nav.scrolled .logo-img {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ── MOBILE MENU ── */
+/* ── MOBILE MENU (MINIMAL & ZERO-SCROLL) ── */
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+}
+
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(250, 246, 238, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  padding: 120px 40px 40px;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  padding: 76px 24px 20px;
   z-index: 999;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  justify-content: space-between;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--transition);
+  transform: translateY(-12px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.open {
@@ -549,52 +557,59 @@ nav.scrolled .logo-img {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
 }
 
 .mobile-menu a {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--text-dark);
   text-decoration: none;
-  transition: padding-left 0.3s, color 0.3s;
-  display: block;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  padding: 2px 0;
+  letter-spacing: 0.3px;
 }
 
-.mobile-menu a:hover {
-  padding-left: 10px;
+.mobile-menu a:hover,
+.mobile-menu a:active {
+  transform: translateX(6px);
   color: var(--accent-orange);
 }
 
 .mobile-lang-section {
-  border-top: 1px solid var(--border);
-  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 12px;
+  margin-top: 4px;
 }
 
 .mobile-lang-section p {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 700;
   color: var(--text-light);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .mobile-lang-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
 }
 
 .mob-lang-btn {
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: transparent;
-  color: var(--text-mid);
-  font-weight: 500;
-  font-size: 13px;
+  padding: 6px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 11px;
+  text-align: center;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -602,12 +617,19 @@ nav.scrolled .logo-img {
 .mob-lang-btn:hover,
 .mob-lang-btn.active {
   background: var(--accent-orange);
-  color: white;
+  color: #FFFFFF;
   border-color: var(--accent-orange);
+  box-shadow: 0 2px 8px rgba(194, 150, 82, 0.3);
 }
 
 .mobile-menu-cta {
   width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 8px;
 }
 
 /* ── HERO SECTION (HONESTEXPORTS STYLE COLLAGE) ── */
@@ -1167,7 +1189,9 @@ section {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   max-width: 520px;
 }
 
@@ -3346,12 +3370,50 @@ footer .logo-link:hover .logo-img {
   .nav-links,
   .header-cta,
   .lang-picker {
-    display: none;
+    display: none !important;
+  }
+
+  .nav-inner {
+    position: relative;
+    height: 70px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav.scrolled .nav-inner {
+    height: 60px;
+  }
+
+  .logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1000;
+  }
+
+  .logo-img {
+    height: 38px;
+    max-height: 38px;
+  }
+
+  nav.scrolled .logo-img {
+    height: 32px;
   }
 
   .mobile-toggle {
     display: flex;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
   }
+
+
 
   .hero .hero-inner {
     padding-top: 420px;
@@ -4900,6 +4962,9 @@ footer .logo-link:hover .logo-img {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 14px;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
   .about-slides-container img.slide {
@@ -5241,7 +5306,7 @@ footer .logo-link:hover .logo-img {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 65px 0 0 0;
+  padding: 110px 0 0 0;
 }
 
 .hero-dark::after {
@@ -5481,6 +5546,7 @@ footer .logo-link:hover .logo-img {
   -webkit-text-fill-color: transparent;
   animation: gold-shimmer 4s linear infinite;
   display: inline-block;
+  filter: drop-shadow(0 0 10px rgba(194, 150, 82, 0.7));
 }
 
 /* Avoid italic rendering breaking letters in non-Latin scripts (Hindi, Arabic, Chinese) */
@@ -5564,13 +5630,16 @@ html[lang="zh"] i {
 
 /* Description */
 .hero-dark-desc {
-  font-size: 21.5px;
+  font-size: 23px;
   line-height: 1.62;
   color: var(--text-primary);
   font-weight: 450;
-  max-width: 500px;
+  max-width: 540px;
   margin: 6px 0 12px 0;
   text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-break: break-word;
 }
 
 /* Buttons */
@@ -5579,7 +5648,7 @@ html[lang="zh"] i {
   gap: 16px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 28px;
+  margin-top: -8px;
 }
 
 /* Primary — gold brand button */
@@ -6113,7 +6182,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-desc {
-    font-size: 15.5px;
+    font-size: 19px;
   }
 
   .hero-dark-ticker {
@@ -6155,7 +6224,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-desc {
-    font-size: 16.5px;
+    font-size: 20px;
   }
 
 
@@ -6174,7 +6243,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-desc {
-    font-size: 15px;
+    font-size: 18px;
   }
 
 
