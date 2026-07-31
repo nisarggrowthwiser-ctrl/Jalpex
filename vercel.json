@@ -2,5 +2,6 @@
   "version": 2,
   "buildCommand": "echo 'No build step required'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No install required'"
+  "installCommand": "echo 'No install required'",
+  "cleanUrls": true
 }
