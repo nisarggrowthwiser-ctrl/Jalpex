@@ -1149,24 +1149,24 @@
         </div>
 
         <div class="inquiry-form-card">
-          <form id="inquiryForm">
+          <form id="inquiryForm" action="https://formspree.io/f/mnjeyojb" method="POST">
             <div class="form-group">
               <label for="formName" data-trans="form_name">Your Full Name / Company Name</label>
-              <input type="text" id="formName" class="form-control" placeholder="John Doe / Global Foods Inc." required>
+              <input type="text" id="formName" name="name" class="form-control" placeholder="John Doe / Global Foods Inc." required>
             </div>
             <div class="form-group-row">
               <div class="form-group">
                 <label for="formEmail" data-trans="form_email">Corporate Email Address</label>
-                <input type="email" id="formEmail" class="form-control" placeholder="john@company.com" required>
+                <input type="email" id="formEmail" name="email" class="form-control" placeholder="john@company.com" required>
               </div>
               <div class="form-group">
                 <label for="formPhone" data-trans="form_phone">Phone Number (with Country Code)</label>
-                <input type="tel" id="formPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                <input type="tel" id="formPhone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
               </div>
             </div>
             <div class="form-group">
               <label for="formProduct" data-trans="form_product">Select Main Product Category</label>
-              <select id="formProduct" class="form-control">
+              <select id="formProduct" name="category" class="form-control">
                 <option value="" disabled selected data-trans="select_default">Select Category</option>
                 <option value="dehydrated">Dehydrated Vegetables & Fruits</option>
                 <option value="agriculture">Agriculture Products</option>
@@ -1182,7 +1182,7 @@
             <div class="form-group">
               <label for="formMessage" data-trans="form_message">Detail your requirement (Quantity, Destination Port,
                 Packaging preference)</label>
-              <textarea id="formMessage" class="form-control"
+              <textarea id="formMessage" name="message" class="form-control"
                 placeholder="I am looking to import 15 Metric Tons of Turmeric Finger (Grade A) to Port of Rotterdam. Please quote FOB and CNF prices."
                 required></textarea>
             </div>

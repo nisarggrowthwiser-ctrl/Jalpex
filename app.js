@@ -2988,11 +2988,10 @@ function initProductTabs() {
   });
 }
 
-// ── FORM INTERACTION ──
+// ── FORM INTERACTION (FORMSPREE AJAX) ──
 function initInquiryForm() {
   const form = document.getElementById("inquiryForm");
   const status = document.getElementById("formStatus");
-  const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
@@ -3003,6 +3002,7 @@ function initInquiryForm() {
     const phone = document.getElementById("formPhone").value.trim();
     const category = document.getElementById("formProduct").value;
     const message = document.getElementById("formMessage").value.trim();
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     if (!name || !email || !phone || !category || !message) {
       status.className = "form-status error";
@@ -3017,65 +3017,51 @@ function initInquiryForm() {
       return;
     }
 
-    const originalBtnText = submitBtn ? submitBtn.textContent : "Send Inquiry";
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending Inquiry...";
-    }
+    // Show sending feedback & disable submit button during request
     status.className = "form-status info";
-    status.textContent = "Sending inquiry to info@jalpexinternational.com...";
-
-    const payload = { name, email, phone, category, message };
+    status.textContent = "Sending your inquiry...";
+    if (submitBtn) submitBtn.disabled = true;
 
     try {
-      // 1. Try PHP backend endpoint (Hostinger/cPanel)
-      const res = await fetch("send_inquiry.php", {
+      const formData = new FormData(form);
+      const endpoint = form.action || "https://formspree.io/f/mnjeyojb";
+
+      const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
-      const result = await res.json().catch(() => null);
-
-      if (res.ok && result && result.success) {
+      if (response.ok) {
         status.className = "form-status success";
-        status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your inquiry has been sent directly to info@jalpexinternational.com.";
+        status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.";
+        
         form.reset();
         const selectEl = document.getElementById("formProduct");
         if (selectEl) selectEl.selectedIndex = 0;
-        return;
+      } else {
+        const data = await response.json();
+        status.className = "form-status error";
+        if (data && data.errors && data.errors.length) {
+          status.textContent = data.errors.map(err => err.message).join(", ");
+        } else {
+          status.textContent = "Submission failed. Please try again or email us directly at info@jalpexinternational.com.";
+        }
       }
     } catch (err) {
-      console.warn("PHP mail endpoint unreachable, activating fallback dispatch.", err);
+      status.className = "form-status error";
+      status.textContent = "Network error. Please check your internet connection and try again.";
     } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalBtnText;
-      }
+      if (submitBtn) submitBtn.disabled = false;
+      setTimeout(() => {
+        if (status.className.includes("success")) {
+          status.textContent = "";
+          status.className = "form-status";
+        }
+      }, 8000);
     }
-
-    // 2. Fallback: Mailto trigger
-    const subject = encodeURIComponent(`Import Inquiry (${category}) from ${name}`);
-    const body = encodeURIComponent(`Hello Jalpex International,\n\nI would like to submit an import inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nDetails:\n${message}\n\nRegards,\n${name}`);
-    const mailtoUrl = `mailto:info@jalpexinternational.com?subject=${subject}&body=${body}`;
-
-    const mailLink = document.createElement("a");
-    mailLink.href = mailtoUrl;
-    mailLink.style.display = "none";
-    document.body.appendChild(mailLink);
-    mailLink.click();
-    setTimeout(() => document.body.removeChild(mailLink), 500);
-
-    status.className = "form-status success";
-    status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your inquiry has been logged.";
-    form.reset();
-    const selectEl = document.getElementById("formProduct");
-    if (selectEl) selectEl.selectedIndex = 0;
-
-    setTimeout(() => {
-      status.textContent = "";
-      status.className = "form-status";
-    }, 8000);
   });
 }
 
