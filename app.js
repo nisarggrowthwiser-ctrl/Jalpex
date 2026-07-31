@@ -2992,9 +2992,10 @@ function initProductTabs() {
 function initInquiryForm() {
   const form = document.getElementById("inquiryForm");
   const status = document.getElementById("formStatus");
+  const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = document.getElementById("formName").value.trim();
@@ -3005,25 +3006,59 @@ function initInquiryForm() {
 
     if (!name || !email || !phone || !category || !message) {
       status.className = "form-status error";
-      status.textContent = translations[currentLang].form_error;
+      status.textContent = (translations[currentLang] && translations[currentLang].form_error) || "Please fill out all required fields.";
       return;
     }
 
     // Validate phone number starts with '+'
     if (!phone.startsWith("+")) {
       status.className = "form-status error";
-      status.textContent = translations[currentLang].form_phone_error || "Please include '+' and your country code (e.g. +91 98799 15124).";
+      status.textContent = (translations[currentLang] && translations[currentLang].form_phone_error) || "Please include '+' and your country code (e.g. +91 98799 15124).";
       return;
     }
 
-    // Construct mailto URL to launch client mail app
+    const originalBtnText = submitBtn ? submitBtn.textContent : "Send Inquiry";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending Inquiry...";
+    }
+    status.className = "form-status info";
+    status.textContent = "Sending inquiry to info@jalpexinternational.com...";
+
+    const payload = { name, email, phone, category, message };
+
+    try {
+      // 1. Try PHP backend endpoint (Hostinger/cPanel)
+      const res = await fetch("send_inquiry.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await res.json().catch(() => null);
+
+      if (res.ok && result && result.success) {
+        status.className = "form-status success";
+        status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your inquiry has been sent directly to info@jalpexinternational.com.";
+        form.reset();
+        const selectEl = document.getElementById("formProduct");
+        if (selectEl) selectEl.selectedIndex = 0;
+        return;
+      }
+    } catch (err) {
+      console.warn("PHP mail endpoint unreachable, activating fallback dispatch.", err);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
+
+    // 2. Fallback: Mailto trigger
     const subject = encodeURIComponent(`Import Inquiry (${category}) from ${name}`);
     const body = encodeURIComponent(`Hello Jalpex International,\n\nI would like to submit an import inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nDetails:\n${message}\n\nRegards,\n${name}`);
     const mailtoUrl = `mailto:info@jalpexinternational.com?subject=${subject}&body=${body}`;
 
-    // Trigger mail client via hidden anchor — avoids navigating away from the page
-    // which would wipe the success message and could silently swallow the mailto in
-    // some browsers when window.location.href is used.
     const mailLink = document.createElement("a");
     mailLink.href = mailtoUrl;
     mailLink.style.display = "none";
@@ -3032,16 +3067,10 @@ function initInquiryForm() {
     setTimeout(() => document.body.removeChild(mailLink), 500);
 
     status.className = "form-status success";
-    status.textContent = translations[currentLang].form_success;
-
-    // Reset form
+    status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your inquiry has been logged.";
     form.reset();
-
-    // Reset select to index 0 (Select Category)
     const selectEl = document.getElementById("formProduct");
-    if (selectEl) {
-      selectEl.selectedIndex = 0;
-    }
+    if (selectEl) selectEl.selectedIndex = 0;
 
     setTimeout(() => {
       status.textContent = "";
