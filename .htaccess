@@ -1,4 +1,4 @@
-# ── HOSTINGER DEPLOYMENT APACHE CONFIGURATION (.htaccess) ──
+# ── JALPEX INTERNATIONAL APACHE CONFIGURATION (.htaccess) ──
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -6,6 +6,37 @@
   # Force HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ── 301 REDIRECTS: Old .html URLs → Clean extensionless URLs ──
+  # Preserves SEO and avoids duplicate content
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+gallery\.html [NC]
+  RewriteRule ^ /gallery [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+news\.html [NC]
+  RewriteRule ^ /news [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+catalog\.html [NC]
+  RewriteRule ^ /catalog%{QUERY_STRING} [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+product\.html [NC]
+  RewriteRule ^ /product%{QUERY_STRING} [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+faq\.html [NC]
+  RewriteRule ^ /faq [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+legal\.html [NC]
+  RewriteRule ^ /legal%{QUERY_STRING} [R=301,L]
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
+  RewriteRule ^ / [R=301,L]
+
+  # ── CLEAN URL REWRITES: Serve .html files internally ──
+  # Requests for /gallery → serve gallery.html
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
 </IfModule>
 
 # MIME Types
