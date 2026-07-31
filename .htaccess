@@ -30,6 +30,12 @@
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
   RewriteRule ^ / [R=301,L]
 
+  # ── SECTION CLEAN URLS: Serve index.html internally for sections ──
+  RewriteRule ^products$ index.html [NC,L]
+  RewriteRule ^why-us$ index.html [NC,L]
+  RewriteRule ^inquiry$ index.html [NC,L]
+  RewriteRule ^home$ index.html [NC,L]
+
   # ── CLEAN URL REWRITES: Serve .html files internally ──
   # Requests for /gallery → serve gallery.html
   RewriteCond %{REQUEST_FILENAME} !-d

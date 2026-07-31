@@ -1927,70 +1927,124 @@ document.addEventListener("DOMContentLoaded", () => {
   try { initScrollFx(); } catch (e) { }
   try { initMorphSlider(); } catch (e) { }
 
-  // Handle hash scrolling on page load
-  // Handles: gallery/faq/product.html → index.html#inquiry
-  //          gallery/faq/product.html → index.html#why-choose-us
-  // Multiple retries needed: hero animations and lazy content shift element positions
-  // after the initial paint, so a single attempt misses the final scroll target.
-  if (window.location.hash) {
-    const hash = window.location.hash;
-    const scrollToHash = (smooth = false) => {
-      try {
-        const target = document.querySelector(hash);
-        if (target) {
-          const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top: offsetTop, behavior: smooth ? "smooth" : "instant" });
-        }
-      } catch (err) {
-        console.warn("Hash scroll failed:", err);
+  // Map clean paths to section selectors
+  const cleanPathMap = {
+    '/home': '#home',
+    '/products': '#products',
+    '/why-us': '#why-choose-us',
+    '/inquiry': '#inquiry'
+  };
+
+  const isServer = window.location.protocol.startsWith('http');
+  const pathname = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+
+  // 1. Rewrite internal URLs to clean paths dynamically when on HTTP/HTTPS
+  if (isServer) {
+    document.querySelectorAll('a').forEach(anchor => {
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      if (href.endsWith('#products') || href.endsWith('index.html#products')) {
+        anchor.setAttribute('href', '/products');
+      } else if (href.endsWith('#why-choose-us') || href.endsWith('index.html#why-choose-us')) {
+        anchor.setAttribute('href', '/why-us');
+      } else if (href.endsWith('#inquiry') || href.endsWith('index.html#inquiry')) {
+        anchor.setAttribute('href', '/inquiry');
+      } else if (href.endsWith('#home') || href.endsWith('index.html#home')) {
+        anchor.setAttribute('href', '/');
       }
-    };
-    // Early retries snap instantly to avoid repeated smooth-scroll jank;
-    // final retry at 1500ms uses smooth after all animations have settled.
-    scrollToHash();
-    setTimeout(() => scrollToHash(), 100);
-    setTimeout(() => scrollToHash(), 500);
-    setTimeout(() => scrollToHash(true), 1500);
+    });
   }
 
-  // Same-page smooth scroll intercepts for links pointing to hashes (accounts for sticky header height)
-  document.querySelectorAll('a').forEach(anchor => {
-    const href = anchor.getAttribute('href');
-    if (!href || href === "#") return;
-
+  // Helper function to scroll to a selector
+  const scrollToSelector = (selector, smooth = false) => {
     try {
-      const url = new URL(anchor.href, window.location.href);
-      const currentNormPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
-      const targetNormPath = url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
-
-      if (currentNormPath === targetNormPath && url.hash) {
-        anchor.addEventListener('click', function (e) {
-          const target = document.querySelector(url.hash);
-          if (target) {
-            e.preventDefault();
-
-            // Close mobile menu if open
-            const mobileMenu = document.getElementById("mobileMenu");
-            const mobileToggle = document.getElementById("mobileToggle");
-            if (mobileMenu) mobileMenu.classList.remove("open", "active");
-            if (mobileToggle) mobileToggle.classList.remove("open", "active");
-            document.body.classList.remove("no-scroll");
-            document.documentElement.classList.remove("no-scroll");
-
-            const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth"
-            });
-
-            // Update URL hash without page reload/jump
-            history.pushState(null, null, url.hash);
-          }
-        });
+      const target = document.querySelector(selector);
+      if (target) {
+        const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offsetTop, behavior: smooth ? "smooth" : "instant" });
       }
     } catch (err) {
-      // Ignore invalid URLs
+      console.warn("Scroll failed:", err);
     }
+  };
+
+  // 2. Handle scroll on page load (either via window.location.hash or clean pathname)
+  let targetSelector = null;
+  if (window.location.hash) {
+    targetSelector = window.location.hash;
+  } else if (isServer && cleanPathMap[pathname]) {
+    targetSelector = cleanPathMap[pathname];
+  }
+
+  if (targetSelector) {
+    scrollToSelector(targetSelector);
+    setTimeout(() => scrollToSelector(targetSelector), 100);
+    setTimeout(() => scrollToSelector(targetSelector), 500);
+    setTimeout(() => scrollToSelector(targetSelector, true), 1500);
+  }
+
+  // 3. Same-page smooth scroll and pushState intercepts
+  document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = anchor.getAttribute('href');
+      if (!href || href === "#") return;
+
+      try {
+        const url = new URL(anchor.href, window.location.href);
+        const currentPathname = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+        const targetPathname = url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+
+        // Check if target is a home page section clean URL or hash
+        const homeSections = ['/', '/products', '/why-us', '/inquiry', '/home'];
+        const isTargetHomeSection = homeSections.includes(targetPathname) || url.hash;
+
+        // We are on the home page if our pathname matches one of the home sections
+        const isCurrentOnHome = homeSections.includes(currentPathname);
+
+        if (isCurrentOnHome && isTargetHomeSection) {
+          // Determine the target selector
+          let selector = null;
+          let pushPath = targetPathname;
+
+          if (url.hash) {
+            selector = url.hash;
+            pushPath = currentPathname + url.hash;
+          } else {
+            selector = cleanPathMap[targetPathname];
+            if (targetPathname === '/') {
+              selector = '#home';
+            }
+          }
+
+          if (selector) {
+            const targetEl = document.querySelector(selector);
+            if (targetEl) {
+              e.preventDefault();
+
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById("mobileMenu");
+              const mobileToggle = document.getElementById("mobileToggle");
+              if (mobileMenu) mobileMenu.classList.remove("open", "active");
+              if (mobileToggle) mobileToggle.classList.remove("open", "active");
+              document.body.classList.remove("no-scroll");
+              document.documentElement.classList.remove("no-scroll");
+
+              const offsetTop = targetEl.getBoundingClientRect().top + window.scrollY - 80;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth"
+              });
+
+              // Update URL path without page reload
+              history.pushState(null, null, pushPath);
+            }
+          }
+        }
+      } catch (err) {
+        // Ignore invalid URLs
+      }
+    });
   });
 });
 
