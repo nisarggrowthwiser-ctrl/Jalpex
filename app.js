@@ -84,7 +84,7 @@ const translations = {
     form_prod_opt3: "Pulses and Grains",
     form_message: "Detail your requirement (Quantity, Destination Port, Packaging preference)",
     form_btn: "Send Inquiry",
-    form_success: "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.",
+    form_success: "Thank You! Our Trade Desk will contact you shortly.",
     form_error: "Please fill out all required fields.",
     footer_desc: "Jalpex International stands at the intersection of Heritage and Global Trade, a premier Export house bringing the best of Indian Agriculture to Import networks in 40+ countries around the world.",
     footer_quick_links: "Quick Navigation",
@@ -3090,7 +3090,7 @@ function initInquiryForm() {
 
       if (response.ok) {
         status.className = "form-status success";
-        status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank you! Your export inquiry has been logged. Our trade desk will contact you shortly.";
+        status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank You! Our Trade Desk will contact you shortly.";
         
         form.reset();
         const selectEl = document.getElementById("formProduct");
