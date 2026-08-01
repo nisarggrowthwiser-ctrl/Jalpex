@@ -333,7 +333,7 @@
     }
 
     .ref-card-highlights li::before {
-      content: "âœ“";
+      content: "\2713";
       position: absolute;
       left: 0;
       color: #4a8c3f;
@@ -1908,7 +1908,7 @@
 
         const highlightsHTML = (cat.highlights || []).map(h => `<li>${h}</li>`).join('');
         hero.innerHTML = `
-          <div class="cat-back-bar"><a href="/#products" class="cat-back-link">â† ${transBack}</a></div>
+          <div class="cat-back-bar"><a href="/#products" class="cat-back-link">← ${transBack}</a></div>
           <div class="cat-hero-grid">
             <div class="cat-hero-img"><img src="${cat.image}" alt="${transCatName}"></div>
             <div class="cat-hero-content">
