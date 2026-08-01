@@ -22,7 +22,7 @@
 
   # ── SECTION CLEAN URLS: Serve index.html / gallery.html internally ──
   RewriteRule ^gallery$ gallery.html [NC,L]
-  RewriteRule ^products$ index.html [NC,L]
+  RewriteRule ^products/?$ catalog.html [NC,L]
   RewriteRule ^why-us$ index.html [NC,L]
   RewriteRule ^inquiry$ index.html [NC,L]
   RewriteRule ^home$ index.html [NC,L]
