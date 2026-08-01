@@ -7,37 +7,27 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # ── 301 REDIRECTS: Old .html URLs → Clean extensionless URLs ──
-  # Preserves SEO and avoids duplicate content
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+gallery\.html [NC]
-  RewriteRule ^ /gallery [R=301,L]
-
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+news\.html [NC]
-  RewriteRule ^ /news [R=301,L]
-
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+catalog\.html [NC]
-  RewriteRule ^ /catalog [R=301,L]
-
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+product\.html [NC]
-  RewriteRule ^ /product [R=301,L]
-
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+faq\.html [NC]
-  RewriteRule ^ /faq [R=301,L]
-
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+legal\.html [NC]
-  RewriteRule ^ /legal [R=301,L]
-
+  # ── 301 REDIRECTS: Force clean extensionless URLs (Strip .html) ──
+  # 1. Redirect index.html -> /
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
   RewriteRule ^ / [R=301,L]
 
-  # ── SECTION CLEAN URLS: Serve index.html internally for sections ──
+  # 2. Redirect /gallery/ -> /gallery (remove trailing slash)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+gallery/\s [NC]
+  RewriteRule ^ /gallery [R=301,L]
+
+  # 3. Redirect any *.html -> clean URL (e.g. /news.html -> /news, /faq.html -> /faq)
+  RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # ── SECTION CLEAN URLS: Serve index.html / gallery.html internally ──
+  RewriteRule ^gallery$ gallery.html [NC,L]
   RewriteRule ^products$ index.html [NC,L]
   RewriteRule ^why-us$ index.html [NC,L]
   RewriteRule ^inquiry$ index.html [NC,L]
   RewriteRule ^home$ index.html [NC,L]
 
   # ── CLEAN URL REWRITES: Serve .html files internally ──
-  # Requests for /gallery → serve gallery.html
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME}.html -f

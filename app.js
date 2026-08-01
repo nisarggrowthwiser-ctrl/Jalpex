@@ -2686,7 +2686,7 @@ function morphSlideTo(targetIndex) {
       document.querySelector(".morph-hero-copy .caption").textContent = targetProduct.category;
       document.querySelector(".morph-hero-copy .title").textContent = targetProduct.name;
       document.querySelector(".morph-hero-copy .spec").textContent = targetProduct.spec;
-      document.querySelector(".morph-hero-copy .cta").setAttribute("href", `product.html?id=${targetProduct.id}`);
+      document.querySelector(".morph-hero-copy .cta").setAttribute("href", `product?id=${targetProduct.id}`);
       document.querySelector(".morph-hero-copy .cta").removeAttribute("onclick");
 
       // Update indices
@@ -2985,7 +2985,7 @@ function renderProducts() {
     card.className = "product-card";
     card.style.cursor = "pointer";
     card.addEventListener("click", () => {
-      window.location.href = `product.html?id=${prod.id}`;
+      window.location.href = `product?id=${prod.id}`;
     });
     card.innerHTML = `
       <div class="product-card-image-wrap">
@@ -3006,7 +3006,7 @@ function renderProducts() {
   seeAllCard.className = "product-card see-all-card";
   seeAllCard.style.cursor = "pointer";
   seeAllCard.addEventListener("click", () => {
-    window.location.href = `catalog.html?cat=${activeCategory}`;
+    window.location.href = `catalog?cat=${activeCategory}`;
   });
 
   const seeAllTitle = (translations[currentLang] && translations[currentLang].btn_view_all) || "See all products";
