@@ -3127,7 +3127,17 @@ function inquireProduct(productName) {
 
   const product = productsData.find(p => p.name === productName);
   if (product && categorySelect) {
-    categorySelect.value = product.category;
+    let matchedOpt = Array.from(categorySelect.options).find(opt => 
+      opt.value === product.category || 
+      opt.value.toLowerCase() === product.category.toLowerCase() ||
+      opt.value.toLowerCase().includes(product.category.toLowerCase()) ||
+      opt.text.toLowerCase().includes(product.category.toLowerCase())
+    );
+    if (matchedOpt) {
+      categorySelect.value = matchedOpt.value;
+    } else {
+      categorySelect.value = product.category;
+    }
   }
 
   if (messageArea) {
