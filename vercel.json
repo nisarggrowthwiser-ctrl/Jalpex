@@ -5,7 +5,7 @@
   "installCommand": "echo 'No install required'",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/products", "destination": "/index.html" },
+    { "source": "/products", "destination": "/catalog/index.html" },
     { "source": "/why-us", "destination": "/index.html" },
     { "source": "/inquiry", "destination": "/index.html" },
     { "source": "/home", "destination": "/index.html" }

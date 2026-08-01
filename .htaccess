@@ -20,12 +20,17 @@
   RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
   RewriteRule ^ /%1 [R=301,L]
 
-  # ── SECTION CLEAN URLS: Serve index.html / gallery.html internally ──
-  RewriteRule ^gallery$ gallery.html [NC,L]
-  RewriteRule ^products/?$ catalog.html [NC,L]
-  RewriteRule ^why-us$ index.html [NC,L]
-  RewriteRule ^inquiry$ index.html [NC,L]
-  RewriteRule ^home$ index.html [NC,L]
+  # ── SECTION CLEAN URLS: Serve clean extensionless routes internally ──
+  RewriteRule ^gallery/?$ gallery/index.html [NC,L]
+  RewriteRule ^catalog/?$ catalog/index.html [NC,L]
+  RewriteRule ^products/?$ catalog/index.html [NC,L]
+  RewriteRule ^news/?$ news/index.html [NC,L]
+  RewriteRule ^faq/?$ faq/index.html [NC,L]
+  RewriteRule ^legal/?$ legal/index.html [NC,L]
+  RewriteRule ^product/?$ product/index.html [NC,L]
+  RewriteRule ^why-us/?$ why-us/index.html [NC,L]
+  RewriteRule ^inquiry/?$ inquiry/index.html [NC,L]
+  RewriteRule ^home/?$ index.html [NC,L]
 
   # ── CLEAN URL REWRITES: Serve .html files internally ──
   RewriteCond %{REQUEST_FILENAME} !-d
