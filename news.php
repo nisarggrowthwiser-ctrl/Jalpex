@@ -15,7 +15,7 @@
 
 const CACHE_SECONDS = 10800;       // 3 hours
 const MAX_ITEMS     = 25;
-define('CACHE_FILE', __DIR__ . '/news-cache.json');
+define('CACHE_FILE', __DIR__ . '/news-cache-v2.json');
 
 const GNEWS_URLS = [
     "https://news.google.com/rss/search?q=India+%22Ministry+of+Commerce%22+OR+DGFT+OR+CBIC+OR+%22export+policy%22+OR+%22customs+duty%22+OR+%22import+tariff%22+OR+%22trade+notice%22&hl=en-IN&gl=IN&ceid=IN:en",
@@ -237,11 +237,19 @@ function news_respond(array $ministryPatterns): void
 {
     header('Content-Type: application/json; charset=utf-8');
     header('Access-Control-Allow-Origin: *');
-    header('Cache-Control: public, max-age=900');
+    header('Cache-Control: no-cache, no-store, must-revalidate');
 
-    if (is_readable(CACHE_FILE) && (time() - filemtime(CACHE_FILE)) < CACHE_SECONDS) {
-        readfile(CACHE_FILE);
-        return;
+    // Automatically remove old v1 cache file if present
+    $oldCache = __DIR__ . '/news-cache.json';
+    if (file_exists($oldCache)) { @unlink($oldCache); }
+
+    if (!isset($_GET['purge']) && !isset($_GET['nocache']) && is_readable(CACHE_FILE) && (time() - filemtime(CACHE_FILE)) < CACHE_SECONDS) {
+        $content = @file_get_contents(CACHE_FILE);
+        if ($content && !str_contains($content, 'Â') && !str_contains($content, 'â')) {
+            echo $content;
+            return;
+        }
+        @unlink(CACHE_FILE);
     }
 
     $out = news_build($ministryPatterns);
