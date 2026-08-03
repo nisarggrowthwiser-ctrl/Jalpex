@@ -3387,7 +3387,7 @@ footer .logo-link:hover .logo-img {
     height: 60px;
   }
 
-  .logo-link {
+  nav .logo-link {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -3396,7 +3396,7 @@ footer .logo-link:hover .logo-img {
     z-index: 1000;
   }
 
-  .logo-img {
+  nav .logo-img {
     height: 38px;
     max-height: 38px;
   }
@@ -3534,6 +3534,27 @@ footer .logo-link:hover .logo-img {
 
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-grid .footer-col:first-child {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  footer .logo-link {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 0 16px 0 !important;
+    display: inline-block !important;
+  }
+
+  footer .logo-img {
+    height: 56px !important;
+    max-height: 56px !important;
+    padding: 8px 16px !important;
   }
 
   /* Morph Slider Mobile Optimizations */
