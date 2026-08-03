@@ -1858,6 +1858,7 @@ section {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+  text-align: justify;
   transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, margin-top 0.5s ease;
 }
 
@@ -4959,7 +4960,7 @@ footer .logo-link:hover .logo-img {
   }
 
   .about-intro-text p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
     margin-bottom: 14px;
     text-align: justify;
@@ -5527,7 +5528,7 @@ footer .logo-link:hover .logo-img {
 /* Heading */
 .hero-dark-heading {
   font-family: var(--font-heading);
-  font-size: clamp(50px, 6vw, 78px);
+  font-size: clamp(52px, 6vw, 80px);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.08;
@@ -6151,7 +6152,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-heading {
-    font-size: clamp(34px, 9vw, 52px);
+    font-size: clamp(36px, 9vw, 54px);
   }
 
   .hero-dark-ticker {
@@ -6178,7 +6179,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-heading {
-    font-size: clamp(28px, 8vw, 40px);
+    font-size: clamp(30px, 8vw, 42px);
   }
 
   .hero-dark-desc {
@@ -6220,7 +6221,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-heading {
-    font-size: clamp(36px, 4.5vw, 56px);
+    font-size: clamp(38px, 4.5vw, 58px);
   }
 
   .hero-dark-desc {
@@ -6239,7 +6240,7 @@ html[lang="zh"] i {
   }
 
   .hero-dark-heading {
-    font-size: clamp(30px, 4vw, 40px);
+    font-size: clamp(32px, 4vw, 42px);
   }
 
   .hero-dark-desc {

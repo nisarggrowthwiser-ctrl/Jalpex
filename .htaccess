@@ -1,5 +1,8 @@
 # ── JALPEX INTERNATIONAL APACHE CONFIGURATION (.htaccess) ──
 
+# Force Default Charset to UTF-8
+AddDefaultCharset UTF-8
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

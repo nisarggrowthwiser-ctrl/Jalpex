@@ -81,6 +81,11 @@ function news_clean_text(string $s): string
 {
     $s = preg_replace('/<[^>]*>/', ' ', $s);
     $s = html_entity_decode($s, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $s = str_replace(['Â·', 'Ã©', 'Ã-', 'Â'], ['·', 'e', '·', ''], $s);
+    $s = preg_replace('/â†[–—¬↗]|â€“|â€"/', '-', $s);
+    $s = preg_replace('/[\x{2018}\x{2019}]/u', "'", $s);
+    $s = preg_replace('/[\x{201C}\x{201D}]/u', '"', $s);
+    $s = preg_replace('/[\x{2013}\x{2014}]/u', '-', $s);
     return trim(preg_replace('/\s+/u', ' ', $s));
 }
 

@@ -337,7 +337,7 @@
     }
 
     .gf-list a::after {
-      content: ' â†—';
+      content: ' \2197';
       font-size: 11px;
       opacity: 0.5;
     }
@@ -450,6 +450,25 @@
         }
       }
 
+      function cleanString(str) {
+        if (!str) return '';
+        return String(str)
+          .replace(/Â·/g, '·')
+          .replace(/â†[–—¬↗]/g, '')
+          .replace(/â€“|â€"/g, '–')
+          .replace(/â€™/g, "'")
+          .replace(/â€[œ]/g, '"')
+          .replace(/Ã©/g, 'e')
+          .replace(/Ã-/g, '·')
+          .replace(/â[^\s]{1,3}/g, '')
+          .replace(/Â/g, '')
+          .replace(/[\u2018\u2019]/g, "'")
+          .replace(/[\u201C\u201D]/g, '"')
+          .replace(/[\u2013\u2014]/g, '-')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
       function renderItems(items) {
         items.forEach(function (it) {
           var li = document.createElement('li');
@@ -464,14 +483,14 @@
           a.href = it.url;
           a.target = '_blank';
           a.rel = 'noopener noreferrer';
-          a.textContent = it.title;
+          a.textContent = cleanString(it.title);
 
           var meta = document.createElement('div');
           meta.className = 'gf-meta';
 
           var badge = document.createElement('span');
           badge.className = 'gf-badge ' + (it.source === 'PIB' ? 'pib' : 'moc');
-          badge.textContent = it.source;
+          badge.textContent = cleanString(it.source);
 
           meta.appendChild(badge);
 
@@ -488,7 +507,7 @@
           if (it.ministry) {
             var minSpan = document.createElement('span');
             minSpan.className = 'gf-ministry';
-            minSpan.textContent = 'Â· ' + it.ministry;
+            minSpan.textContent = '· ' + cleanString(it.ministry);
             meta.appendChild(minSpan);
           }
 
@@ -512,7 +531,7 @@
           try {
             updatedEl.textContent = 'Last refreshed: ' +
               new Date(data.updatedAt).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) +
-              '  Â·  ' + data.count + ' items';
+              '  ·  ' + data.count + ' items';
             updatedEl.style.display = 'block';
           } catch (e) { }
 

@@ -86,7 +86,7 @@ const translations = {
     form_btn: "Send Inquiry",
     form_success: "Thank You! Our Trade Desk will contact you shortly.",
     form_error: "Please fill out all required fields.",
-    footer_desc: "Jalpex International stands at the intersection of Heritage and Global Trade, a premier Export house bringing the best of Indian Agriculture to Import networks in 40+ countries around the world.",
+    footer_desc: "Jalpex International stands at the intersection of Heritage and Global Trade, a premier Export house bringing the best of Indian Agriculture to Import networks in 40+ countries around the World.",
     footer_quick_links: "Quick Navigation",
     footer_products: "Our Offerings",
     footer_contact: "Contact Sourcing Desk",
@@ -3091,7 +3091,7 @@ function initInquiryForm() {
       if (response.ok) {
         status.className = "form-status success";
         status.textContent = (translations[currentLang] && translations[currentLang].form_success) || "Thank You! Our Trade Desk will contact you shortly.";
-        
+
         form.reset();
         const selectEl = document.getElementById("formProduct");
         if (selectEl) selectEl.selectedIndex = 0;
@@ -3127,8 +3127,8 @@ function inquireProduct(productName) {
 
   const product = productsData.find(p => p.name === productName);
   if (product && categorySelect) {
-    let matchedOpt = Array.from(categorySelect.options).find(opt => 
-      opt.value === product.category || 
+    let matchedOpt = Array.from(categorySelect.options).find(opt =>
+      opt.value === product.category ||
       opt.value.toLowerCase() === product.category.toLowerCase() ||
       opt.value.toLowerCase().includes(product.category.toLowerCase()) ||
       opt.text.toLowerCase().includes(product.category.toLowerCase())

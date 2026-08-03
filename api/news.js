@@ -65,7 +65,21 @@ function decodeEntities(s) {
 }
 
 function cleanText(s) {
-  return decodeEntities(s.replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
+  let cleaned = decodeEntities(s.replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
+  return cleaned
+    .replace(/Â·/g, "·")
+    .replace(/â†[–—¬↗]/g, "")
+    .replace(/â€“|â€"/g, "–")
+    .replace(/â€™/g, "'")
+    .replace(/â€[œ ]/g, '"')
+    .replace(/Ã©/g, "e")
+    .replace(/Ã-/g, "·")
+    .replace(/Â/g, "")
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 async function fetchText(url) {
